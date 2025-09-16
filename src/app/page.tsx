@@ -52,30 +52,41 @@ const testimonials = [
 
 export default function Home() {
   const heroInvestImage = PlaceHolderImages.find(p => p.id === 'hero-invest');
+  const businessPeopleImage = PlaceHolderImages.find(p => p.id === 'business-people');
+
 
   return (
     <div className="flex flex-col">
 
-      <section className="bg-background py-16 md:py-24">
-        <div className="container mx-auto px-4 md:px-6">
+      <section className="relative bg-background py-16 md:py-24">
+        {businessPeopleImage && (
+            <Image
+                src={businessPeopleImage.imageUrl}
+                alt={businessPeopleImage.description}
+                fill
+                className="object-cover brightness-50"
+                data-ai-hint={businessPeopleImage.imageHint}
+            />
+        )}
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h1 className="text-4xl md:text-5xl font-headline font-bold">
+              <h1 className="text-4xl md:text-5xl font-headline font-bold text-white">
                 Добро пожаловать в мир надежных инвестиций и международной торговли
               </h1>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-gray-200">
                 Ваш стратегический партнер в глобальном бизнесе. Мы — ведущая международная компания, специализирующаяся на трех ключевых направлениях: торговле драгоценными металлами, профессиональном консалтинге и поставках высококачественного продовольствия на мировые рынки.
               </p>
               <div className="flex gap-4 pt-4">
                 <Button size="lg" asChild>
                   <Link href="/consulting">Наши Услуги</Link>
                 </Button>
-                <Button size="lg" variant="outline" asChild>
+                <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-primary" asChild>
                   <Link href="#contact">Связаться с нами</Link>
                 </Button>
               </div>
             </div>
-            <Card className="shadow-lg">
+            <Card className="shadow-lg bg-background/90 backdrop-blur-sm">
               <CardHeader>
                 <CardTitle>Свяжитесь с нами</CardTitle>
               </CardHeader>
