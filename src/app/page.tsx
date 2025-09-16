@@ -23,17 +23,17 @@ export default function Home() {
 
     const keyDirections = [
     {
-      icon: <Gem className="h-8 w-8 text-primary" />,
+      icon: <Gem className="h-8 w-8 text-white" />,
       title: "Торговля драгоценными металлами",
       href: "/projects/gold",
     },
     {
-      icon: <Briefcase className="h-8 w-8 text-primary" />,
+      icon: <Briefcase className="h-8 w-8 text-white" />,
       title: "Профессиональный консалтинг",
       href: "/consulting",
     },
     {
-      icon: <Leaf className="h-8 w-8 text-primary" />,
+      icon: <Leaf className="h-8 w-8 text-white" />,
       title: "Поставки продовольствия",
       href: "/projects/shop",
     },

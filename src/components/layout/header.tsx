@@ -31,15 +31,15 @@ export function Header() {
   const closeMenu = () => setIsMenuOpen(false);
 
   const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    if (isClient && !isMobile) {
-      e.preventDefault();
-      setIsModalOpen(true);
+    e.preventDefault();
+    if (isClient && isMobile) {
+       window.location.href = '#contact';
     } else {
-      // Allow default behavior on mobile (navigate to #contact)
-      closeMenu();
+       setIsModalOpen(true);
     }
+    closeMenu();
   };
-
+  
   const navLinks = [
     { href: "/#about", label: translations.header.about },
     { href: "/consulting", label: translations.header.consulting },
