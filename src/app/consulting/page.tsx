@@ -1,6 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { ContactForm } from "@/components/contact-form";
-import { Briefcase, BarChart, Settings, Rocket, DollarSign, Users, ShieldCheck, FileText, Handshake, Landmark, ArrowTrendingUp, Scale } from "lucide-react";
+import { Briefcase, BarChart, Settings, Rocket, Users, ShieldCheck, FileText, Landmark, TrendingUp, Scale } from "lucide-react";
+import Image from "next/image";
+import {PlaceHolderImages} from "@/lib/placeholder-images";
 
 const consultingServices = [
   {
@@ -47,7 +49,7 @@ const financialServices = [
         description: "Разработка комплексных финансовых планов и бюджетов для компаний и частных лиц, контроль за их исполнением.",
     },
     {
-        icon: <ArrowTrendingUp className="h-10 w-10 text-primary" />,
+        icon: <TrendingUp className="h-10 w-10 text-primary" />,
         title: "Инвестиционное консультирование",
         description: "Анализ инвестиционных возможностей, разработка стратегий, управление портфелем активов и минимизация рисков.",
     },
@@ -60,6 +62,9 @@ const financialServices = [
 
 
 export default function ConsultingPage() {
+    const targetAudienceImage = PlaceHolderImages.find(p => p.id === 'business-people');
+    const teamImage = PlaceHolderImages.find(p => p.id === 'consulting-hero');
+
   return (
     <div>
       <section className="bg-secondary/50 py-16 md:py-24">
@@ -94,6 +99,19 @@ export default function ConsultingPage() {
                     ))}
                 </div>
             </div>
+
+            {targetAudienceImage && (
+                <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg group mt-12">
+                    <Image
+                        src={targetAudienceImage.imageUrl}
+                        alt={targetAudienceImage.description}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        data-ai-hint={targetAudienceImage.imageHint}
+                    />
+                </div>
+            )}
+            
             <div>
                 <div className="text-center space-y-4 mb-12">
                     <h2 className="text-3xl md:text-4xl font-headline font-bold">Финансовый консалтинг</h2>
@@ -115,6 +133,18 @@ export default function ConsultingPage() {
                     ))}
                 </div>
             </div>
+
+            {teamImage && (
+                <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg group mt-12">
+                    <Image
+                        src={teamImage.imageUrl}
+                        alt={teamImage.description}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        data-ai-hint={teamImage.imageHint}
+                    />
+                </div>
+            )}
         </div>
       </section>
 
