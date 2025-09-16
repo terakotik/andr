@@ -128,17 +128,17 @@ export default function Home() {
       {/* Why Choose Us Section */}
       <section className="bg-background py-16 md:py-24" id="about">
         <div className="container mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-12 items-center">
-          {heroInvestImage && (
+          
             <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg group">
                 <Image
-                    src={heroInvestImage.imageUrl}
-                    alt={heroInvestImage.description}
+                    src="https://img.freepik.com/premium-photo/urban-business-man-casual-businessman-wearing-suit-jacket-portrait-mature-businessman-ambitions_265223-140824.jpg?semt=ais_hybrid&w=740&q=80"
+                    alt="Наши конкурентные преимущества"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    data-ai-hint={heroInvestImage.imageHint}
+                    data-ai-hint="businessman portrait"
                 />
             </div>
-          )}
+          
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-headline font-bold">Наши конкурентные преимущества</h2>
             <p className="text-lg text-muted-foreground">
