@@ -41,6 +41,12 @@
       "description": "A crate of fresh produce for the AndrShop page.",
       "imageUrl": "https://picsum.photos/seed/shop/1200/600",
       "imageHint": "food market"
+    },
+    {
+      "id": "consulting-main",
+      "description": "A team of professionals in a discussion.",
+      "imageUrl": "https://picsum.photos/seed/discuss/1200/600",
+      "imageHint": "team discussion"
     }
   ]
 }

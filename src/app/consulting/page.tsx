@@ -64,17 +64,30 @@ const financialServices = [
 export default function ConsultingPage() {
     const targetAudienceImage = PlaceHolderImages.find(p => p.id === 'business-people');
     const teamImage = PlaceHolderImages.find(p => p.id === 'consulting-hero');
+    const heroImage = PlaceHolderImages.find(p => p.id === 'consulting-main');
 
   return (
     <div>
-      <section className="bg-secondary/50 py-16 md:py-24">
-        <div className="container mx-auto px-4 md:px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-headline font-bold">Ваш путь к успеху: Комплексные консалтинговые и финансовые решения</h1>
-          <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
-            Мы специализируемся на предоставлении высококачественных консалтинговых и финансовых услуг, разработанных для того, чтобы помочь вам не просто адаптироваться к изменениям, но и активно формировать свое будущее.
-          </p>
-        </div>
-      </section>
+       {heroImage && (
+        <section className="relative h-[50vh] flex items-center justify-center text-center text-white">
+          <Image
+            src={heroImage.imageUrl}
+            alt={heroImage.description}
+            fill
+            className="object-cover brightness-50"
+            data-ai-hint={heroImage.imageHint}
+            priority
+          />
+          <div className="relative z-10 space-y-6 px-4">
+            <h1 className="text-4xl md:text-5xl font-headline font-bold">
+              Ваш путь к успеху: Комплексные консалтинговые и финансовые решения
+            </h1>
+            <p className="text-lg text-white/80 mt-4 max-w-3xl mx-auto">
+              Мы специализируемся на предоставлении высококачественных консалтинговых и финансовых услуг, разработанных для того, чтобы помочь вам не просто адаптироваться к изменениям, но и активно формировать свое будущее.
+            </p>
+          </div>
+        </section>
+      )}
 
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6 space-y-16">

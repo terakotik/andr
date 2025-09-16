@@ -1,16 +1,26 @@
 "use client";
 
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { AndrGlobalLogo } from "@/components/icons";
 import { usePathname } from 'next/navigation';
 import { cn } from "@/lib/utils";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const navLinks = [
   { href: "/consulting", label: "Консалтинг" },
-  { href: "/#projects", label: "Наши проекты" },
+];
+
+const projectLinks = [
+  { href: "/projects/gold", label: "ANDROGOLD" },
+  { href: "/projects/shop", label: "ANDRESHOP" },
 ];
 
 export function Header() {
@@ -32,12 +42,25 @@ export function Header() {
               href={link.href}
               className={cn(
                 "text-foreground/80 transition-colors hover:text-foreground",
-                (pathname === link.href || (link.href.startsWith('/#') && pathname === '/')) && "text-foreground font-semibold"
+                pathname === link.href && "text-foreground font-semibold"
               )}
             >
               {link.label}
             </Link>
           ))}
+          <DropdownMenu>
+            <DropdownMenuTrigger className="flex items-center gap-1 text-foreground/80 transition-colors hover:text-foreground focus:outline-none">
+              Наши проекты
+              <ChevronDown className="h-4 w-4" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              {projectLinks.map((link) => (
+                <DropdownMenuItem key={link.label} asChild>
+                  <Link href={link.href}>{link.label}</Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
         </nav>
 
         <div className="flex items-center gap-4">
@@ -69,7 +92,20 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
-            <Button asChild className="w-full">
+             <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center justify-between w-full text-foreground/80 hover:text-foreground">
+                Наши проекты
+                <ChevronDown className="h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-[calc(100vw-2rem)]">
+                {projectLinks.map((link) => (
+                  <DropdownMenuItem key={link.label} asChild>
+                    <Link href={link.href} onClick={() => setIsMenuOpen(false)}>{link.label}</Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+            <Button asChild className="w-full mt-2">
               <Link href="/#contact" onClick={() => setIsMenuOpen(false)}>Связаться с нами</Link>
             </Button>
           </nav>
