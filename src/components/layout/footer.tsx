@@ -43,17 +43,17 @@ export function Footer() {
         <Separator className="my-12" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-            <Link href="/" className="flex flex-col items-start mb-4">
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
+            <Link href="/" className="hidden md:flex flex-col items-start mb-4">
               <span className="text-2xl font-bold text-primary uppercase tracking-wider font-headline">ANDRGLOBAL</span>
               <span className="text-xs uppercase tracking-widest text-muted-foreground font-body">Consulting</span>
             </Link>
-            <p className="text-muted-foreground text-sm max-w-xs">
+            <p className="text-muted-foreground text-sm max-w-xs text-left md:text-center lg:text-left">
               Профессиональный бизнес-консалтинг для повышения вашей стратегии и операций.
             </p>
           </div>
           
-          <div className="text-center lg:text-left">
+          <div className="text-center md:text-left">
             <h4 className="font-headline font-semibold mb-4">Быстрые ссылки</h4>
             <ul className="space-y-2 text-sm">
               <li><Link href="/consulting" className="text-muted-foreground hover:text-foreground">Консалтинг</Link></li>
@@ -62,9 +62,9 @@ export function Footer() {
             </ul>
           </div>
           
-          <div className="text-center lg:text-left">
+          <div className="text-center md:text-left">
             <h4 className="font-headline font-semibold mb-4">Следите за нами</h4>
-            <div className="flex justify-center lg:justify-start gap-4">
+            <div className="flex justify-center md:justify-start gap-4">
               {socialLinks.map(link => (
                 <Button key={link.name} variant="ghost" size="icon" asChild>
                     <Link href={link.href} aria-label={link.name} className="text-muted-foreground hover:text-foreground">
@@ -75,7 +75,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="text-center lg:text-left">
+          <div className="text-center md:text-left">
             <h4 className="font-headline font-semibold mb-4">Подпишитесь на нашу рассылку</h4>
             <form className="flex flex-col sm:flex-row gap-2">
               <Input type="email" placeholder="Ваш email" className="bg-background" />
@@ -86,7 +86,7 @@ export function Footer() {
         
         <Separator className="my-8" />
         
-        <div className="text-center text-sm text-muted-foreground">
+        <div className="text-center md:text-left text-sm text-muted-foreground">
           © {new Date().getFullYear()} AndrGlobal Consulting. Все права защищены.
         </div>
       </div>
