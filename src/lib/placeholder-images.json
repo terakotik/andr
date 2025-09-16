@@ -47,6 +47,12 @@
       "description": "A team of professionals in a discussion.",
       "imageUrl": "https://picsum.photos/seed/discuss/1200/600",
       "imageHint": "team discussion"
+    },
+    {
+      "id": "hero-invest",
+      "description": "A person in a suit looking out over a sunset, representing investment and foresight.",
+      "imageUrl": "https://picsum.photos/seed/invest/800/600",
+      "imageHint": "man sunset"
     }
   ]
 }
