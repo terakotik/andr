@@ -3,10 +3,9 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { CheckCircle2, ArrowRight, Briefcase, BarChart, Rocket, Send, MessageCircle, SendHorizonal } from 'lucide-react';
+import { CheckCircle2, ArrowRight, Briefcase, BarChart, Rocket } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ContactForm } from '@/components/contact-form';
-import { Input } from '@/components/ui/input';
 
 const featuredServices = [
   {
@@ -52,46 +51,44 @@ const testimonials = [
 ];
 
 export default function Home() {
-  const heroImage = PlaceHolderImages.find(p => p.id === 'consulting-hero');
+  const heroImage = PlaceHolderImages.find(p => p.id === 'business-people');
   const strategyImage = PlaceHolderImages.find(p => p.id === 'consulting-hero');
 
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative h-[80vh] flex items-center justify-center text-center text-white">
-        {heroImage && (
-            <Image
-                src={heroImage.imageUrl}
-                alt={heroImage.description}
-                fill
-                className="object-cover brightness-50"
-                data-ai-hint={heroImage.imageHint}
-                priority
-              />
-        )}
-        <div className="relative z-10 space-y-8 px-4 max-w-4xl">
-            <h1 className="text-4xl md:text-6xl font-headline font-bold">
-              КОНСАЛТИНГОВЫЕ УСЛУГИ И ФИНАНСОВЫЕ РЕШЕНИЯ
-            </h1>
-            <p className="text-lg text-white/90 max-w-2xl mx-auto">
-              Введите ваш номер телефона для консультации или свяжитесь с нами напрямую в чате WhatsApp или Telegram
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Input type="tel" placeholder="Ваш номер телефона" className="max-w-xs bg-white/90 text-black placeholder:text-gray-500" />
-              <Button size="lg">
-                <SendHorizonal className="mr-2 h-4 w-4" /> Отправить
-              </Button>
+      <section className="bg-background">
+        <div className="container mx-auto px-4 md:px-6 py-16 md:py-24">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6 text-center md:text-left">
+              <h1 className="text-4xl md:text-5xl font-headline font-bold text-foreground">
+                Добро пожаловать в мир надежных инвестиций и международной торговли
+              </h1>
+              <p className="text-lg text-muted-foreground">
+                Ваш стратегический партнер в глобальном бизнесе. Мы — ведущая международная компания, специализирующаяся на трех ключевых направлениях: торговле драгоценными металлами, профессиональном консалтинге и поставках высококачественного продовольствия на мировые рынки.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <Button size="lg" asChild>
+                  <Link href="/#services">Наши Услуги</Link>
+                </Button>
+                <Button size="lg" variant="outline" asChild>
+                  <Link href="/#contact">Связаться с нами</Link>
+                </Button>
+              </div>
             </div>
-            <div className="flex flex-row gap-4 justify-center">
-              <Button variant="outline" className="bg-transparent border-white/80 hover:bg-white/10">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 h-5 w-5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-                WhatsApp
-              </Button>
-              <Button variant="outline" className="bg-transparent border-white/80 hover:bg-white/10">
-                <Send className="mr-2 h-5 w-5" />
-                Telegram
-              </Button>
-            </div>
+             {heroImage && (
+                <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg group">
+                    <Image
+                        src={heroImage.imageUrl}
+                        alt={heroImage.description}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        data-ai-hint={heroImage.imageHint}
+                        priority
+                    />
+                </div>
+              )}
+          </div>
         </div>
       </section>
 
