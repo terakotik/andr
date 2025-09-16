@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { CheckCircle2, ArrowRight, Briefcase, BarChart, Rocket } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -51,8 +51,8 @@ const testimonials = [
 ];
 
 export default function Home() {
-  const heroImage = PlaceHolderImages.find(p => p.id === 'consulting-hero');
-  const strategyImage = PlaceHolderImages.find(p => p.id === 'business-people');
+  const heroImage = PlaceHolderImages.find(p => p.id === 'business-people');
+  const strategyImage = PlaceHolderImages.find(p => p.id === 'consulting-hero');
 
   return (
     <div className="flex flex-col">
