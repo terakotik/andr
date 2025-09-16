@@ -52,47 +52,10 @@ const testimonials = [
 
 
 export default function Home() {
-  const heroImage = PlaceHolderImages.find(p => p.id === 'hero-invest');
   const strategyImage = PlaceHolderImages.find(p => p.id === 'consulting-hero');
 
   return (
     <div className="flex flex-col">
-      {/* Hero Section */}
-      <section className="bg-background py-16 md:py-24">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h1 className="text-4xl md:text-5xl font-headline font-bold">
-                Добро пожаловать в мир надежных инвестиций и международной торговли
-              </h1>
-              <p className="text-lg text-muted-foreground">
-                Ваш стратегический партнер в глобальном бизнесе. Мы — ведущая международная компания, специализирующаяся на трех ключевых направлениях: торговле драгоценными металлами, профессиональном консалтинге и поставках высококачественного продовольствия на мировые рынки.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" asChild>
-                  <Link href="#services">Наши Услуги</Link>
-                </Button>
-                <Button size="lg" variant="outline" asChild>
-                  <Link href="#contact">Связаться с нами</Link>
-                </Button>
-              </div>
-            </div>
-            {heroImage && (
-              <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg group">
-                  <Image
-                      src={heroImage.imageUrl}
-                      alt={heroImage.description}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      data-ai-hint={heroImage.imageHint}
-                      priority
-                  />
-              </div>
-            )}
-          </div>
-        </div>
-      </section>
-
       {/* Featured Services Section */}
       <section className="py-16 md:py-24 bg-secondary/50" id="services">
         <div className="container mx-auto px-4 md:px-6">
