@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from 'next/image';
@@ -75,10 +76,11 @@ export default function Home() {
                 loop
                 muted
                 playsInline
-                className="absolute top-0 left-0 w-full h-full object-cover opacity-50 z-0"
+                className="absolute top-0 left-0 w-full h-full object-cover opacity-30 z-0"
             >
                 <source src="https://videos.pexels.com/video-files/853874/853874-hd_1920_1080_25fps.mp4" type="video/mp4" />
             </video>
+            <div className="pixel-overlay"></div>
         </div>
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -262,3 +264,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
