@@ -45,6 +45,12 @@ const nextConfig: NextConfig = {
         hostname: 'newdaynews.ru',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'api.qrserver.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
