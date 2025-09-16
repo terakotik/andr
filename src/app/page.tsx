@@ -3,9 +3,12 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { CheckCircle2, ArrowRight, Briefcase, BarChart, Rocket } from 'lucide-react';
+import { CheckCircle2, ArrowRight, Briefcase, BarChart, Rocket, Send, Phone } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ContactForm } from '@/components/contact-form';
+import { Input } from '@/components/ui/input';
+import { TelegramIcon, WhatsAppIcon } from '@/components/icons';
+
 
 const featuredServices = [
   {
@@ -52,10 +55,55 @@ const testimonials = [
 
 
 export default function Home() {
+  const heroImage = PlaceHolderImages.find(p => p.id === 'consulting-hero');
   const strategyImage = PlaceHolderImages.find(p => p.id === 'business-people');
 
   return (
     <div className="flex flex-col">
+      {heroImage && (
+        <section className="relative bg-black text-white py-20 md:py-32">
+            <Image
+                src={heroImage.imageUrl}
+                alt={heroImage.description}
+                fill
+                className="object-cover opacity-30"
+                data-ai-hint={heroImage.imageHint}
+                priority
+            />
+            <div className="container mx-auto px-4 md:px-6 relative z-10">
+                <div className="max-w-3xl text-center mx-auto">
+                    <h1 className="text-4xl md:text-6xl font-headline font-bold mb-4">Комплексные решения для вашего бизнеса</h1>
+                    <p className="text-lg md:text-xl text-gray-300 mb-8">
+                        Откройте новые горизонты для своей компании с нашей экспертной поддержкой. Мы поможем вам разработать и реализовать стратегию, которая приведет к успеху.
+                    </p>
+                    <div className="bg-white p-4 rounded-lg shadow-lg max-w-xl mx-auto">
+                        <div className="flex flex-col sm:flex-row gap-2">
+                            <div className="relative flex-grow">
+                                <Phone className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
+                                <Input type="tel" placeholder="+7 (999) 999-99-99" className="pl-10 w-full text-gray-900" />
+                            </div>
+                            <Button size="lg" className="w-full sm:w-auto">
+                                Получить консультацию
+                                <Send className="ml-2 h-5 w-5" />
+                            </Button>
+                        </div>
+                        <div className="flex items-center justify-center gap-4 mt-4">
+                            <p className="text-sm text-gray-500">Или напишите нам в мессенджеры:</p>
+                            <div className="flex gap-3">
+                                <Link href="#" aria-label="Telegram">
+                                    <TelegramIcon className="w-8 h-8 hover:opacity-80 transition-opacity" />
+                                </Link>
+                                <Link href="#" aria-label="WhatsApp">
+                                    <WhatsAppIcon className="w-8 h-8 hover:opacity-80 transition-opacity" />
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+      )}
+
       {/* Featured Services Section */}
       <section className="py-16 md:py-24 bg-secondary/50" id="services">
         <div className="container mx-auto px-4 md:px-6">
