@@ -25,30 +25,30 @@ export function ContactModal({ isOpen, onOpenChange }: ContactModalProps) {
   
   return (
     <Dialog open={isOpen} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-md p-8">
+      <DialogContent className="sm:max-w-lg p-8">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-center">
             Мы на связи в мессенджерах
           </DialogTitle>
         </DialogHeader>
         <div className="mt-6 bg-secondary/50 p-6 rounded-lg flex flex-col md:flex-row items-center gap-6">
-          <div className="flex-1 space-y-4 w-full">
+          <div className="flex-1 space-y-4 w-full text-center">
              <Button asChild className="w-full bg-green-500 hover:bg-green-600 text-white text-lg py-6">
                 <Link href={whatsappLink} target="_blank">
                     <WhatsAppIcon className="h-6 w-6 mr-2"/>
                     WhatsApp
                 </Link>
             </Button>
-            <Button asChild variant="outline" className="w-full text-lg py-6">
-                <Link href={phoneLink}>
+            <Button asChild variant="ghost" className="w-full text-lg py-6">
+                <Link href={phoneLink} className="flex items-center justify-center">
                     <Phone className="h-5 w-5 mr-2"/>
-                    +62 895 308 25574
+                    <span>+62 895 308 25574</span>
                 </Link>
             </Button>
           </div>
           <div className="flex-1 flex flex-col items-center text-center">
             <p className="text-sm text-muted-foreground mb-2">Удобнее с телефона? <br/> Сканируйте QR</p>
-            <div className="p-2 bg-white rounded-lg">
+            <div className="p-2 bg-white rounded-lg shadow-md">
                  <Image
                     src={qrCodeUrl}
                     alt="WhatsApp QR Code"
