@@ -69,7 +69,7 @@ export default function ConsultingPage() {
     <div>
       <section className="bg-secondary/50 py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-headline font-bold">Ваш Путь к Успеху: Комплексные Решения</h1>
+          <h1 className="text-4xl md:text-5xl font-headline font-bold">Ваш путь к успеху: Комплексные консалтинговые и финансовые решения</h1>
           <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
             Мы специализируемся на предоставлении высококачественных консалтинговых и финансовых услуг, разработанных для того, чтобы помочь вам не просто адаптироваться к изменениям, но и активно формировать свое будущее.
           </p>
@@ -87,11 +87,11 @@ export default function ConsultingPage() {
                 </div>
                 <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
                     {consultingServices.map((service) => (
-                    <Card key={service.title} className="flex flex-col md:flex-row items-start overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-accent/50 transform hover:-translate-y-1">
-                        <div className="p-6 flex-shrink-0 bg-secondary/50 md:bg-transparent rounded-full md:rounded-none m-6 md:m-0 md:p-6">
+                    <Card key={service.title} className="flex flex-col md:flex-row items-start overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-primary/50 transform hover:-translate-y-1">
+                        <div className="p-6 flex-shrink-0 bg-secondary/50 rounded-full m-6 md:m-0 md:p-6">
                         {service.icon}
                         </div>
-                        <div className="p-6 pt-0 md:pt-6 md:border-l w-full">
+                        <div className="p-6 pt-0 md:pt-6 md:border-l border-border/70 w-full">
                         <CardTitle className="font-headline text-xl mb-2">{service.title}</CardTitle>
                         <CardDescription>{service.description}</CardDescription>
                         </div>
@@ -121,11 +121,11 @@ export default function ConsultingPage() {
                 </div>
                 <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
                     {financialServices.map((service) => (
-                    <Card key={service.title} className="flex flex-col md:flex-row items-start overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-accent/50 transform hover:-translate-y-1">
-                        <div className="p-6 flex-shrink-0 bg-secondary/50 md:bg-transparent rounded-full md:rounded-none m-6 md:m-0 md:p-6">
+                    <Card key={service.title} className="flex flex-col md:flex-row items-start overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-primary/50 transform hover:-translate-y-1">
+                        <div className="p-6 flex-shrink-0 bg-secondary/50 rounded-full m-6 md:m-0 md:p-6">
                         {service.icon}
                         </div>
-                        <div className="p-6 pt-0 md:pt-6 md:border-l w-full">
+                        <div className="p-6 pt-0 md:pt-6 md:border-l border-border/70 w-full">
                         <CardTitle className="font-headline text-xl mb-2">{service.title}</CardTitle>
                         <CardDescription>{service.description}</CardDescription>
                         </div>
