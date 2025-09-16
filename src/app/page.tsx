@@ -76,7 +76,7 @@ export default function Home() {
             playsInline
             className="absolute top-0 left-0 w-full h-full object-cover brightness-50 z-0"
         >
-            <source src="https://videos.pexels.com/video-files/853875/853875-hd_1920_1080_25fps.mp4" type="video/mp4" />
+            <source src="https://videos.pexels.com/video-files/3826049/3826049-hd_1920_1080_25fps.mp4" type="video/mp4" />
         </video>
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
