@@ -21,6 +21,7 @@ interface ContactModalProps {
 export function ContactModal({ isOpen, onOpenChange }: ContactModalProps) {
   const whatsappLink = "https://wa.me/6289530825574";
   const phoneLink = "tel:+6289530825574";
+  const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=${whatsappLink}`;
   
   return (
     <Dialog open={isOpen} onOpenChange={onOpenChange}>
@@ -49,7 +50,7 @@ export function ContactModal({ isOpen, onOpenChange }: ContactModalProps) {
             <p className="text-sm text-muted-foreground mb-2">Удобнее с телефона? <br/> Сканируйте QR</p>
             <div className="p-2 bg-white rounded-lg">
                  <Image
-                    src="/qr.jpg"
+                    src={qrCodeUrl}
                     alt="WhatsApp QR Code"
                     width={160}
                     height={160}
