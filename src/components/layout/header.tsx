@@ -9,8 +9,8 @@ import { usePathname } from 'next/navigation';
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { href: "/consulting", label: "Consulting Services" },
-  { href: "/#projects", label: "Our Projects" },
+  { href: "/consulting", label: "Консалтинг" },
+  { href: "/#projects", label: "Наши проекты" },
 ];
 
 export function Header() {
@@ -42,7 +42,7 @@ export function Header() {
 
         <div className="flex items-center gap-4">
           <Button asChild className="hidden md:flex">
-            <Link href="/#contact">Contact Us</Link>
+            <Link href="/#contact">Связаться с нами</Link>
           </Button>
           <Button
             variant="ghost"
@@ -70,7 +70,7 @@ export function Header() {
               </Link>
             ))}
             <Button asChild className="w-full">
-              <Link href="/#contact" onClick={() => setIsMenuOpen(false)}>Contact Us</Link>
+              <Link href="/#contact" onClick={() => setIsMenuOpen(false)}>Связаться с нами</Link>
             </Button>
           </nav>
         </div>

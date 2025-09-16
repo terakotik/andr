@@ -5,7 +5,7 @@ import { Footer } from '@/components/layout/footer';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'AndrGf | Надежные инвестиции и международная торговля',
+  title: 'AndrGlobal Consulting | Надежные инвестиции и международная торговля',
   description: 'Ваш стратегический партнер в глобальном бизнесе. Мы специализируемся на торговле драгоценными металлами, профессиональном консалтинге и поставках высококачественного продовольствия.',
 };
 

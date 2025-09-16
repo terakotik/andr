@@ -19,13 +19,13 @@ import { useToast } from "@/hooks/use-toast";
 
 const formSchema = z.object({
   name: z.string().min(2, {
-    message: "Name must be at least 2 characters.",
+    message: "Имя должно содержать не менее 2 символов.",
   }),
   email: z.string().email({
-    message: "Please enter a valid email address.",
+    message: "Пожалуйста, введите действительный адрес электронной почты.",
   }),
   message: z.string().min(10, {
-    message: "Message must be at least 10 characters.",
+    message: "Сообщение должно содержать не менее 10 символов.",
   }),
 });
 
@@ -44,8 +44,8 @@ export function ContactForm() {
     function onSubmit(values: z.infer<typeof formSchema>) {
         console.log(values);
         toast({
-            title: "Message Sent!",
-            description: "Thank you for reaching out. We will get back to you shortly.",
+            title: "Сообщение отправлено!",
+            description: "Спасибо за ваше обращение. Мы свяжемся с вами в ближайшее время.",
         });
         form.reset();
     }
@@ -58,9 +58,9 @@ export function ContactForm() {
                     name="name"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Full Name</FormLabel>
+                            <FormLabel>Полное имя</FormLabel>
                             <FormControl>
-                                <Input placeholder="John Doe" {...field} />
+                                <Input placeholder="Иван Иванов" {...field} />
                             </FormControl>
                             <FormMessage />
                         </FormItem>
@@ -71,9 +71,9 @@ export function ContactForm() {
                     name="email"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Email Address</FormLabel>
+                            <FormLabel>Адрес электронной почты</FormLabel>
                             <FormControl>
-                                <Input placeholder="john.doe@example.com" {...field} />
+                                <Input placeholder="ivan.ivanov@example.com" {...field} />
                             </FormControl>
                             <FormMessage />
                         </FormItem>
@@ -84,10 +84,10 @@ export function ContactForm() {
                     name="message"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Your Message</FormLabel>
+                            <FormLabel>Ваше сообщение</FormLabel>
                             <FormControl>
                                 <Textarea
-                                    placeholder="Tell us how we can help..."
+                                    placeholder="Расскажите, как мы можем помочь..."
                                     className="min-h-[120px]"
                                     {...field}
                                 />
@@ -96,7 +96,7 @@ export function ContactForm() {
                         </FormItem>
                     )}
                 />
-                <Button type="submit" className="w-full">Send Message</Button>
+                <Button type="submit" className="w-full">Отправить сообщение</Button>
             </form>
         </Form>
     );

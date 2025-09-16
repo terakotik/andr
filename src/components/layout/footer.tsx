@@ -6,8 +6,8 @@ import { Separator } from '@/components/ui/separator';
 import { Twitter, Linkedin, Facebook } from 'lucide-react';
 
 const projectLinks = [
-  { name: 'ANDROGOLD', description: 'Commission-based gold sales.', href: '/projects/gold' },
-  { name: 'ANDRESHOP', description: 'Wholesale food supplies.', href: '/projects/shop' },
+  { name: 'ANDROGOLD', description: 'Продажа золота на комиссионной основе.', href: '/projects/gold' },
+  { name: 'ANDRESHOP', description: 'Оптовые поставки продуктов питания.', href: '/projects/shop' },
 ];
 
 const socialLinks = [
@@ -23,9 +23,9 @@ export function Footer() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center md:text-left">
           <div className="md:col-span-1">
-            <h3 className="font-headline text-2xl font-semibold mb-2">Our Partner Projects</h3>
+            <h3 className="font-headline text-2xl font-semibold mb-2">Наши партнерские проекты</h3>
             <p className="text-muted-foreground">
-              Expanding our expertise into diverse markets.
+              Расширяем нашу экспертизу на разнообразные рынки.
             </p>
           </div>
           <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8">
@@ -34,7 +34,7 @@ export function Footer() {
                 <h4 className="font-headline text-xl font-bold text-primary">{project.name}</h4>
                 <p className="text-muted-foreground mt-2 mb-4">{project.description}</p>
                 <Button asChild variant="outline">
-                  <Link href={project.href}>Learn More</Link>
+                  <Link href={project.href}>Узнать больше</Link>
                 </Button>
               </div>
             ))}
@@ -50,21 +50,21 @@ export function Footer() {
               <span>AndrGlobal</span>
             </Link>
             <p className="text-muted-foreground text-sm max-w-xs">
-              Professional business consulting to elevate your strategy and operations.
+              Профессиональный бизнес-консалтинг для повышения вашей стратегии и операций.
             </p>
           </div>
           
           <div className="text-center lg:text-left">
-            <h4 className="font-headline font-semibold mb-4">Quick Links</h4>
+            <h4 className="font-headline font-semibold mb-4">Быстрые ссылки</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/consulting" className="text-muted-foreground hover:text-foreground">Consulting</Link></li>
-              <li><Link href="/#about" className="text-muted-foreground hover:text-foreground">About Us</Link></li>
-              <li><Link href="/#contact" className="text-muted-foreground hover:text-foreground">Contact</Link></li>
+              <li><Link href="/consulting" className="text-muted-foreground hover:text-foreground">Консалтинг</Link></li>
+              <li><Link href="/#about" className="text-muted-foreground hover:text-foreground">О нас</Link></li>
+              <li><Link href="/#contact" className="text-muted-foreground hover:text-foreground">Контакты</Link></li>
             </ul>
           </div>
           
           <div className="text-center lg:text-left">
-            <h4 className="font-headline font-semibold mb-4">Follow Us</h4>
+            <h4 className="font-headline font-semibold mb-4">Следите за нами</h4>
             <div className="flex justify-center lg:justify-start gap-4">
               {socialLinks.map(link => (
                 <Button key={link.name} variant="ghost" size="icon" asChild>
@@ -77,10 +77,10 @@ export function Footer() {
           </div>
 
           <div className="text-center lg:text-left">
-            <h4 className="font-headline font-semibold mb-4">Subscribe to our Newsletter</h4>
+            <h4 className="font-headline font-semibold mb-4">Подпишитесь на нашу рассылку</h4>
             <form className="flex flex-col sm:flex-row gap-2">
-              <Input type="email" placeholder="Your email" className="bg-background" />
-              <Button type="submit">Subscribe</Button>
+              <Input type="email" placeholder="Ваш email" className="bg-background" />
+              <Button type="submit">Подписаться</Button>
             </form>
           </div>
         </div>
@@ -88,7 +88,7 @@ export function Footer() {
         <Separator className="my-8" />
         
         <div className="text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} AndrGlobal Consulting. All Rights Reserved.
+          © {new Date().getFullYear()} AndrGlobal Consulting. Все права защищены.
         </div>
       </div>
     </footer>
