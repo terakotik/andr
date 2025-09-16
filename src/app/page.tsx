@@ -105,11 +105,11 @@ export default function Home() {
               </p>
                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
                 {keyDirections.map((direction) => (
-                  <Link key={direction.title} href={direction.href} className="bg-white/10 backdrop-blur-sm p-4 rounded-lg flex flex-col items-center justify-center text-center text-white hover:bg-white/20 transition-colors">
-                      <div className="p-3 bg-white/20 rounded-md mb-3">
+                  <Link key={direction.title} href={direction.href} className="bg-black/20 backdrop-blur-md p-6 rounded-xl flex flex-col items-center justify-center text-center text-white hover:bg-black/30 transition-colors h-48">
+                      <div className="p-4 bg-white/10 rounded-lg mb-4">
                         {direction.icon}
                       </div>
-                      <span className="text-xs font-semibold">{direction.title}</span>
+                      <span className="font-semibold">{direction.title.split(' ').slice(0, 2).join(' ')}<br/>{direction.title.split(' ').slice(2).join(' ')}</span>
                   </Link>
                 ))}
               </div>
