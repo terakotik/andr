@@ -74,7 +74,7 @@ export default function Home() {
               <p className="text-lg text-gray-200">
                 Ваш стратегический партнер в глобальном бизнесе. Мы — ведущая международная компания, специализирующаяся на трех ключевых направлениях: торговле драгоценными металлами, профессиональном консалтинге и поставках высококачественного продовольствия на мировые рынки.
               </p>
-              <div className="flex gap-4 pt-4">
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button size="lg" asChild>
                   <Link href="/consulting">Наши Услуги</Link>
                 </Button>
@@ -104,7 +104,7 @@ export default function Home() {
               Мы предлагаем комплексные решения для стратегического развития вашего бизнеса.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredServices.map((service) => (
               <Card key={service.title} className="flex flex-col text-center items-center hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
                 <CardHeader className="items-center">

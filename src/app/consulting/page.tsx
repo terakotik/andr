@@ -81,7 +81,7 @@ export default function ConsultingPage() {
               <p className="text-lg text-muted-foreground">
                 Откройте новые горизонты для своей компании с нашей экспертной поддержкой. Мы поможем вам разработать и реализовать стратегию, которая приведет к успеху.
               </p>
-              <div className="flex gap-4 pt-4">
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button size="lg" asChild>
                   <Link href="#services">Наши Услуги</Link>
                 </Button>
@@ -113,13 +113,13 @@ export default function ConsultingPage() {
                 </div>
                 <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
                     {consultingServices.map((service) => (
-                    <Card key={service.title} className="flex flex-col md:flex-row items-start overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-primary/50 transform hover:-translate-y-1">
-                        <div className="p-6 flex-shrink-0 bg-secondary/50 rounded-full m-6 md:m-0 md:p-6">
-                        {service.icon}
+                    <Card key={service.title} className="flex flex-col md:flex-row items-center md:items-start overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-primary/50 transform hover:-translate-y-1 text-center md:text-left">
+                        <div className="p-6 flex-shrink-0 bg-secondary/50 rounded-full m-6 mt-6 md:m-6">
+                          {service.icon}
                         </div>
                         <div className="p-6 pt-0 md:pt-6 md:border-l border-border/70 w-full">
-                        <CardTitle className="font-headline text-xl mb-2">{service.title}</CardTitle>
-                        <CardDescription>{service.description}</CardDescription>
+                          <CardTitle className="font-headline text-xl mb-2">{service.title}</CardTitle>
+                          <CardDescription>{service.description}</CardDescription>
                         </div>
                     </Card>
                     ))}
@@ -147,13 +147,13 @@ export default function ConsultingPage() {
                 </div>
                 <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
                     {financialServices.map((service) => (
-                    <Card key={service.title} className="flex flex-col md:flex-row items-start overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-primary/50 transform hover:-translate-y-1">
-                        <div className="p-6 flex-shrink-0 bg-secondary/50 rounded-full m-6 md:m-0 md:p-6">
-                        {service.icon}
+                    <Card key={service.title} className="flex flex-col md:flex-row items-center md:items-start overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-primary/50 transform hover:-translate-y-1 text-center md:text-left">
+                        <div className="p-6 flex-shrink-0 bg-secondary/50 rounded-full m-6 mt-6 md:m-6">
+                          {service.icon}
                         </div>
                         <div className="p-6 pt-0 md:pt-6 md:border-l border-border/70 w-full">
-                        <CardTitle className="font-headline text-xl mb-2">{service.title}</CardTitle>
-                        <CardDescription>{service.description}</CardDescription>
+                          <CardTitle className="font-headline text-xl mb-2">{service.title}</CardTitle>
+                          <CardDescription>{service.description}</CardDescription>
                         </div>
                     </Card>
                     ))}
