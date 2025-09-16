@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { ChevronDown, Menu, X, Globe } from "lucide-react";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { usePathname } from 'next/navigation';
 import { cn } from "@/lib/utils";
@@ -22,11 +22,16 @@ export function Header() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const pathname = usePathname();
   const isMobile = useIsMobile();
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const closeMenu = () => setIsMenuOpen(false);
 
   const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    if (!isMobile) {
+    if (isClient && !isMobile) {
       e.preventDefault();
       setIsModalOpen(true);
     } else {
@@ -149,7 +154,7 @@ export function Header() {
           </div>
         )}
       </header>
-      <ContactModal isOpen={isModalOpen} onOpenChange={setIsModalOpen} />
+      {isClient && <ContactModal isOpen={isModalOpen} onOpenChange={setIsModalOpen} />}
     </>
   );
 }
