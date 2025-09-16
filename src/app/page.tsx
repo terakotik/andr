@@ -108,7 +108,7 @@ export default function Home() {
                 <Button size="lg" asChild>
                   <Link href="/consulting">Наши Услуги</Link>
                 </Button>
-                <Button size="lg" variant="outline" className="text-white border-white bg-transparent hover:bg-white hover:text-primary" asChild>
+                <Button size="lg" variant="outline" className="text-white border-white bg-transparent hover:bg-gradient-to-r hover:from-amber-400 hover:to-amber-600 hover:text-white hover:border-transparent transition-all" asChild>
                   <Link href="#contact">Связаться с нами</Link>
                 </Button>
               </div>
