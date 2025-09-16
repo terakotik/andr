@@ -1,0 +1,207 @@
+
+{
+    "header": {
+        "about": "About Us",
+        "consulting": "Consulting",
+        "contact": "Contact",
+        "projects": "Our Projects",
+        "contactUs": "Contact Us"
+    },
+    "home": {
+        "hero": {
+            "title": "Welcome to the world of reliable investments and international trade",
+            "subtitle": "Your strategic partner in global business. We are a leading international company specializing in three key areas: precious metals trading, professional consulting, and supplying high-quality food to world markets.",
+            "servicesButton": "Our Services",
+            "contactButton": "Contact Us"
+        },
+        "consultingDirections": {
+            "title": "Key Consulting Directions",
+            "subtitle": "We offer comprehensive solutions for the strategic development of your business."
+        },
+        "featuredServices": {
+            "management": {
+                "title": "Management Consulting",
+                "description": "Optimization of management systems and organizational structures to increase productivity.",
+                "details": "We offer a deep analysis of your business processes and the implementation of advanced management techniques to achieve maximum efficiency."
+            },
+            "strategic": {
+                "title": "Strategic Consulting",
+                "description": "Development of long-term growth strategies and roadmaps to achieve your goals.",
+                "details": "Our team will help you identify key development vectors, analyze market trends, and create a sustainable growth strategy."
+            },
+            "marketing": {
+                "title": "Marketing Consulting",
+                "description": "Creation and optimization of marketing strategies to strengthen the brand and attract customers.",
+                "details": "We will develop a comprehensive marketing strategy for you that will increase your brand awareness and attract your target audience."
+            },
+            "it": {
+                "title": "IT Consulting",
+                "description": "Optimization of IT infrastructure, implementation of technologies, and ensuring cybersecurity.",
+                "details": "Our IT specialists will help you modernize your IT infrastructure, implement innovative solutions, and ensure reliable data protection."
+            },
+            "hr": {
+                "title": "HR Consulting",
+                "description": "Building an effective team through personnel management, recruitment, and cultural development.",
+                "details": "We will help you form a strong team, develop a motivation system, and create a corporate culture that fosters success."
+            },
+            "legal": {
+                "title": "Legal Consulting",
+                "description": "Expert legal support to protect your business and minimize legal risks.",
+                "details": "Our lawyers will provide full legal protection for your business, help in solving complex legal issues, and minimize risks."
+            }
+        },
+        "learnMore": "Learn More",
+        "orderButton": "Order",
+        "ourProjects": {
+            "title": "Our Projects",
+            "gold": "Sale and supply of gold to world markets.",
+            "shop": "Wholesale food supplies."
+        },
+        "whyChooseUs": {
+            "title": "Our Competitive Advantages",
+            "subtitle": "Our company's success is based on a unique combination of global expertise and a deep understanding of the local specifics of various markets.",
+            "points": [
+                "Global expertise and knowledge of local markets",
+                "Reliability and full transparency of transactions",
+                "Individual approach to each client",
+                "Active use of technological innovations"
+            ],
+            "aboutUsButton": "More about us",
+            "imageAlt": "Our competitive advantages"
+        },
+        "testimonials": {
+            "title": "What Our Clients Say",
+            "reviews": [
+                {
+                    "name": "Alexey Petrov",
+                    "title": "CEO, 'TechnoStroy'",
+                    "avatar": "https://picsum.photos/seed/avatar1/100/100",
+                    "text": "Thanks to AndrGlobal, we have reached a new level of strategic planning. Their team demonstrated a deep understanding of our business and offered truly innovative solutions."
+                },
+                {
+                    "name": "Elena Ivanova",
+                    "title": "CFO, 'InvestGroup'",
+                    "avatar": "https://picsum.photos/seed/avatar2/100/100",
+                    "text": "Professionalism and an individual approach are what distinguish AndrGlobal. They helped us optimize financial flows and significantly reduce costs."
+                }
+            ]
+        },
+        "startCollaboration": {
+            "title": "Start collaborating with us today",
+            "subtitle": "Our team of experts is ready to answer all your questions and provide detailed information about our services.",
+            "formTitle": "Send us a message"
+        }
+    },
+    "contactForm": {
+        "title": "Contact Us",
+        "nameLabel": "Full Name",
+        "namePlaceholder": "John Doe",
+        "emailLabel": "Email Address",
+        "emailPlaceholder": "john.doe@example.com",
+        "messageLabel": "Your Message",
+        "messagePlaceholder": "Tell us how we can help...",
+        "submitButton": "Send Message",
+        "validation": {
+            "name": "Name must be at least 2 characters.",
+            "email": "Please enter a valid email address.",
+            "message": "Message must be at least 10 characters."
+        },
+        "toast": {
+            "title": "Message Sent!",
+            "description": "Thank you for your message. We will get back to you shortly."
+        }
+    },
+    "footer": {
+        "ourProjects": {
+            "title": "Our Partner Projects",
+            "subtitle": "Expanding our expertise into diverse markets."
+        },
+        "learnMore": "Learn More",
+        "projects": {
+            "gold": "Sale and supply of gold to world markets.",
+            "shop": "Wholesale food supplies."
+        },
+        "companyDescription": "Professional business consulting to enhance your strategy and operations.",
+        "quickLinks": {
+            "title": "Quick Links",
+            "consulting": "Consulting",
+            "about": "About Us",
+            "contact": "Contact"
+        },
+        "followUs": {
+            "title": "Follow Us"
+        },
+        "subscribe": {
+            "title": "Subscribe to our newsletter",
+            "placeholder": "Your email",
+            "button": "Subscribe"
+        },
+        "copyright": "AndrGlobal Consulting. All rights reserved."
+    },
+    "consulting": {
+        "hero": {
+            "title": "Comprehensive solutions for your business",
+            "subtitle": "Discover new horizons for your company with our expert support. We will help you develop and implement a strategy that leads to success.",
+            "servicesButton": "Our Services",
+            "contactButton": "Contact Us",
+            "formTitle": "Get a consultation"
+        },
+        "consultingServicesSection": {
+            "title": "Consulting Services",
+            "subtitle": "Turning challenges into opportunities through a strategic partnership aimed at increasing the efficiency of your business."
+        },
+        "services": {
+            "management": {
+                "title": "Management Consulting",
+                "description": "Assistance in developing and implementing effective management systems, optimizing organizational structures, increasing productivity, and developing corporate culture. We analyze current business processes, identify bottlenecks, and offer solutions that lead to significant productivity growth."
+            },
+            "strategic": {
+                "title": "Strategic Consulting",
+                "description": "Development of long-term growth strategies, market analysis, assessment of reserves and internal resources. We help define key development directions, formulate the company's mission and vision, and create a roadmap to achieve strategic goals."
+            },
+            "marketing": {
+                "title": "Marketing Consulting",
+                "description": "Development and optimization of marketing strategies, online analysis, and development of effective promotion methods to increase brand awareness. We will help you build a strong brand and attract new customers."
+            },
+            "it": {
+                "title": "IT Consulting",
+                "description": "Optimization of IT infrastructure, implementation of new technologies, automation of business processes, and ensuring cybersecurity. We will help you use technology as a tool for business growth."
+            },
+            "hr": {
+                "title": "HR Consulting",
+                "description": "Development of effective personnel management systems, recruitment and adaptation of new employees, development of corporate culture, and increasing motivation. We will help you create a dream team for the development of your business."
+            },
+            "legal": {
+                "title": "Legal Consulting",
+                "description": "Expert legal support on a wide range of issues, including corporate law, contract law, labor law, and dispute resolution. We protect your business and minimize legal risks."
+            },
+            "accounting": {
+                "title": "Accounting Consulting",
+                "description": "Optimization of accounting processes, tax planning, preparation of financial statements, and advice on compliance with legislation. We will help you maintain financial order and avoid penalties."
+            }
+        },
+        "financialConsultingSection": {
+            "title": "Financial Consulting",
+            "subtitle": "Managing your assets for maximum profit and sustainable growth of your capital."
+        },
+        "financialServices": {
+            "planning": {
+                "title": "Financial Planning and Budgeting",
+                "description": "Development of comprehensive financial plans and budgets for companies and individuals, and monitoring their implementation."
+            },
+            "investment": {
+                "title": "Investment Consulting",
+                "description": "Analysis of investment opportunities, strategy development, asset portfolio management, and risk minimization."
+            },
+            "financing": {
+                "title": "Attracting Financing",
+                "description": "Assistance in finding and attracting bank loans, investments, grants, and subsidies for the development of your business."
+            }
+        },
+        "startTransformation": {
+            "title": "Start Your Transformation",
+            "subtitle": "Ready to take the next step? Contact us for a personalized consultation.",
+            "formTitle": "Send us a message"
+        }
+    }
+}

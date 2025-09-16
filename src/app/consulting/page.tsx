@@ -1,3 +1,5 @@
+"use client";
+
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { ContactForm } from "@/components/contact-form";
 import { Briefcase, BarChart, Settings, Rocket, Users, ShieldCheck, FileText, Landmark, TrendingUp, Scale } from "lucide-react";
@@ -5,67 +7,68 @@ import Image from "next/image";
 import {PlaceHolderImages} from "@/lib/placeholder-images";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-
-const consultingServices = [
-  {
-    icon: <Briefcase className="h-10 w-10 text-primary" />,
-    title: "Управленческий консалтинг",
-    description: "Помощь в разработке и внедрении эффективных систем управления, оптимизации организационных структур, повышении производительности и развитии корпоративной культуры. Мы анализируем текущие бизнес-процессы, выявляем узкие места и предлагаем решения, которые приводят к значительному росту производительности.",
-  },
-  {
-    icon: <BarChart className="h-10 w-10 text-primary" />,
-    title: "Стратегический консалтинг",
-    description: "Разработка долгосрочных стратегий роста, анализ рынка, оценка резервов и внутренних ресурсов. Мы помогаем определить ключевые направления развития, сформулировать миссию и видение компании, а также создать дорожную карту для достижения стратегических целей.",
-  },
-  {
-    icon: <Rocket className="h-10 w-10 text_primary" />,
-    title: "Маркетинговый консалтинг",
-    description: "Разработка и оптимизация маркетинговых стратегий, онлайн-анализ и разработка эффективных методов продвижения для повышения узнаваемости бренда. Мы поможем вам построить сильный бренд и привлечь новых клиентов.",
-  },
-  {
-    icon: <Settings className="h-10 w-10 text-primary" />,
-    title: "IT-консалтинг",
-    description: "Оптимизация ИТ-инфраструктуры, внедрение новых технологий, автоматизация бизнес-процессов и обеспечение кибербезопасности. Мы поможем вам использовать технологии как инструмент для роста бизнеса.",
-  },
-  {
-    icon: <Users className="h-10 w-10 text-primary" />,
-    title: "Кадровый (HR) консалтинг",
-    description: "Разработка эффективных систем управления персоналом, подбор и адаптация новых сотрудников, развитие корпоративной культуры и повышение мотивации. Мы поможем вам создать команду мечты для развития вашего бизнеса.",
-  },
-  {
-    icon: <ShieldCheck className="h-10 w-10 text-primary" />,
-    title: "Юридический консалтинг",
-    description: "Экспертная юридическая поддержка по широкому спектру вопросов, включая корпоративное право, договорное право, трудовое право и разрешение споров. Мы защищаем ваш бизнес и минимизируем правовые риски.",
-  },
-  {
-    icon: <FileText className="h-10 w-10 text-primary" />,
-    title: "Бухгалтерский консалтинг",
-    description: "Оптимизация бухгалтерских процессов, налоговое планирование, подготовка финансовой отчетности и консультации по вопросам соблюдения законодательства. Мы поможем вам поддерживать финансовый порядок и избегать штрафных санкций.",
-  },
-];
-
-const financialServices = [
-    {
-        icon: <Landmark className="h-10 w-10 text-primary" />,
-        title: "Финансовое планирование и бюджетирование",
-        description: "Разработка комплексных финансовых планов и бюджетов для компаний и частных лиц, контроль за их исполнением.",
-    },
-    {
-        icon: <TrendingUp className="h-10 w-10 text-primary" />,
-        title: "Инвестиционное консультирование",
-        description: "Анализ инвестиционных возможностей, разработка стратегий, управление портфелем активов и минимизация рисков.",
-    },
-    {
-        icon: <Scale className="h-10 w-10 text-primary" />,
-        title: "Привлечение финансирования",
-        description: "Помощь в поиске и привлечении банковских кредитов, инвестиций, грантов и субсидий для развития вашего бизнеса.",
-    }
-];
-
+import { useLanguage } from "@/context/language-context";
 
 export default function ConsultingPage() {
+    const { translations } = useLanguage();
     const targetAudienceImage = PlaceHolderImages.find(p => p.id === 'business-people');
     const teamImage = PlaceHolderImages.find(p => p.id === 'consulting-hero');
+
+    const consultingServices = [
+      {
+        icon: <Briefcase className="h-10 w-10 text-primary" />,
+        title: translations.consulting.services.management.title,
+        description: translations.consulting.services.management.description,
+      },
+      {
+        icon: <BarChart className="h-10 w-10 text-primary" />,
+        title: translations.consulting.services.strategic.title,
+        description: translations.consulting.services.strategic.description,
+      },
+      {
+        icon: <Rocket className="h-10 w-10 text-primary" />,
+        title: translations.consulting.services.marketing.title,
+        description: translations.consulting.services.marketing.description,
+      },
+      {
+        icon: <Settings className="h-10 w-10 text-primary" />,
+        title: translations.consulting.services.it.title,
+        description: translations.consulting.services.it.description,
+      },
+      {
+        icon: <Users className="h-10 w-10 text-primary" />,
+        title: translations.consulting.services.hr.title,
+        description: translations.consulting.services.hr.description,
+      },
+      {
+        icon: <ShieldCheck className="h-10 w-10 text-primary" />,
+        title: translations.consulting.services.legal.title,
+        description: translations.consulting.services.legal.description,
+      },
+      {
+        icon: <FileText className="h-10 w-10 text-primary" />,
+        title: translations.consulting.services.accounting.title,
+        description: translations.consulting.services.accounting.description,
+      },
+    ];
+
+    const financialServices = [
+        {
+            icon: <Landmark className="h-10 w-10 text-primary" />,
+            title: translations.consulting.financialServices.planning.title,
+            description: translations.consulting.financialServices.planning.description,
+        },
+        {
+            icon: <TrendingUp className="h-10 w-10 text-primary" />,
+            title: translations.consulting.financialServices.investment.title,
+            description: translations.consulting.financialServices.investment.description,
+        },
+        {
+            icon: <Scale className="h-10 w-10 text-primary" />,
+            title: translations.consulting.financialServices.financing.title,
+            description: translations.consulting.financialServices.financing.description,
+        }
+    ];
 
   return (
     <div>
@@ -74,23 +77,23 @@ export default function ConsultingPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl font-headline font-bold">
-                Комплексные решения для вашего бизнеса
+                {translations.consulting.hero.title}
               </h1>
               <p className="text-lg text-muted-foreground">
-                Откройте новые горизонты для своей компании с нашей экспертной поддержкой. Мы поможем вам разработать и реализовать стратегию, которая приведет к успеху.
+                {translations.consulting.hero.subtitle}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button size="lg" asChild>
-                  <Link href="#services">Наши Услуги</Link>
+                  <Link href="#services">{translations.consulting.hero.servicesButton}</Link>
                 </Button>
                 <Button size="lg" variant="outline" asChild>
-                  <Link href="#contact-consulting">Связаться с нами</Link>
+                  <Link href="#contact-consulting">{translations.consulting.hero.contactButton}</Link>
                 </Button>
               </div>
             </div>
             <Card className="shadow-lg">
               <CardHeader>
-                <CardTitle>Получить консультацию</CardTitle>
+                <CardTitle>{translations.consulting.hero.formTitle}</CardTitle>
               </CardHeader>
               <CardContent>
                 <ContactForm />
@@ -104,9 +107,9 @@ export default function ConsultingPage() {
         <div className="container mx-auto px-4 md:px-6 space-y-16">
             <div>
                 <div className="text-center space-y-4 mb-12">
-                    <h2 className="text-3xl md:text-4xl font-headline font-bold">Консалтинговые услуги</h2>
+                    <h2 className="text-3xl md:text-4xl font-headline font-bold">{translations.consulting.consultingServicesSection.title}</h2>
                     <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                        Превращаем вызовы в возможности через стратегическое партнерство, направленное на повышение эффективности вашего бизнеса.
+                        {translations.consulting.consultingServicesSection.subtitle}
                     </p>
                 </div>
                 <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
@@ -140,9 +143,9 @@ export default function ConsultingPage() {
             
             <div>
                 <div className="text-center space-y-4 mb-12">
-                    <h2 className="text-3xl md:text-4xl font-headline font-bold">Финансовый консалтинг</h2>
+                    <h2 className="text-3xl md:text-4xl font-headline font-bold">{translations.consulting.financialConsultingSection.title}</h2>
                     <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                        Управление вашими активами для максимальной прибыли и устойчивого роста вашего капитала.
+                        {translations.consulting.financialConsultingSection.subtitle}
                     </p>
                 </div>
                 <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
@@ -179,14 +182,14 @@ export default function ConsultingPage() {
       <section className="bg-secondary/50 py-16 md:py-24" id="contact-consulting">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center space-y-4 mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold">Начните Вашу трансформацию</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold">{translations.consulting.startTransformation.title}</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Готовы сделать следующий шаг? Свяжитесь с нами для индивидуальной консультации.
+              {translations.consulting.startTransformation.subtitle}
             </p>
           </div>
           <Card className="max-w-2xl mx-auto">
             <CardHeader>
-              <CardTitle>Отправьте нам сообщение</CardTitle>
+              <CardTitle>{translations.consulting.startTransformation.formTitle}</CardTitle>
             </CardHeader>
             <CardContent className="p-6 md:p-8">
               <ContactForm />

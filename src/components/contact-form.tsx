@@ -16,21 +16,23 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-
-const formSchema = z.object({
-  name: z.string().min(2, {
-    message: "Имя должно содержать не менее 2 символов.",
-  }),
-  email: z.string().email({
-    message: "Пожалуйста, введите действительный адрес электронной почты.",
-  }),
-  message: z.string().min(10, {
-    message: "Сообщение должно содержать не менее 10 символов.",
-  }),
-});
+import { useLanguage } from "@/context/language-context";
 
 export function ContactForm() {
+    const { translations } = useLanguage();
     const { toast } = useToast();
+
+    const formSchema = z.object({
+        name: z.string().min(2, {
+            message: translations.contactForm.validation.name,
+        }),
+        email: z.string().email({
+            message: translations.contactForm.validation.email,
+        }),
+        message: z.string().min(10, {
+            message: translations.contactForm.validation.message,
+        }),
+    });
 
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
@@ -44,8 +46,8 @@ export function ContactForm() {
     function onSubmit(values: z.infer<typeof formSchema>) {
         console.log(values);
         toast({
-            title: "Сообщение отправлено!",
-            description: "Спасибо за ваше обращение. Мы свяжемся с вами в ближайшее время.",
+            title: translations.contactForm.toast.title,
+            description: translations.contactForm.toast.description,
         });
         form.reset();
     }
@@ -58,9 +60,9 @@ export function ContactForm() {
                     name="name"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Полное имя</FormLabel>
+                            <FormLabel>{translations.contactForm.nameLabel}</FormLabel>
                             <FormControl>
-                                <Input placeholder="Иван Иванов" {...field} />
+                                <Input placeholder={translations.contactForm.namePlaceholder} {...field} />
                             </FormControl>
                             <FormMessage />
                         </FormItem>
@@ -71,9 +73,9 @@ export function ContactForm() {
                     name="email"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Адрес электронной почты</FormLabel>
+                            <FormLabel>{translations.contactForm.emailLabel}</FormLabel>
                             <FormControl>
-                                <Input placeholder="ivan.ivanov@example.com" {...field} />
+                                <Input placeholder={translations.contactForm.emailPlaceholder} {...field} />
                             </FormControl>
                             <FormMessage />
                         </FormItem>
@@ -84,10 +86,10 @@ export function ContactForm() {
                     name="message"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Ваше сообщение</FormLabel>
+                            <FormLabel>{translations.contactForm.messageLabel}</FormLabel>
                             <FormControl>
                                 <Textarea
-                                    placeholder="Расскажите, как мы можем помочь..."
+                                    placeholder={translations.contactForm.messagePlaceholder}
                                     className="min-h-[120px]"
                                     {...field}
                                 />
@@ -96,8 +98,7 @@ export function ContactForm() {
                         </FormItem>
                     )}
                 />
-                <Button type="submit" className="w-full">Отправить сообщение</Button>
-            </form>
-        </Form>
+                <Button type="submit" className="w-full">{translations.contactForm.submitButton}</Button>
+            </form>        </Form>
     );
 }

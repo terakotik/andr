@@ -12,30 +12,25 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-
-const navLinks = [
-  { href: "/#about", label: "О нас" },
-  { href: "/consulting", label: "Консалтинг" },
-  { href: "/#contact", label: "Контакты" },
-];
-
-const projectLinks = [
-  { href: "/projects/gold", label: "ANDROGOLD" },
-  { href: "/projects/shop", label: "ANDRESHOP" },
-];
-
-const languages = [
-    { code: 'RU', name: 'Русский' },
-    { code: 'EN', name: 'English' },
-    { code: 'CN', name: '中文' },
-]
+import { useLanguage, languages, Language } from '@/context/language-context';
 
 export function Header() {
+  const { language, setLanguage, translations } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
-  const [currentLang, setCurrentLang] = useState('RU');
 
   const closeMenu = () => setIsMenuOpen(false);
+
+  const navLinks = [
+    { href: "/#about", label: translations.header.about },
+    { href: "/consulting", label: translations.header.consulting },
+    { href: "/#contact", label: translations.header.contact },
+  ];
+
+  const projectLinks = [
+    { href: "/projects/gold", label: "ANDROGOLD" },
+    { href: "/projects/shop", label: "ANDRESHOP" },
+  ];
 
   return (
     <header className="bg-background/80 backdrop-blur-sm sticky top-0 z-50 border-b">
@@ -60,7 +55,7 @@ export function Header() {
           ))}
           <DropdownMenu>
             <DropdownMenuTrigger className="flex items-center gap-1 text-foreground/80 transition-colors hover:text-foreground focus:outline-none">
-              Наши проекты
+              {translations.header.projects}
               <ChevronDown className="h-4 w-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent>
@@ -82,16 +77,16 @@ export function Header() {
                     </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end">
-                    {languages.map((lang) => (
-                        <DropdownMenuItem key={lang.code} onSelect={() => setCurrentLang(lang.code)}>
-                            {lang.name} {currentLang === lang.code && <span className="ml-auto">✓</span>}
+                    {Object.values(languages).map((lang: Language) => (
+                        <DropdownMenuItem key={lang.code} onSelect={() => setLanguage(lang.code)}>
+                            {lang.name} {language === lang.code && <span className="ml-auto">✓</span>}
                         </DropdownMenuItem>
                     ))}
                 </DropdownMenuContent>
             </DropdownMenu>
 
           <Button asChild className="hidden md:flex">
-            <Link href="/#contact">Связаться с нами</Link>
+            <Link href="/#contact">{translations.header.contactUs}</Link>
           </Button>
           <Button
             variant="ghost"
@@ -120,7 +115,7 @@ export function Header() {
             ))}
              <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center justify-between w-full text-foreground/80 hover:text-foreground text-lg">
-                Наши проекты
+                {translations.header.projects}
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-[calc(100vw-2rem)]">
@@ -132,7 +127,7 @@ export function Header() {
               </DropdownMenuContent>
             </DropdownMenu>
             <Button asChild className="w-full mt-2" size="lg">
-              <Link href="/#contact" onClick={closeMenu}>Связаться с нами</Link>
+              <Link href="/#contact" onClick={closeMenu}>{translations.header.contactUs}</Link>
             </Button>
           </nav>
         </div>
