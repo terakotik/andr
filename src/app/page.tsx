@@ -68,14 +68,16 @@ export default function Home() {
   return (
     <div className="flex flex-col">
 
-      <section className="relative bg-background py-16 md:py-24">
-        <Image
-            src="https://newdaynews.ru/pict/arts1/76/27/762751_b.jpg"
-            alt="Businessman"
-            fill
-            className="object-cover brightness-50"
-            data-ai-hint="businessman professional"
-        />
+      <section className="relative bg-background py-16 md:py-24 overflow-hidden">
+        <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute top-0 left-0 w-full h-full object-cover brightness-50 z-0"
+        >
+            <source src="https://videos.pexels.com/video-files/3209828/3209828-hd_1920_1080_25fps.mp4" type="video/mp4" />
+        </video>
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
