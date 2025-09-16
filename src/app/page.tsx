@@ -5,9 +5,10 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { CheckCircle2, ArrowRight, BarChart, Briefcase, Rocket, Settings, Users, ShieldCheck } from 'lucide-react';
+import { CheckCircle2, ArrowRight, BarChart, Briefcase, Rocket, Settings, Users, ShieldCheck, Gem, Leaf } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ContactForm } from '@/components/contact-form';
+import React from 'react';
 import {
   Accordion,
   AccordionContent,
@@ -19,6 +20,24 @@ import { useLanguage } from '@/context/language-context';
 export default function Home() {
   const { translations } = useLanguage();
   const heroInvestImage = PlaceHolderImages.find(p => p.id === 'hero-invest');
+
+    const keyDirections = [
+    {
+      icon: <Gem className="h-8 w-8 text-primary" />,
+      title: "Торговля драгоценными металлами",
+      href: "/projects/gold",
+    },
+    {
+      icon: <Briefcase className="h-8 w-8 text-primary" />,
+      title: "Профессиональный консалтинг",
+      href: "/consulting",
+    },
+    {
+      icon: <Leaf className="h-8 w-8 text-primary" />,
+      title: "Поставки продовольствия",
+      href: "/projects/shop",
+    },
+  ];
 
   const featuredServices = [
     {
@@ -84,6 +103,16 @@ export default function Home() {
               <p className="text-lg text-gray-200">
                 {translations.home.hero.subtitle}
               </p>
+               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+                {keyDirections.map((direction) => (
+                  <Link key={direction.title} href={direction.href} className="bg-white/10 backdrop-blur-sm p-4 rounded-lg flex flex-col items-center justify-center text-center text-white hover:bg-white/20 transition-colors">
+                      <div className="p-3 bg-white/20 rounded-md mb-3">
+                        {direction.icon}
+                      </div>
+                      <span className="text-xs font-semibold">{direction.title}</span>
+                  </Link>
+                ))}
+              </div>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button size="lg" asChild>
                   <Link href="/consulting">{translations.home.hero.servicesButton}</Link>
@@ -115,32 +144,33 @@ export default function Home() {
             </p>
           </div>
           <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-            {featuredServices.map((service) => (
-              <Card key={service.title} className="flex flex-col overflow-hidden">
-                 <div className="flex flex-col md:flex-row items-center md:items-start text-center md:text-left p-6">
-                    <div className="p-4 bg-primary/10 rounded-full w-fit flex-shrink-0">
-                        {service.icon}
-                    </div>
-                    <div className="md:ml-6 mt-4 md:mt-0 w-full">
-                        <CardTitle className="font-headline text-xl mb-2">{service.title}</CardTitle>
-                        <CardDescription>{service.description}</CardDescription>
-                    </div>
-                 </div>
-
-                <Accordion type="single" collapsible className="w-full">
-                  <AccordionItem value={service.title} className="border-t">
-                    <AccordionTrigger className="px-6 justify-start text-sm text-primary hover:underline">
-                      {translations.home.learnMore}
-                    </AccordionTrigger>
-                    <AccordionContent className="px-6 pb-6 text-muted-foreground">
-                      <p className="mb-4">{service.details}</p>
-                      <Button asChild>
-                        <Link href="https://wa.me/6289530825574" target="_blank">{translations.home.orderButton}</Link>
-                      </Button>
-                    </AccordionContent>
-                  </AccordionItem>
-                </Accordion>
-              </Card>
+            {featuredServices.map((service, index) => (
+              <div key={service.title} className="flex flex-col">
+                <Card className="flex-grow">
+                  <div className="flex flex-col md:flex-row items-center md:items-start text-center md:text-left p-6">
+                      <div className="p-4 bg-primary/10 rounded-full w-fit flex-shrink-0">
+                          {service.icon}
+                      </div>
+                      <div className="md:ml-6 mt-4 md:mt-0 w-full">
+                          <CardTitle className="font-headline text-xl mb-2">{service.title}</CardTitle>
+                          <CardDescription>{service.description}</CardDescription>
+                      </div>
+                  </div>
+                  <Accordion type="single" collapsible className="w-full">
+                    <AccordionItem value={service.title} className="border-t">
+                      <AccordionTrigger className="px-6 justify-start text-sm text-primary hover:underline">
+                        {translations.home.learnMore}
+                      </AccordionTrigger>
+                      <AccordionContent className="px-6 pb-6 text-muted-foreground">
+                        <p className="mb-4">{service.details}</p>
+                        <Button asChild>
+                          <Link href="https://wa.me/6289530825574" target="_blank">{translations.home.orderButton}</Link>
+                        </Button>
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
+                </Card>
+              </div>
             ))}
           </div>
         </div>
