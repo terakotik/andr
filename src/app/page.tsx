@@ -2,33 +2,33 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { CheckCircle2, ArrowRight, Briefcase, BarChart, Settings } from 'lucide-react';
+import { CheckCircle2, ArrowRight, Gem, Briefcase, ShoppingCart } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ContactForm } from '@/components/contact-form';
 
 const services = [
   {
+    icon: <Gem className="h-8 w-8 text-accent" />,
+    title: 'Торговля золотом',
+    description: 'Высококачественное золото в слитках (93-97%), сертифицированное по международным стандартам.',
+  },
+  {
     icon: <Briefcase className="h-8 w-8 text-accent" />,
-    title: 'Strategic Planning',
-    description: 'Developing robust strategies to navigate market complexities and drive long-term growth.',
+    title: 'Консалтинговые услуги',
+    description: 'Комплексные услуги по развитию бизнеса, включая стратегическое и операционное планирование.',
   },
   {
-    icon: <BarChart className="h-8 w-8 text-accent" />,
-    title: 'Market Analysis',
-    description: 'In-depth market research and analysis to identify opportunities and mitigate risks.',
-  },
-  {
-    icon: <Settings className="h-8 w-8 text-accent" />,
-    title: 'Operational Improvement',
-    description: 'Optimizing your business processes for enhanced efficiency and performance.',
+    icon: <ShoppingCart className="h-8 w-8 text-accent" />,
+    title: 'Торговля продовольствием',
+    description: 'Поставки высококачественных продовольственных товаров по всему миру.',
   },
 ];
 
 const whyChooseUsPoints = [
-  'Expert-led teams with deep industry knowledge',
-  'Data-driven insights for informed decision-making',
-  'Tailored solutions for your unique business challenges',
-  'Proven track record of delivering measurable results',
+  'Глобальная экспертиза и знание локальных рынков',
+  'Надежность и полная прозрачность сделок',
+  'Индивидуальный подход к каждому клиенту',
+  'Активное использование технологических инноваций',
 ];
 
 export default function Home() {
@@ -42,17 +42,17 @@ export default function Home() {
         <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center px-4 md:px-6 py-20 md:py-28">
           <div className="space-y-6 text-center md:text-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold tracking-tighter">
-              Professional Business Consulting
+              Добро пожаловать в мир надежных инвестиций и международной торговли
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto md:mx-0">
-              AndrGlobal provides expert guidance to elevate your business strategy, optimize operations, and unlock sustainable growth.
+              Ваш стратегический партнер в глобальном бизнесе. Мы специализируемся на торговле драгоценными металлами, профессиональном консалтинге и поставках высококачественного продовольствия.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Button asChild size="lg" variant="secondary">
-                <Link href="/consulting">Explore Services</Link>
+                <Link href="/consulting">Наши Услуги</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="bg-transparent border-primary-foreground/50 hover:bg-primary-foreground/10 text-primary-foreground">
-                <Link href="/#contact">Book a Consultation</Link>
+                <Link href="/#contact">Связаться с нами</Link>
               </Button>
             </div>
           </div>
@@ -75,9 +75,9 @@ export default function Home() {
       <section className="py-16 md:py-24" id="services">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center space-y-4 mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold">Core Consulting Areas</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold">Наши направления деятельности</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              We focus on the critical areas that drive business success and create lasting value for our clients.
+              Мы создаем устойчивые деловые отношения, основанные на доверии, профессионализме и взаимной выгоде.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -96,7 +96,7 @@ export default function Home() {
           <div className="text-center mt-12">
             <Button asChild size="lg">
               <Link href="/consulting">
-                View All Services <ArrowRight className="ml-2 h-5 w-5" />
+                Посмотреть все услуги <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
           </div>
@@ -118,9 +118,9 @@ export default function Home() {
             </div>
           )}
           <div className="space-y-6">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold">Your Partner in Growth</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold">Наши конкурентные преимущества</h2>
             <p className="text-lg text-muted-foreground">
-              At AndrGlobal, we are more than just consultants; we are your dedicated partners in achieving excellence. Our approach is collaborative, transparent, and relentlessly focused on delivering results that matter.
+              Успех нашей компании основан на уникальном сочетании глобальной экспертизы и глубокого понимания локальных особенностей различных рынков.
             </p>
             <ul className="space-y-3">
               {whyChooseUsPoints.map((point) => (
@@ -138,9 +138,9 @@ export default function Home() {
       <section className="py-16 md:py-24" id="contact">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center space-y-4 mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold">Let's Discuss Your Project</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold">Начните сотрудничество с нами сегодня</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Fill out the form below to schedule a free consultation with one of our experts.
+             Наша команда экспертов готова ответить на все ваши вопросы и предоставить детальную информацию о наших услугах.
             </p>
           </div>
           <Card className="max-w-2xl mx-auto">

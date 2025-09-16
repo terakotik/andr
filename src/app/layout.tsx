@@ -5,8 +5,8 @@ import { Footer } from '@/components/layout/footer';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'AndrGlobal Consulting',
-  description: 'Professional business consulting to elevate your strategy and operations.',
+  title: 'AndrGf | Надежные инвестиции и международная торговля',
+  description: 'Ваш стратегический партнер в глобальном бизнесе. Мы специализируемся на торговле драгоценными металлами, профессиональном консалтинге и поставках высококачественного продовольствия.',
 };
 
 export default function RootLayout({
@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+    <html lang="ru" className="scroll-smooth" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
