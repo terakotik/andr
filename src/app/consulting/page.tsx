@@ -3,6 +3,8 @@ import { ContactForm } from "@/components/contact-form";
 import { Briefcase, BarChart, Settings, Rocket, Users, ShieldCheck, FileText, Landmark, TrendingUp, Scale } from "lucide-react";
 import Image from "next/image";
 import {PlaceHolderImages} from "@/lib/placeholder-images";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const consultingServices = [
   {
@@ -64,32 +66,46 @@ const financialServices = [
 export default function ConsultingPage() {
     const targetAudienceImage = PlaceHolderImages.find(p => p.id === 'business-people');
     const teamImage = PlaceHolderImages.find(p => p.id === 'consulting-hero');
-    const heroImage = PlaceHolderImages.find(p => p.id === 'consulting-main');
+    const heroImage = PlaceHolderImages.find(p => p.id === 'hero-invest');
 
   return (
     <div>
-       {heroImage && (
-        <section className="relative h-[50vh] flex items-center justify-center text-center text-white">
-          <Image
-            src={heroImage.imageUrl}
-            alt={heroImage.description}
-            fill
-            className="object-cover brightness-50"
-            data-ai-hint={heroImage.imageHint}
-            priority
-          />
-          <div className="relative z-10 space-y-6 px-4">
-            <h1 className="text-4xl md:text-5xl font-headline font-bold">
-              Ваш путь к успеху: Комплексные консалтинговые и финансовые решения
-            </h1>
-            <p className="text-lg text-white/80 mt-4 max-w-3xl mx-auto">
-              Мы специализируемся на предоставлении высококачественных консалтинговых и финансовых услуг, разработанных для того, чтобы помочь вам не просто адаптироваться к изменениям, но и активно формировать свое будущее.
-            </p>
+      <section className="bg-background py-16 md:py-24">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center bg-card p-8 md:p-12 rounded-2xl shadow-lg">
+            <div className="space-y-6">
+              <h1 className="text-4xl md:text-5xl font-headline font-bold text-card-foreground">
+                Добро пожаловать в мир надежных инвестиций и международной торговли
+              </h1>
+              <p className="text-lg text-muted-foreground">
+                Ваш стратегический партнер в глобальном бизнесе. Мы — ведущая международная компания, специализирующаяся на трех ключевых направлениях: торговле драгоценными металлами, профессиональном консалтинге и поставках высококачественного продовольствия на мировые рынки.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <Button asChild size="lg">
+                  <Link href="#services">Наши Услуги</Link>
+                </Button>
+                <Button asChild size="lg" variant="outline">
+                  <Link href="#contact-consulting">Связаться с нами</Link>
+                </Button>
+              </div>
+            </div>
+            {heroImage && (
+              <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg group">
+                  <Image
+                      src={heroImage.imageUrl}
+                      alt={heroImage.description}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      data-ai-hint={heroImage.imageHint}
+                      priority
+                  />
+              </div>
+            )}
           </div>
-        </section>
-      )}
+        </div>
+      </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24" id="services">
         <div className="container mx-auto px-4 md:px-6 space-y-16">
             <div>
                 <div className="text-center space-y-4 mb-12">
