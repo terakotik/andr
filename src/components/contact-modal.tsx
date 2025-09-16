@@ -21,11 +21,11 @@ interface ContactModalProps {
 export function ContactModal({ isOpen, onOpenChange }: ContactModalProps) {
   const whatsappLink = "https://wa.me/6289530825574";
   const phoneLink = "tel:+6289530825574";
-  const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(whatsappLink)}`;
+  const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(whatsappLink)}`;
   
   return (
     <Dialog open={isOpen} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-2xl p-8">
+      <DialogContent className="sm:max-w-3xl p-8">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-center">
             Мы на связи в мессенджерах
@@ -40,7 +40,6 @@ export function ContactModal({ isOpen, onOpenChange }: ContactModalProps) {
             </Button>
             <Button asChild className="w-full bg-green-500 hover:bg-green-600 text-white text-lg py-6">
                 <Link href={whatsappLink} target="_blank" className="flex items-center justify-center">
-                    <WhatsAppIcon className="h-6 w-6 mr-2"/>
                     WhatsApp
                 </Link>
             </Button>
@@ -51,8 +50,8 @@ export function ContactModal({ isOpen, onOpenChange }: ContactModalProps) {
                  <Image
                     src={qrCodeUrl}
                     alt="WhatsApp QR Code"
-                    width={200}
-                    height={200}
+                    width={250}
+                    height={250}
                 />
             </div>
           </div>

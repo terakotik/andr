@@ -41,7 +41,7 @@ export function Header() {
   const navLinks = [
     { href: "/#about", label: translations.header.about },
     { href: "/consulting", label: translations.header.consulting },
-    { href: "/#contact", label: translations.header.contact, onClick: handleContactClick },
+    { href: "#", label: translations.header.contact, onClick: handleContactClick },
   ];
 
   const projectLinks = [
@@ -146,7 +146,7 @@ export function Header() {
                 </DropdownMenuContent>
               </DropdownMenu>
               <Button asChild className="w-full mt-2" size="lg">
-                <Link href="/#contact" onClick={handleContactClick}>{translations.header.contactUs}</Link>
+                <Link href="#" onClick={handleContactClick}>{translations.header.contactUs}</Link>
               </Button>
             </nav>
           </div>
