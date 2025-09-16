@@ -3,14 +3,14 @@
     {
       "id": "consulting-hero",
       "description": "A modern office meeting for the hero section.",
-      "imageUrl": "https://picsum.photos/seed/hero/1200/800",
+      "imageUrl": "https://picsum.photos/seed/people/1200/800",
       "imageHint": "office meeting"
     },
     {
-      "id": "strategic-planning",
-      "description": "A chessboard representing strategic planning.",
-      "imageUrl": "https://picsum.photos/seed/strategy/600/400",
-      "imageHint": "strategy chess"
+      "id": "business-people",
+      "description": "Business people collaborating on a project.",
+      "imageUrl": "https://picsum.photos/seed/business/600/400",
+      "imageHint": "business people"
     },
     {
       "id": "market-analysis",
