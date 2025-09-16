@@ -68,53 +68,40 @@ const financialServices = [
 export default function ConsultingPage() {
     const targetAudienceImage = PlaceHolderImages.find(p => p.id === 'business-people');
     const teamImage = PlaceHolderImages.find(p => p.id === 'consulting-hero');
-    const heroImage = PlaceHolderImages.find(p => p.id === 'consulting-main');
 
   return (
     <div>
-      {heroImage && (
-        <section className="relative bg-black text-white py-20 md:py-32">
-            <Image
-                src={heroImage.imageUrl}
-                alt={heroImage.description}
-                fill
-                className="object-cover opacity-30"
-                data-ai-hint={heroImage.imageHint}
-                priority
-            />
-            <div className="container mx-auto px-4 md:px-6 relative z-10">
-                <div className="max-w-3xl text-center mx-auto">
-                    <h1 className="text-4xl md:text-6xl font-headline font-bold mb-4">Комплексные решения для вашего бизнеса</h1>
-                    <p className="text-lg md:text-xl text-gray-300 mb-8">
-                        Откройте новые горизонты для своей компании с нашей экспертной поддержкой. Мы поможем вам разработать и реализовать стратегию, которая приведет к успеху.
-                    </p>
-                    <div className="bg-white p-4 rounded-lg shadow-lg max-w-xl mx-auto">
-                        <div className="flex flex-col sm:flex-row gap-2">
-                            <div className="relative flex-grow">
-                                <Phone className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
-                                <Input type="tel" placeholder="+7 (999) 999-99-99" className="pl-10 w-full text-gray-900" />
-                            </div>
-                            <Button size="lg" className="w-full sm:w-auto">
-                                Получить консультацию
-                                <Send className="ml-2 h-5 w-5" />
-                            </Button>
-                        </div>
-                        <div className="flex items-center justify-center gap-4 mt-4">
-                            <p className="text-sm text-gray-500">Или напишите нам в мессенджеры:</p>
-                            <div className="flex gap-3">
-                                <Link href="#" aria-label="Telegram">
-                                    <TelegramIcon className="w-8 h-8 hover:opacity-80 transition-opacity" />
-                                </Link>
-                                <Link href="#" aria-label="WhatsApp">
-                                    <WhatsAppIcon className="w-8 h-8 hover:opacity-80 transition-opacity" />
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <section className="bg-background py-16 md:py-24">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <h1 className="text-4xl md:text-5xl font-headline font-bold">
+                Комплексные решения для вашего бизнеса
+              </h1>
+              <p className="text-lg text-muted-foreground">
+                Откройте новые горизонты для своей компании с нашей экспертной поддержкой. Мы поможем вам разработать и реализовать стратегию, которая приведет к успеху.
+              </p>
+              <div className="flex gap-4 pt-4">
+                <Button size="lg" asChild>
+                  <Link href="#services">Наши Услуги</Link>
+                </Button>
+                <Button size="lg" variant="outline" asChild>
+                  <Link href="#contact-consulting">Связаться с нами</Link>
+                </Button>
+              </div>
             </div>
-        </section>
-      )}
+            <Card className="shadow-lg">
+              <CardHeader>
+                <CardTitle>Получить консультацию</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ContactForm />
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 md:py-24" id="services">
         <div className="container mx-auto px-4 md:px-6 space-y-16">
             <div>
@@ -196,6 +183,9 @@ export default function ConsultingPage() {
             </p>
           </div>
           <Card className="max-w-2xl mx-auto">
+            <CardHeader>
+              <CardTitle>Отправьте нам сообщение</CardTitle>
+            </CardHeader>
             <CardContent className="p-6 md:p-8">
               <ContactForm />
             </CardContent>
