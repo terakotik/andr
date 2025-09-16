@@ -21,24 +21,6 @@ export default function Home() {
   const { translations } = useLanguage();
   const heroInvestImage = PlaceHolderImages.find(p => p.id === 'hero-invest');
 
-    const keyDirections = [
-    {
-      icon: <Gem className="h-8 w-8 text-white" />,
-      title: "Торговля драгоценными металлами",
-      href: "/projects/gold",
-    },
-    {
-      icon: <Briefcase className="h-8 w-8 text-white" />,
-      title: "Профессиональный консалтинг",
-      href: "/consulting",
-    },
-    {
-      icon: <Leaf className="h-8 w-8 text-white" />,
-      title: "Поставки продовольствия",
-      href: "/projects/shop",
-    },
-  ];
-
   const featuredServices = [
     {
       icon: <Briefcase className="h-10 w-10 text-primary" />,
@@ -103,16 +85,6 @@ export default function Home() {
               <p className="text-lg text-gray-200">
                 {translations.home.hero.subtitle}
               </p>
-               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
-                {keyDirections.map((direction) => (
-                  <Link key={direction.title} href={direction.href} className="bg-black/20 backdrop-blur-md p-6 rounded-xl flex flex-col items-center justify-center text-center text-white hover:bg-black/30 transition-colors h-48">
-                      <div className="p-4 bg-white/10 rounded-lg mb-4">
-                        {direction.icon}
-                      </div>
-                      <span className="font-semibold">{direction.title.split(' ').slice(0, 2).join(' ')}<br/>{direction.title.split(' ').slice(2).join(' ')}</span>
-                  </Link>
-                ))}
-              </div>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button size="lg" asChild>
                   <Link href="/consulting">{translations.home.hero.servicesButton}</Link>
