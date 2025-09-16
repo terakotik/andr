@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X, Globe } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { AndrGlobalLogo } from "@/components/icons";
@@ -15,7 +15,9 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 const navLinks = [
+  { href: "/#about", label: "О нас" },
   { href: "/consulting", label: "Консалтинг" },
+  { href: "/#contact", label: "Контакты" },
 ];
 
 const projectLinks = [
@@ -23,9 +25,16 @@ const projectLinks = [
   { href: "/projects/shop", label: "ANDRESHOP" },
 ];
 
+const languages = [
+    { code: 'RU', name: 'Русский' },
+    { code: 'EN', name: 'English' },
+    { code: 'CN', name: '中文' },
+]
+
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
+  const [currentLang, setCurrentLang] = useState('RU');
 
   return (
     <header className="bg-background/80 backdrop-blur-sm sticky top-0 z-50 border-b">
@@ -42,7 +51,7 @@ export function Header() {
               href={link.href}
               className={cn(
                 "text-foreground/80 transition-colors hover:text-foreground",
-                pathname === link.href && "text-foreground font-semibold"
+                (pathname === link.href || (link.href.includes('#') && pathname === '/')) && "text-foreground font-semibold"
               )}
             >
               {link.label}
@@ -63,7 +72,23 @@ export function Header() {
           </DropdownMenu>
         </nav>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2">
+            <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                    <Button variant="ghost" size="icon">
+                        <Globe className="h-5 w-5" />
+                        <span className="sr-only">Выбрать язык</span>
+                    </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end">
+                    {languages.map((lang) => (
+                        <DropdownMenuItem key={lang.code} onSelect={() => setCurrentLang(lang.code)}>
+                            {lang.name} {currentLang === lang.code && <span className="ml-auto">✓</span>}
+                        </DropdownMenuItem>
+                    ))}
+                </DropdownMenuContent>
+            </DropdownMenu>
+
           <Button asChild className="hidden md:flex">
             <Link href="/#contact">Связаться с нами</Link>
           </Button>
