@@ -1,26 +1,30 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { CheckCircle2, ArrowRight, Gem, Briefcase, ShoppingCart } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { CheckCircle2, ArrowRight, Briefcase, BarChart, Rocket } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ContactForm } from '@/components/contact-form';
 
-const services = [
+const featuredServices = [
   {
-    icon: <Gem className="h-8 w-8 text-accent" />,
-    title: 'Торговля золотом',
-    description: 'Высококачественное золото в слитках (93-97%), сертифицированное по международным стандартам.',
+    icon: <BarChart className="h-10 w-10 text-primary" />,
+    title: 'Стратегический консалтинг',
+    description: 'Разработка долгосрочных стратегий для определения ключевых направлений роста.',
+    href: '/consulting'
   },
   {
-    icon: <Briefcase className="h-8 w-8 text-accent" />,
-    title: 'Консалтинговые услуги',
-    description: 'Комплексные услуги по развитию бизнеса, включая стратегическое и операционное планирование.',
+    icon: <Briefcase className="h-10 w-10 text-primary" />,
+    title: 'Управленческий консалтинг',
+    description: 'Оптимизация организационной структуры и повышение производительности.',
+     href: '/consulting'
   },
   {
-    icon: <ShoppingCart className="h-8 w-8 text-accent" />,
-    title: 'Торговля продовольствием',
-    description: 'Поставки высококачественных продовольственных товаров по всему миру.',
+    icon: <Rocket className="h-10 w-10 text-primary" />,
+    title: 'Маркетинговый консалтинг',
+    description: 'Создание и оптимизация маркетинговых стратегий для продвижения вашего бренда.',
+     href: '/consulting'
   },
 ];
 
@@ -31,6 +35,21 @@ const whyChooseUsPoints = [
   'Активное использование технологических инноваций',
 ];
 
+const testimonials = [
+    {
+        name: "Алексей Петров",
+        title: "Генеральный директор, 'ТехноСтрой'",
+        avatar: "https://picsum.photos/seed/avatar1/100/100",
+        text: "Благодаря AndrGlobal мы вышли на новый уровень стратегического планирования. Их команда продемонстрировала глубокое понимание нашего бизнеса и предложила действительно инновационные решения."
+    },
+    {
+        name: "Елена Иванова",
+        title: "Финансовый директор, 'ИнвестГрупп'",
+        avatar: "https://picsum.photos/seed/avatar2/100/100",
+        text: "Профессионализм и индивидуальный подход — вот что отличает AndrGlobal. Они помогли нам оптимизировать финансовые потоки и значительно снизить издержки."
+    }
+];
+
 export default function Home() {
   const heroImage = PlaceHolderImages.find(p => p.id === 'consulting-hero');
   const strategyImage = PlaceHolderImages.find(p => p.id === 'business-people');
@@ -38,20 +57,20 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="bg-primary text-primary-foreground">
+      <section className="bg-background">
         <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center px-4 md:px-6 py-20 md:py-28">
           <div className="space-y-6 text-center md:text-left">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold tracking-tighter">
-              Добро пожаловать в мир надежных инвестиций и международной торговли
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold tracking-tighter text-primary">
+             Ваш путь к успеху через стратегический консалтинг
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto md:mx-0">
-              Ваш стратегический партнер в глобальном бизнесе. Мы — ведущая международная компания, специализирующаяся на трех ключевых направлениях: торговле драгоценными металлами, профессиональном консалтинге и поставках высококачественного продовольствия на мировые рынки.
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto md:mx-0">
+              Мы помогаем компаниям достигать выдающихся результатов, превращая вызовы в возможности для роста.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <Button asChild size="lg" variant="secondary">
+              <Button asChild size="lg">
                 <Link href="/consulting">Наши Услуги</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="bg-transparent border-primary-foreground/50 hover:bg-primary-foreground/10 text-primary-foreground">
+              <Button asChild size="lg" variant="outline">
                 <Link href="/#contact">Связаться с нами</Link>
               </Button>
             </div>
@@ -71,40 +90,38 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Highlight Section */}
-      <section className="py-16 md:py-24" id="services">
+      {/* Featured Services Section */}
+      <section className="py-16 md:py-24 bg-secondary/50" id="services">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center space-y-4 mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold">Наши направления деятельности</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold">Ключевые направления консалтинга</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Мы создаем устойчивые деловые отношения, основанные на доверии, профессионализме и взаимной выгоде.
+              Мы предлагаем комплексные решения для стратегического развития вашего бизнеса.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            {services.map((service) => (
-              <Card key={service.title} className="text-center hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
-                <CardHeader>
-                  <div className="mx-auto bg-secondary rounded-full p-4 w-fit mb-4">{service.icon}</div>
+            {featuredServices.map((service) => (
+              <Card key={service.title} className="flex flex-col text-center items-center hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
+                <CardHeader className="items-center">
+                  <div className="bg-primary/10 rounded-full p-4 w-fit mb-4">{service.icon}</div>
                   <CardTitle className="font-headline text-xl">{service.title}</CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="flex-grow">
                   <p className="text-muted-foreground">{service.description}</p>
                 </CardContent>
+                <div className="p-6 pt-0">
+                    <Button asChild variant="link">
+                        <Link href={service.href}>Узнать больше <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                    </Button>
+                </div>
               </Card>
             ))}
-          </div>
-          <div className="text-center mt-12">
-            <Button asChild size="lg">
-              <Link href="/consulting">
-                Посмотреть все услуги <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
           </div>
         </div>
       </section>
       
       {/* Why Choose Us Section */}
-      <section className="bg-secondary/50 py-16 md:py-24" id="about">
+      <section className="bg-background py-16 md:py-24" id="about">
         <div className="container mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-12 items-center">
           {strategyImage && (
             <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg group">
@@ -122,16 +139,49 @@ export default function Home() {
             <p className="text-lg text-muted-foreground">
             Успех нашей компании основан на уникальном сочетании глобальной экспертизы и глубокого понимания локальных особенностей различных рынков.
             </p>
-            <ul className="space-y-3">
+            <ul className="space-y-4">
               {whyChooseUsPoints.map((point) => (
                 <li key={point} className="flex items-start">
-                  <CheckCircle2 className="h-6 w-6 text-accent mr-3 mt-1 shrink-0" />
-                  <span className="text-muted-foreground">{point}</span>
+                  <CheckCircle2 className="h-6 w-6 text-primary mr-3 mt-1 shrink-0" />
+                  <span className="text-lg text-muted-foreground">{point}</span>
                 </li>
               ))}
             </ul>
+             <div className="pt-4">
+                 <Button asChild size="lg">
+                    <Link href="/consulting">Подробнее о нас</Link>
+                </Button>
+             </div>
           </div>
         </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="bg-secondary/50 py-16 md:py-24">
+          <div className="container mx-auto px-4 md:px-6">
+              <div className="text-center space-y-4 mb-12">
+                  <h2 className="text-3xl md:text-4xl font-headline font-bold">Что говорят наши клиенты</h2>
+              </div>
+              <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                  {testimonials.map((testimonial) => (
+                      <Card key={testimonial.name} className="bg-background">
+                          <CardContent className="p-6">
+                              <p className="text-muted-foreground mb-6 italic">"{testimonial.text}"</p>
+                              <div className="flex items-center gap-4">
+                                  <Avatar>
+                                      <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
+                                      <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
+                                  </Avatar>
+                                  <div>
+                                      <p className="font-semibold">{testimonial.name}</p>
+                                      <p className="text-sm text-muted-foreground">{testimonial.title}</p>
+                                  </div>
+                              </div>
+                          </CardContent>
+                      </Card>
+                  ))}
+              </div>
+          </div>
       </section>
 
       {/* Contact Section */}

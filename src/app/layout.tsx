@@ -5,8 +5,8 @@ import { Footer } from '@/components/layout/footer';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'AndrGlobal Consulting | Надежные инвестиции и международная торговля',
-  description: 'Ваш стратегический партнер в глобальном бизнесе. Мы специализируемся на торговле драгоценными металлами, профессиональном консалтинге и поставках высококачественного продовольствия.',
+  title: 'AndrGlobal | Стратегический консалтинг и развитие бизнеса',
+  description: 'Комплексные консалтинговые услуги для роста вашего бизнеса. Стратегический, управленческий и маркетинговый консалтинг.',
 };
 
 export default function RootLayout({
