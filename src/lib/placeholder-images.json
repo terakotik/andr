@@ -1,3 +1,46 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "consulting-hero",
+      "description": "A modern office meeting for the hero section.",
+      "imageUrl": "https://picsum.photos/seed/hero/1200/800",
+      "imageHint": "office meeting"
+    },
+    {
+      "id": "strategic-planning",
+      "description": "A chessboard representing strategic planning.",
+      "imageUrl": "https://picsum.photos/seed/strategy/600/400",
+      "imageHint": "strategy chess"
+    },
+    {
+      "id": "market-analysis",
+      "description": "Charts and graphs for market analysis.",
+      "imageUrl": "https://picsum.photos/seed/analysis/600/400",
+      "imageHint": "data charts"
+    },
+    {
+      "id": "operational-improvement",
+      "description": "Gears meshing together for operational improvement.",
+      "imageUrl": "https://picsum.photos/seed/operations/600/400",
+      "imageHint": "gears machinery"
+    },
+    {
+      "id": "product-innovation",
+      "description": "A lightbulb representing new ideas for product innovation.",
+      "imageUrl": "https://picsum.photos/seed/innovation/600/400",
+      "imageHint": "lightbulb idea"
+    },
+    {
+      "id": "andrgold-hero",
+      "description": "Gold bars for the AndrGold page.",
+      "imageUrl": "https://picsum.photos/seed/gold/1200/600",
+      "imageHint": "gold bars"
+    },
+    {
+      "id": "andrshop-hero",
+      "description": "A crate of fresh produce for the AndrShop page.",
+      "imageUrl": "https://picsum.photos/seed/shop/1200/600",
+      "imageHint": "food market"
+    }
+  ]
 }
