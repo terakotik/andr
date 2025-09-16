@@ -52,22 +52,19 @@ const testimonials = [
 
 export default function Home() {
   const heroInvestImage = PlaceHolderImages.find(p => p.id === 'hero-invest');
-  const businessPeopleImage = PlaceHolderImages.find(p => p.id === 'business-people');
 
 
   return (
     <div className="flex flex-col">
 
       <section className="relative bg-background py-16 md:py-24">
-        {businessPeopleImage && (
-            <Image
-                src={businessPeopleImage.imageUrl}
-                alt={businessPeopleImage.description}
-                fill
-                className="object-cover brightness-50"
-                data-ai-hint={businessPeopleImage.imageHint}
-            />
-        )}
+        <Image
+            src="https://img.freepik.com/free-photo/businessman-caucasian-male-professional-concept_53876-22890.jpg?semt=ais_incoming&w=740&q=80"
+            alt="Businessman"
+            fill
+            className="object-cover brightness-50"
+            data-ai-hint="businessman professional"
+        />
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
