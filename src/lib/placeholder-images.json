@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "consulting-hero",
-      "description": "A modern office meeting for the hero section.",
-      "imageUrl": "https://picsum.photos/seed/people/1200/800",
-      "imageHint": "office meeting"
+      "description": "A person on a mountain top, representing achieving goals.",
+      "imageUrl": "https://picsum.photos/seed/mountain/1920/1080",
+      "imageHint": "mountain landscape"
     },
     {
       "id": "business-people",
