@@ -35,7 +35,6 @@ export function ContactModal({ isOpen, onOpenChange }: ContactModalProps) {
           <div className="flex-1 flex flex-col justify-center space-y-4 w-full text-center">
             <Button asChild variant="ghost" className="w-full text-lg py-6">
                 <Link href={phoneLink} className="flex items-center justify-center">
-                    <Phone className="h-5 w-5 mr-2"/>
                     <span>+62 895 308 25574</span>
                 </Link>
             </Button>
