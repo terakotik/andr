@@ -1,12 +1,10 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { ContactForm } from "@/components/contact-form";
-import { Briefcase, BarChart, Settings, Rocket, Users, ShieldCheck, FileText, Landmark, TrendingUp, Scale, Send, Phone } from "lucide-react";
+import { Briefcase, BarChart, Settings, Rocket, Users, ShieldCheck, FileText, Landmark, TrendingUp, Scale } from "lucide-react";
 import Image from "next/image";
 import {PlaceHolderImages} from "@/lib/placeholder-images";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Input } from "@/components/ui/input";
-import { TelegramIcon, WhatsAppIcon } from "@/components/icons";
 
 const consultingServices = [
   {
@@ -114,8 +112,10 @@ export default function ConsultingPage() {
                 <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
                     {consultingServices.map((service) => (
                     <Card key={service.title} className="flex flex-col md:flex-row items-center md:items-start overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-primary/50 transform hover:-translate-y-1 text-center md:text-left">
-                        <div className="p-6 flex-shrink-0 bg-secondary/50 rounded-full m-6 mt-6 md:m-6">
-                          {service.icon}
+                        <div className="p-6 flex-shrink-0">
+                          <div className="p-4 bg-secondary/50 rounded-full w-fit">
+                            {service.icon}
+                          </div>
                         </div>
                         <div className="p-6 pt-0 md:pt-6 md:border-l border-border/70 w-full">
                           <CardTitle className="font-headline text-xl mb-2">{service.title}</CardTitle>
@@ -148,8 +148,10 @@ export default function ConsultingPage() {
                 <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
                     {financialServices.map((service) => (
                     <Card key={service.title} className="flex flex-col md:flex-row items-center md:items-start overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-primary/50 transform hover:-translate-y-1 text-center md:text-left">
-                        <div className="p-6 flex-shrink-0 bg-secondary/50 rounded-full m-6 mt-6 md:m-6">
-                          {service.icon}
+                        <div className="p-6 flex-shrink-0">
+                           <div className="p-4 bg-secondary/50 rounded-full w-fit">
+                            {service.icon}
+                          </div>
                         </div>
                         <div className="p-6 pt-0 md:pt-6 md:border-l border-border/70 w-full">
                           <CardTitle className="font-headline text-xl mb-2">{service.title}</CardTitle>
