@@ -52,7 +52,7 @@ const testimonials = [
 
 
 export default function Home() {
-  const strategyImage = PlaceHolderImages.find(p => p.id === 'consulting-hero');
+  const strategyImage = PlaceHolderImages.find(p => p.id === 'business-people');
 
   return (
     <div className="flex flex-col">
