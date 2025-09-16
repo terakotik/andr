@@ -3,59 +3,53 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { CheckCircle2, ArrowRight, BarChart, Briefcase, Rocket, Settings, Users, ShieldCheck, FileText, Bot } from 'lucide-react';
+import { CheckCircle2, ArrowRight, BarChart, Briefcase, Rocket, Settings, Users, ShieldCheck } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ContactForm } from '@/components/contact-form';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 
 const featuredServices = [
   {
     icon: <Briefcase className="h-10 w-10 text-primary" />,
     title: 'Управленческий консалтинг',
     description: 'Оптимизация систем управления и организационных структур для повышения производительности.',
-    href: '/consulting',
+    details: 'Мы предлагаем глубокий анализ ваших бизнес-процессов и внедрение передовых методик управления для достижения максимальной эффективности.',
   },
   {
     icon: <BarChart className="h-10 w-10 text-primary" />,
     title: 'Стратегический консалтинг',
     description: 'Разработка долгосрочных стратегий роста и дорожных карт для достижения ваших целей.',
-    href: '/consulting',
+    details: 'Наша команда поможет вам определить ключевые векторы развития, проанализировать рыночные тенденции и создать устойчивую стратегию роста.',
   },
   {
     icon: <Rocket className="h-10 w-10 text-primary" />,
     title: 'Маркетинговый консалтинг',
     description: 'Создание и оптимизация маркетинговых стратегий для усиления бренда и привлечения клиентов.',
-    href: '/consulting',
+    details: 'Мы разработаем для вас комплексную маркетинговую стратегию, которая увеличит узнаваемость вашего бренда и привлечет целевую аудиторию.',
   },
     {
     icon: <Settings className="h-10 w-10 text-primary" />,
     title: 'IT-консалтинг',
     description: 'Оптимизация IT-инфраструктуры, внедрение технологий и обеспечение кибербезопасности.',
-     href: '/consulting',
+    details: 'Наши IT-специалисты помогут вам модернизировать вашу IT-инфраструктуру, внедрить инновационные решения и обеспечить надежную защиту данных.',
   },
   {
     icon: <Users className="h-10 w-10 text-primary" />,
     title: 'Кадровый (HR) консалтинг',
     description: 'Построение эффективной команды через управление персоналом, подбор и развитие культуры.',
-     href: '/consulting',
+    details: 'Мы поможем вам сформировать сильную команду, разработать систему мотивации и создать корпоративную культуру, способствующую успеху.',
   },
     {
     icon: <ShieldCheck className="h-10 w-10 text-primary" />,
     title: 'Юридический консалтинг',
     description: 'Экспертная юридическая поддержка для защиты вашего бизнеса и минимизации правовых рисков.',
-     href: '/consulting',
+    details: 'Наши юристы обеспечат полную правовую защиту вашего бизнеса, помогут в решении сложных юридических вопросов и минимизируют риски.',
   },
-  {
-    icon: <FileText className="h-10 w-10 text-primary" />,
-    title: 'Бухгалтерский консалтинг',
-    description: 'Оптимизация бухгалтерских процессов, налоговое планирование и финансовая отчетность.',
-     href: '/consulting',
-  },
-  {
-    icon: <Bot className="h-10 w-10 text-primary" />,
-    title: 'Внедрение AI и автоматизация',
-    description: 'Интеграция искусственного интеллекта для оптимизации процессов и создания конкурентных преимуществ.',
-    href: '/consulting',
-  }
 ];
 
 const whyChooseUsPoints = [
@@ -140,23 +134,32 @@ export default function Home() {
               Мы предлагаем комплексные решения для стратегического развития вашего бизнеса.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
             {featuredServices.map((service) => (
-              <Card key={service.title} className="flex flex-col md:flex-row items-center md:items-start overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-primary/50 text-center md:text-left">
-                <div className="p-6 flex-shrink-0">
-                  <div className="p-4 bg-primary/10 rounded-full w-fit">
-                    {service.icon}
-                  </div>
-                </div>
-                <div className="p-6 pt-0 md:pt-6 md:border-l border-border/70 w-full">
-                  <CardTitle className="font-headline text-xl mb-2">{service.title}</CardTitle>
-                  <CardDescription>{service.description}</CardDescription>
-                  <Button asChild variant="link" className="p-0 h-auto mt-4 text-primary hover:underline">
-                    <Link href={service.href}>
-                      Узнать больше <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
-                </div>
+              <Card key={service.title} className="flex flex-col overflow-hidden">
+                 <div className="flex flex-col md:flex-row items-center md:items-start text-center md:text-left p-6">
+                    <div className="p-4 bg-primary/10 rounded-full w-fit flex-shrink-0">
+                        {service.icon}
+                    </div>
+                    <div className="md:ml-6 mt-4 md:mt-0 w-full">
+                        <CardTitle className="font-headline text-xl mb-2">{service.title}</CardTitle>
+                        <CardDescription>{service.description}</CardDescription>
+                    </div>
+                 </div>
+
+                <Accordion type="single" collapsible className="w-full">
+                  <AccordionItem value="item-1" className="border-t">
+                    <AccordionTrigger className="px-6 justify-end text-sm text-primary hover:underline">
+                      Узнать больше 
+                    </AccordionTrigger>
+                    <AccordionContent className="px-6 pb-6 text-muted-foreground">
+                      <p className="mb-4">{service.details}</p>
+                      <Button asChild>
+                        <Link href="https://wa.me/6289530825574" target="_blank">Заказать</Link>
+                      </Button>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
               </Card>
             ))}
           </div>
