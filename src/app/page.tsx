@@ -3,27 +3,51 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { CheckCircle2, ArrowRight, BarChart, Briefcase, Rocket } from 'lucide-react';
+import { CheckCircle2, ArrowRight, BarChart, Briefcase, Rocket, Settings, Users, ShieldCheck, FileText } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ContactForm } from '@/components/contact-form';
 
 const featuredServices = [
   {
-    icon: <BarChart className="h-10 w-10 text-primary" />,
-    title: 'Стратегический консалтинг',
-    description: 'Разработка долгосрочных стратегий для определения ключевых направлений роста.',
+    icon: <Briefcase className="h-10 w-10 text-primary" />,
+    title: 'Управленческий консалтинг',
+    description: 'Помощь в разработке и внедрении эффективных систем управления, оптимизации организационных структур, повышении производительности и развитии корпоративной культуры. Мы анализируем текущие бизнес-процессы, выявляем узкие места и предлагаем решения, которые приводят к значительному росту производительности.',
     href: '/consulting'
   },
   {
-    icon: <Briefcase className="h-10 w-10 text-primary" />,
-    title: 'Управленческий консалтинг',
-    description: 'Оптимизация организационной структуры и повышение производительности.',
-     href: '/consulting'
+    icon: <BarChart className="h-10 w-10 text-primary" />,
+    title: 'Стратегический консалтинг',
+    description: 'Разработка долгосрочных стратегий роста, анализ рынка, оценка резервов и внутренних ресурсов. Мы помогаем определить ключевые направления развития, сформулировать миссию и видение компании, а также создать дорожную карту для достижения стратегических целей.',
+    href: '/consulting'
   },
   {
     icon: <Rocket className="h-10 w-10 text-primary" />,
     title: 'Маркетинговый консалтинг',
-    description: 'Создание и оптимизация маркетинговых стратегий для продвижения вашего бренда.',
+    description: 'Разработка и оптимизация маркетинговых стратегий, онлайн-анализ и разработка эффективных методов продвижения для повышения узнаваемости бренда. Мы поможем вам построить сильный бренд и привлечь новых клиентов.',
+    href: '/consulting'
+  },
+    {
+    icon: <Settings className="h-10 w-10 text-primary" />,
+    title: 'IT-консалтинг',
+    description: 'Оптимизация ИТ-инфраструктуры, внедрение новых технологий, автоматизация бизнес-процессов и обеспечение кибербезопасности. Мы поможем вам использовать технологии как инструмент для роста бизнеса.',
+     href: '/consulting'
+  },
+  {
+    icon: <Users className="h-10 w-10 text-primary" />,
+    title: 'Кадровый (HR) консалтинг',
+    description: 'Разработка эффективных систем управления персоналом, подбор и адаптация новых сотрудников, развитие корпоративной культуры и повышение мотивации. Мы поможем вам создать команду мечты для развития вашего бизнеса.',
+     href: '/consulting'
+  },
+    {
+    icon: <ShieldCheck className="h-10 w-10 text-primary" />,
+    title: 'Юридический консалтинг',
+    description: 'Экспертная юридическая поддержка по широкому спектру вопросов, включая корпоративное право, договорное право, трудовое право и разрешение споров. Мы защищаем ваш бизнес и минимизируем правовые риски.',
+     href: '/consulting'
+  },
+  {
+    icon: <FileText className="h-10 w-10 text-primary" />,
+    title: 'Бухгалтерский консалтинг',
+    description: 'Оптимизация бухгалтерских процессов, налоговое планирование, подготовка финансовой отчетности и консультации по вопросам соблюдения законодательства. Мы поможем вам поддерживать финансовый порядок и избегать штрафных санкций.',
      href: '/consulting'
   },
 ];
@@ -110,20 +134,22 @@ export default function Home() {
               Мы предлагаем комплексные решения для стратегического развития вашего бизнеса.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
             {featuredServices.map((service) => (
-              <Card key={service.title} className="flex flex-col text-center items-center hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
-                <CardHeader className="items-center">
-                  <div className="bg-primary/10 rounded-full p-4 w-fit mb-4">{service.icon}</div>
-                  <CardTitle className="font-headline text-xl">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="flex-grow">
+              <Card key={service.title} className="flex flex-col md:flex-row items-center md:items-start overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-primary/50 transform hover:-translate-y-1 text-center md:text-left">
+                <div className="p-6 flex-shrink-0">
+                  <div className="p-4 bg-primary/10 rounded-full w-fit">
+                    {service.icon}
+                  </div>
+                </div>
+                <div className="p-6 pt-0 md:pt-6 md:border-l border-border/70 w-full">
+                  <CardTitle className="font-headline text-xl mb-2">{service.title}</CardTitle>
                   <p className="text-muted-foreground">{service.description}</p>
-                </CardContent>
-                <div className="p-6 pt-0">
-                    <Button asChild variant="link">
+                   <div className="pt-4">
+                    <Button asChild variant="link" className="p-0 h-auto">
                         <Link href={service.href}>Узнать больше <ArrowRight className="ml-2 h-4 w-4" /></Link>
                     </Button>
+                </div>
                 </div>
               </Card>
             ))}
@@ -241,3 +267,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
