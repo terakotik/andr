@@ -37,9 +37,10 @@ export function Header() {
 
   return (
     <header className="bg-background/80 backdrop-blur-sm sticky top-0 z-50 border-b">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-        <Link href="/" className="flex items-center text-2xl font-bold text-primary uppercase tracking-wider">
-          <span>AndrGlobal</span>
+      <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
+        <Link href="/" className="flex flex-col -my-2">
+            <span className="text-2xl font-bold text-primary uppercase tracking-wider font-headline">ANDRGLOBAL</span>
+            <span className="text-xs uppercase tracking-widest text-muted-foreground font-body">Consulting</span>
         </Link>
         
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">

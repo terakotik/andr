@@ -44,8 +44,9 @@ export function Footer() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-            <Link href="/" className="flex items-center text-2xl font-bold text-primary uppercase tracking-wider mb-4">
-              <span>AndrGlobal</span>
+            <Link href="/" className="flex flex-col items-start mb-4">
+              <span className="text-2xl font-bold text-primary uppercase tracking-wider font-headline">ANDRGLOBAL</span>
+              <span className="text-xs uppercase tracking-widest text-muted-foreground font-body">Consulting</span>
             </Link>
             <p className="text-muted-foreground text-sm max-w-xs">
               Профессиональный бизнес-консалтинг для повышения вашей стратегии и операций.
