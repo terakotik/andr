@@ -5,7 +5,7 @@ import { Separator } from '@/components/ui/separator';
 import { Twitter, Linkedin, Facebook } from 'lucide-react';
 
 const projectLinks = [
-  { name: 'ANDROGOLD', description: 'Продажа золота на комиссионной основе.', href: '/projects/gold' },
+  { name: 'ANDROGOLD', description: 'Продажа и поставка золота на мировые рынки.', href: '/projects/gold' },
   { name: 'ANDRESHOP', description: 'Оптовые поставки продуктов питания.', href: '/projects/shop' },
 ];
 
@@ -17,7 +17,7 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-secondary/50 text-secondary-foreground" id="projects">
+    <footer className="bg-secondary/50 text-secondary-foreground" id="footer-projects">
       <div className="container mx-auto px-4 md:px-6 py-12">
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center md:text-left">

@@ -50,6 +50,12 @@ const testimonials = [
     }
 ];
 
+const projectLinks = [
+  { name: 'ANDROGOLD', description: 'Продажа и поставка золота на мировые рынки.', href: '/projects/gold' },
+  { name: 'ANDRESHOP', description: 'Оптовые поставки продуктов питания.', href: '/projects/shop' },
+];
+
+
 export default function Home() {
   const heroInvestImage = PlaceHolderImages.find(p => p.id === 'hero-invest');
 
@@ -124,9 +130,33 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Projects Section */}
+      <section className="bg-background py-16 md:py-24" id="projects">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center space-y-4 mb-12">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold">Наши проекты</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {projectLinks.map((project) => (
+              <Card key={project.name} className="hover:shadow-xl transition-shadow duration-300">
+                <CardHeader>
+                  <CardTitle className="font-headline text-2xl text-primary">{project.name}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground mb-4">{project.description}</p>
+                  <Button asChild variant="outline">
+                    <Link href={project.href}>Узнать больше</Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
       
       {/* Why Choose Us Section */}
-      <section className="bg-background py-16 md:py-24" id="about">
+      <section className="bg-secondary/50 py-16 md:py-24" id="about">
         <div className="container mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-12 items-center">
           
             <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg group">
@@ -162,14 +192,14 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="bg-secondary/50 py-16 md:py-24">
+      <section className="bg-background py-16 md:py-24">
           <div className="container mx-auto px-4 md:px-6">
               <div className="text-center space-y-4 mb-12">
                   <h2 className="text-3xl md:text-4xl font-headline font-bold">Что говорят наши клиенты</h2>
               </div>
               <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                   {testimonials.map((testimonial) => (
-                      <Card key={testimonial.name} className="bg-background">
+                      <Card key={testimonial.name} className="bg-secondary/50">
                           <CardContent className="p-6">
                               <p className="text-muted-foreground mb-6 italic">"{testimonial.text}"</p>
                               <div className="flex items-center gap-4">
@@ -190,7 +220,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 md:py-24" id="contact">
+      <section className="py-16 md:py-24 bg-secondary/50" id="contact">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl md:text-4xl font-headline font-bold">Начните сотрудничество с нами сегодня</h2>

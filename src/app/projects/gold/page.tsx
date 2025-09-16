@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Gem, Lock, Scale } from 'lucide-react';
+import { Gem, Lock, Scale, Globe } from 'lucide-react';
 
 export default function AndrGoldPage() {
   const heroImage = PlaceHolderImages.find(p => p.id === 'andrgold-hero');
@@ -21,7 +21,7 @@ export default function AndrGoldPage() {
           <div className="relative z-10 space-y-4 px-4">
             <p className="font-headline text-lg text-amber-400 tracking-widest">ANDROGOLD</p>
             <h1 className="text-4xl md:text-6xl font-headline font-bold text-white">
-              Продажа золота на комиссионной основе
+              Продажа и поставка золота на мировые рынки
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Безопасные, прозрачные и профессиональные услуги по покупке и продаже инвестиционного золота.
@@ -51,8 +51,8 @@ export default function AndrGoldPage() {
                 <p className="text-gray-400">Партнерство с ведущими хранилищами для полностью застрахованных и аудированных решений по хранению.</p>
             </div>
             <div className="border border-gray-700 p-8 rounded-lg bg-gray-800/50">
-                <Scale className="h-12 w-12 text-amber-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2 text-amber-300">Комиссионные продажи</h3>
+                <Globe className="h-12 w-12 text-amber-400 mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-2 text-amber-300">Продажа и поставка</h3>
                 <p className="text-gray-400">Экспертные брокерские услуги по продаже вашего золота по конкурентоспособным рыночным ставкам.</p>
             </div>
           </div>
