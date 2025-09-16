@@ -11,6 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { WhatsAppIcon } from "@/components/icons";
 import Link from "next/link";
+import { Phone } from "lucide-react";
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -32,7 +33,7 @@ export function ContactModal({ isOpen, onOpenChange }: ContactModalProps) {
         </DialogHeader>
         <div className="mt-6 bg-secondary/50 p-6 rounded-lg flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12">
           <div className="flex-1 flex flex-col justify-center space-y-4 w-full text-center">
-            <Button asChild variant="ghost" className="w-full text-lg py-6">
+             <Button asChild variant="ghost" className="w-full text-lg py-6">
                 <Link href={phoneLink} className="flex items-center justify-center">
                     <span>+62 895 308 25574</span>
                 </Link>
