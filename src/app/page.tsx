@@ -1,18 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { CheckCircle2, ArrowRight, BarChart, Briefcase, Rocket, Settings, Users, ShieldCheck, FileText, Bot } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ContactForm } from '@/components/contact-form';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { WhatsAppIcon } from '@/components/icons';
 
 const featuredServices = [
   {
@@ -20,56 +13,48 @@ const featuredServices = [
     title: 'Управленческий консалтинг',
     description: 'Оптимизация систем управления и организационных структур для повышения производительности.',
     href: '/consulting',
-    details: 'Мы помогаем в разработке и внедрении эффективных систем управления, оптимизации организационных структур, повышении производительности и развитии корпоративной культуры. Мы анализируем текущие бизнес-процессы, выявляем узкие места и предлагаем решения для роста.'
   },
   {
     icon: <BarChart className="h-10 w-10 text-primary" />,
     title: 'Стратегический консалтинг',
     description: 'Разработка долгосрочных стратегий роста и дорожных карт для достижения ваших целей.',
     href: '/consulting',
-    details: 'Разработка долгосрочных стратегий роста, анализ рынка, оценка резервов и внутренних ресурсов. Мы помогаем определить ключевые направления развития, сформулировать миссию и видение компании, а также создать дорожную карту для достижения стратегических целей.'
   },
   {
     icon: <Rocket className="h-10 w-10 text-primary" />,
     title: 'Маркетинговый консалтинг',
     description: 'Создание и оптимизация маркетинговых стратегий для усиления бренда и привлечения клиентов.',
     href: '/consulting',
-    details: 'Разработка и оптимизация маркетинговых стратегий, онлайн-анализ и разработка эффективных методов продвижения для повышения узнаваемости бренда. Мы поможем вам построить сильный бренд и привлечь новых клиентов.'
   },
     {
     icon: <Settings className="h-10 w-10 text-primary" />,
     title: 'IT-консалтинг',
     description: 'Оптимизация IT-инфраструктуры, внедрение технологий и обеспечение кибербезопасности.',
      href: '/consulting',
-     details: 'Оптимизация ИТ-инфраструктуры, внедрение новых технологий, автоматизация бизнес-процессов и обеспечение кибербезопасности. Мы поможем вам использовать технологии как инструмент для роста бизнеса.'
   },
   {
     icon: <Users className="h-10 w-10 text-primary" />,
     title: 'Кадровый (HR) консалтинг',
     description: 'Построение эффективной команды через управление персоналом, подбор и развитие культуры.',
      href: '/consulting',
-     details: 'Разработка эффективных систем управления персоналом, подбор и адаптация новых сотрудников, развитие корпоративной культуры и повышение мотивации. Мы поможем вам создать команду мечты для развития вашего бизнеса.'
   },
     {
     icon: <ShieldCheck className="h-10 w-10 text-primary" />,
     title: 'Юридический консалтинг',
     description: 'Экспертная юридическая поддержка для защиты вашего бизнеса и минимизации правовых рисков.',
      href: '/consulting',
-     details: 'Экспертная юридическая поддержка по широкому спектру вопросов, включая корпоративное право, договорное право, трудовое право и разрешение споров. Мы защищаем ваш бизнес и минимизируем правовые риски.'
   },
   {
     icon: <FileText className="h-10 w-10 text-primary" />,
     title: 'Бухгалтерский консалтинг',
     description: 'Оптимизация бухгалтерских процессов, налоговое планирование и финансовая отчетность.',
      href: '/consulting',
-     details: 'Оптимизация бухгалтерских процессов, налоговое планирование, подготовка финансовой отчетности и консультации по вопросам соблюдения законодательства. Мы поможем вам поддерживать финансовый порядок и избегать штрафных санкций.'
   },
   {
     icon: <Bot className="h-10 w-10 text-primary" />,
     title: 'Внедрение AI и автоматизация',
     description: 'Интеграция искусственного интеллекта для оптимизации процессов и создания конкурентных преимуществ.',
     href: '/consulting',
-    details: 'Мы помогаем внедрять AI-решения для автоматизации рутинных задач, анализа данных и принятия более точных решений. От чат-ботов до прогнозной аналитики — мы найдем подходящий инструмент для вашего бизнеса.'
   }
 ];
 
@@ -155,38 +140,25 @@ export default function Home() {
               Мы предлагаем комплексные решения для стратегического развития вашего бизнеса.
             </p>
           </div>
-          <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
-            <Accordion type="single" collapsible className="w-full space-y-8 md:col-span-2">
-              {featuredServices.map((service, index) => (
-                <AccordionItem value={`item-${index}`} key={service.title} className="border-none">
-                  <Card className="flex flex-col md:flex-row items-center md:items-start overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-primary/50 text-center md:text-left">
-                    <div className="p-6 flex-shrink-0">
-                      <div className="p-4 bg-primary/10 rounded-full w-fit">
-                        {service.icon}
-                      </div>
-                    </div>
-                    <div className="p-6 pt-0 md:pt-6 md:border-l border-border/70 w-full">
-                      <CardTitle className="font-headline text-xl mb-2">{service.title}</CardTitle>
-                      <p className="text-muted-foreground">{service.description}</p>
-                      <div className="pt-4">
-                        <AccordionTrigger className="p-0 h-auto text-primary hover:underline">
-                          Узнать больше
-                        </AccordionTrigger>
-                      </div>
-                      <AccordionContent className="pt-4 text-left">
-                        <p className="text-muted-foreground mb-4">{service.details}</p>
-                        <Button asChild>
-                          <Link href="https://wa.me/6289530825574" target="_blank">
-                            <WhatsAppIcon className="h-5 w-5 mr-2" />
-                            Заказать
-                          </Link>
-                        </Button>
-                      </AccordionContent>
-                    </div>
-                  </Card>
-                </AccordionItem>
-              ))}
-            </Accordion>
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+            {featuredServices.map((service) => (
+              <Card key={service.title} className="flex flex-col md:flex-row items-center md:items-start overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-primary/50 text-center md:text-left">
+                <div className="p-6 flex-shrink-0">
+                  <div className="p-4 bg-primary/10 rounded-full w-fit">
+                    {service.icon}
+                  </div>
+                </div>
+                <div className="p-6 pt-0 md:pt-6 md:border-l border-border/70 w-full">
+                  <CardTitle className="font-headline text-xl mb-2">{service.title}</CardTitle>
+                  <CardDescription>{service.description}</CardDescription>
+                  <Button asChild variant="link" className="p-0 h-auto mt-4 text-primary hover:underline">
+                    <Link href={service.href}>
+                      Узнать больше <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </div>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -301,5 +273,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
