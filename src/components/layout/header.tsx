@@ -32,11 +32,7 @@ export function Header() {
 
   const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
-    if (isClient && isMobile) {
-       window.location.href = '#contact';
-    } else {
-       setIsModalOpen(true);
-    }
+    setIsModalOpen(true);
     closeMenu();
   };
   
