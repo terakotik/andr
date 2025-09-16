@@ -134,7 +134,7 @@ export default function Home() {
               Мы предлагаем комплексные решения для стратегического развития вашего бизнеса.
             </p>
           </div>
-          <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             {featuredServices.map((service) => (
               <Card key={service.title} className="flex flex-col overflow-hidden">
                  <div className="flex flex-col md:flex-row items-center md:items-start text-center md:text-left p-6">
@@ -148,8 +148,8 @@ export default function Home() {
                  </div>
 
                 <Accordion type="single" collapsible className="w-full">
-                  <AccordionItem value="item-1" className="border-t">
-                    <AccordionTrigger className="px-6 justify-end text-sm text-primary hover:underline">
+                  <AccordionItem value={service.title} className="border-t">
+                    <AccordionTrigger className="px-6 justify-start text-sm text-primary hover:underline">
                       Узнать больше 
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-6 text-muted-foreground">
