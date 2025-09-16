@@ -89,7 +89,7 @@ export default function Home() {
 
       <section className="relative bg-background py-16 md:py-24">
         <Image
-            src="https://img.freepik.com/free-photo/businessman-caucasian-male-professional-concept_53876-22890.jpg?semt=ais_incoming&w=740&q=80"
+            src="https://i.redd.it/8bjybc5t4iha1.jpg"
             alt="Businessman"
             fill
             className="object-cover brightness-50"
