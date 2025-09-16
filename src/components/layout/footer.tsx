@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { AndrGlobalLogo } from '@/components/icons';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Separator } from '@/components/ui/separator';
@@ -45,8 +44,7 @@ export function Footer() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-            <Link href="/" className="flex items-center gap-2 font-headline text-xl font-bold text-primary mb-4">
-              <AndrGlobalLogo className="h-7 w-7" />
+            <Link href="/" className="flex items-center text-2xl font-bold text-primary uppercase tracking-wider mb-4">
               <span>AndrGlobal</span>
             </Link>
             <p className="text-muted-foreground text-sm max-w-xs">

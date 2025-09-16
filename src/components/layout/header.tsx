@@ -4,7 +4,6 @@ import Link from "next/link";
 import { ChevronDown, Menu, X, Globe } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { AndrGlobalLogo } from "@/components/icons";
 import { usePathname } from 'next/navigation';
 import { cn } from "@/lib/utils";
 import {
@@ -39,8 +38,7 @@ export function Header() {
   return (
     <header className="bg-background/80 backdrop-blur-sm sticky top-0 z-50 border-b">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-        <Link href="/" className="flex items-center gap-2 font-headline text-xl font-bold text-primary">
-          <AndrGlobalLogo className="h-7 w-7" />
+        <Link href="/" className="flex items-center text-2xl font-bold text-primary uppercase tracking-wider">
           <span>AndrGlobal</span>
         </Link>
         
