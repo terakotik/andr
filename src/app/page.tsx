@@ -89,7 +89,7 @@ export default function Home() {
 
       <section className="relative bg-background py-16 md:py-24">
         <Image
-            src="https://i.redd.it/8bjybc5t4iha1.jpg"
+            src="https://newdaynews.ru/pict/arts1/76/27/762751_b.jpg"
             alt="Businessman"
             fill
             className="object-cover brightness-50"
@@ -267,5 +267,7 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     

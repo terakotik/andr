@@ -39,9 +39,17 @@ const nextConfig: NextConfig = {
         hostname: 'i.redd.it',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'newdaynews.ru',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
 };
 
 export default nextConfig;
+
+    
