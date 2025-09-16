@@ -11,7 +11,6 @@ import {
 import { Button } from "@/components/ui/button";
 import { WhatsAppIcon } from "@/components/icons";
 import Link from "next/link";
-import { Phone } from "lucide-react";
 
 interface ContactModalProps {
   isOpen: boolean;
