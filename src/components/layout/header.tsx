@@ -30,10 +30,12 @@ export function Header() {
 
   const closeMenu = () => setIsMenuOpen(false);
 
-  const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+  const handleContactClick = (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
     setIsModalOpen(true);
-    closeMenu();
+    if (isMenuOpen) {
+      closeMenu();
+    }
   };
   
   const navLinks = [
@@ -102,8 +104,8 @@ export function Header() {
                   </DropdownMenuContent>
               </DropdownMenu>
 
-            <Button asChild className="hidden md:flex">
-              <Link href="/#contact" onClick={handleContactClick}>{translations.header.contactUs}</Link>
+            <Button onClick={handleContactClick} className="hidden md:flex">
+              {translations.header.contactUs}
             </Button>
             <Button
               variant="ghost"
