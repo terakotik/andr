@@ -18,7 +18,7 @@ export function Footer() {
   const { translations } = useLanguage();
 
   const projectLinks = [
-    { name: 'ANDROGOLD', description: translations.footer.projects.gold, href: '/projects/gold' },
+    { name: 'ANDRGOLD', description: translations.footer.projects.gold, href: '/projects/gold' },
     { name: 'ANDRSHOP', description: translations.footer.projects.shop, href: '/projects/shop' },
   ];
 

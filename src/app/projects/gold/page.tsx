@@ -17,7 +17,7 @@ const SectionCard = ({ icon, title, children }: { icon: React.ReactNode, title: 
     </Card>
 );
 
-export default function AndrGoldPage() {
+export default function AndrgoldPage() {
   const heroImage = PlaceHolderImages.find(p => p.id === 'andrgold-hero');
   
   return (
@@ -34,7 +34,7 @@ export default function AndrGoldPage() {
           />
           <div className="absolute inset-0 bg-primary/10"></div>
           <div className="relative z-10 space-y-4 px-4">
-            <p className="font-headline text-lg text-amber-300 tracking-widest">ANDROGOLD</p>
+            <p className="font-headline text-lg text-amber-300 tracking-widest">ANDRGOLD</p>
             <h1 className="text-4xl md:text-6xl font-headline font-bold text-white">
               Продажа и поставка золота на мировые рынки
             </h1>

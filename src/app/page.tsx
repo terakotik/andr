@@ -50,7 +50,7 @@ export default function Home() {
   ];
 
   const projectLinks = [
-    { name: 'ANDROGOLD', description: translations.home.ourProjects.gold, href: '/projects/gold' },
+    { name: 'ANDRGOLD', description: translations.home.ourProjects.gold, href: '/projects/gold' },
     { name: 'ANDRSHOP', description: translations.home.ourProjects.shop, href: '/projects/shop' },
   ];
 
@@ -254,6 +254,7 @@ export default function Home() {
     
 
     
+
 
 
 

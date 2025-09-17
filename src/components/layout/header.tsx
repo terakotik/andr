@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -46,7 +47,7 @@ export function Header() {
   ];
 
   const projectLinks = [
-    { href: "/projects/gold", label: "ANDROGOLD" },
+    { href: "/projects/gold", label: "ANDRGOLD" },
     { href: "/projects/shop", label: "ANDRSHOP" },
   ];
 
