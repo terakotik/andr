@@ -38,14 +38,14 @@ export function Footer() {
           </div>
           <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8">
             {projectLinks.map((project) => (
-              <div key={project.name} className={`bg-card rounded-lg shadow-md hover:shadow-lg transition-shadow relative overflow-hidden group ${project.name === 'ANDRGOLD' ? 'p-0' : 'p-6'}`}>
-                {project.name === 'ANDRGOLD' ? (
+              <div key={project.name} className={`bg-card rounded-lg shadow-md hover:shadow-lg transition-shadow relative overflow-hidden group p-6`}>
+                {project.name === 'ANDRGOLD' && (
                   <div 
-                    className="absolute inset-0 bg-cover bg-right bg-no-repeat opacity-20 group-hover:opacity-30 transition-opacity duration-300"
+                    className="absolute bottom-2 right-2 w-16 h-16 bg-contain bg-center bg-no-repeat z-0"
                     style={{ backgroundImage: `url(${andrGoldImageUrl})` }}
                   ></div>
-                ) : null}
-                 <div className="relative z-10 p-6">
+                )}
+                 <div className="relative z-10">
                     <h4 className="font-headline text-xl font-bold text-primary">{project.name}</h4>
                     <p className="text-muted-foreground mt-2 mb-4">{project.description}</p>
                     <Button asChild variant="outline">
