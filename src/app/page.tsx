@@ -81,10 +81,10 @@ export default function Home() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button size="lg" asChild>
-                  <Link href="/consulting">{translations.home.hero.servicesButton}</Link>
-                </Button>
-                <Button size="lg" variant="outline" className="text-white border-white bg-transparent hover:text-primary-foreground hover:border-amber-500 hover:bg-gradient-to-r hover:from-amber-400 hover:to-amber-600 transition-all" asChild>
-                  <Link href="#contact">{translations.home.hero.contactButton}</Link>
+                  <Link href="/consulting">
+                    {translations.home.hero.servicesButton}
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -256,5 +256,7 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
