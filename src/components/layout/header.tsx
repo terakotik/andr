@@ -15,6 +15,7 @@ import {
 import { useLanguage, languages, Language } from '@/context/language-context';
 import { ContactModal } from "@/components/contact-modal";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { AndrGlobalLogo } from "@/components/icons";
 
 export function Header() {
   const { language, setLanguage, translations } = useLanguage();
@@ -51,11 +52,14 @@ export function Header() {
 
   return (
     <>
-      <header className="bg-background/80 backdrop-blur-sm sticky top-0 z-50 border-b">
+      <header className="bg-black text-white sticky top-0 z-50 border-b border-gray-800">
         <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
-          <Link href="/" className="flex flex-col -my-2" onClick={closeMenu}>
-              <span className="text-2xl font-bold text-primary uppercase tracking-wider font-headline">ANDRGLOBAL</span>
-              <span className="text-xs uppercase tracking-widest text-muted-foreground font-body">Consulting</span>
+          <Link href="/" className="flex items-center gap-3" onClick={closeMenu}>
+              <AndrGlobalLogo className="h-8 w-8 text-white" />
+              <div className="flex flex-col -my-2">
+                <span className="text-2xl font-bold text-white uppercase tracking-wider font-headline">ANDRGLOBAL</span>
+                <span className="text-xs uppercase tracking-widest text-gray-400 font-body">Consulting</span>
+              </div>
           </Link>
           
           <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
@@ -65,15 +69,15 @@ export function Header() {
                 href={link.href}
                 onClick={link.onClick}
                 className={cn(
-                  "text-foreground/80 transition-colors hover:text-foreground",
-                  (pathname === link.href || (link.href.includes('#') && pathname === '/')) && "text-foreground font-semibold"
+                  "text-gray-300 transition-colors hover:text-white",
+                  (pathname === link.href || (link.href.includes('#') && pathname === '/')) && "text-white font-semibold"
                 )}
               >
                 {link.label}
               </Link>
             ))}
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center gap-1 text-foreground/80 transition-colors hover:text-foreground focus:outline-none">
+              <DropdownMenuTrigger className="flex items-center gap-1 text-gray-300 transition-colors hover:text-white focus:outline-none">
                 {translations.header.projects}
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
@@ -90,7 +94,7 @@ export function Header() {
           <div className="flex items-center gap-2">
               <DropdownMenu>
                   <DropdownMenuTrigger asChild>
-                      <Button variant="ghost" size="icon">
+                      <Button variant="ghost" size="icon" className="text-white hover:bg-gray-800 hover:text-white">
                           <Globe className="h-5 w-5" />
                           <span className="sr-only">Выбрать язык</span>
                       </Button>
@@ -104,13 +108,13 @@ export function Header() {
                   </DropdownMenuContent>
               </DropdownMenu>
 
-            <Button onClick={handleContactClick} className="hidden md:flex">
+            <Button onClick={handleContactClick} className="hidden md:flex bg-primary hover:bg-primary/90 text-primary-foreground">
               {translations.header.contactUs}
             </Button>
             <Button
               variant="ghost"
               size="icon"
-              className="md:hidden"
+              className="md:hidden text-white hover:bg-gray-800 hover:text-white"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle menu"
             >
@@ -120,20 +124,20 @@ export function Header() {
         </div>
         
         {isMenuOpen && (
-          <div className="md:hidden bg-background border-t absolute top-full left-0 w-full">
+          <div className="md:hidden bg-black border-t border-gray-800 absolute top-full left-0 w-full">
             <nav className="flex flex-col gap-4 p-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="text-foreground/80 hover:text-foreground text-lg"
+                  className="text-gray-300 hover:text-white text-lg"
                   onClick={link.onClick || closeMenu}
                 >
                   {link.label}
                 </Link>
               ))}
                <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center justify-between w-full text-foreground/80 hover:text-foreground text-lg">
+                <DropdownMenuTrigger className="flex items-center justify-between w-full text-gray-300 hover:text-white text-lg">
                   {translations.header.projects}
                   <ChevronDown className="h-4 w-4" />
                 </DropdownMenuTrigger>
@@ -145,7 +149,7 @@ export function Header() {
                   ))}
                 </DropdownMenuContent>
               </DropdownMenu>
-              <Button asChild className="w-full mt-2" size="lg">
+              <Button asChild className="w-full mt-2 bg-primary hover:bg-primary/90 text-primary-foreground" size="lg">
                 <Link href="#" onClick={handleContactClick}>{translations.header.contactUs}</Link>
               </Button>
             </nav>
