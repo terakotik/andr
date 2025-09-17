@@ -140,17 +140,17 @@ export default function AndrgoldPage() {
                     </CardContent>
                 </Card>
             </div>
-            <div className="flex justify-center my-8">
-                <div className="flex items-center text-center text-muted-foreground">
-                    <div className="p-4 bg-green-100 rounded-lg">
+            <div className="overflow-x-auto py-4">
+                <div className="flex items-center justify-center my-4 min-w-[500px]">
+                    <div className="p-4 bg-green-100 rounded-lg whitespace-nowrap">
                         <p className="font-bold text-green-800">Продавец</p>
                     </div>
-                    <ArrowRight className="w-12 h-12 mx-4 text-gray-400"/>
-                     <div className="p-4 bg-gray-200 rounded-lg">
-                        <p className="font-bold">Перевозчик <br/>(г. Ташкент)</p>
+                    <ArrowRight className="w-12 h-12 mx-4 text-gray-400 shrink-0"/>
+                     <div className="p-4 bg-gray-200 rounded-lg whitespace-nowrap">
+                        <p className="font-bold text-center">Перевозчик <br/>(г. Ташкент)</p>
                     </div>
-                    <ArrowRight className="w-12 h-12 mx-4 text-gray-400"/>
-                    <div className="p-4 bg-blue-100 rounded-lg">
+                    <ArrowRight className="w-12 h-12 mx-4 text-gray-400 shrink-0"/>
+                    <div className="p-4 bg-blue-100 rounded-lg whitespace-nowrap">
                         <p className="font-bold text-blue-800">Покупатель</p>
                     </div>
                 </div>
