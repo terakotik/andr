@@ -41,7 +41,7 @@ export function Footer() {
               <div key={project.name} className={`bg-card rounded-lg shadow-md hover:shadow-lg transition-shadow relative overflow-hidden group p-6`}>
                 {project.name === 'ANDRGOLD' && (
                   <div 
-                    className="absolute bottom-2 -right-4 w-24 h-24 bg-contain bg-center bg-no-repeat z-0"
+                    className="absolute bottom-2 -right-6 w-32 h-32 bg-contain bg-center bg-no-repeat z-0 transition-transform duration-300 group-hover:scale-110"
                     style={{ backgroundImage: `url(${andrGoldImageUrl})` }}
                   ></div>
                 )}
