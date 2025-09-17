@@ -165,19 +165,24 @@ export function Header() {
                   {link.label}
                 </Link>
               ))}
-               <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center justify-between w-full text-gray-300 hover:text-white text-lg text-left">
-                  {translations.header.projects}
-                  <ChevronDown className="h-4 w-4" />
-                </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-[calc(100vw-2rem)]">
-                  {projectLinks.map((link) => (
-                    <DropdownMenuItem key={link.label} asChild>
-                      <Link href={link.href} onClick={closeMenu}>{link.label}</Link>
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuContent>
-              </DropdownMenu>
+               <details>
+                  <summary className="text-gray-300 hover:text-white text-lg cursor-pointer flex justify-between items-center">
+                    {translations.header.projects}
+                    <ChevronDown className="h-4 w-4 transition-transform duration-200" />
+                  </summary>
+                  <div className="flex flex-col pl-4 pt-2 gap-2">
+                    {projectLinks.map((link) => (
+                       <Link
+                        key={link.label}
+                        href={link.href}
+                        className="text-gray-300 hover:text-white text-lg"
+                        onClick={closeMenu}
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+              </details>
                <Link
                   href={contactLink.href}
                   className="text-gray-300 hover:text-white text-lg"
