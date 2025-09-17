@@ -11,14 +11,11 @@ import { ChartContainer, ChartTooltip, ChartTooltipContent, ChartConfig } from "
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis, Line, LineChart, Pie, PieChart, Cell } from "recharts"
 
 const lbmaData = [
-  { date: '01/07', price: 2335.55 },
-  { date: '02/07', price: 2320.80 },
-  { date: '03/07', price: 2355.70 },
-  { date
-: '04/07', price: 2365.60 },
-  { date: '05/07', price: 2350.15 },
-  { date: '08/07', price: 2338.90 },
-  { date: '09/07', price: 2345.00 },
+    { date: "2020", price: 1898.36 },
+    { date: "2021", price: 1829.20 },
+    { date: "2022", price: 1824.05 },
+    { date: "2023", price: 2078.40 },
+    { date: "2024", price: 2350.00 },
 ];
 
 const lbmaChartConfig = {
@@ -192,7 +189,7 @@ export default function AndrgoldPage() {
             </div>
              <Card>
                 <CardHeader>
-                    <CardTitle>Динамика котировок LBMA Gold Price (Пример)</CardTitle>
+                    <CardTitle>Динамика котировок LBMA Gold Price</CardTitle>
                     <CardDescription>Цена на золото привязана к мировым котировкам для обеспечения прозрачности.</CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -200,9 +197,9 @@ export default function AndrgoldPage() {
                         <LineChart data={lbmaData} margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
                             <CartesianGrid vertical={false} />
                             <XAxis dataKey="date" tickLine={false} axisLine={false} tickMargin={8} />
-                            <YAxis domain={['dataMin - 50', 'dataMax + 50']} hide />
+                            <YAxis domain={['dataMin - 200', 'dataMax + 200']} hide />
                             <ChartTooltip content={<ChartTooltipContent indicator="line" />} />
-                            <Line dataKey="price" type="monotone" stroke="var(--color-price)" strokeWidth={3} dot={false} />
+                            <Line dataKey="price" type="monotone" stroke="var(--color-price)" strokeWidth={3} dot={true} />
                         </LineChart>
                     </ChartContainer>
                 </CardContent>
@@ -227,11 +224,5 @@ export default function AndrgoldPage() {
     </div>
   );
 }
-
-    
-
-    
-
-    
 
     
