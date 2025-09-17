@@ -141,16 +141,16 @@ export default function AndrgoldPage() {
                 </Card>
             </div>
             <div className="overflow-x-auto py-4">
-                <div className="flex items-center justify-center my-4 min-w-[500px]">
-                    <div className="p-4 bg-amber-100 rounded-lg whitespace-nowrap shadow-md border border-amber-200">
+                <div className="flex items-center justify-center my-4 min-w-full">
+                    <div className="px-2 py-4 bg-amber-100 rounded-lg whitespace-nowrap shadow-md border border-amber-200">
                         <p className="font-bold text-amber-800">Продавец</p>
                     </div>
-                    <ArrowRight className="w-12 h-12 mx-4 text-gray-400 shrink-0"/>
-                     <div className="p-4 bg-gray-200 rounded-lg whitespace-nowrap shadow-md border border-gray-300">
+                    <ArrowRight className="w-8 h-8 mx-2 text-gray-400 shrink-0"/>
+                     <div className="px-2 py-4 bg-gray-200 rounded-lg whitespace-nowrap shadow-md border border-gray-300">
                         <p className="font-bold text-center text-gray-700">Перевозчик</p>
                     </div>
-                    <ArrowRight className="w-12 h-12 mx-4 text-gray-400 shrink-0"/>
-                    <div className="p-4 bg-amber-100 rounded-lg whitespace-nowrap shadow-md border border-amber-200">
+                    <ArrowRight className="w-8 h-8 mx-2 text-gray-400 shrink-0"/>
+                    <div className="px-2 py-4 bg-amber-100 rounded-lg whitespace-nowrap shadow-md border border-amber-200">
                         <p className="font-bold text-amber-800">Покупатель</p>
                     </div>
                 </div>
@@ -229,5 +229,3 @@ export default function AndrgoldPage() {
     </div>
   );
 }
-
-    
