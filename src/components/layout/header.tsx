@@ -59,7 +59,7 @@ export function Header() {
           <Link href="/" className="flex items-center gap-3" onClick={closeMenu}>
               <Image src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3Vld2RwdHdlbWp6eHkxaG0yMmh2bDJnYTQ2Mzl0b2dsbnBhMnRhaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/U4FkC2VqpeNRHjTDQ5/giphy.gif" alt="AndrGlobal Logo" width={56} height={56} unoptimized className="rounded-full" />
               <div className="flex flex-col -my-2">
-                <span className="text-2xl font-bold text-white uppercase tracking-wider font-headline italic">ANDRGLOBAL</span>
+                <span className="text-2xl font-bold text-white uppercase font-headline italic">ANDRGLOBAL</span>
                 <span className="text-xs uppercase tracking-widest text-gray-400 font-body">financial</span>
               </div>
           </Link>
@@ -135,7 +135,7 @@ export function Header() {
         {isMenuOpen && (
           <div className="md:hidden bg-black border-t border-gray-800 absolute top-full left-0 w-full">
             <nav className="flex flex-col gap-4 p-4">
-              {[...navLinks].map((link) => (
+              {[...navLinks, contactLink].map((link) => (
                 <Link
                   key={link.label}
                   href={link.href}
@@ -158,13 +158,6 @@ export function Header() {
                   ))}
                 </DropdownMenuContent>
               </DropdownMenu>
-              <Link
-                  href={contactLink.href}
-                  className="text-gray-300 hover:text-white text-lg"
-                  onClick={contactLink.onClick || closeMenu}
-                >
-                  {contactLink.label}
-              </Link>
               <Button asChild className="w-full mt-2 bg-primary hover:bg-primary/90 text-primary-foreground" size="lg">
                 <Link href="#" onClick={handleContactClick}>{translations.header.contactUs}</Link>
               </Button>
