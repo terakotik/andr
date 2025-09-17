@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ChevronDown, Menu, X, Globe } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
@@ -15,7 +16,6 @@ import {
 import { useLanguage, languages, Language } from '@/context/language-context';
 import { ContactModal } from "@/components/contact-modal";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { AndrGlobalLogo } from "@/components/icons";
 
 export function Header() {
   const { language, setLanguage, translations } = useLanguage();
@@ -55,7 +55,7 @@ export function Header() {
       <header className="bg-black text-white sticky top-0 z-50 border-b border-gray-800">
         <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
           <Link href="/" className="flex items-center gap-3" onClick={closeMenu}>
-              <AndrGlobalLogo className="h-8 w-8 text-white" />
+              <Image src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3Vld2RwdHdlbWp6eHkxaG0yMmh2bDJnYTQ2Mzl0b2dsbnBhMnRhaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/U4FkC2VqpeNRHjTDQ5/giphy.gif" alt="AndrGlobal Logo" width={32} height={32} unoptimized />
               <div className="flex flex-col -my-2">
                 <span className="text-2xl font-bold text-white uppercase tracking-wider font-headline">ANDRGLOBAL</span>
                 <span className="text-xs uppercase tracking-widest text-gray-400 font-body">Consulting</span>

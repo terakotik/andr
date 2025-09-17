@@ -51,6 +51,12 @@ const nextConfig: NextConfig = {
         hostname: 'api.qrserver.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'media0.giphy.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
