@@ -71,8 +71,8 @@ export default function Home() {
             <div className="pixel-overlay"></div>
         </div>
         <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center min-h-[60vh]">
+            <div className="space-y-6 md:col-span-2">
               <h1 className="text-4xl md:text-5xl font-headline font-bold text-white">
                 {translations.home.hero.title}
               </h1>
@@ -88,14 +88,6 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-            <Card className="shadow-lg bg-background/90 backdrop-blur-sm">
-              <CardHeader>
-                <CardTitle>{translations.contactForm.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ContactForm />
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
