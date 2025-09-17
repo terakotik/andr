@@ -166,7 +166,7 @@ export function Header() {
                 </Link>
               ))}
                <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center justify-between w-full text-gray-300 hover:text-white text-lg">
+                <DropdownMenuTrigger className="flex items-center justify-between w-full text-gray-300 hover:text-white text-lg text-left">
                   {translations.header.projects}
                   <ChevronDown className="h-4 w-4" />
                 </DropdownMenuTrigger>
