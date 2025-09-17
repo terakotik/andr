@@ -72,6 +72,26 @@ export default function AndrgoldPage() {
 
       <main className="container mx-auto px-4 md:px-6 py-16 md:py-24 space-y-20">
         
+        <section id="key-advantages">
+          <div className="grid md:grid-cols-3 gap-8 text-center">
+            <div className="bg-white p-8 rounded-lg shadow-md border border-amber-100">
+                <ShieldCheck className="h-12 w-12 text-amber-600 mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-2 text-amber-900">Гарантия качества</h3>
+                <p className="text-gray-600">Чистота и происхождение золота подтверждены сертификатами.</p>
+            </div>
+            <div className="bg-white p-8 rounded-lg shadow-md border border-amber-100">
+                <Globe className="h-12 w-12 text-amber-600 mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-2 text-amber-900">Надежность поставок</h3>
+                <p className="text-gray-600">Строгое соблюдение сроков и условий договора FCA Ташкент.</p>
+            </div>
+            <div className="bg-white p-8 rounded-lg shadow-md border border-amber-100">
+                <Scale className="h-12 w-12 text-amber-600 mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-2 text-amber-900">Прозрачность цены</h3>
+                <p className="text-gray-600">Цена формируется на основе котировок LBMA с согласованным дисконтом.</p>
+            </div>
+          </div>
+        </section>
+
         <section id="product">
             <div className="text-center space-y-4 mb-12">
                 <h2 className="text-3xl md:text-4xl font-headline font-bold text-amber-900">О продукте</h2>
@@ -229,3 +249,5 @@ export default function AndrgoldPage() {
     </div>
   );
 }
+
+    
