@@ -142,16 +142,16 @@ export default function AndrgoldPage() {
             </div>
             <div className="overflow-x-auto py-4">
                 <div className="flex items-center justify-center my-4 min-w-[500px]">
-                    <div className="p-4 bg-green-100 rounded-lg whitespace-nowrap">
-                        <p className="font-bold text-green-800">Продавец</p>
+                    <div className="p-4 bg-amber-100 rounded-lg whitespace-nowrap shadow-md border border-amber-200">
+                        <p className="font-bold text-amber-800">Продавец</p>
                     </div>
                     <ArrowRight className="w-12 h-12 mx-4 text-gray-400 shrink-0"/>
-                     <div className="p-4 bg-gray-200 rounded-lg whitespace-nowrap">
-                        <p className="font-bold text-center">Перевозчик <br/>(г. Ташкент)</p>
+                     <div className="p-4 bg-gray-200 rounded-lg whitespace-nowrap shadow-md border border-gray-300">
+                        <p className="font-bold text-center text-gray-700">Перевозчик <br/>(г. Ташкент)</p>
                     </div>
                     <ArrowRight className="w-12 h-12 mx-4 text-gray-400 shrink-0"/>
-                    <div className="p-4 bg-blue-100 rounded-lg whitespace-nowrap">
-                        <p className="font-bold text-blue-800">Покупатель</p>
+                    <div className="p-4 bg-amber-100 rounded-lg whitespace-nowrap shadow-md border border-amber-200">
+                        <p className="font-bold text-amber-800">Покупатель</p>
                     </div>
                 </div>
             </div>
