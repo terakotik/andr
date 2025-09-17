@@ -99,11 +99,11 @@ export default function ConsultingPage() {
             {targetAudienceImage && (
                 <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg group mt-12">
                     <Image
-                        src={targetAudienceImage.imageUrl}
-                        alt={targetAudienceImage.description}
+                        src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1911&auto=format&fit=crop"
+                        alt="Business people collaborating on a project."
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
-                        data-ai-hint={targetAudienceImage.imageHint}
+                        data-ai-hint="business people meeting"
                     />
                 </div>
             )}
