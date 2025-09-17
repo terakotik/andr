@@ -178,7 +178,7 @@ export default function Home() {
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                     data-ai-hint="businessman portrait"
                 />
-                <div className="absolute inset-0 bg-primary/90"></div>
+                <div className="absolute inset-0 bg-primary/10"></div>
             </div>
           
           <div className="space-y-6">
@@ -218,7 +218,7 @@ export default function Home() {
                                   <Avatar>
                                       <div className="relative w-full h-full">
                                         <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
-                                        <div className="absolute inset-0 bg-primary/90 rounded-full"></div>
+                                        <div className="absolute inset-0 bg-primary/10 rounded-full"></div>
                                       </div>
                                       <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
                                   </Avatar>

@@ -32,7 +32,7 @@ export default function AndrGoldPage() {
             data-ai-hint={heroImage.imageHint}
             priority
           />
-          <div className="absolute inset-0 bg-primary/90"></div>
+          <div className="absolute inset-0 bg-primary/10"></div>
           <div className="relative z-10 space-y-4 px-4">
             <p className="font-headline text-lg text-amber-300 tracking-widest">ANDROGOLD</p>
             <h1 className="text-4xl md:text-6xl font-headline font-bold text-white">

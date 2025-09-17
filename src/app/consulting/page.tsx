@@ -105,7 +105,7 @@ export default function ConsultingPage() {
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                         data-ai-hint="business people meeting"
                     />
-                    <div className="absolute inset-0 bg-primary/90"></div>
+                    <div className="absolute inset-0 bg-primary/10"></div>
                 </div>
             )}
         </div>
