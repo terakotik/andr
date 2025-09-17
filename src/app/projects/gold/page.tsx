@@ -91,9 +91,9 @@ export default function AndrgoldPage() {
                 <p className="text-gray-600">Строгое соблюдение сроков и условий договора FCA Ташкент.</p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-md border border-amber-100">
-                <Scale className="h-12 w-12 text-amber-600 mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2 text-amber-900">Прозрачность цены</h3>
-                <p className="text-gray-600">Цена формируется на основе котировок LBMA с согласованным дисконтом.</p>
+                <Gem className="h-12 w-12 text-amber-600 mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-2 text-amber-900">Индивидуальный подход</h3>
+                <p className="text-gray-600">Готовность адаптировать условия сотрудничества под ваши нужды.</p>
             </div>
           </div>
         </section>
@@ -209,34 +209,6 @@ export default function AndrgoldPage() {
             </Card>
         </section>
         
-        <section id="advantages">
-            <div className="text-center space-y-4 mb-12">
-                <h2 className="text-3xl md:text-4xl font-headline font-bold text-amber-900">Преимущества работы с нами</h2>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div className="flex flex-col items-center text-center">
-                    <div className="p-4 bg-amber-100 rounded-full mb-4"><ShieldCheck className="w-8 h-8 text-amber-600" /></div>
-                    <h3 className="text-xl font-semibold mb-2 font-headline">Гарантия качества</h3>
-                    <p className="text-muted-foreground">Чистота и происхождение золота подтверждены сертификатами.</p>
-                </div>
-                <div className="flex flex-col items-center text-center">
-                    <div className="p-4 bg-amber-100 rounded-full mb-4"><Globe className="w-8 h-8 text-amber-600" /></div>
-                    <h3 className="text-xl font-semibold mb-2 font-headline">Надежность</h3>
-                    <p className="text-muted-foreground">Строгое соблюдение сроков поставки и условий договора.</p>
-                </div>
-                <div className="flex flex-col items-center text-center">
-                    <div className="p-4 bg-amber-100 rounded-full mb-4"><Scale className="w-8 h-8 text-amber-600" /></div>
-                    <h3 className="text-xl font-semibold mb-2 font-headline">Прозрачность цены</h3>
-                    <p className="text-muted-foreground">Привязка к мировым котировкам LBMA для справедливости сделки.</p>
-                </div>
-                 <div className="flex flex-col items-center text-center">
-                    <div className="p-4 bg-amber-100 rounded-full mb-4"><Gem className="w-8 h-8 text-amber-600" /></div>
-                    <h3 className="text-xl font-semibold mb-2 font-headline">Индивидуальный подход</h3>
-                    <p className="text-muted-foreground">Готовность адаптировать условия сотрудничества под ваши нужды.</p>
-                </div>
-            </div>
-        </section>
-
         <section id="cta" className="bg-white rounded-lg shadow-xl p-8 md:p-12 border-2 border-amber-400">
             <div className="text-center space-y-6">
                 <h2 className="text-3xl md:text-4xl font-headline font-bold text-amber-900">Начните сотрудничество с нами</h2>
@@ -255,6 +227,8 @@ export default function AndrgoldPage() {
     </div>
   );
 }
+
+    
 
     
 
