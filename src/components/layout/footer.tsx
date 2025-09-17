@@ -21,6 +21,9 @@ export function Footer() {
     { name: 'ANDRGOLD', description: translations.footer.projects.gold, href: '/projects/gold' },
     { name: 'ANDRSHOP', description: translations.footer.projects.shop, href: '/projects/shop' },
   ];
+  
+  const andrGoldImageUrl = "https://dalogo.ru/wp-content/uploads/2019/10/Sajjt-11132-SHokoladnyjj-mini-Slitok-zolota-New-3.jpg";
+
 
   return (
     <footer className="bg-secondary/50 text-secondary-foreground" id="footer-projects">
@@ -35,12 +38,20 @@ export function Footer() {
           </div>
           <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8">
             {projectLinks.map((project) => (
-              <div key={project.name} className="bg-card p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h4 className="font-headline text-xl font-bold text-primary">{project.name}</h4>
-                <p className="text-muted-foreground mt-2 mb-4">{project.description}</p>
-                <Button asChild variant="outline">
-                  <Link href={project.href}>{translations.footer.learnMore}</Link>
-                </Button>
+              <div key={project.name} className={`bg-card rounded-lg shadow-md hover:shadow-lg transition-shadow relative overflow-hidden group ${project.name === 'ANDRGOLD' ? 'p-0' : 'p-6'}`}>
+                {project.name === 'ANDRGOLD' ? (
+                  <div 
+                    className="absolute inset-0 bg-cover bg-right bg-no-repeat opacity-20 group-hover:opacity-30 transition-opacity duration-300"
+                    style={{ backgroundImage: `url(${andrGoldImageUrl})` }}
+                  ></div>
+                ) : null}
+                 <div className="relative z-10 p-6">
+                    <h4 className="font-headline text-xl font-bold text-primary">{project.name}</h4>
+                    <p className="text-muted-foreground mt-2 mb-4">{project.description}</p>
+                    <Button asChild variant="outline">
+                      <Link href={project.href}>{translations.footer.learnMore}</Link>
+                    </Button>
+                </div>
               </div>
             ))}
           </div>

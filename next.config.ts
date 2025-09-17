@@ -41,6 +41,12 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
       {
+        protocol: 'https' ,
+        hostname: 'dalogo.ru',
+        port: '',
+        pathname: '/**',
+      },
+      {
         protocol: 'https',
         hostname: 'newdaynews.ru',
         port: '',
