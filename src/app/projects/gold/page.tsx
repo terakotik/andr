@@ -141,7 +141,7 @@ export default function AndrgoldPage() {
                 </Card>
             </div>
             <div className="overflow-x-auto py-4">
-                <div className="flex items-center justify-center my-4 min-w-full">
+                <div className="flex items-center justify-center my-4 min-w-[500px]">
                     <div className="px-2 py-4 bg-amber-100 rounded-lg whitespace-nowrap shadow-md border border-amber-200">
                         <p className="font-bold text-amber-800">Продавец</p>
                     </div>
