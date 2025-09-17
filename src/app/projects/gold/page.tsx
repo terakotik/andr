@@ -147,7 +147,7 @@ export default function AndrgoldPage() {
                     </div>
                     <ArrowRight className="w-12 h-12 mx-4 text-gray-400 shrink-0"/>
                      <div className="p-4 bg-gray-200 rounded-lg whitespace-nowrap shadow-md border border-gray-300">
-                        <p className="font-bold text-center text-gray-700">Перевозчик <br/>(г. Ташкент)</p>
+                        <p className="font-bold text-center text-gray-700">Перевозчик</p>
                     </div>
                     <ArrowRight className="w-12 h-12 mx-4 text-gray-400 shrink-0"/>
                     <div className="p-4 bg-amber-100 rounded-lg whitespace-nowrap shadow-md border border-amber-200">
@@ -229,5 +229,3 @@ export default function AndrgoldPage() {
     </div>
   );
 }
-
-    
