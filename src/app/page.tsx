@@ -51,7 +51,7 @@ export default function Home() {
 
   const projectLinks = [
     { name: 'ANDROGOLD', description: translations.home.ourProjects.gold, href: '/projects/gold' },
-    { name: 'ANDRESHOP', description: translations.home.ourProjects.shop, href: '/projects/shop' },
+    { name: 'ANDRSHOP', description: translations.home.ourProjects.shop, href: '/projects/shop' },
   ];
 
   return (
@@ -254,5 +254,6 @@ export default function Home() {
     
 
     
+
 
 
