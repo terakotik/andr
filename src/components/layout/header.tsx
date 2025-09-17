@@ -78,7 +78,7 @@ export function Header() {
       <header className="bg-black text-white sticky top-0 z-50 border-b border-gray-800">
         <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
           <Link href="/" className="flex items-center gap-3" onClick={closeMenu}>
-              <Image src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3Vld2RwdHdlbWp6eHkxaG0yMmh2bDJnYTQ2Mzl0b2dsbnBhMnRhaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/U4FkC2VqpeNRHjTDQ5/giphy.gif" alt="AndrGlobal Logo" width={50} height={50} unoptimized className="rounded-full md:w-[50px] md:h-[50px] w-[40px] h-[40px]" />
+              <Image src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3Vld2RwdHdlbWp6eHkxaG0yMmh2bDJnYTQ2Mzl0b2dsbnBhMnRhaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/U4FkC2VqpeNRHjTDQ5/giphy.gif" alt="AndrGlobal Logo" width={50} height={50} unoptimized className="rounded-full md:w-[60px] md:h-[60px] w-[40px] h-[40px]" />
               <div className="flex flex-col -my-2">
                 <span className="text-base md:text-2xl font-bold text-white uppercase font-headline tracking-normal">ANDRGLOBAL</span>
                 <span className="text-xs uppercase tracking-normal text-gray-400 font-body">financial</span>
@@ -160,7 +160,7 @@ export function Header() {
                   key={link.label}
                   href={link.href}
                   className="text-gray-300 hover:text-white text-lg"
-                  onClick={link.onClick || closeMenu}
+                  onClick={closeMenu}
                 >
                   {link.label}
                 </Link>
@@ -181,7 +181,7 @@ export function Header() {
                <Link
                   href={contactLink.href}
                   className="text-gray-300 hover:text-white text-lg"
-                  onClick={contactLink.onClick}
+                  onClick={handleContactClick}
                 >
                   {contactLink.label}
                 </Link>
