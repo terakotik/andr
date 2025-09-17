@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { CheckCircle2, ArrowRight, Landmark, Briefcase, Scale } from 'lucide-react';
+import { CheckCircle2, ArrowRight, Landmark, Briefcase, Scale, FileText } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ContactForm } from '@/components/contact-form';
 import React from 'react';
@@ -40,6 +40,12 @@ export default function Home() {
       title: translations.home.featuredServices.planning.title,
       description: translations.home.featuredServices.planning.description,
       details: translations.home.featuredServices.planning.details,
+    },
+    {
+      icon: <FileText className="h-10 w-10 text-primary" />,
+      title: translations.home.featuredServices.accreditive.title,
+      description: translations.home.featuredServices.accreditive.description,
+      details: translations.home.featuredServices.accreditive.details,
     },
   ];
 
@@ -103,7 +109,7 @@ export default function Home() {
               {translations.home.consultingDirections.subtitle}
             </p>
           </div>
-          <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+          <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             {featuredServices.map((service, index) => (
               <div key={service.title} className="flex flex-col">
                 <Card className="flex-grow">
@@ -246,3 +252,5 @@ export default function Home() {
     </div>
   );
 }
+
+    

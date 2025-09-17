@@ -33,6 +33,11 @@
                 "title": "Financial Planning",
                 "description": "Development of comprehensive financial plans and budgets for companies and individuals.",
                 "details": "We will help you create a sustainable financial model that will ensure the stable growth of your business and personal well-being."
+            },
+            "accreditive": {
+                "title": "Bank Letter of Credit Support",
+                "description": "Ensuring the reliability and security of international trade operations.",
+                "details": "We provide full support for obtaining and executing bank letters of credit. Our partnership with 'Asia invest' (Malaysia) ensures reliability and favorable terms for our clients."
             }
         },
         "learnMore": "Learn More",
@@ -160,3 +165,5 @@
         }
     }
 }
+
+    
