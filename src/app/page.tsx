@@ -68,11 +68,11 @@ export default function Home() {
             >
                 <source src="https://videos.pexels.com/video-files/853874/853874-hd_1920_1080_25fps.mp4" type="video/mp4" />
             </video>
-            <div className="pixel-overlay"></div>
+            <div className="pixel-overlay" style={{backgroundSize: '3px 3px'}}></div>
         </div>
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center min-h-[60vh]">
-            <div className="space-y-6 md:col-span-2">
+            <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl font-headline font-bold text-white">
                 {translations.home.hero.title}
               </h1>
@@ -87,6 +87,15 @@ export default function Home() {
                   </Link>
                 </Button>
               </div>
+            </div>
+            <div className="relative h-full w-full">
+              <Image
+                src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3Vld2RwdHdlbWp6eHkxaG0yMmh2bDJnYTQ2Mzl0b2dsbnBhMnRhaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/U4FkC2VqpeNRHjTDQ5/giphy.gif"
+                alt="Business animation"
+                layout="fill"
+                objectFit="contain"
+                unoptimized
+              />
             </div>
           </div>
         </div>
@@ -252,3 +261,4 @@ export default function Home() {
     
 
     
+
