@@ -181,12 +181,16 @@ export function Header() {
                <Link
                   href={contactLink.href}
                   className="text-gray-300 hover:text-white text-lg"
-                  onClick={handleContactClick}
+                  onClick={(e) => {
+                    handleContactClick(e);
+                  }}
                 >
                   {contactLink.label}
                 </Link>
-              <Button asChild className="w-full mt-2 bg-primary hover:bg-primary/90 text-primary-foreground" size="lg">
-                <Link href="#" onClick={handleContactClick}>{translations.header.contactUs}</Link>
+              <Button asChild className="w-full mt-2 bg-primary hover:bg-primary/90 text-primary-foreground" size="lg" onClick={(e) => {
+                  handleContactClick(e as React.MouseEvent<HTMLButtonElement | HTMLAnchorElement, MouseEvent>);
+              }}>
+                <div role="button">{translations.header.contactUs}</div>
               </Button>
             </nav>
           </div>
