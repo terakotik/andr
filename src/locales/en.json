@@ -24,30 +24,15 @@
                 "description": "Optimization of management systems and organizational structures to increase productivity.",
                 "details": "We offer a deep analysis of your business processes and the implementation of advanced management techniques to achieve maximum efficiency."
             },
-            "strategic": {
-                "title": "Strategic Consulting",
-                "description": "Development of long-term growth strategies and roadmaps to achieve your goals.",
-                "details": "Our team will help you identify key development vectors, analyze market trends, and create a sustainable growth strategy."
+            "financial": {
+                "title": "Financial Consulting",
+                "description": "Analysis of investment opportunities, strategy development, asset portfolio management, and risk minimization.",
+                "details": "Our specialists will help you effectively manage your finances, optimize costs, and find new sources of funding."
             },
-            "marketing": {
-                "title": "Marketing Consulting",
-                "description": "Creation and optimization of marketing strategies to strengthen the brand and attract customers.",
-                "details": "We will develop a comprehensive marketing strategy for you that will increase your brand awareness and attract your target audience."
-            },
-            "it": {
-                "title": "IT Consulting",
-                "description": "Optimization of IT infrastructure, implementation of technologies, and ensuring cybersecurity.",
-                "details": "Our IT specialists will help you modernize your IT infrastructure, implement innovative solutions, and ensure reliable data protection."
-            },
-            "hr": {
-                "title": "HR Consulting",
-                "description": "Building an effective team through personnel management, recruitment, and cultural development.",
-                "details": "We will help you form a strong team, develop a motivation system, and create a corporate culture that fosters success."
-            },
-            "legal": {
-                "title": "Legal Consulting",
-                "description": "Expert legal support to protect your business and minimize legal risks.",
-                "details": "Our lawyers will provide full legal protection for your business, help in solving complex legal issues, and minimize risks."
+            "planning": {
+                "title": "Financial Planning",
+                "description": "Development of comprehensive financial plans and budgets for companies and individuals.",
+                "details": "We will help you create a sustainable financial model that will ensure the stable growth of your business and personal well-being."
             }
         },
         "learnMore": "Learn More",
@@ -147,55 +132,25 @@
             "formTitle": "Get a consultation"
         },
         "consultingServicesSection": {
-            "title": "Consulting Services",
-            "subtitle": "Turning challenges into opportunities through a strategic partnership aimed at increasing the efficiency of your business."
+            "title": "Key Consulting Services",
+            "subtitle": "We focus on strategic directions that guarantee the growth and stability of your business."
         },
         "services": {
             "management": {
                 "title": "Management Consulting",
-                "description": "Assistance in developing and implementing effective management systems, optimizing organizational structures, increasing productivity, and developing corporate culture. We analyze current business processes, identify bottlenecks, and offer solutions that lead to significant productivity growth."
+                "description": "Assistance in developing and implementing effective management systems, optimizing organizational structures, and increasing productivity. We analyze current business processes, identify bottlenecks, and offer solutions that lead to significant productivity growth."
             },
-            "strategic": {
-                "title": "Strategic Consulting",
-                "description": "Development of long-term growth strategies, market analysis, assessment of reserves and internal resources. We help define key development directions, formulate the company's mission and vision, and create a roadmap to achieve strategic goals."
+            "financial": {
+                "title": "Financial Consulting",
+                "description": "Analysis of investment opportunities, strategy development, asset portfolio management, and risk minimization. We help define key development directions, formulate the company's mission and vision, and create a roadmap to achieve strategic goals."
             },
-            "marketing": {
-                "title": "Marketing Consulting",
-                "description": "Development and optimization of marketing strategies, online analysis, and development of effective promotion methods to increase brand awareness. We will help you build a strong brand and attract new customers."
-            },
-            "it": {
-                "title": "IT Consulting",
-                "description": "Optimization of IT infrastructure, implementation of new technologies, automation of business processes, and ensuring cybersecurity. We will help you use technology as a tool for business growth."
-            },
-            "hr": {
-                "title": "HR Consulting",
-                "description": "Development of effective personnel management systems, recruitment and adaptation of new employees, development of corporate culture, and increasing motivation. We will help you create a dream team for the development of your business."
-            },
-            "legal": {
-                "title": "Legal Consulting",
-                "description": "Expert legal support on a wide range of issues, including corporate law, contract law, labor law, and dispute resolution. We protect your business and minimize legal risks."
-            },
-            "accounting": {
-                "title": "Accounting Consulting",
-                "description": "Optimization of accounting processes, tax planning, preparation of financial statements, and advice on compliance with legislation. We will help you maintain financial order and avoid penalties."
-            }
-        },
-        "financialConsultingSection": {
-            "title": "Financial Consulting",
-            "subtitle": "Managing your assets for maximum profit and sustainable growth of your capital."
-        },
-        "financialServices": {
             "planning": {
-                "title": "Financial Planning and Budgeting",
-                "description": "Development of comprehensive financial plans and budgets for companies and individuals, and monitoring their implementation."
+                "title": "Financial Planning",
+                "description": "Development of comprehensive financial plans and budgets for companies and individuals, and monitoring their implementation. We help you use technology as a tool for business growth."
             },
-            "investment": {
-                "title": "Investment Consulting",
-                "description": "Analysis of investment opportunities, strategy development, asset portfolio management, and risk minimization."
-            },
-            "financing": {
-                "title": "Attracting Financing",
-                "description": "Assistance in finding and attracting bank loans, investments, grants, and subsidies for the development of your business."
+            "accreditive": {
+                "title": "Bank Letter of Credit Support",
+                "description": "We provide full support for obtaining and executing bank letters of credit for international trade operations. Our partnership with 'Asia invest' (Malaysia) ensures reliability and favorable terms for our clients."
             }
         },
         "startTransformation": {

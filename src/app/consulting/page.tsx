@@ -2,7 +2,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { ContactForm } from "@/components/contact-form";
-import { Briefcase, BarChart, Settings, Rocket, Users, ShieldCheck, FileText, Landmark, TrendingUp, Scale } from "lucide-react";
+import { Briefcase, Landmark, Scale, FileText } from "lucide-react";
 import Image from "next/image";
 import {PlaceHolderImages} from "@/lib/placeholder-images";
 import { Button } from "@/components/ui/button";
@@ -21,53 +21,20 @@ export default function ConsultingPage() {
         description: translations.consulting.services.management.description,
       },
       {
-        icon: <BarChart className="h-10 w-10 text-primary" />,
-        title: translations.consulting.services.strategic.title,
-        description: translations.consulting.services.strategic.description,
+        icon: <Landmark className="h-10 w-10 text-primary" />,
+        title: translations.consulting.services.financial.title,
+        description: translations.consulting.services.financial.description,
       },
       {
-        icon: <Rocket className="h-10 w-10 text-primary" />,
-        title: translations.consulting.services.marketing.title,
-        description: translations.consulting.services.marketing.description,
+        icon: <Scale className="h-10 w-10 text-primary" />,
+        title: translations.consulting.services.planning.title,
+        description: translations.consulting.services.planning.description,
       },
-      {
-        icon: <Settings className="h-10 w-10 text-primary" />,
-        title: translations.consulting.services.it.title,
-        description: translations.consulting.services.it.description,
-      },
-      {
-        icon: <Users className="h-10 w-10 text-primary" />,
-        title: translations.consulting.services.hr.title,
-        description: translations.consulting.services.hr.description,
-      },
-      {
-        icon: <ShieldCheck className="h-10 w-10 text-primary" />,
-        title: translations.consulting.services.legal.title,
-        description: translations.consulting.services.legal.description,
-      },
-      {
+       {
         icon: <FileText className="h-10 w-10 text-primary" />,
-        title: translations.consulting.services.accounting.title,
-        description: translations.consulting.services.accounting.description,
+        title: translations.consulting.services.accreditive.title,
+        description: translations.consulting.services.accreditive.description,
       },
-    ];
-
-    const financialServices = [
-        {
-            icon: <Landmark className="h-10 w-10 text-primary" />,
-            title: translations.consulting.financialServices.planning.title,
-            description: translations.consulting.financialServices.planning.description,
-        },
-        {
-            icon: <TrendingUp className="h-10 w-10 text-primary" />,
-            title: translations.consulting.financialServices.investment.title,
-            description: translations.consulting.financialServices.investment.description,
-        },
-        {
-            icon: <Scale className="h-10 w-10 text-primary" />,
-            title: translations.consulting.financialServices.financing.title,
-            description: translations.consulting.financialServices.financing.description,
-        }
     ];
 
   return (
@@ -137,42 +104,6 @@ export default function ConsultingPage() {
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                         data-ai-hint={targetAudienceImage.imageHint}
-                    />
-                </div>
-            )}
-            
-            <div>
-                <div className="text-center space-y-4 mb-12">
-                    <h2 className="text-3xl md:text-4xl font-headline font-bold">{translations.consulting.financialConsultingSection.title}</h2>
-                    <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                        {translations.consulting.financialConsultingSection.subtitle}
-                    </p>
-                </div>
-                <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
-                    {financialServices.map((service) => (
-                    <Card key={service.title} className="flex flex-col md:flex-row items-center md:items-start overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-primary/50 transform hover:-translate-y-1 text-center md:text-left">
-                        <div className="p-6 flex-shrink-0">
-                           <div className="p-4 bg-secondary/50 rounded-full w-fit">
-                            {service.icon}
-                          </div>
-                        </div>
-                        <div className="p-6 pt-0 md:pt-6 md:border-l border-border/70 w-full">
-                          <CardTitle className="font-headline text-xl mb-2">{service.title}</CardTitle>
-                          <CardDescription>{service.description}</CardDescription>
-                        </div>
-                    </Card>
-                    ))}
-                </div>
-            </div>
-
-            {teamImage && (
-                <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg group mt-12">
-                    <Image
-                        src={teamImage.imageUrl}
-                        alt={teamImage.description}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-500"
-                        data-ai-hint={teamImage.imageHint}
                     />
                 </div>
             )}

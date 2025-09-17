@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { CheckCircle2, ArrowRight, BarChart, Briefcase, Rocket, Settings, Users, ShieldCheck, Gem, Leaf } from 'lucide-react';
+import { CheckCircle2, ArrowRight, Landmark, Briefcase, Scale } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ContactForm } from '@/components/contact-form';
 import React from 'react';
@@ -30,34 +30,16 @@ export default function Home() {
       details: translations.home.featuredServices.management.details,
     },
     {
-      icon: <BarChart className="h-10 w-10 text-primary" />,
-      title: translations.home.featuredServices.strategic.title,
-      description: translations.home.featuredServices.strategic.description,
-      details: translations.home.featuredServices.strategic.details,
+      icon: <Landmark className="h-10 w-10 text-primary" />,
+      title: translations.home.featuredServices.financial.title,
+      description: translations.home.featuredServices.financial.description,
+      details: translations.home.featuredServices.financial.details,
     },
     {
-      icon: <Rocket className="h-10 w-10 text-primary" />,
-      title: translations.home.featuredServices.marketing.title,
-      description: translations.home.featuredServices.marketing.description,
-      details: translations.home.featuredServices.marketing.details,
-    },
-      {
-      icon: <Settings className="h-10 w-10 text-primary" />,
-      title: translations.home.featuredServices.it.title,
-      description: translations.home.featuredServices.it.description,
-      details: translations.home.featuredServices.it.details,
-    },
-    {
-      icon: <Users className="h-10 w-10 text-primary" />,
-      title: translations.home.featuredServices.hr.title,
-      description: translations.home.featuredServices.hr.description,
-      details: translations.home.featuredServices.hr.details,
-    },
-      {
-      icon: <ShieldCheck className="h-10 w-10 text-primary" />,
-      title: translations.home.featuredServices.legal.title,
-      description: translations.home.featuredServices.legal.description,
-      details: translations.home.featuredServices.legal.details,
+      icon: <Scale className="h-10 w-10 text-primary" />,
+      title: translations.home.featuredServices.planning.title,
+      description: translations.home.featuredServices.planning.description,
+      details: translations.home.featuredServices.planning.details,
     },
   ];
 
@@ -121,7 +103,7 @@ export default function Home() {
               {translations.home.consultingDirections.subtitle}
             </p>
           </div>
-          <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 items-start">
             {featuredServices.map((service, index) => (
               <div key={service.title} className="flex flex-col">
                 <Card className="flex-grow">
