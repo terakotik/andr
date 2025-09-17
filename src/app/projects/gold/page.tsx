@@ -44,14 +44,14 @@ export default function AndrgoldPage() {
   
   return (
     <div className="bg-stone-50 text-gray-800">
-      {heroImage && (
+      
         <section className="relative h-[50vh] flex items-center justify-center text-center">
           <Image
-            src={heroImage.imageUrl}
-            alt={heroImage.description}
+            src="https://s0.rbk.ru/v6_top_pics/ampresize/media/img/3/61/756468432337613.jpg"
+            alt="Gold bars"
             fill
             className="object-cover brightness-50"
-            data-ai-hint={heroImage.imageHint}
+            data-ai-hint="gold bars"
             priority
           />
           <div className="absolute inset-0 bg-primary/20"></div>
@@ -65,7 +65,7 @@ export default function AndrgoldPage() {
             </p>
           </div>
         </section>
-      )}
+      
 
       <main className="container mx-auto px-4 md:px-6 py-16 md:py-24 space-y-20">
         

@@ -63,6 +63,12 @@ const nextConfig: NextConfig = {
         hostname: 'media0.giphy.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 's0.rbk.ru',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
