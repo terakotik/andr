@@ -51,7 +51,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="flex flex-col items-start text-left">
             <Link href="/" className="flex flex-col items-start mb-4">
-              <span className="text-2xl font-bold text-primary uppercase font-headline italic tracking-normal">ANDRGLOBAL</span>
+              <span className="text-2xl font-bold text-primary uppercase font-headline tracking-normal">ANDRGLOBAL</span>
               <span className="text-xs uppercase tracking-normal text-muted-foreground font-body">financial</span>
             </Link>
             <p className="text-muted-foreground text-sm max-w-xs text-left">
