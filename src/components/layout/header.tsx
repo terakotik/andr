@@ -43,8 +43,9 @@ export function Header() {
   const navLinks = [
     { href: "/#about", label: translations.header.about },
     { href: "/consulting", label: translations.header.consulting },
-    { href: "#", label: translations.header.contact, onClick: handleContactClick },
   ];
+  
+  const contactLink = { href: "#", label: translations.header.contact, onClick: handleContactClick };
 
   const projectLinks = [
     { href: "/projects/gold", label: "ANDRGOLD" },
@@ -90,6 +91,13 @@ export function Header() {
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
+             <Link
+                href={contactLink.href}
+                onClick={contactLink.onClick}
+                className="text-gray-300 transition-colors hover:text-white"
+              >
+                {contactLink.label}
+              </Link>
           </nav>
 
           <div className="flex items-center gap-2">
@@ -127,7 +135,7 @@ export function Header() {
         {isMenuOpen && (
           <div className="md:hidden bg-black border-t border-gray-800 absolute top-full left-0 w-full">
             <nav className="flex flex-col gap-4 p-4">
-              {navLinks.map((link) => (
+              {[...navLinks].map((link) => (
                 <Link
                   key={link.label}
                   href={link.href}
@@ -150,6 +158,13 @@ export function Header() {
                   ))}
                 </DropdownMenuContent>
               </DropdownMenu>
+              <Link
+                  href={contactLink.href}
+                  className="text-gray-300 hover:text-white text-lg"
+                  onClick={contactLink.onClick || closeMenu}
+                >
+                  {contactLink.label}
+              </Link>
               <Button asChild className="w-full mt-2 bg-primary hover:bg-primary/90 text-primary-foreground" size="lg">
                 <Link href="#" onClick={handleContactClick}>{translations.header.contactUs}</Link>
               </Button>
