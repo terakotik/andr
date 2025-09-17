@@ -4,7 +4,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronDown, Menu, X, Globe } from "lucide-react";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { usePathname } from 'next/navigation';
 import { cn } from "@/lib/utils";
@@ -25,10 +25,31 @@ export function Header() {
   const pathname = usePathname();
   const isMobile = useIsMobile();
   const [isClient, setIsClient] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     setIsClient(true);
   }, []);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        isMenuOpen &&
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node) &&
+        triggerRef.current &&
+        !triggerRef.current.contains(event.target as Node)
+      ) {
+        setIsMenuOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isMenuOpen]);
 
   const closeMenu = () => setIsMenuOpen(false);
 
@@ -57,9 +78,9 @@ export function Header() {
       <header className="bg-black text-white sticky top-0 z-50 border-b border-gray-800">
         <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
           <Link href="/" className="flex items-center gap-3" onClick={closeMenu}>
-              <Image src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3Vld2RwdHdlbWp6eHkxaG0yMmh2bDJnYTQ2Mzl0b2dsbnBhMnRhaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/U4FkC2VqpeNRHjTDQ5/giphy.gif" alt="AndrGlobal Logo" width={56} height={56} unoptimized className="rounded-full" />
+              <Image src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3Vld2RwdHdlbWp6eHkxaG0yMmh2bDJnYTQ2Mzl0b2dsbnBhMnRhaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/U4FkC2VqpeNRHjTDQ5/giphy.gif" alt="AndrGlobal Logo" width={40} height={40} unoptimized className="rounded-full" />
               <div className="flex flex-col -my-2">
-                <span className="text-xl md:text-2xl font-bold text-white uppercase font-headline tracking-normal">ANDRGLOBAL</span>
+                <span className="text-lg md:text-2xl font-bold text-white uppercase font-headline tracking-normal">ANDRGLOBAL</span>
                 <span className="text-xs uppercase tracking-normal text-gray-400 font-body">financial</span>
               </div>
           </Link>
@@ -70,8 +91,7 @@ export function Header() {
                 key={link.label}
                 href={link.href}
                 className={cn(
-                  "text-gray-300 transition-colors hover:text-white",
-                  (pathname === link.href || (link.href.includes('#') && pathname === '/')) && "text-white font-semibold"
+                  "text-gray-300 transition-colors hover:text-white"
                 )}
               >
                 {link.label}
@@ -120,6 +140,7 @@ export function Header() {
               {translations.header.contactUs}
             </Button>
             <Button
+              ref={triggerRef}
               variant="ghost"
               size="icon"
               className="md:hidden text-white hover:bg-gray-800 hover:text-white"
@@ -132,7 +153,7 @@ export function Header() {
         </div>
         
         {isMenuOpen && (
-          <div className="md:hidden bg-black border-t border-gray-800 absolute top-full left-0 w-full">
+          <div ref={menuRef} className="md:hidden bg-black border-t border-gray-800 absolute top-full left-0 w-full">
             <nav className="flex flex-col gap-4 p-4">
               {navLinks.map((link) => (
                 <Link
