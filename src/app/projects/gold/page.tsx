@@ -142,23 +142,23 @@ export default function AndrgoldPage() {
             <div className="text-center space-y-4 mb-12">
                 <h2 className="text-3xl md:text-4xl font-headline font-bold text-amber-900">Условия поставки: FCA Ташкент (Инкотермс 2020)</h2>
             </div>
-            <div className="grid md:grid-cols-2 gap-8 items-start max-w-6xl mx-auto">
-                <Card className="border-green-600 border-2">
+            <div className="grid md:grid-cols-2 gap-8 items-stretch max-w-6xl mx-auto">
+                <Card className="border-green-600 border-2 flex flex-col">
                     <CardHeader>
                         <CardTitle className="text-green-800">Обязанности Продавца (наши)</CardTitle>
                     </CardHeader>
-                    <CardContent className="space-y-3">
+                    <CardContent className="space-y-3 flex-grow">
                        <p className="flex items-start"><Check className="w-5 h-5 mr-2 mt-1 text-green-600 flex-shrink-0"/>Подготовить товар к экспорту в Ташкенте.</p>
                        <p className="flex items-start"><Check className="w-5 h-5 mr-2 mt-1 text-green-600 flex-shrink-0"/>Осуществить экспортное таможенное оформление.</p>
                        <p className="flex items-start"><Check className="w-5 h-5 mr-2 mt-1 text-green-600 flex-shrink-0"/>Нести риски до передачи товара перевозчику.</p>
                        <p className="flex items-start"><Check className="w-5 h-5 mr-2 mt-1 text-green-600 flex-shrink-0"/>Предоставить все необходимые документы.</p>
                     </CardContent>
                 </Card>
-                <Card className="border-blue-600 border-2">
+                <Card className="border-blue-600 border-2 flex flex-col">
                     <CardHeader>
                         <CardTitle className="text-blue-800">Обязанности Покупателя</CardTitle>
                     </CardHeader>
-                    <CardContent className="space-y-3">
+                    <CardContent className="space-y-3 flex-grow">
                        <p className="flex items-start"><Check className="w-5 h-5 mr-2 mt-1 text-blue-600 flex-shrink-0"/>Назначить перевозчика и заключить договор перевозки.</p>
                        <p className="flex items-start"><Check className="w-5 h-5 mr-2 mt-1 text-blue-600 flex-shrink-0"/>Нести риски с момента получения товара от нас.</p>
                        <p className="flex items-start"><Check className="w-5 h-5 mr-2 mt-1 text-blue-600 flex-shrink-0"/>Осуществить импортное таможенное оформление.</p>
@@ -227,6 +227,8 @@ export default function AndrgoldPage() {
     </div>
   );
 }
+
+    
 
     
 
