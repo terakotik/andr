@@ -89,13 +89,6 @@ export default function Home() {
               </div>
             </div>
             <div className="relative h-full w-full">
-              <Image
-                src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3Vld2RwdHdlbWp6eHkxaG0yMmh2bDJnYTQ2Mzl0b2dsbnBhMnRhaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/U4FkC2VqpeNRHjTDQ5/giphy.gif"
-                alt="Business animation"
-                layout="fill"
-                objectFit="contain"
-                unoptimized
-              />
             </div>
           </div>
         </div>
@@ -261,4 +254,5 @@ export default function Home() {
     
 
     
+
 
