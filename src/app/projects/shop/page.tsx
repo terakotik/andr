@@ -18,6 +18,7 @@ export default function AndrShopPage() {
             data-ai-hint={heroImage.imageHint}
             priority
           />
+          <div className="absolute inset-0 bg-primary/90"></div>
           <div className="relative z-10 space-y-4 px-4 text-white">
             <p className="font-headline text-lg tracking-widest text-green-200">ANDRESHOP</p>
             <h1 className="text-4xl md:text-6xl font-headline font-bold">

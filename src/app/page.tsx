@@ -178,6 +178,7 @@ export default function Home() {
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                     data-ai-hint="businessman portrait"
                 />
+                <div className="absolute inset-0 bg-primary/90"></div>
             </div>
           
           <div className="space-y-6">
@@ -215,7 +216,10 @@ export default function Home() {
                               <p className="text-muted-foreground mb-6 italic">"{testimonial.text}"</p>
                               <div className="flex items-center gap-4">
                                   <Avatar>
-                                      <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
+                                      <div className="relative w-full h-full">
+                                        <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
+                                        <div className="absolute inset-0 bg-primary/90 rounded-full"></div>
+                                      </div>
                                       <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
                                   </Avatar>
                                   <div>
