@@ -52,7 +52,7 @@ export function Footer() {
           <div className="flex flex-col items-start text-left">
             <Link href="/" className="hidden md:flex flex-col items-start mb-4">
               <span className="text-2xl font-bold text-primary uppercase tracking-wider font-headline italic">ANDRGLOBAL</span>
-              <span className="text-xs uppercase tracking-widest text-muted-foreground font-body">Consulting</span>
+              <span className="text-xs uppercase tracking-widest text-muted-foreground font-body">financial</span>
             </Link>
             <p className="text-muted-foreground text-sm max-w-xs text-left">
               {translations.footer.companyDescription}
