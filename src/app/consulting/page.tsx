@@ -58,7 +58,7 @@ export default function ConsultingPage() {
                 </Button>
               </div>
             </div>
-            <Card className="shadow-lg">
+            <Card className="shadow-lg rounded-lg">
               <CardHeader>
                 <CardTitle>{translations.consulting.hero.formTitle}</CardTitle>
               </CardHeader>
@@ -81,7 +81,7 @@ export default function ConsultingPage() {
                 </div>
                 <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
                     {consultingServices.map((service) => (
-                    <Card key={service.title} className="flex flex-col md:flex-row items-center md:items-start overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-primary/50 transform hover:-translate-y-1 text-center md:text-left">
+                    <Card key={service.title} className="flex flex-col md:flex-row items-center md:items-start overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-primary/50 transform hover:-translate-y-1 text-center md:text-left rounded-lg">
                         <div className="p-6 flex-shrink-0">
                           <div className="p-4 bg-secondary/50 rounded-full w-fit">
                             {service.icon}
@@ -119,7 +119,7 @@ export default function ConsultingPage() {
               {translations.consulting.startTransformation.subtitle}
             </p>
           </div>
-          <Card className="max-w-2xl mx-auto">
+          <Card className="max-w-2xl mx-auto rounded-lg">
             <CardHeader>
               <CardTitle>{translations.consulting.startTransformation.formTitle}</CardTitle>
             </CardHeader>

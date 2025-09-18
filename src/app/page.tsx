@@ -106,7 +106,7 @@ export default function Home() {
           <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             {featuredServices.map((service, index) => (
               <div key={service.title} className="flex flex-col">
-                <Card className="flex-grow">
+                <Card className="flex-grow rounded-lg">
                   <div className="flex flex-col md:flex-row items-center md:items-start text-center md:text-left p-6">
                       <div className="p-4 bg-primary/10 rounded-full w-fit flex-shrink-0">
                           {service.icon}
@@ -144,7 +144,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {projectLinks.map((project) => (
-              <Card key={project.name} className="hover:shadow-xl transition-shadow duration-300">
+              <Card key={project.name} className="hover:shadow-xl transition-shadow duration-300 rounded-lg">
                 <CardHeader>
                   <CardTitle className="font-headline text-2xl text-primary">{project.name}</CardTitle>
                 </CardHeader>
@@ -205,7 +205,7 @@ export default function Home() {
               </div>
               <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                   {translations.home.testimonials.reviews.map((testimonial: { name: string; title: string; avatar: string; text: string; }) => (
-                      <Card key={testimonial.name} className="bg-secondary/50">
+                      <Card key={testimonial.name} className="bg-secondary/50 rounded-lg">
                           <CardContent className="p-6">
                               <p className="text-muted-foreground mb-6 italic">"{testimonial.text}"</p>
                               <div className="flex items-center gap-4">
@@ -237,7 +237,7 @@ export default function Home() {
              {translations.home.startCollaboration.subtitle}
             </p>
           </div>
-          <Card className="max-w-2xl mx-auto">
+          <Card className="max-w-2xl mx-auto rounded-lg">
               <CardHeader>
                 <CardTitle>{translations.home.startCollaboration.formTitle}</CardTitle>
               </CardHeader>
