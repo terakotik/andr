@@ -80,7 +80,7 @@ export default function Home() {
                 {translations.home.hero.subtitle}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button size="lg" asChild>
+                <Button size="lg" variant="outline" asChild className="border-white text-white hover:bg-primary hover:text-primary-foreground hover:border-primary">
                   <Link href="/consulting">
                     {translations.home.hero.servicesButton}
                   </Link>
@@ -122,7 +122,7 @@ export default function Home() {
                       </AccordionTrigger>
                       <AccordionContent className="px-6 pb-6 text-muted-foreground">
                         <p className="mb-4">{service.details}</p>
-                        <Button asChild>
+                        <Button asChild variant="outline">
                           <Link href="https://wa.me/6289530825574" target="_blank">{translations.home.orderButton}</Link>
                         </Button>
                       </AccordionContent>
@@ -188,7 +188,7 @@ export default function Home() {
               ))}
             </ul>
              <div className="pt-4">
-                 <Button asChild size="lg">
+                 <Button asChild size="lg" variant="outline">
                     <Link href="/consulting">{translations.home.whyChooseUs.aboutUsButton}</Link>
                 </Button>
              </div>
@@ -253,3 +253,4 @@ export default function Home() {
     
 
     
+
