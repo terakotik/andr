@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { CheckCircle2, ArrowRight, Landmark, Briefcase, Scale, FileText } from 'lucide-react';
+import { CheckCircle2, ChevronRight, Landmark, Briefcase, Scale, FileText } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ContactForm } from '@/components/contact-form';
 import React from 'react';
@@ -82,7 +82,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button size="lg" variant="outline" asChild className="border-white text-white hover:bg-primary hover:text-primary-foreground hover:border-primary">
                   <Link href="/consulting">
-                    <ArrowRight className="mr-2 h-4 w-4" />
+                    <ChevronRight className="mr-2 h-4 w-4" />
                     {translations.home.hero.servicesButton}
                   </Link>
                 </Button>
