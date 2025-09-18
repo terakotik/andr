@@ -93,11 +93,12 @@ export function Footer() {
           </div>
 
           <div className="text-left">
-            <h4 className="font-headline font-semibold mb-4">{translations.footer.subscribe.title}</h4>
-            <form className="flex flex-col sm:flex-row gap-2">
-              <Input type="email" placeholder={translations.footer.subscribe.placeholder} className="bg-background" />
-              <Button type="submit">{translations.footer.subscribe.button}</Button>
-            </form>
+            <h4 className="font-headline font-semibold mb-4">Наш офис</h4>
+            <div className="text-sm text-muted-foreground space-y-2">
+                <p>Alamanda Office, Jl. Bypass Ngurah Rai Br. Kerthayasa No.67 5th Floor</p>
+                <p>Telephone: +62 895 308 25574 (WhatsApp)</p>
+                <p>E-mail: <a href="mailto:sale@andrgf.id" className="hover:text-primary">sale@andrgf.id</a></p>
+            </div>
           </div>
         </div>
         

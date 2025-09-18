@@ -83,7 +83,6 @@ export default function Home() {
                 <Button size="lg" asChild>
                   <Link href="/consulting">
                     {translations.home.hero.servicesButton}
-                    <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
               </div>
@@ -254,7 +253,3 @@ export default function Home() {
     
 
     
-
-
-
-
