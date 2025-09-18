@@ -213,7 +213,7 @@ export default function AndrgoldPage() {
                     Свяжитесь с нами, чтобы обсудить детали и получить индивидуальное предложение. Наша команда готова ответить на все ваши вопросы.
                 </p>
                 <div className="pt-4">
-                    <Button size="lg" asChild className="bg-gradient-to-r from-amber-400 to-amber-600 text-white shadow-lg hover:shadow-xl transition-shadow px-10 py-6 text-lg">
+                    <Button size="lg" asChild variant="outline" className="px-10 py-6 text-lg">
                         <Link href="/#contact">Связаться с нами</Link>
                     </Button>
                 </div>
@@ -224,5 +224,7 @@ export default function AndrgoldPage() {
     </div>
   );
 }
+
+    
 
     

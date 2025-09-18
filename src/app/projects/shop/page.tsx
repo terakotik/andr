@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -59,7 +60,7 @@ export default function AndrShopPage() {
           </div>
 
           <div className="text-center pt-8">
-            <Button size="lg" className="bg-green-700 text-white hover:bg-green-800 px-12 py-6 text-lg">
+            <Button size="lg" variant="outline" className="px-12 py-6 text-lg">
               Запросить стоимость
             </Button>
           </div>
@@ -68,3 +69,5 @@ export default function AndrShopPage() {
     </div>
   );
 }
+
+    
