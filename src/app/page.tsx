@@ -80,7 +80,7 @@ export default function Home() {
                 {translations.home.hero.subtitle}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button size="lg" variant="outline" asChild className="border-white text-white hover:bg-primary hover:text-primary-foreground hover:border-primary">
+                <Button size="lg" variant="outline" asChild className="rounded-full border-white text-white hover:bg-primary hover:text-primary-foreground hover:border-primary">
                   <Link href="/consulting">
                     <ChevronRight className="mr-2 h-4 w-4" />
                     {translations.home.hero.servicesButton}
@@ -250,3 +250,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
