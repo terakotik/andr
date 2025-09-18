@@ -50,7 +50,7 @@ export default function ConsultingPage() {
                 {translations.consulting.hero.subtitle}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button size="lg" asChild>
+                <Button size="lg" asChild variant="outline">
                   <Link href="#services">{translations.consulting.hero.servicesButton}</Link>
                 </Button>
                 <Button size="lg" variant="outline" asChild>

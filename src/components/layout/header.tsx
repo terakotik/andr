@@ -136,7 +136,7 @@ export function Header() {
                   </DropdownMenuContent>
               </DropdownMenu>
 
-            <Button onClick={handleContactClick} className="hidden md:flex bg-primary hover:bg-primary/90 text-primary-foreground">
+            <Button onClick={handleContactClick} className="hidden md:flex">
               {translations.header.contactUs}
             </Button>
             <Button
@@ -192,7 +192,7 @@ export function Header() {
                 >
                   {contactLink.label}
                 </Link>
-              <Button asChild className="w-full mt-2 bg-primary hover:bg-primary/90 text-primary-foreground" size="lg" onClick={(e) => {
+              <Button asChild className="w-full mt-2" size="lg" onClick={(e) => {
                   handleContactClick(e as React.MouseEvent<HTMLButtonElement | HTMLAnchorElement, MouseEvent>);
               }}>
                 <div role="button">{translations.header.contactUs}</div>
