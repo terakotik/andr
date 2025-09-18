@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Separator } from '@/components/ui/separator';
-import { Twitter, Linkedin, Facebook } from 'lucide-react';
+import { Twitter, Linkedin, Facebook, ChevronRight } from 'lucide-react';
 import { useLanguage } from '@/context/language-context';
 
 const socialLinks = [
@@ -49,7 +49,10 @@ export function Footer() {
                     <h4 className="font-headline text-xl font-bold text-primary">{project.name}</h4>
                     <p className="text-muted-foreground mt-2 mb-4">{project.description}</p>
                     <Button asChild variant="outline">
-                      <Link href={project.href}>{translations.footer.learnMore}</Link>
+                      <Link href={project.href}>
+                        {translations.footer.learnMore}
+                        <ChevronRight className="ml-2 h-4 w-4" />
+                      </Link>
                     </Button>
                 </div>
               </div>
