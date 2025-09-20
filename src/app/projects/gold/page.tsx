@@ -217,7 +217,7 @@ export default function AndrgoldPage() {
                             <CartesianGrid vertical={false} />
                             <XAxis dataKey="year" tickLine={false} axisLine={false} tickMargin={8} />
                             <YAxis 
-                                domain={['dataMin - 100', 'auto']}
+                                domain={[0, 'auto']}
                                 tickFormatter={(value) => `$${value}`}
                             />
                             <Tooltip 
