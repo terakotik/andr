@@ -262,6 +262,4 @@ export default function AndrgoldPage() {
   );
 }
 
-
-
     
