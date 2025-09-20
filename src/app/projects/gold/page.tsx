@@ -4,7 +4,7 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Gem, ShieldCheck, Scale, Globe, ArrowRight, ArrowLeft, Check, X } from 'lucide-react';
+import { Gem, ShieldCheck, Scale, Globe, ArrowRight, ArrowLeft, Check, X, Award } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import Link from 'next/link';
 import { ChartContainer, ChartTooltip, ChartTooltipContent, ChartConfig } from "@/components/ui/chart"
@@ -25,9 +25,13 @@ const lbmaChartConfig = {
   },
 } satisfies ChartConfig
 
-const purityData = [
+const purityDataRaw = [
     { name: 'Pure Gold', value: 95, fill: '#eab308' },
     { name: 'Other Metals', value: 5, fill: '#6b7280' },
+]
+const purityDataRefined = [
+    { name: 'Pure Gold', value: 99.99, fill: '#eab308' },
+    { name: 'Other Metals', value: 0.01, fill: '#6b7280' },
 ]
 
 const purityChartConfig = {
@@ -97,40 +101,36 @@ export default function AndrgoldPage() {
 
         <section id="product">
             <div className="text-center space-y-4 mb-12">
-                <h2 className="text-3xl md:text-4xl font-headline font-bold text-amber-900">О продукте</h2>
+                <h2 className="text-3xl md:text-4xl font-headline font-bold text-amber-900">Два варианта продукта</h2>
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                    Мы предлагаем как сырьевое золото из Афганистана, так и аффинированное золото высшей пробы.
+                </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <Card>
-                    <CardHeader><CardTitle>Наименование</CardTitle></CardHeader>
-                    <CardContent><p>Золото в слитках</p></CardContent>
-                </Card>
-                <Card>
-                    <CardHeader><CardTitle>Происхождение</CardTitle></CardHeader>
-                    <CardContent><p>Афганистан</p></CardContent>
-                </Card>
-                 <Card className="lg:col-span-2">
-                    <CardHeader><CardTitle>Чистота: 93-97%</CardTitle></CardHeader>
-                    <CardContent>
-                       <ChartContainer config={purityChartConfig} className="mx-auto aspect-square h-[100px]">
-                            <PieChart>
-                                <ChartTooltip content={<ChartTooltipContent hideLabel />} />
-                                <Pie data={purityData} dataKey="value" nameKey="name" innerRadius={20} outerRadius={40} strokeWidth={5}>
-                                     {purityData.map((entry, index) => (
-                                        <Cell key={`cell-${index}`} fill={entry.fill} />
-                                    ))}
-                                </Pie>
-                            </PieChart>
-                        </ChartContainer>
-                        <p className="text-center text-sm text-muted-foreground mt-2">Визуализация среднего показателя чистоты</p>
+            <div className="grid md:grid-cols-2 gap-8 items-stretch">
+                <Card className="flex flex-col">
+                    <CardHeader>
+                        <CardTitle className="text-amber-900">Вариант 1: Золото-сырец</CardTitle>
+                        <CardDescription>Происхождение: Афганистан</CardDescription>
+                    </CardHeader>
+                    <CardContent className="flex-grow space-y-4">
+                        <p><span className="font-semibold">Чистота:</span> 93-97% (22-23 карата)</p>
+                        <p><span className="font-semibold">Форма:</span> Стандартные слитки или по согласованию.</p>
+                        <p>Идеально подходит для последующей переработки и аффинажа.</p>
                     </CardContent>
                 </Card>
-                <Card>
-                    <CardHeader><CardTitle>Форма</CardTitle></CardHeader>
-                    <CardContent><p>Стандартные слитки или по согласованию</p></CardContent>
-                </Card>
-                <Card className="lg-col-span-3">
-                    <CardHeader><CardTitle>Сертификация</CardTitle></CardHeader>
-                    <CardContent><p>Предоставляется полный пакет сертификатов качества и происхождения.</p></CardContent>
+                <Card className="flex flex-col border-amber-400 border-2">
+                    <CardHeader>
+                        <CardTitle className="text-amber-900">Вариант 2: Аффинированное золото</CardTitle>
+                        <CardDescription>После полной очистки</CardDescription>
+                    </CardHeader>
+                    <CardContent className="flex-grow space-y-4">
+                        <p><span className="font-semibold">Чистота:</span> 999.9 (четыре девятки)</p>
+                        <p><span className="font-semibold">Форма:</span> Стандартные банковские слитки.</p>
+                        <div className="flex items-start gap-2 pt-2">
+                            <Award className="h-6 w-6 text-amber-600 mt-0.5 flex-shrink-0" />
+                            <p className="flex-grow"><span className="font-semibold">Сертификация:</span> Поставляется с сертификатом Узбекской государственной пробирной палаты.</p>
+                        </div>
+                    </CardContent>
                 </Card>
             </div>
         </section>
@@ -224,7 +224,5 @@ export default function AndrgoldPage() {
     </div>
   );
 }
-
-    
 
     
