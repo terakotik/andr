@@ -11,12 +11,12 @@ import { ChartContainer, ChartTooltip, ChartTooltipContent, ChartConfig } from "
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis, Line, LineChart, Pie, PieChart, Cell } from "recharts"
 
 const lbmaData = [
-    { date: "2020", price: 1898.36 },
-    { date: "2021", price: 1829.20 },
-    { date: "2022", price: 1824.05 },
-    { date: "2023", price: 2078.40 },
-    { date: "2024", price: 2350.00 },
-    { date: "2025", price: 2450.00 },
+    { date: "2020", price: 1586.20 },
+    { date: "2021", price: 1798.61 },
+    { date: "2022", price: 1800.09 },
+    { date: "2023", price: 1900.00 },
+    { date: "2024", price: 1950.00 },
+    { date: "2025", price: 1975.00 },
 ];
 
 const lbmaChartConfig = {
@@ -205,14 +205,14 @@ export default function AndrgoldPage() {
              <Card>
                 <CardHeader>
                     <CardTitle>Динамика котировок LBMA Gold Price (USD за унцию)</CardTitle>
-                    <CardDescription>Цена на золото привязана к мировым котировкам для обеспечения прозрачности. Данные за 2025 год являются прогнозом.</CardDescription>
+                    <CardDescription>Собраны данные о средней цене золота в долларах США за 1 тройскую унцию по годам с 2020 по 2025. Данные за 2023-2025 годы являются ориентировочными.</CardDescription>
                 </CardHeader>
                 <CardContent>
                     <ChartContainer config={lbmaChartConfig} className="w-full h-[350px]">
                         <BarChart data={lbmaData} margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
                             <CartesianGrid vertical={false} />
                             <XAxis dataKey="date" tickLine={false} axisLine={false} tickMargin={8} />
-                            <YAxis domain={['dataMin - 500', 'auto']} />
+                            <YAxis domain={['dataMin - 200', 'auto']} />
                             <ChartTooltip cursor={false} content={<ChartTooltipContent indicator="line" />} />
                             <Bar dataKey="price" fill="var(--color-price)" radius={8} />
                         </BarChart>
@@ -238,5 +238,6 @@ export default function AndrgoldPage() {
       </main>
     </div>
   );
+}
 
     
