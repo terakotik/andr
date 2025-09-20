@@ -16,6 +16,7 @@ const lbmaData = [
     { date: "2022", price: 1824.05 },
     { date: "2023", price: 2078.40 },
     { date: "2024", price: 2350.00 },
+    { date: "2025", price: 2450.00 },
 ];
 
 const lbmaChartConfig = {
@@ -118,7 +119,7 @@ export default function AndrgoldPage() {
                         <p>Идеально подходит для последующей переработки и аффинажа.</p>
                     </CardContent>
                 </Card>
-                <Card className="flex flex-col border-amber-400 border-2">
+                <Card className="flex flex-col">
                     <CardHeader>
                         <CardTitle className="text-amber-900">Вариант 2: Аффинированное золото</CardTitle>
                         <CardDescription>После полной очистки</CardDescription>
@@ -190,7 +191,7 @@ export default function AndrgoldPage() {
              <Card>
                 <CardHeader>
                     <CardTitle>Динамика котировок LBMA Gold Price (USD за унцию)</CardTitle>
-                    <CardDescription>Цена на золото привязана к мировым котировкам для обеспечения прозрачности.</CardDescription>
+                    <CardDescription>Цена на золото привязана к мировым котировкам для обеспечения прозрачности. Данные за 2025 год являются прогнозом.</CardDescription>
                 </CardHeader>
                 <CardContent>
                     <ChartContainer config={lbmaChartConfig} className="w-full h-[350px]">
@@ -213,7 +214,7 @@ export default function AndrgoldPage() {
                     Свяжитесь с нами, чтобы обсудить детали и получить индивидуальное предложение. Наша команда готова ответить на все ваши вопросы.
                 </p>
                 <div className="pt-4">
-                    <Button size="lg" asChild variant="outline" className="px-10 py-6 text-lg">
+                    <Button size="lg" asChild variant="outline" className="px-10 py-6 text-lg rounded-full">
                         <Link href="/#contact">Связаться с нами</Link>
                     </Button>
                 </div>
@@ -224,3 +225,5 @@ export default function AndrgoldPage() {
     </div>
   );
 }
+
+    
