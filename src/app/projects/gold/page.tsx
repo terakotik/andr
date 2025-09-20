@@ -110,7 +110,10 @@ export default function AndrgoldPage() {
             <div className="grid md:grid-cols-2 gap-8 items-stretch">
                 <Card className="flex flex-col">
                     <CardHeader>
-                        <CardTitle className="text-amber-900">Золото-сырец</CardTitle>
+                        <CardTitle className="flex items-center gap-3 text-amber-900">
+                            <Gem className="w-7 h-7 text-amber-700"/>
+                            Золото-сырец
+                        </CardTitle>
                         <CardDescription>Происхождение: Афганистан</CardDescription>
                     </CardHeader>
                     <CardContent className="flex-grow space-y-4">
@@ -121,15 +124,17 @@ export default function AndrgoldPage() {
                 </Card>
                 <Card className="flex flex-col">
                     <CardHeader>
-                        <CardTitle className="text-amber-900">Аффинированное золото</CardTitle>
+                        <CardTitle className="flex items-center gap-3 text-amber-900">
+                            <Award className="w-7 h-7 text-amber-700"/>
+                            Аффинированное золото
+                        </CardTitle>
                         <CardDescription>После полной очистки</CardDescription>
                     </CardHeader>
                     <CardContent className="flex-grow space-y-4">
                         <p><span className="font-semibold">Чистота:</span> 999.9 (четыре девятки)</p>
                         <p><span className="font-semibold">Форма:</span> Мерные слитки (1, 2, 3 кг).</p>
                         <div className="flex items-start gap-2 pt-2">
-                            <Award className="h-6 w-6 text-amber-600 mt-0.5 flex-shrink-0" />
-                            <p className="flex-grow"><span className="font-semibold">Сертификация:</span> Поставляется с сертификатом Узбекской государственной пробирной палаты.</p>
+                           <p><span className="font-semibold">Сертификация:</span> Поставляется с сертификатом Узбекской государственной пробирной палаты.</p>
                         </div>
                     </CardContent>
                 </Card>
@@ -225,5 +230,3 @@ export default function AndrgoldPage() {
     </div>
   );
 }
-
-    
