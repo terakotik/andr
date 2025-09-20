@@ -215,7 +215,7 @@ export default function AndrgoldPage() {
             </div>
              <Card>
                 <CardHeader>
-                    <CardTitle>Динамика годового роста цены на золото (%)</CardTitle>
+                    <CardTitle>Динамика цены на золото (LBMA Gold Price)</CardTitle>
                     <CardDescription>
                         Процентное изменение средней цены на золото по сравнению с предыдущим годом. Данные за 2023-2025 годы являются ориентировочными.
                     </CardDescription>
@@ -266,5 +266,3 @@ export default function AndrgoldPage() {
     </div>
   );
 }
-
-    
