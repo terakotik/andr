@@ -31,7 +31,7 @@ const purityDataRaw = [
     { name: 'Other Metals', value: 5, fill: '#6b7280' },
 ]
 const purityDataRefined = [
-    { name: 'Pure Gold', value: 99.99, fill: '#eab308' },
+    { name: 'Pure Gold', value: 99.99, fill: '#eab3a8' },
     { name: 'Other Metals', value: 0.01, fill: '#6b7280' },
 ]
 
@@ -102,15 +102,15 @@ export default function AndrgoldPage() {
 
         <section id="product">
             <div className="text-center space-y-4 mb-12">
-                <h2 className="text-3xl md:text-4xl font-headline font-bold text-amber-900">Два варианта продукта</h2>
+                <h2 className="text-3xl md:text-4xl font-headline font-bold text-amber-900">Наши продукты</h2>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                    Мы предлагаем как сырьевое золото из Афганистана, так и аффинированное золото высшей пробы.
+                    Мы предлагаем как золото-сырец из Афганистана, так и аффинированное золото высшей пробы.
                 </p>
             </div>
             <div className="grid md:grid-cols-2 gap-8 items-stretch">
                 <Card className="flex flex-col">
                     <CardHeader>
-                        <CardTitle className="text-amber-900">Вариант 1: Золото-сырец</CardTitle>
+                        <CardTitle className="text-amber-900">Золото-сырец</CardTitle>
                         <CardDescription>Происхождение: Афганистан</CardDescription>
                     </CardHeader>
                     <CardContent className="flex-grow space-y-4">
@@ -121,7 +121,7 @@ export default function AndrgoldPage() {
                 </Card>
                 <Card className="flex flex-col">
                     <CardHeader>
-                        <CardTitle className="text-amber-900">Вариант 2: Аффинированное золото</CardTitle>
+                        <CardTitle className="text-amber-900">Аффинированное золото</CardTitle>
                         <CardDescription>После полной очистки</CardDescription>
                     </CardHeader>
                     <CardContent className="flex-grow space-y-4">
@@ -170,7 +170,7 @@ export default function AndrgoldPage() {
                         <p className="font-bold text-amber-800">Продавец</p>
                     </div>
                     <ArrowRight className="w-8 h-8 mx-2 text-gray-400 shrink-0"/>
-                     <div className="px-2 py-4 bg-gray-200 rounded-lg whitespace-nowrap shadow-md border border-gray-300">
+                     <div className="px-2 py-4 bg-gray-200 rounded-lg whitespace-nowrap shadow-md border-gray-300">
                         <p className="font-bold text-center text-gray-700">Перевозчик</p>
                     </div>
                     <ArrowRight className="w-8 h-8 mx-2 text-gray-400 shrink-0"/>
