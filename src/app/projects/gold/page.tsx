@@ -8,30 +8,21 @@ import { Gem, ShieldCheck, Scale, Globe, ArrowRight, ArrowLeft, Check, X, Award,
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import Link from 'next/link';
 import { ChartContainer, ChartTooltip, ChartTooltipContent, ChartConfig } from "@/components/ui/chart"
-import { Bar, BarChart, CartesianGrid, XAxis, YAxis, LabelList } from "recharts"
+import { Bar, BarChart, CartesianGrid, XAxis, YAxis, LabelList, Line, LineChart, Tooltip } from "recharts"
 
 const priceData = [
-    { date: "2020", price: 1586.20 },
-    { date: "2021", price: 1798.61 },
-    { date: "2022", price: 1800.09 },
-    { date: "2023", price: 1900.00 },
-    { date: "2024", price: 1950.00 },
-    { date: "2025", price: 1975.00 },
+    { year: "1970", price: 36 },
+    { year: "1980", price: 615 },
+    { year: "1990", price: 383 },
+    { year: "2000", price: 279 },
+    { year: "2010", price: 1224 },
+    { year: "2020", price: 1770 },
+    { year: "2024", price: 2300 },
 ];
 
-const growthData = priceData.map((item, index) => {
-    if (index === 0) {
-        return { date: item.date, growth: 0 };
-    }
-    const previousPrice = priceData[index - 1].price;
-    const growth = ((item.price - previousPrice) / previousPrice) * 100;
-    return { date: item.date, growth: parseFloat(growth.toFixed(2)) };
-});
-
-
 const lbmaChartConfig = {
-  growth: {
-    label: "Рост (%)",
+  price: {
+    label: "Цена ($)",
     color: "#eab308",
   },
 } satisfies ChartConfig
@@ -215,34 +206,38 @@ export default function AndrgoldPage() {
             </div>
              <Card>
                 <CardHeader>
-                    <CardTitle>Динамика цены на золото (LBMA Gold Price)</CardTitle>
+                    <CardTitle>Мировая динамика цены на золото (1970-2024)</CardTitle>
                     <CardDescription>
-                        Процентное изменение средней цены на золото по сравнению с предыдущим годом. Данные за 2023-2025 годы являются ориентировочными.
+                        Среднегодовая цена за тройскую унцию в долларах США. Данные показывают долгосрочный тренд роста.
                     </CardDescription>
                 </CardHeader>
                 <CardContent>
-                    <ChartContainer config={lbmaChartConfig} className="w-full h-[350px]">
-                        <BarChart data={growthData} margin={{ top: 30, right: 20, bottom: 20, left: 20 }}>
+                    <ChartContainer config={lbmaChartConfig} className="w-full h-[400px]">
+                        <LineChart data={priceData} margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
                             <CartesianGrid vertical={false} />
-                            <XAxis dataKey="date" tickLine={false} axisLine={false} tickMargin={8} />
+                            <XAxis dataKey="year" tickLine={false} axisLine={false} tickMargin={8} />
                             <YAxis 
-                                unit="%" 
-                                domain={[0, 'auto']}
+                                domain={['dataMin - 100', 'auto']}
+                                tickFormatter={(value) => `$${value}`}
                             />
-                            <ChartTooltip 
-                                cursor={false} 
-                                content={<ChartTooltipContent indicator="line" labelKey="date" formatter={(value) => `${value}%`} />} 
+                            <Tooltip 
+                                cursor={true} 
+                                content={<ChartTooltipContent indicator="line" labelKey="year" formatter={(value) => `$${(value as number).toFixed(2)}`} />} 
                             />
-                             <Bar dataKey="growth" fill="var(--color-growth)" radius={8}>
-                                <LabelList 
-                                    dataKey="growth" 
-                                    position="top" 
-                                    offset={10}
-                                    formatter={(value: number) => `${value}%`}
-                                    className="fill-foreground text-sm font-medium"
-                                />
-                            </Bar>
-                        </BarChart>
+                            <Line 
+                                type="monotone" 
+                                dataKey="price" 
+                                stroke="var(--color-price)" 
+                                strokeWidth={2} 
+                                dot={{
+                                    r: 4,
+                                    fill: "var(--color-price)",
+                                }}
+                                activeDot={{
+                                    r: 6,
+                                }}
+                            />
+                        </LineChart>
                     </ChartContainer>
                 </CardContent>
             </Card>
