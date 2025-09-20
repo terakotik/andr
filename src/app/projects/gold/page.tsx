@@ -227,7 +227,7 @@ export default function AndrgoldPage() {
                             <XAxis dataKey="date" tickLine={false} axisLine={false} tickMargin={8} />
                             <YAxis 
                                 unit="%" 
-                                domain={['dataMin - 2', 'auto']}
+                                domain={[0, 'auto']}
                             />
                             <ChartTooltip 
                                 cursor={false} 
