@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Separator } from '@/components/ui/separator';
-import { Twitter, Linkedin, Facebook, ChevronRight } from 'lucide-react';
+import { Twitter, Linkedin, Facebook, ChevronRight, MapPin, Phone, Mail } from 'lucide-react';
 import { useLanguage } from '@/context/language-context';
 
 const socialLinks = [
@@ -23,6 +23,8 @@ export function Footer() {
   ];
   
   const andrGoldImageUrl = "https://dalogo.ru/wp-content/uploads/2019/10/Sajjt-11132-SHokoladnyjj-mini-Slitok-zolota-New-3.jpg";
+  const officeAddress = "Alamanda Office, Jl. Bypass Ngurah Rai Br. Kerthayasa No.67 5th Floor";
+  const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(officeAddress)}`;
 
 
   return (
@@ -96,10 +98,19 @@ export function Footer() {
 
           <div className="text-left">
             <h4 className="font-headline font-semibold mb-4">Наш офис</h4>
-            <div className="text-sm text-muted-foreground space-y-2">
-                <p>Alamanda Office, Jl. Bypass Ngurah Rai Br. Kerthayasa No.67 5th Floor</p>
-                <p>Telephone: +62 895 308 25574 (WhatsApp)</p>
-                <p>E-mail: <a href="mailto:sale@andrgf.id" className="hover:text-primary">sale@andrgf.id</a></p>
+            <div className="text-sm text-muted-foreground space-y-3">
+                <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 hover:text-primary transition-colors">
+                  <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
+                  <span>{officeAddress}</span>
+                </a>
+                <a href="tel:+6289530825574" className="flex items-center gap-3 hover:text-primary transition-colors">
+                    <Phone className="w-4 h-4 shrink-0" />
+                    <span>+62 895 308 25574 (WhatsApp)</span>
+                </a>
+                <a href="mailto:sale@andrgf.id" className="flex items-center gap-3 hover:text-primary transition-colors">
+                    <Mail className="w-4 h-4 shrink-0" />
+                    <span>sale@andrgf.id</span>
+                </a>
             </div>
           </div>
         </div>
