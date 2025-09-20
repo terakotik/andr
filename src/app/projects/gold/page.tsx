@@ -4,7 +4,7 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Gem, ShieldCheck, Scale, Globe, ArrowRight, ArrowLeft, Check, X, Award } from 'lucide-react';
+import { Gem, ShieldCheck, Scale, Globe, ArrowRight, ArrowLeft, Check, X, Award, ExternalLink } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import Link from 'next/link';
 import { ChartContainer, ChartTooltip, ChartTooltipContent, ChartConfig } from "@/components/ui/chart"
@@ -193,6 +193,14 @@ export default function AndrgoldPage() {
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                     Цена формируется на основе котировок LBMA Gold Price с согласованным дисконтом. Оплата — 100% предоплата.
                 </p>
+                 <div className="pt-2">
+                    <Button asChild variant="outline">
+                        <Link href="http://ru.investing.com/currencies/xau-usd" target="_blank">
+                            Проверить актуальную цену
+                            <ExternalLink className="w-4 h-4 ml-2" />
+                        </Link>
+                    </Button>
+                </div>
             </div>
              <Card>
                 <CardHeader>
@@ -230,4 +238,5 @@ export default function AndrgoldPage() {
       </main>
     </div>
   );
-}
+
+    
