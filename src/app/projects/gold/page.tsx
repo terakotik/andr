@@ -134,6 +134,7 @@ export default function AndrgoldPage() {
                         <p><span className="font-semibold">Чистота:</span> 999.9 (четыре девятки)</p>
                         <p><span className="font-semibold">Форма:</span> Мерные слитки (1, 2, 3 кг).</p>
                         <div className="flex items-start gap-2 pt-2">
+                           <ShieldCheck className="w-5 h-5 text-amber-600 mt-1 shrink-0"/>
                            <p><span className="font-semibold">Сертификация:</span> Поставляется с сертификатом Узбекской государственной пробирной палаты.</p>
                         </div>
                     </CardContent>
