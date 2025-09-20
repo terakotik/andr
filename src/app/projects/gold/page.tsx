@@ -114,7 +114,7 @@ export default function AndrgoldPage() {
                     </CardHeader>
                     <CardContent className="flex-grow space-y-4">
                         <p><span className="font-semibold">Чистота:</span> 93-97% (22-23 карата)</p>
-                        <p><span className="font-semibold">Форма:</span> Стандартные слитки или по согласованию.</p>
+                        <p><span className="font-semibold">Форма:</span> Мерные слитки (1, 2, 3 кг).</p>
                         <p>Идеально подходит для последующей переработки и аффинажа.</p>
                     </CardContent>
                 </Card>
@@ -125,7 +125,7 @@ export default function AndrgoldPage() {
                     </CardHeader>
                     <CardContent className="flex-grow space-y-4">
                         <p><span className="font-semibold">Чистота:</span> 999.9 (четыре девятки)</p>
-                        <p><span className="font-semibold">Форма:</span> Стандартные банковские слитки.</p>
+                        <p><span className="font-semibold">Форма:</span> Мерные слитки (1, 2, 3 кг).</p>
                         <div className="flex items-start gap-2 pt-2">
                             <Award className="h-6 w-6 text-amber-600 mt-0.5 flex-shrink-0" />
                             <p className="flex-grow"><span className="font-semibold">Сертификация:</span> Поставляется с сертификатом Узбекской государственной пробирной палаты.</p>
@@ -189,18 +189,18 @@ export default function AndrgoldPage() {
             </div>
              <Card>
                 <CardHeader>
-                    <CardTitle>Динамика котировок LBMA Gold Price</CardTitle>
+                    <CardTitle>Динамика котировок LBMA Gold Price (USD за унцию)</CardTitle>
                     <CardDescription>Цена на золото привязана к мировым котировкам для обеспечения прозрачности.</CardDescription>
                 </CardHeader>
                 <CardContent>
-                    <ChartContainer config={lbmaChartConfig} className="w-full h-[250px]">
-                        <LineChart data={lbmaData} margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
+                    <ChartContainer config={lbmaChartConfig} className="w-full h-[350px]">
+                        <BarChart data={lbmaData} margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
                             <CartesianGrid vertical={false} />
                             <XAxis dataKey="date" tickLine={false} axisLine={false} tickMargin={8} />
-                            <YAxis domain={['dataMin - 200', 'dataMax + 200']} hide />
-                            <ChartTooltip content={<ChartTooltipContent indicator="line" />} />
-                            <Line dataKey="price" type="monotone" stroke="var(--color-price)" strokeWidth={3} dot={true} />
-                        </LineChart>
+                            <YAxis domain={['dataMin - 500', 'auto']} />
+                            <ChartTooltip cursor={false} content={<ChartTooltipContent indicator="line" />} />
+                            <Bar dataKey="price" fill="var(--color-price)" radius={8} />
+                        </BarChart>
                     </ChartContainer>
                 </CardContent>
             </Card>
@@ -224,5 +224,3 @@ export default function AndrgoldPage() {
     </div>
   );
 }
-
-    
