@@ -8,9 +8,9 @@ import { Gem, ShieldCheck, Scale, Globe, ArrowRight, ArrowLeft, Check, X, Award,
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import Link from 'next/link';
 import { ChartContainer, ChartTooltip, ChartTooltipContent, ChartConfig } from "@/components/ui/chart"
-import { Bar, BarChart, CartesianGrid, XAxis, YAxis, Line, LineChart, Pie, PieChart, Cell } from "recharts"
+import { Bar, BarChart, CartesianGrid, XAxis, YAxis, LabelList } from "recharts"
 
-const lbmaData = [
+const priceData = [
     { date: "2020", price: 1586.20 },
     { date: "2021", price: 1798.61 },
     { date: "2022", price: 1800.09 },
@@ -19,12 +19,23 @@ const lbmaData = [
     { date: "2025", price: 1975.00 },
 ];
 
+const growthData = priceData.map((item, index) => {
+    if (index === 0) {
+        return { date: item.date, growth: 0 };
+    }
+    const previousPrice = priceData[index - 1].price;
+    const growth = ((item.price - previousPrice) / previousPrice) * 100;
+    return { date: item.date, growth: parseFloat(growth.toFixed(2)) };
+});
+
+
 const lbmaChartConfig = {
-  price: {
-    label: "Цена (USD)",
+  growth: {
+    label: "Рост (%)",
     color: "#eab308",
   },
 } satisfies ChartConfig
+
 
 const purityDataRaw = [
     { name: 'Pure Gold', value: 95, fill: '#eab308' },
@@ -204,17 +215,33 @@ export default function AndrgoldPage() {
             </div>
              <Card>
                 <CardHeader>
-                    <CardTitle>Динамика котировок LBMA Gold Price (USD за унцию)</CardTitle>
-                    <CardDescription>Собраны данные о средней цене золота в долларах США за 1 тройскую унцию по годам с 2020 по 2025. Данные за 2023-2025 годы являются ориентировочными.</CardDescription>
+                    <CardTitle>Динамика годового роста цены на золото (%)</CardTitle>
+                    <CardDescription>
+                        Процентное изменение средней цены на золото по сравнению с предыдущим годом. Данные за 2023-2025 годы являются ориентировочными.
+                    </CardDescription>
                 </CardHeader>
                 <CardContent>
                     <ChartContainer config={lbmaChartConfig} className="w-full h-[350px]">
-                        <BarChart data={lbmaData} margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
+                        <BarChart data={growthData} margin={{ top: 30, right: 20, bottom: 20, left: 20 }}>
                             <CartesianGrid vertical={false} />
                             <XAxis dataKey="date" tickLine={false} axisLine={false} tickMargin={8} />
-                            <YAxis domain={['dataMin - 200', 'auto']} />
-                            <ChartTooltip cursor={false} content={<ChartTooltipContent indicator="line" />} />
-                            <Bar dataKey="price" fill="var(--color-price)" radius={8} />
+                            <YAxis 
+                                unit="%" 
+                                domain={['dataMin - 2', 'auto']}
+                            />
+                            <ChartTooltip 
+                                cursor={false} 
+                                content={<ChartTooltipContent indicator="line" labelKey="date" formatter={(value) => `${value}%`} />} 
+                            />
+                             <Bar dataKey="growth" fill="var(--color-growth)" radius={8}>
+                                <LabelList 
+                                    dataKey="growth" 
+                                    position="top" 
+                                    offset={10}
+                                    formatter={(value: number) => `${value}%`}
+                                    className="fill-foreground text-sm font-medium"
+                                />
+                            </Bar>
                         </BarChart>
                     </ChartContainer>
                 </CardContent>
