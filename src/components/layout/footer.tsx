@@ -48,7 +48,7 @@ export function Footer() {
                  <div className="relative z-10">
                     <h4 className="font-headline text-xl font-bold text-primary">{project.name}</h4>
                     <p className="text-muted-foreground mt-2 mb-4">{project.description}</p>
-                    <Button asChild variant="outline">
+                    <Button asChild variant="outline" className="rounded-full">
                       <Link href={project.href}>
                         {translations.footer.learnMore}
                         <ChevronRight className="ml-2 h-4 w-4" />
@@ -65,8 +65,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="flex flex-col items-start text-left">
             <Link href="/" className="flex flex-col items-start mb-4">
-              <span className="text-2xl font-bold text-primary uppercase font-headline tracking-normal">ANDRGLOBAL</span>
-              <span className="text-xs uppercase tracking-normal text-muted-foreground font-body">financial</span>
+               <span className="text-xl font-bold text-primary uppercase font-headline tracking-wide">ANDR GLOBAL FINANCIAL</span>
             </Link>
             <p className="text-muted-foreground text-sm max-w-xs text-left">
               {translations.footer.companyDescription}

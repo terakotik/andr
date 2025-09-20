@@ -79,10 +79,7 @@ export function Header() {
         <div className="container mx-auto flex h-14 items-center justify-between px-4 md:px-6">
           <Link href="/" className="flex items-center gap-2" onClick={closeMenu}>
               <Image src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3Vld2RwdHdlbWp6eHkxaG0yMmh2bDJnYTQ2Mzl0b2dsbnBhMnRhaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/U4FkC2VqpeNRHjTDQ5/giphy.gif" alt="AndrGlobal Logo" width={32} height={32} unoptimized className="rounded-full" />
-              <div className="flex flex-col -my-2">
-                <span className="text-sm md:text-2xl font-bold text-white uppercase font-headline tracking-normal">ANDRGLOBAL</span>
-                <span className="text-xs uppercase tracking-normal text-gray-400 font-body">financial</span>
-              </div>
+              <span className="text-sm md:text-xl font-bold text-white uppercase font-headline tracking-wide">ANDR GLOBAL FINANCIAL</span>
           </Link>
           
           <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
@@ -136,7 +133,7 @@ export function Header() {
                   </DropdownMenuContent>
               </DropdownMenu>
 
-            <Button onClick={handleContactClick} className="hidden md:flex">
+            <Button onClick={handleContactClick} className="hidden md:flex rounded-full">
               {translations.header.contactUs}
             </Button>
             <Button
@@ -192,7 +189,7 @@ export function Header() {
                 >
                   {contactLink.label}
                 </Link>
-              <Button asChild className="w-full mt-2" size="lg" onClick={(e) => {
+              <Button asChild className="w-full mt-2 rounded-full" size="lg" onClick={(e) => {
                   handleContactClick(e as React.MouseEvent<HTMLButtonElement | HTMLAnchorElement, MouseEvent>);
               }}>
                 <div role="button">{translations.header.contactUs}</div>
