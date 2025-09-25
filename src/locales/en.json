@@ -270,7 +270,26 @@
             "subtitle": "Contact us to discuss the details and receive a personalized offer. Our team is ready to answer all your questions.",
             "button": "Contact us"
         }
+    },
+    "shopPage": {
+        "heroTitle": "Wholesale Food Supplies",
+        "heroSubtitle": "We supply fresh, high-quality food products directly from producers to your business.",
+        "sectionTitle": "Reliable and Fresh Supplies",
+        "sectionSubtitle": "We are your trusted partner for sourcing and delivering wholesale premium food products, including beans, grains, and other crops.",
+        "features": {
+            "sourcing": {
+                "title": "Quality Sourcing",
+                "description": "We partner with the best producers to ensure the highest quality and freshness."
+            },
+            "orders": {
+                "title": "Wholesale Orders",
+                "description": "Efficient handling of large orders to meet your business needs."
+            },
+            "logistics": {
+                "title": "Global Logistics",
+                "description": "Reliable and timely delivery to your location, wherever you are."
+            }
+        },
+        "ctaButton": "Request a Quote"
     }
 }
-
-    
