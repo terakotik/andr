@@ -79,7 +79,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li><Link href="/consulting" className="text-muted-foreground hover:text-foreground">{translations.footer.quickLinks.consulting}</Link></li>
               <li><Link href="/#about" className="text-muted-foreground hover:text-foreground">{translations.footer.quickLinks.about}</Link></li>
-              <li><Link href="/#contact" className="text-muted-foreground hover:text-foreground">{translations.footer.quickLinks.contact}</Link></li>
+              <li><Link href="/#contact" className="text-muted-foreground hoverText-foreground">{translations.footer.quickLinks.contact}</Link></li>
             </ul>
           </div>
           
@@ -97,7 +97,7 @@ export function Footer() {
           </div>
 
           <div className="text-left">
-            <h4 className="font-headline font-semibold mb-4">Наш офис</h4>
+            <h4 className="font-headline font-semibold mb-4">{translations.footer.ourOffice.title}</h4>
             <div className="text-sm text-muted-foreground space-y-3">
                 <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 hover:text-primary transition-colors">
                   <MapPin className="w-4 h-4 mt-0.5 shrink-0" />

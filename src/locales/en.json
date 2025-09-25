@@ -101,6 +101,11 @@
             "description": "Thank you for your message. We will get back to you shortly."
         }
     },
+    "contactModal": {
+        "title": "We are available in messengers",
+        "scanQR": "More convenient from your phone? <br/> Scan the QR code",
+        "whatsappButton": "WhatsApp"
+    },
     "footer": {
         "ourProjects": {
             "title": "Our Partner Projects",
@@ -120,6 +125,9 @@
         },
         "followUs": {
             "title": "Follow Us"
+        },
+        "ourOffice": {
+            "title": "Our Office"
         },
         "subscribe": {
             "title": "Subscribe to our newsletter",
@@ -165,5 +173,3 @@
         }
     }
 }
-
-    
