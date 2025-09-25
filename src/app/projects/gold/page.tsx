@@ -53,7 +53,7 @@ export default function AndrgoldPage() {
       
         <section className="relative h-[50vh] flex items-center justify-center text-center">
           <Image
-            src="https://s0.rbk.ru/v6_top_pics/ampresize/media/img/3/61/756468432337613.jpg"
+            src="/go.jpg"
             alt="Gold bars"
             fill
             className="object-cover brightness-50"
@@ -260,5 +260,3 @@ export default function AndrgoldPage() {
     </div>
   );
 }
-
-    
