@@ -51,15 +51,17 @@ export default function AndrgoldPage() {
   return (
     <div className="bg-stone-50 text-gray-800">
       
-        <section className="relative h-[50vh] flex items-center justify-center text-center">
-          <Image
-            src="/go.jpg"
-            alt="Gold bars"
-            fill
-            className="object-cover brightness-50"
-            data-ai-hint="gold bars"
-            priority
-          />
+        <section className="relative h-[50vh] flex items-center justify-center text-center overflow-hidden">
+            <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute top-1/2 left-1/2 w-auto min-w-full min-h-full max-w-none -translate-x-1/2 -translate-y-1/2 brightness-50 z-0 object-cover"
+            >
+                <source src="https://ruah.uz/images/RGR.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
           <div className="absolute inset-0 bg-primary/20"></div>
           <div className="relative z-10 space-y-4 px-4">
             <p className="font-headline text-lg text-amber-300 tracking-widest">ANDRGOLD</p>
@@ -304,3 +306,5 @@ export default function AndrgoldPage() {
     </div>
   );
 }
+
+    
