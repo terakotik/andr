@@ -143,6 +143,50 @@ export default function AndrgoldPage() {
             </div>
         </section>
 
+        <section>
+          <Card className="grid md:grid-cols-2 overflow-hidden shadow-lg border-amber-200">
+              <div className="relative min-h-[300px] md:min-h-full">
+                  <Image
+                      src="https://s1.hostingkartinok.com/uploads/images/2025/09/af6b257df6c8cb1866f9df662df9502b.png"
+                      alt="Аффинированное золото 999.9"
+                      fill
+                      className="object-contain"
+                  />
+              </div>
+              <div className="p-8">
+                  <h3 className="font-headline text-2xl font-bold text-amber-900 mb-4">Аффинированное золото — Ваш надежный актив</h3>
+                  
+                  <div className="space-y-6">
+                      <div>
+                          <h4 className="font-bold text-lg text-amber-800 mb-2">Ключевые характеристики:</h4>
+                          <ul className="list-disc list-inside space-y-1 text-gray-700">
+                              <li><span className="font-semibold">Категория:</span> Инвестиционное золото (FINE GOLD)</li>
+                              <li><span className="font-semibold">Чистота:</span> 999.9 ("четыре девятки") — высший стандарт чистоты.</li>
+                              <li><span className="font-semibold">Производитель:</span> RUAH Gold Refinery (Узбекистан)</li>
+                              <li><span className="font-semibold">Гарантии:</span> Сертифицировано, легальное происхождение ("Responsibly Sourced").</li>
+                          </ul>
+                      </div>
+
+                      <div>
+                          <h4 className="font-bold text-lg text-amber-800 mb-2">Почему это выгодная инвестиция?</h4>
+                          <p className="text-gray-700">
+                              Золото пробы 999.9 — это мировой стандарт для банков и инвесторов. Маркировка "IN GOLD WE INVEST" и наличие сертификата подтверждают его ликвидность и ценность. Это не просто металл, а стабильный актив для сохранения капитала в любой экономической ситуации.
+                          </p>
+                      </div>
+
+                      <div>
+                          <h4 className="font-bold text-lg text-amber-800 mb-2">Идеально подходит для:</h4>
+                           <ul className="list-disc list-inside space-y-1 text-gray-700">
+                              <li><span className="font-semibold">Частных инвесторов:</span> Для защиты и приумножения сбережений.</li>
+                              <li><span className="font-semibold">Банков:</span> В качестве надежного резервного актива.</li>
+                              <li><span className="font-semibold">Крупных покупателей:</span> Как стратегический актив в нестабильные времена.</li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </Card>
+        </section>
+
         <section id="delivery-terms">
             <div className="text-center space-y-4 mb-12">
                 <h2 className="text-3xl md:text-4xl font-headline font-bold text-amber-900">Условия поставки: FCA Ташкент (Инкотермс 2020)</h2>

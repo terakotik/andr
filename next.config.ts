@@ -69,6 +69,12 @@ const nextConfig: NextConfig = {
         hostname: 's0.rbk.ru',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 's1.hostingkartinok.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
