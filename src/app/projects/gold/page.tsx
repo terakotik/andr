@@ -8,6 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import Link from 'next/link';
 import { ChartContainer, ChartTooltip, ChartTooltipContent, ChartConfig } from "@/components/ui/chart"
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis, LabelList, Line, LineChart, Tooltip } from "recharts"
+import { useLanguage } from '@/context/language-context';
 
 const priceData = [
     { year: "1970", price: 36 },
@@ -21,7 +22,7 @@ const priceData = [
 
 const lbmaChartConfig = {
   price: {
-    label: "Цена ($)",
+    label: "Price ($)",
     color: "#eab308",
   },
 } satisfies ChartConfig
@@ -38,16 +39,19 @@ const purityDataRefined = [
 
 const purityChartConfig = {
     gold: {
-        label: "Золото",
+        label: "Gold",
     },
     other: {
-        label: "Примеси"
+        label: "Impurities"
     }
 } satisfies ChartConfig
 
 export default function AndrgoldPage() {
+  const { translations } = useLanguage();
   const heroImage = PlaceHolderImages.find(p => p.id === 'andrgold-hero');
   
+  const goldTranslations = translations.goldPage || {};
+
   return (
     <div className="bg-stone-50 text-gray-800">
       
@@ -66,10 +70,10 @@ export default function AndrgoldPage() {
           <div className="relative z-10 space-y-4 px-4">
             <p className="font-headline text-lg text-amber-300 tracking-widest">ANDRGOLD</p>
             <h1 className="text-4xl md:text-5xl font-headline font-bold text-white">
-              Продажа золота в слитках на условиях FCA Ташкент
+              {goldTranslations.heroTitle}
             </h1>
             <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-              Высококачественное золото из Афганистана, соответствующее международным стандартам.
+              {goldTranslations.heroSubtitle}
             </p>
           </div>
         </section>
@@ -79,35 +83,35 @@ export default function AndrgoldPage() {
         
         <section>
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-headline font-semibold text-amber-900 mb-4">Надежные и выгодные инвестиции в золото</h2>
+            <h2 className="text-3xl font-headline font-semibold text-amber-900 mb-4">{goldTranslations.investmentTitle}</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Мы ваш надежный партнер по приобретению и поставке высококачественного золота в слитках, соответствующего международным стандартам.
+              {goldTranslations.investmentSubtitle}
             </p>
           </div>
           <div id="key-advantages" className="grid md:grid-cols-3 gap-8 text-center">
             <div className="bg-white p-8 rounded-lg shadow-md border border-amber-100">
                 <ShieldCheck className="h-12 w-12 text-amber-600 mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2 text-amber-900">Гарантия качества</h3>
-                <p className="text-gray-600">Чистота и происхождение золота подтверждены сертификатами.</p>
+                <h3 className="text-xl font-bold mb-2 text-amber-900">{goldTranslations.advantages.quality.title}</h3>
+                <p className="text-gray-600">{goldTranslations.advantages.quality.description}</p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-md border border-amber-100">
                 <Globe className="h-12 w-12 text-amber-600 mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2 text-amber-900">Надежность поставок</h3>
-                <p className="text-gray-600">Строгое соблюдение сроков и условий договора FCA Ташкент.</p>
+                <h3 className="text-xl font-bold mb-2 text-amber-900">{goldTranslations.advantages.reliability.title}</h3>
+                <p className="text-gray-600">{goldTranslations.advantages.reliability.description}</p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-md border border-amber-100">
                 <Gem className="h-12 w-12 text-amber-600 mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2 text-amber-900">Индивидуальный подход</h3>
-                <p className="text-gray-600">Готовность адаптировать условия сотрудничества под ваши нужды.</p>
+                <h3 className="text-xl font-bold mb-2 text-amber-900">{goldTranslations.advantages.approach.title}</h3>
+                <p className="text-gray-600">{goldTranslations.advantages.approach.description}</p>
             </div>
           </div>
         </section>
 
         <section id="product">
             <div className="text-center space-y-4 mb-12">
-                <h2 className="text-3xl md:text-4xl font-headline font-bold text-amber-900">Наши продукты</h2>
+                <h2 className="text-3xl md:text-4xl font-headline font-bold text-amber-900">{goldTranslations.products.title}</h2>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                    Мы предлагаем как золото-сырец из Афганистана, так и аффинированное золото высшей пробы.
+                    {goldTranslations.products.subtitle}
                 </p>
             </div>
             <div className="grid md:grid-cols-2 gap-8 items-stretch">
@@ -115,30 +119,30 @@ export default function AndrgoldPage() {
                     <CardHeader>
                         <CardTitle className="flex items-center gap-3 text-amber-900">
                             <Gem className="w-7 h-7 text-amber-700"/>
-                            Золото-сырец
+                            {goldTranslations.products.raw.title}
                         </CardTitle>
-                        <CardDescription>Происхождение: Афганистан</CardDescription>
+                        <CardDescription>{goldTranslations.products.raw.origin}</CardDescription>
                     </CardHeader>
                     <CardContent className="flex-grow space-y-4">
-                        <p><span className="font-semibold">Чистота:</span> 93-97% (22-23 карата)</p>
-                        <p><span className="font-semibold">Форма:</span> Мерные слитки (1, 2, 3 кг).</p>
-                        <p>Идеально подходит для последующей переработки и аффинажа.</p>
+                        <p><span className="font-semibold">{goldTranslations.products.purityLabel}:</span> {goldTranslations.products.raw.purity}</p>
+                        <p><span className="font-semibold">{goldTranslations.products.formLabel}:</span> {goldTranslations.products.raw.form}</p>
+                        <p>{goldTranslations.products.raw.idealFor}</p>
                     </CardContent>
                 </Card>
                 <Card className="flex flex-col">
                     <CardHeader>
                         <CardTitle className="flex items-center gap-3 text-amber-900">
                             <Award className="w-7 h-7 text-amber-700"/>
-                            Аффинированное золото
+                            {goldTranslations.products.refined.title}
                         </CardTitle>
-                        <CardDescription>После полной очистки</CardDescription>
+                        <CardDescription>{goldTranslations.products.refined.afterRefining}</CardDescription>
                     </CardHeader>
                     <CardContent className="flex-grow space-y-4">
-                        <p><span className="font-semibold">Чистота:</span> 999.9 (четыре девятки)</p>
-                        <p><span className="font-semibold">Форма:</span> Мерные слитки (1, 2, 3 кг).</p>
+                        <p><span className="font-semibold">{goldTranslations.products.purityLabel}:</span> {goldTranslations.products.refined.purity}</p>
+                        <p><span className="font-semibold">{goldTranslations.products.formLabel}:</span> {goldTranslations.products.refined.form}</p>
                         <div className="flex items-start gap-2 pt-2">
                            <ShieldCheck className="w-5 h-5 text-amber-600 mt-1 shrink-0"/>
-                           <p><span className="font-semibold">Сертификация:</span> Поставляется с сертификатом Узбекской государственной пробирной палаты.</p>
+                           <p><span className="font-semibold">{goldTranslations.products.certificationLabel}:</span> {goldTranslations.products.refined.certification}</p>
                         </div>
                     </CardContent>
                 </Card>
@@ -150,38 +154,38 @@ export default function AndrgoldPage() {
               <div className="relative min-h-[300px] md:min-h-full">
                   <Image
                       src="https://s1.hostingkartinok.com/uploads/images/2025/09/af6b257df6c8cb1866f9df662df9502b.png"
-                      alt="Аффинированное золото 999.9"
+                      alt={goldTranslations.refinedCard.alt}
                       fill
                       className="object-contain"
                   />
               </div>
               <div className="p-8">
-                  <h3 className="font-headline text-2xl font-bold text-amber-900 mb-4">Аффинированное золото — Ваш надежный актив</h3>
+                  <h3 className="font-headline text-2xl font-bold text-amber-900 mb-4">{goldTranslations.refinedCard.title}</h3>
                   
                   <div className="space-y-6">
                       <div>
-                          <h4 className="font-bold text-lg text-amber-800 mb-2">Ключевые характеристики:</h4>
+                          <h4 className="font-bold text-lg text-amber-800 mb-2">{goldTranslations.refinedCard.characteristics.title}</h4>
                           <ul className="list-disc list-inside space-y-1 text-gray-700">
-                              <li><span className="font-semibold">Категория:</span> Инвестиционное золото (FINE GOLD)</li>
-                              <li><span className="font-semibold">Чистота:</span> 999.9 ("четыре девятки") — высший стандарт чистоты.</li>
-                              <li><span className="font-semibold">Производитель:</span> RUAH Gold Refinery (Узбекистан)</li>
-                              <li><span className="font-semibold">Гарантии:</span> Сертифицировано, легальное происхождение ("Responsibly Sourced").</li>
+                              <li><span className="font-semibold">{goldTranslations.refinedCard.characteristics.category.label}:</span> {goldTranslations.refinedCard.characteristics.category.value}</li>
+                              <li><span className="font-semibold">{goldTranslations.refinedCard.characteristics.purity.label}:</span> {goldTranslations.refinedCard.characteristics.purity.value}</li>
+                              <li><span className="font-semibold">{goldTranslations.refinedCard.characteristics.manufacturer.label}:</span> {goldTranslations.refinedCard.characteristics.manufacturer.value}</li>
+                              <li><span className="font-semibold">{goldTranslations.refinedCard.characteristics.guarantees.label}:</span> {goldTranslations.refinedCard.characteristics.guarantees.value}</li>
                           </ul>
                       </div>
 
                       <div>
-                          <h4 className="font-bold text-lg text-amber-800 mb-2">Почему это выгодная инвестиция?</h4>
+                          <h4 className="font-bold text-lg text-amber-800 mb-2">{goldTranslations.refinedCard.investmentCase.title}</h4>
                           <p className="text-gray-700">
-                              Золото пробы 999.9 — это мировой стандарт для банков и инвесторов. Маркировка "IN GOLD WE INVEST" и наличие сертификата подтверждают его ликвидность и ценность. Это не просто металл, а стабильный актив для сохранения капитала в любой экономической ситуации.
+                              {goldTranslations.refinedCard.investmentCase.description}
                           </p>
                       </div>
 
                       <div>
-                          <h4 className="font-bold text-lg text-amber-800 mb-2">Идеально подходит для:</h4>
+                          <h4 className="font-bold text-lg text-amber-800 mb-2">{goldTranslations.refinedCard.idealFor.title}</h4>
                            <ul className="list-disc list-inside space-y-1 text-gray-700">
-                              <li><span className="font-semibold">Частных инвесторов:</span> Для защиты и приумножения сбережений.</li>
-                              <li><span className="font-semibold">Банков:</span> В качестве надежного резервного актива.</li>
-                              <li><span className="font-semibold">Крупных покупателей:</span> Как стратегический актив в нестабильные времена.</li>
+                              <li><span className="font-semibold">{goldTranslations.refinedCard.idealFor.investors.label}:</span> {goldTranslations.refinedCard.idealFor.investors.value}</li>
+                              <li><span className="font-semibold">{goldTranslations.refinedCard.idealFor.banks.label}:</span> {goldTranslations.refinedCard.idealFor.banks.value}</li>
+                              <li><span className="font-semibold">{goldTranslations.refinedCard.idealFor.buyers.label}:</span> {goldTranslations.refinedCard.idealFor.buyers.value}</li>
                           </ul>
                       </div>
                   </div>
@@ -191,44 +195,42 @@ export default function AndrgoldPage() {
 
         <section id="delivery-terms">
             <div className="text-center space-y-4 mb-12">
-                <h2 className="text-3xl md:text-4xl font-headline font-bold text-amber-900">Условия поставки: FCA Ташкент (Инкотермс 2020)</h2>
+                <h2 className="text-3xl md:text-4xl font-headline font-bold text-amber-900">{goldTranslations.delivery.title}</h2>
             </div>
             <div className="grid md:grid-cols-2 gap-8 items-stretch max-w-6xl mx-auto">
                 <Card className="border-amber-600 border-2 flex flex-col">
                     <CardHeader>
-                        <CardTitle className="text-amber-800">Обязанности Продавца (наши)</CardTitle>
+                        <CardTitle className="text-amber-800">{goldTranslations.delivery.seller.title}</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-3 flex-grow">
-                       <p className="flex items-start"><Check className="w-5 h-5 mr-2 mt-1 text-amber-600 flex-shrink-0"/>Подготовить товар к экспорту в Ташкенте.</p>
-                       <p className="flex items-start"><Check className="w-5 h-5 mr-2 mt-1 text-amber-600 flex-shrink-0"/>Осуществить экспортное таможенное оформление.</p>
-                       <p className="flex items-start"><Check className="w-5 h-5 mr-2 mt-1 text-amber-600 flex-shrink-0"/>Нести риски до передачи товара перевозчику.</p>
-                       <p className="flex items-start"><Check className="w-5 h-5 mr-2 mt-1 text-amber-600 flex-shrink-0"/>Предоставить все необходимые документы.</p>
+                       {goldTranslations.delivery.seller.duties.map((duty: string) => (
+                           <p key={duty} className="flex items-start"><Check className="w-5 h-5 mr-2 mt-1 text-amber-600 flex-shrink-0"/>{duty}</p>
+                       ))}
                     </CardContent>
                 </Card>
                 <Card className="border-stone-500 border-2 flex flex-col">
                     <CardHeader>
-                        <CardTitle className="text-stone-800">Обязанности Покупателя</CardTitle>
+                        <CardTitle className="text-stone-800">{goldTranslations.delivery.buyer.title}</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-3 flex-grow">
-                       <p className="flex items-start"><Check className="w-5 h-5 mr-2 mt-1 text-stone-600 flex-shrink-0"/>Назначить перевозчика и заключить договор перевозки.</p>
-                       <p className="flex items-start"><Check className="w-5 h-5 mr-2 mt-1 text-stone-600 flex-shrink-0"/>Нести риски с момента получения товара от нас.</p>
-                       <p className="flex items-start"><Check className="w-5 h-5 mr-2 mt-1 text-stone-600 flex-shrink-0"/>Осуществить импортное таможенное оформление.</p>
-                       <p className="flex items-start"><Check className="w-5 h-5 mr-2 mt-1 text-stone-600 flex-shrink-0"/>Организовать дальнейшую транспортировку.</p>
+                       {goldTranslations.delivery.buyer.duties.map((duty: string) => (
+                           <p key={duty} className="flex items-start"><Check className="w-5 h-5 mr-2 mt-1 text-stone-600 flex-shrink-0"/>{duty}</p>
+                       ))}
                     </CardContent>
                 </Card>
             </div>
             <div className="overflow-x-auto py-4">
                 <div className="flex items-center justify-center my-4 min-w-[500px]">
                     <div className="px-2 py-4 bg-amber-100 rounded-lg whitespace-nowrap shadow-md border border-amber-200">
-                        <p className="font-bold text-amber-800">Продавец</p>
+                        <p className="font-bold text-amber-800">{goldTranslations.delivery.seller.title}</p>
                     </div>
                     <ArrowRight className="w-8 h-8 mx-2 text-gray-400 shrink-0"/>
                      <div className="px-2 py-4 bg-gray-200 rounded-lg whitespace-nowrap shadow-md border-gray-300">
-                        <p className="font-bold text-center text-gray-700">Перевозчик</p>
+                        <p className="font-bold text-center text-gray-700">{goldTranslations.delivery.carrier}</p>
                     </div>
                     <ArrowRight className="w-8 h-8 mx-2 text-gray-400 shrink-0"/>
                     <div className="px-2 py-4 bg-amber-100 rounded-lg whitespace-nowrap shadow-md border border-amber-200">
-                        <p className="font-bold text-amber-800">Покупатель</p>
+                        <p className="font-bold text-amber-800">{goldTranslations.delivery.buyer.title}</p>
                     </div>
                 </div>
             </div>
@@ -236,14 +238,14 @@ export default function AndrgoldPage() {
 
         <section id="pricing">
             <div className="text-center space-y-4 mb-12">
-                <h2 className="text-3xl md:text-4xl font-headline font-bold text-amber-900">Ценообразование и оплата</h2>
+                <h2 className="text-3xl md:text-4xl font-headline font-bold text-amber-900">{goldTranslations.pricing.title}</h2>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                    Цена формируется на основе котировок LBMA Gold Price с согласованным дисконтом. Оплата — 100% предоплата.
+                    {goldTranslations.pricing.subtitle}
                 </p>
                  <div className="pt-2">
                     <Button asChild variant="outline">
                         <Link href="http://ru.investing.com/currencies/xau-usd" target="_blank">
-                            Проверить актуальную цену
+                            {goldTranslations.pricing.checkPrice}
                             <ExternalLink className="w-4 h-4 ml-2" />
                         </Link>
                     </Button>
@@ -251,13 +253,13 @@ export default function AndrgoldPage() {
             </div>
              <Card>
                 <CardHeader>
-                    <CardTitle>Мировая динамика цены на золото (1970-2024)</CardTitle>
+                    <CardTitle>{goldTranslations.chart.title}</CardTitle>
                     <CardDescription>
-                        Среднегодовая цена за тройскую унцию в долларах США. Данные показывают долгосрочный тренд роста.
+                        {goldTranslations.chart.description}
                     </CardDescription>
                 </CardHeader>
                 <CardContent>
-                    <ChartContainer config={lbmaChartConfig} className="w-full h-[400px]">
+                    <ChartContainer config={{...lbmaChartConfig, price: { ...lbmaChartConfig.price, label: goldTranslations.chart.priceLabel}}} className="w-full h-[400px]">
                         <LineChart data={priceData} margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
                             <CartesianGrid vertical={false} />
                             <XAxis dataKey="year" tickLine={false} axisLine={false} tickMargin={8} />
@@ -290,13 +292,13 @@ export default function AndrgoldPage() {
         
         <section id="cta" className="bg-white rounded-lg shadow-xl p-8 md:p-12 border-2 border-amber-400">
             <div className="text-center space-y-6">
-                <h2 className="text-3xl md:text-4xl font-headline font-bold text-amber-900">Начните сотрудничество с нами</h2>
+                <h2 className="text-3xl md:text-4xl font-headline font-bold text-amber-900">{goldTranslations.cta.title}</h2>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                    Свяжитесь с нами, чтобы обсудить детали и получить индивидуальное предложение. Наша команда готова ответить на все ваши вопросы.
+                    {goldTranslations.cta.subtitle}
                 </p>
                 <div className="pt-4">
                     <Button size="lg" asChild variant="outline" className="px-10 py-6 text-lg rounded-full">
-                        <Link href="/#contact">Связаться с нами</Link>
+                        <Link href="/#contact">{goldTranslations.cta.button}</Link>
                     </Button>
                 </div>
             </div>
@@ -306,3 +308,5 @@ export default function AndrgoldPage() {
     </div>
   );
 }
+
+    

@@ -171,5 +171,106 @@
             "subtitle": "Ready to take the next step? Contact us for a personalized consultation.",
             "formTitle": "Send us a message"
         }
+    },
+    "goldPage": {
+        "heroTitle": "Sale of Gold Bars on FCA Tashkent Terms",
+        "heroSubtitle": "High-quality gold from Afghanistan, compliant with international standards.",
+        "investmentTitle": "Reliable and Profitable Investments in Gold",
+        "investmentSubtitle": "We are your trusted partner for the acquisition and supply of high-quality gold bars that meet international standards.",
+        "advantages": {
+            "quality": {
+                "title": "Quality Guarantee",
+                "description": "The purity and origin of the gold are confirmed by certificates."
+            },
+            "reliability": {
+                "title": "Supply Reliability",
+                "description": "Strict adherence to the terms and conditions of the FCA Tashkent contract."
+            },
+            "approach": {
+                "title": "Individual Approach",
+                "description": "We are ready to adapt the cooperation terms to your needs."
+            }
+        },
+        "products": {
+            "title": "Our Products",
+            "subtitle": "We offer both raw gold from Afghanistan and refined gold of the highest purity.",
+            "purityLabel": "Purity",
+            "formLabel": "Form",
+            "certificationLabel": "Certification",
+            "raw": {
+                "title": "Raw Gold",
+                "origin": "Origin: Afghanistan",
+                "purity": "93-97% (22-23 carats)",
+                "form": "Standard bars (1, 2, 3 kg).",
+                "idealFor": "Ideal for subsequent processing and refining."
+            },
+            "refined": {
+                "title": "Refined Gold",
+                "afterRefining": "After full purification",
+                "purity": "999.9 (four nines)",
+                "form": "Standard bars (1, 2, 3 kg).",
+                "certification": "Supplied with a certificate from the Uzbek State Assay Office."
+            }
+        },
+        "refinedCard": {
+            "alt": "Refined Gold 999.9",
+            "title": "Refined Gold — Your Reliable Asset",
+            "characteristics": {
+                "title": "Key Characteristics:",
+                "category": { "label": "Category", "value": "Investment Gold (FINE GOLD)" },
+                "purity": { "label": "Purity", "value": "999.9 ('four nines') — the highest standard of purity." },
+                "manufacturer": { "label": "Manufacturer", "value": "RUAH Gold Refinery (Uzbekistan)" },
+                "guarantees": { "label": "Guarantees", "value": "Certified, legally sourced ('Responsibly Sourced')." }
+            },
+            "investmentCase": {
+                "title": "Why is this a profitable investment?",
+                "description": "999.9 purity gold is the global standard for banks and investors. The 'IN GOLD WE INVEST' marking and the presence of a certificate confirm its liquidity and value. This is not just a metal, but a stable asset for capital preservation in any economic situation."
+            },
+            "idealFor": {
+                "title": "Ideal for:",
+                "investors": { "label": "Private Investors", "value": "For protecting and growing savings." },
+                "banks": { "label": "Banks", "value": "As a reliable reserve asset." },
+                "buyers": { "label": "Large Buyers", "value": "As a strategic asset in unstable times." }
+            }
+        },
+        "delivery": {
+            "title": "Delivery Terms: FCA Tashkent (Incoterms 2020)",
+            "seller": {
+                "title": "Seller's Duties (ours)",
+                "duties": [
+                    "Prepare the goods for export in Tashkent.",
+                    "Carry out export customs clearance.",
+                    "Bear risks until the goods are transferred to the carrier.",
+                    "Provide all necessary documents."
+                ]
+            },
+            "buyer": {
+                "title": "Buyer's Duties",
+                "duties": [
+                    "Appoint a carrier and conclude a contract of carriage.",
+                    "Bear risks from the moment of receiving the goods from us.",
+                    "Carry out import customs clearance.",
+                    "Organize further transportation."
+                ]
+            },
+            "carrier": "Carrier"
+        },
+        "pricing": {
+            "title": "Pricing and Payment",
+            "subtitle": "The price is based on LBMA Gold Price quotes with an agreed discount. Payment — 100% prepayment.",
+            "checkPrice": "Check current price"
+        },
+        "chart": {
+            "title": "Global Gold Price Dynamics (1970-2024)",
+            "description": "Average annual price per troy ounce in US dollars. Data shows a long-term growth trend.",
+            "priceLabel": "Price ($)"
+        },
+        "cta": {
+            "title": "Start cooperating with us",
+            "subtitle": "Contact us to discuss the details and receive a personalized offer. Our team is ready to answer all your questions.",
+            "button": "Contact us"
+        }
     }
 }
+
+    
