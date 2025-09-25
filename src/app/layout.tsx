@@ -6,8 +6,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { LanguageProvider } from '@/context/language-context';
 
 export const metadata: Metadata = {
-  title: 'AndrGlobal | Стратегический консалтинг и развитие бизнеса',
-  description: 'Комплексные консалтинговые услуги для роста вашего бизнеса. Стратегический, управленческий и маркетинговый консалтинг.',
+  title: 'AndrGlobal | Strategic Consulting & Business Development',
+  description: 'Comprehensive consulting services for your business growth. Strategic, management, and marketing consulting.',
 };
 
 export default function RootLayout({
@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <LanguageProvider>
-      <html lang="ru" className="scroll-smooth" suppressHydrationWarning>
+      <html lang="en" className="scroll-smooth" suppressHydrationWarning>
         <head>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

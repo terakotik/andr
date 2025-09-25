@@ -28,12 +28,12 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider = ({ children }: { children: React.ReactNode }) => {
-    const [language, setLanguage] = useState<LanguageCode>('ru');
-    const [currentTranslations, setCurrentTranslations] = useState(translations.ru);
+    const [language, setLanguage] = useState<LanguageCode>('en');
+    const [currentTranslations, setCurrentTranslations] = useState(translations.en);
 
     useEffect(() => {
         // @ts-ignore
-        setCurrentTranslations(translations[language] || translations.ru);
+        setCurrentTranslations(translations[language] || translations.en);
         document.documentElement.lang = language;
     }, [language]);
     
