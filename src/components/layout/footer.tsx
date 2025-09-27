@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from 'next/link';
@@ -18,8 +17,9 @@ export function Footer() {
   const { translations } = useLanguage();
 
   const projectLinks = [
-    { name: 'ANDRGOLD', description: translations.footer.projects.gold, href: '/projects/gold' },
-    { name: 'ANDRSHOP', description: translations.footer.projects.shop, href: '/projects/shop' },
+    { name: 'ANDRGOLD', href: '/projects/gold' },
+    { name: 'ANDRSHOP', href: '/projects/shop' },
+    { name: translations.footer.quickLinks.consulting, href: '/consulting' },
   ];
   
   const andrGoldImageUrl = "https://dalogo.ru/wp-content/uploads/2019/10/Sajjt-11132-SHokoladnyjj-mini-Slitok-zolota-New-3.jpg";
@@ -30,38 +30,6 @@ export function Footer() {
   return (
     <footer className="bg-secondary/50 text-secondary-foreground" id="footer-projects">
       <div className="container mx-auto px-4 md:px-6 py-12">
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-left md:text-left">
-          <div className="md:col-span-1">
-            <h3 className="font-headline text-2xl font-semibold mb-2">{translations.footer.ourProjects.title}</h3>
-            <p className="text-muted-foreground">
-              {translations.footer.ourProjects.subtitle}
-            </p>
-          </div>
-          <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8">
-            {projectLinks.map((project) => (
-              <div key={project.name} className={`bg-card rounded-lg shadow-md hover:shadow-lg transition-shadow relative overflow-hidden group p-6`}>
-                {project.name === 'ANDRGOLD' && (
-                  <div 
-                    className="absolute bottom-2 -right-6 w-32 h-32 bg-contain bg-center bg-no-repeat z-0 transition-transform duration-300 group-hover:scale-110"
-                    style={{ backgroundImage: `url(${andrGoldImageUrl})` }}
-                  ></div>
-                )}
-                 <div className="relative z-10">
-                    <h4 className="font-headline text-xl font-bold text-primary">{project.name}</h4>
-                    <p className="text-muted-foreground mt-2 mb-4">{project.description}</p>
-                    <Button asChild variant="outline" className="rounded-full">
-                      <Link href={project.href}>
-                        {translations.footer.learnMore}
-                        <ChevronRight className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
         <Separator className="my-12" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -77,7 +45,9 @@ export function Footer() {
           <div className="text-left">
             <h4 className="font-headline font-semibold mb-4">{translations.footer.quickLinks.title}</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/consulting" className="text-muted-foreground hover:text-foreground">{translations.footer.quickLinks.consulting}</Link></li>
+              {projectLinks.map(link => (
+                 <li key={link.name}><Link href={link.href} className="text-muted-foreground hover:text-foreground">{link.name}</Link></li>
+              ))}
               <li><Link href="/#about" className="text-muted-foreground hover:text-foreground">{translations.footer.quickLinks.about}</Link></li>
               <li><Link href="/#contact" className="text-muted-foreground hoverText-foreground">{translations.footer.quickLinks.contact}</Link></li>
             </ul>

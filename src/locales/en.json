@@ -1,4 +1,3 @@
-
 {
     "header": {
         "about": "About Us",
@@ -11,12 +10,11 @@
         "hero": {
             "title": "Welcome to the world of reliable investments and international trade",
             "subtitle": "Your strategic partner in global business. We are a leading international company specializing in three key areas: precious metals trading, professional consulting, and supplying high-quality food to world markets.",
-            "servicesButton": "Our Services",
-            "contactButton": "Contact Us"
+            "servicesButton": "Our Businesses"
         },
         "consultingDirections": {
-            "title": "Key Consulting Directions",
-            "subtitle": "We offer comprehensive solutions for the strategic development of your business."
+            "title": "Key Business Areas",
+            "subtitle": "We offer comprehensive solutions for strategic business development across various sectors."
         },
         "featuredServices": {
             "management": {
@@ -43,9 +41,10 @@
         "learnMore": "Learn More",
         "orderButton": "Order",
         "ourProjects": {
-            "title": "Our Projects",
-            "gold": "Sale and supply of gold to world markets.",
-            "shop": "Wholesale food supplies."
+            "title": "Our Businesses",
+            "gold": "Sale and supply of investment-grade gold to world markets.",
+            "shop": "Wholesale supply of high-quality food products.",
+            "consulting": "Professional consulting for business strategy and growth."
         },
         "whyChooseUs": {
             "title": "Our Competitive Advantages",
@@ -56,7 +55,7 @@
                 "Individual approach to each client",
                 "Active use of technological innovations"
             ],
-            "aboutUsButton": "More about us",
+            "aboutUsButton": "Contact Us",
             "imageAlt": "Our competitive advantages"
         },
         "testimonials": {
@@ -300,5 +299,3 @@
         "ctaButton": "Request a Quote"
     }
 }
-
-    

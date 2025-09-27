@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -63,7 +62,6 @@ export function Header() {
   
   const navLinks = [
     { href: "/#about", label: translations.header.about },
-    { href: "/consulting", label: translations.header.consulting },
   ];
   
   const contactLink = { href: "#", label: translations.header.contact, onClick: handleContactClick };
@@ -71,6 +69,7 @@ export function Header() {
   const projectLinks = [
     { href: "/projects/gold", label: "ANDRGOLD" },
     { href: "/projects/shop", label: "ANDRSHOP" },
+    { href: "/consulting", label: translations.header.consulting },
   ];
 
   return (
