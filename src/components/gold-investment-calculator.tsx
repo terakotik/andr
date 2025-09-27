@@ -183,12 +183,27 @@ export function GoldInvestmentCalculator() {
                                 <Tooltip 
                                     content={({ active, payload, label }) => {
                                         if (active && payload && payload.length) {
+                                            const dataPoint = payload[0];
+                                            const dataIndex = chartData.findIndex(d => d.year === label);
+                                            let annualGrowth = null;
+
+                                            if (dataIndex > 0) {
+                                                const prevPrice = chartData[dataIndex - 1].price;
+                                                const currentPrice = dataPoint.payload.price;
+                                                annualGrowth = ((currentPrice - prevPrice) / prevPrice * 100).toFixed(2);
+                                            }
+
                                             return (
                                                 <div className="bg-background/90 backdrop-blur-sm p-4 rounded-lg shadow-lg border">
                                                     <p className="font-bold text-lg mb-2">{label}</p>
-                                                    <p className="text-primary">{`${goldTranslations.chart?.priceLabel || 'Gold Price'}: ${formatCurrency(payload[0].value as number)}`}</p>
+                                                    <p className="text-primary">{`${goldTranslations.chart?.priceLabel || 'Gold Price'}: ${formatCurrency(dataPoint.value as number)}`}</p>
+                                                    {annualGrowth !== null && (
+                                                        <p className={`font-semibold ${Number(annualGrowth) >= 0 ? 'text-green-500' : 'text-red-500'}`}>
+                                                            {goldTranslations.chart?.annualGrowth || 'Annual Growth'}: {annualGrowth}%
+                                                        </p>
+                                                    )}
                                                     {payload[1] && payload[1].value && (
-                                                        <p className="text-green-600 font-semibold">{`${goldTranslations.chart?.yourInvestment || 'Your Investment'}: ${formatCurrency(payload[1].value as number)}`}</p>
+                                                        <p className="text-green-600 font-semibold mt-2 pt-2 border-t border-border">{`${goldTranslations.chart?.yourInvestment || 'Your Investment'}: ${formatCurrency(payload[1].value as number)}`}</p>
                                                     )}
                                                 </div>
                                             );

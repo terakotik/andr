@@ -263,13 +263,14 @@
         "chart": {
             "title": "Динамика цены на золото: прогноз на 10 лет",
             "description": "Впечатляющий рост в <strong>300%</strong> прогнозируется <span class='font-bold text-amber-600'>за 10 лет</span>. Золото демонстрирует стабильный долгосрочный рост, подтверждая свой статус надежного инвестиционного актива.",
-            "priceLabel": "Цена ($)",
+            "priceLabel": "Цена на золото",
             "investmentAmountLabel": "Сумма инвестиций ($)",
             "investmentYearLabel": "Год инвестирования",
             "calculateButton": "Рассчитать доход",
             "finalValueLabel": "Итоговая стоимость в 2025",
             "profitLabel": "Чистая прибыль",
-            "yourInvestment": "Ваши инвестиции"
+            "yourInvestment": "Ваши инвестиции",
+            "annualGrowth": "Годовой рост"
         },
         "cta": {
             "title": "Начните сотрудничество с нами",

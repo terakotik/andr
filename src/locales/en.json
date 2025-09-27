@@ -263,13 +263,14 @@
         "chart": {
             "title": "Gold Price Dynamics: 10-Year Outlook",
             "description": "An impressive <strong>300% growth</strong> is projected <span class='font-bold text-amber-600'>in 10 years</span>. Gold demonstrates stable long-term growth, confirming its status as a reliable investment asset.",
-            "priceLabel": "Price ($)",
+            "priceLabel": "Gold Price",
             "investmentAmountLabel": "Investment Amount ($)",
             "investmentYearLabel": "Investment Year",
             "calculateButton": "Calculate Profit",
             "finalValueLabel": "Final Value in 2025",
             "profitLabel": "Net Profit",
-            "yourInvestment": "Your Investment"
+            "yourInvestment": "Your Investment",
+            "annualGrowth": "Annual Growth"
         },
         "cta": {
             "title": "Start cooperating with us",
