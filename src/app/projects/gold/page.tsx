@@ -11,13 +11,12 @@ import { Bar, BarChart, CartesianGrid, XAxis, YAxis, LabelList, Line, LineChart,
 import { useLanguage } from '@/context/language-context';
 
 const priceData = [
-    { year: "1970", price: 36 },
-    { year: "1980", price: 615 },
-    { year: "1990", price: 383 },
-    { year: "2000", price: 279 },
-    { year: "2010", price: 1224 },
-    { year: "2020", price: 1770 },
-    { year: "2024", price: 2300 },
+    { year: "2015", price: 1200 },
+    { year: "2017", price: 1250 },
+    { year: "2019", price: 1500 },
+    { year: "2021", price: 1800 },
+    { year: "2023", price: 2300 },
+    { year: "2025", price: 3750 },
 ];
 
 const lbmaChartConfig = {
@@ -91,27 +90,27 @@ export default function AndrgoldPage() {
           <div id="key-advantages" className="grid md:grid-cols-3 gap-8 text-center">
             <div className="bg-white p-8 rounded-lg shadow-md border border-amber-100">
                 <ShieldCheck className="h-12 w-12 text-amber-600 mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2 text-amber-900">{goldTranslations.advantages.quality.title}</h3>
-                <p className="text-gray-600">{goldTranslations.advantages.quality.description}</p>
+                <h3 className="text-xl font-bold mb-2 text-amber-900">{goldTranslations.advantages?.quality?.title}</h3>
+                <p className="text-gray-600">{goldTranslations.advantages?.quality?.description}</p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-md border border-amber-100">
                 <Globe className="h-12 w-12 text-amber-600 mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2 text-amber-900">{goldTranslations.advantages.reliability.title}</h3>
-                <p className="text-gray-600">{goldTranslations.advantages.reliability.description}</p>
+                <h3 className="text-xl font-bold mb-2 text-amber-900">{goldTranslations.advantages?.reliability?.title}</h3>
+                <p className="text-gray-600">{goldTranslations.advantages?.reliability?.description}</p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-md border border-amber-100">
                 <Gem className="h-12 w-12 text-amber-600 mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2 text-amber-900">{goldTranslations.advantages.approach.title}</h3>
-                <p className="text-gray-600">{goldTranslations.advantages.approach.description}</p>
+                <h3 className="text-xl font-bold mb-2 text-amber-900">{goldTranslations.advantages?.approach?.title}</h3>
+                <p className="text-gray-600">{goldTranslations.advantages?.approach?.description}</p>
             </div>
           </div>
         </section>
 
         <section id="product">
             <div className="text-center space-y-4 mb-12">
-                <h2 className="text-3xl md:text-4xl font-headline font-bold text-amber-900">{goldTranslations.products.title}</h2>
+                <h2 className="text-3xl md:text-4xl font-headline font-bold text-amber-900">{goldTranslations.products?.title}</h2>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                    {goldTranslations.products.subtitle}
+                    {goldTranslations.products?.subtitle}
                 </p>
             </div>
             <div className="grid md:grid-cols-2 gap-8 items-stretch">
@@ -119,30 +118,30 @@ export default function AndrgoldPage() {
                     <CardHeader>
                         <CardTitle className="flex items-center gap-3 text-amber-900">
                             <Gem className="w-7 h-7 text-amber-700"/>
-                            {goldTranslations.products.raw.title}
+                            {goldTranslations.products?.raw?.title}
                         </CardTitle>
-                        <CardDescription>{goldTranslations.products.raw.origin}</CardDescription>
+                        <CardDescription>{goldTranslations.products?.raw?.origin}</CardDescription>
                     </CardHeader>
                     <CardContent className="flex-grow space-y-4">
-                        <p><span className="font-semibold">{goldTranslations.products.purityLabel}:</span> {goldTranslations.products.raw.purity}</p>
-                        <p><span className="font-semibold">{goldTranslations.products.formLabel}:</span> {goldTranslations.products.raw.form}</p>
-                        <p>{goldTranslations.products.raw.idealFor}</p>
+                        <p><span className="font-semibold">{goldTranslations.products?.purityLabel}:</span> {goldTranslations.products?.raw?.purity}</p>
+                        <p><span className="font-semibold">{goldTranslations.products?.formLabel}:</span> {goldTranslations.products?.raw?.form}</p>
+                        <p>{goldTranslations.products?.raw?.idealFor}</p>
                     </CardContent>
                 </Card>
                 <Card className="flex flex-col">
                     <CardHeader>
                         <CardTitle className="flex items-center gap-3 text-amber-900">
                             <Award className="w-7 h-7 text-amber-700"/>
-                            {goldTranslations.products.refined.title}
+                            {goldTranslations.products?.refined?.title}
                         </CardTitle>
-                        <CardDescription>{goldTranslations.products.refined.afterRefining}</CardDescription>
+                        <CardDescription>{goldTranslations.products?.refined?.afterRefining}</CardDescription>
                     </CardHeader>
                     <CardContent className="flex-grow space-y-4">
-                        <p><span className="font-semibold">{goldTranslations.products.purityLabel}:</span> {goldTranslations.products.refined.purity}</p>
-                        <p><span className="font-semibold">{goldTranslations.products.formLabel}:</span> {goldTranslations.products.refined.form}</p>
+                        <p><span className="font-semibold">{goldTranslations.products?.purityLabel}:</span> {goldTranslations.products?.refined?.purity}</p>
+                        <p><span className="font-semibold">{goldTranslations.products?.formLabel}:</span> {goldTranslations.products?.refined?.form}</p>
                         <div className="flex items-start gap-2 pt-2">
                            <ShieldCheck className="w-5 h-5 text-amber-600 mt-1 shrink-0"/>
-                           <p><span className="font-semibold">{goldTranslations.products.certificationLabel}:</span> {goldTranslations.products.refined.certification}</p>
+                           <p><span className="font-semibold">{goldTranslations.products?.certificationLabel}:</span> {goldTranslations.products?.refined?.certification}</p>
                         </div>
                     </CardContent>
                 </Card>
@@ -154,38 +153,38 @@ export default function AndrgoldPage() {
               <div className="relative min-h-[300px] md:min-h-full">
                   <Image
                       src="https://s1.hostingkartinok.com/uploads/images/2025/09/af6b257df6c8cb1866f9df662df9502b.png"
-                      alt={goldTranslations.refinedCard.alt}
+                      alt={goldTranslations.refinedCard?.alt}
                       fill
-                      className="object-contain"
+                      className="object-contain p-4"
                   />
               </div>
               <div className="p-8">
-                  <h3 className="font-headline text-2xl font-bold text-amber-900 mb-4">{goldTranslations.refinedCard.title}</h3>
+                  <h3 className="font-headline text-2xl font-bold text-amber-900 mb-4">{goldTranslations.refinedCard?.title}</h3>
                   
                   <div className="space-y-6">
                       <div>
-                          <h4 className="font-bold text-lg text-amber-800 mb-2">{goldTranslations.refinedCard.characteristics.title}</h4>
+                          <h4 className="font-bold text-lg text-amber-800 mb-2">{goldTranslations.refinedCard?.characteristics?.title}</h4>
                           <ul className="list-disc list-inside space-y-1 text-gray-700">
-                              <li><span className="font-semibold">{goldTranslations.refinedCard.characteristics.category.label}:</span> {goldTranslations.refinedCard.characteristics.category.value}</li>
-                              <li><span className="font-semibold">{goldTranslations.refinedCard.characteristics.purity.label}:</span> {goldTranslations.refinedCard.characteristics.purity.value}</li>
-                              <li><span className="font-semibold">{goldTranslations.refinedCard.characteristics.manufacturer.label}:</span> {goldTranslations.refinedCard.characteristics.manufacturer.value}</li>
-                              <li><span className="font-semibold">{goldTranslations.refinedCard.characteristics.guarantees.label}:</span> {goldTranslations.refinedCard.characteristics.guarantees.value}</li>
+                              <li><span className="font-semibold">{goldTranslations.refinedCard?.characteristics?.category?.label}:</span> {goldTranslations.refinedCard?.characteristics?.category?.value}</li>
+                              <li><span className="font-semibold">{goldTranslations.refinedCard?.characteristics?.purity?.label}:</span> {goldTranslations.refinedCard?.characteristics?.purity?.value}</li>
+                              <li><span className="font-semibold">{goldTranslations.refinedCard?.characteristics?.manufacturer?.label}:</span> {goldTranslations.refinedCard?.characteristics?.manufacturer?.value}</li>
+                              <li><span className="font-semibold">{goldTranslations.refinedCard?.characteristics?.guarantees?.label}:</span> {goldTranslations.refinedCard?.characteristics?.guarantees?.value}</li>
                           </ul>
                       </div>
 
                       <div>
-                          <h4 className="font-bold text-lg text-amber-800 mb-2">{goldTranslations.refinedCard.investmentCase.title}</h4>
+                          <h4 className="font-bold text-lg text-amber-800 mb-2">{goldTranslations.refinedCard?.investmentCase?.title}</h4>
                           <p className="text-gray-700">
-                              {goldTranslations.refinedCard.investmentCase.description}
+                              {goldTranslations.refinedCard?.investmentCase?.description}
                           </p>
                       </div>
 
                       <div>
-                          <h4 className="font-bold text-lg text-amber-800 mb-2">{goldTranslations.refinedCard.idealFor.title}</h4>
+                          <h4 className="font-bold text-lg text-amber-800 mb-2">{goldTranslations.refinedCard?.idealFor?.title}</h4>
                            <ul className="list-disc list-inside space-y-1 text-gray-700">
-                              <li><span className="font-semibold">{goldTranslations.refinedCard.idealFor.investors.label}:</span> {goldTranslations.refinedCard.idealFor.investors.value}</li>
-                              <li><span className="font-semibold">{goldTranslations.refinedCard.idealFor.banks.label}:</span> {goldTranslations.refinedCard.idealFor.banks.value}</li>
-                              <li><span className="font-semibold">{goldTranslations.refinedCard.idealFor.buyers.label}:</span> {goldTranslations.refinedCard.idealFor.buyers.value}</li>
+                              <li><span className="font-semibold">{goldTranslations.refinedCard?.idealFor?.investors?.label}:</span> {goldTranslations.refinedCard?.idealFor?.investors?.value}</li>
+                              <li><span className="font-semibold">{goldTranslations.refinedCard?.idealFor?.banks?.label}:</span> {goldTranslations.refinedCard?.idealFor?.banks?.value}</li>
+                              <li><span className="font-semibold">{goldTranslations.refinedCard?.idealFor?.buyers?.label}:</span> {goldTranslations.refinedCard?.idealFor?.buyers?.value}</li>
                           </ul>
                       </div>
                   </div>
@@ -195,25 +194,25 @@ export default function AndrgoldPage() {
 
         <section id="delivery-terms">
             <div className="text-center space-y-4 mb-12">
-                <h2 className="text-3xl md:text-4xl font-headline font-bold text-amber-900">{goldTranslations.delivery.title}</h2>
+                <h2 className="text-3xl md:text-4xl font-headline font-bold text-amber-900">{goldTranslations.delivery?.title}</h2>
             </div>
             <div className="grid md:grid-cols-2 gap-8 items-stretch max-w-6xl mx-auto">
                 <Card className="border-amber-600 border-2 flex flex-col">
                     <CardHeader>
-                        <CardTitle className="text-amber-800">{goldTranslations.delivery.seller.title}</CardTitle>
+                        <CardTitle className="text-amber-800">{goldTranslations.delivery?.seller?.title}</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-3 flex-grow">
-                       {goldTranslations.delivery.seller.duties.map((duty: string) => (
+                       {goldTranslations.delivery?.seller?.duties.map((duty: string) => (
                            <p key={duty} className="flex items-start"><Check className="w-5 h-5 mr-2 mt-1 text-amber-600 flex-shrink-0"/>{duty}</p>
                        ))}
                     </CardContent>
                 </Card>
                 <Card className="border-stone-500 border-2 flex flex-col">
                     <CardHeader>
-                        <CardTitle className="text-stone-800">{goldTranslations.delivery.buyer.title}</CardTitle>
+                        <CardTitle className="text-stone-800">{goldTranslations.delivery?.buyer?.title}</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-3 flex-grow">
-                       {goldTranslations.delivery.buyer.duties.map((duty: string) => (
+                       {goldTranslations.delivery?.buyer?.duties.map((duty: string) => (
                            <p key={duty} className="flex items-start"><Check className="w-5 h-5 mr-2 mt-1 text-stone-600 flex-shrink-0"/>{duty}</p>
                        ))}
                     </CardContent>
@@ -222,15 +221,15 @@ export default function AndrgoldPage() {
             <div className="overflow-x-auto py-4">
                 <div className="flex items-center justify-center my-4 min-w-[500px]">
                     <div className="px-2 py-4 bg-amber-100 rounded-lg whitespace-nowrap shadow-md border border-amber-200">
-                        <p className="font-bold text-amber-800">{goldTranslations.delivery.seller.title}</p>
+                        <p className="font-bold text-amber-800">{goldTranslations.delivery?.seller?.title}</p>
                     </div>
                     <ArrowRight className="w-8 h-8 mx-2 text-gray-400 shrink-0"/>
                      <div className="px-2 py-4 bg-gray-200 rounded-lg whitespace-nowrap shadow-md border-gray-300">
-                        <p className="font-bold text-center text-gray-700">{goldTranslations.delivery.carrier}</p>
+                        <p className="font-bold text-center text-gray-700">{goldTranslations.delivery?.carrier}</p>
                     </div>
                     <ArrowRight className="w-8 h-8 mx-2 text-gray-400 shrink-0"/>
                     <div className="px-2 py-4 bg-amber-100 rounded-lg whitespace-nowrap shadow-md border border-amber-200">
-                        <p className="font-bold text-amber-800">{goldTranslations.delivery.buyer.title}</p>
+                        <p className="font-bold text-amber-800">{goldTranslations.delivery?.buyer?.title}</p>
                     </div>
                 </div>
             </div>
@@ -238,14 +237,14 @@ export default function AndrgoldPage() {
 
         <section id="pricing">
             <div className="text-center space-y-4 mb-12">
-                <h2 className="text-3xl md:text-4xl font-headline font-bold text-amber-900">{goldTranslations.pricing.title}</h2>
+                <h2 className="text-3xl md:text-4xl font-headline font-bold text-amber-900">{goldTranslations.pricing?.title}</h2>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                    {goldTranslations.pricing.subtitle}
+                    {goldTranslations.pricing?.subtitle}
                 </p>
                  <div className="pt-2">
                     <Button asChild variant="outline">
                         <Link href="http://ru.investing.com/currencies/xau-usd" target="_blank">
-                            {goldTranslations.pricing.checkPrice}
+                            {goldTranslations.pricing?.checkPrice}
                             <ExternalLink className="w-4 h-4 ml-2" />
                         </Link>
                     </Button>
@@ -253,18 +252,20 @@ export default function AndrgoldPage() {
             </div>
              <Card>
                 <CardHeader>
-                    <CardTitle>{goldTranslations.chart.title}</CardTitle>
-                    <CardDescription>
-                        {goldTranslations.chart.description}
-                    </CardDescription>
+                    <CardTitle>{goldTranslations.chart?.title}</CardTitle>
+                    <CardDescription
+                        dangerouslySetInnerHTML={{
+                            __html: goldTranslations.chart?.description || "",
+                        }}
+                    />
                 </CardHeader>
                 <CardContent>
-                    <ChartContainer config={{...lbmaChartConfig, price: { ...lbmaChartConfig.price, label: goldTranslations.chart.priceLabel}}} className="w-full h-[400px]">
+                    <ChartContainer config={{...lbmaChartConfig, price: { ...lbmaChartConfig.price, label: goldTranslations.chart?.priceLabel}}} className="w-full h-[400px]">
                         <LineChart data={priceData} margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
                             <CartesianGrid vertical={false} />
                             <XAxis dataKey="year" tickLine={false} axisLine={false} tickMargin={8} />
                             <YAxis 
-                                domain={[36, 'auto']}
+                                domain={[1200, 'auto']}
                                 tickFormatter={(value) => `$${value}`}
                             />
                             <Tooltip 
@@ -292,13 +293,13 @@ export default function AndrgoldPage() {
         
         <section id="cta" className="bg-white rounded-lg shadow-xl p-8 md:p-12 border-2 border-amber-400">
             <div className="text-center space-y-6">
-                <h2 className="text-3xl md:text-4xl font-headline font-bold text-amber-900">{goldTranslations.cta.title}</h2>
+                <h2 className="text-3xl md:text-4xl font-headline font-bold text-amber-900">{goldTranslations.cta?.title}</h2>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                    {goldTranslations.cta.subtitle}
+                    {goldTranslations.cta?.subtitle}
                 </p>
                 <div className="pt-4">
                     <Button size="lg" asChild variant="outline" className="px-10 py-6 text-lg rounded-full">
-                        <Link href="/#contact">{goldTranslations.cta.button}</Link>
+                        <Link href="/#contact">{goldTranslations.cta?.button}</Link>
                     </Button>
                 </div>
             </div>
@@ -308,5 +309,3 @@ export default function AndrgoldPage() {
     </div>
   );
 }
-
-    

@@ -220,7 +220,7 @@
                 "category": { "label": "Category", "value": "Investment Gold (FINE GOLD)" },
                 "purity": { "label": "Purity", "value": "999.9 ('four nines') — the highest standard of purity." },
                 "manufacturer": { "label": "Manufacturer", "value": "RUAH Gold Refinery (Uzbekistan)" },
-                "guarantees": { "label": "Guarantees", "value": "Certified, legally sourced ('Responsibly Sourced')." }
+                "guarantees": { "label": "Guarantees", "value": "Certified, Responsibly Sourced." }
             },
             "investmentCase": {
                 "title": "Why is this a profitable investment?",
@@ -261,8 +261,8 @@
             "checkPrice": "Check current price"
         },
         "chart": {
-            "title": "Global Gold Price Dynamics (1970-2024)",
-            "description": "Average annual price per troy ounce in US dollars. Data shows a long-term growth trend.",
+            "title": "Gold Price Dynamics: 10-Year Outlook",
+            "description": "An impressive <strong>300% growth</strong> is projected <span class='font-bold text-amber-600'>in 10 years</span>. Gold demonstrates stable long-term growth, confirming its status as a reliable investment asset.",
             "priceLabel": "Price ($)"
         },
         "cta": {
