@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from 'next/image';
@@ -6,44 +7,8 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Gem, ShieldCheck, Scale, Globe, ArrowRight, ArrowLeft, Check, X, Award, ExternalLink } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import Link from 'next/link';
-import { ChartContainer, ChartTooltip, ChartTooltipContent, ChartConfig } from "@/components/ui/chart"
-import { Bar, BarChart, CartesianGrid, XAxis, YAxis, LabelList, Line, LineChart, Tooltip } from "recharts"
+import { GoldInvestmentCalculator } from '@/components/gold-investment-calculator';
 import { useLanguage } from '@/context/language-context';
-
-const priceData = [
-    { year: "2015", price: 1200 },
-    { year: "2017", price: 1250 },
-    { year: "2019", price: 1500 },
-    { year: "2021", price: 1800 },
-    { year: "2023", price: 2300 },
-    { year: "2025", price: 3750 },
-];
-
-const lbmaChartConfig = {
-  price: {
-    label: "Price ($)",
-    color: "#eab308",
-  },
-} satisfies ChartConfig
-
-
-const purityDataRaw = [
-    { name: 'Pure Gold', value: 95, fill: '#eab308' },
-    { name: 'Other Metals', value: 5, fill: '#6b7280' },
-]
-const purityDataRefined = [
-    { name: 'Pure Gold', value: 99.99, fill: '#eab3a8' },
-    { name: 'Other Metals', value: 0.01, fill: '#6b7280' },
-]
-
-const purityChartConfig = {
-    gold: {
-        label: "Gold",
-    },
-    other: {
-        label: "Impurities"
-    }
-} satisfies ChartConfig
 
 export default function AndrgoldPage() {
   const { translations } = useLanguage();
@@ -153,7 +118,7 @@ export default function AndrgoldPage() {
               <div className="relative min-h-[300px] md:min-h-full">
                   <Image
                       src="https://s1.hostingkartinok.com/uploads/images/2025/09/af6b257df6c8cb1866f9df662df9502b.png"
-                      alt={goldTranslations.refinedCard?.alt}
+                      alt={goldTranslations.refinedCard?.alt || "Refined Gold 999.9"}
                       fill
                       className="object-contain p-4"
                   />
@@ -236,59 +201,7 @@ export default function AndrgoldPage() {
         </section>
 
         <section id="pricing">
-            <div className="text-center space-y-4 mb-12">
-                <h2 className="text-3xl md:text-4xl font-headline font-bold text-amber-900">{goldTranslations.pricing?.title}</h2>
-                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                    {goldTranslations.pricing?.subtitle}
-                </p>
-                 <div className="pt-2">
-                    <Button asChild variant="outline">
-                        <Link href="http://ru.investing.com/currencies/xau-usd" target="_blank">
-                            {goldTranslations.pricing?.checkPrice}
-                            <ExternalLink className="w-4 h-4 ml-2" />
-                        </Link>
-                    </Button>
-                </div>
-            </div>
-             <Card>
-                <CardHeader>
-                    <CardTitle>{goldTranslations.chart?.title}</CardTitle>
-                    <CardDescription
-                        dangerouslySetInnerHTML={{
-                            __html: goldTranslations.chart?.description || "",
-                        }}
-                    />
-                </CardHeader>
-                <CardContent>
-                    <ChartContainer config={{...lbmaChartConfig, price: { ...lbmaChartConfig.price, label: goldTranslations.chart?.priceLabel}}} className="w-full h-[400px]">
-                        <LineChart data={priceData} margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
-                            <CartesianGrid vertical={false} />
-                            <XAxis dataKey="year" tickLine={false} axisLine={false} tickMargin={8} />
-                            <YAxis 
-                                domain={[1200, 'auto']}
-                                tickFormatter={(value) => `$${value}`}
-                            />
-                            <Tooltip 
-                                cursor={true} 
-                                content={<ChartTooltipContent indicator="line" labelKey="year" formatter={(value) => `$${(value as number).toFixed(2)}`} />} 
-                            />
-                            <Line 
-                                type="monotone" 
-                                dataKey="price" 
-                                stroke="var(--color-price)" 
-                                strokeWidth={2} 
-                                dot={{
-                                    r: 4,
-                                    fill: "var(--color-price)",
-                                }}
-                                activeDot={{
-                                    r: 6,
-                                }}
-                            />
-                        </LineChart>
-                    </ChartContainer>
-                </CardContent>
-            </Card>
+          <GoldInvestmentCalculator />
         </section>
         
         <section id="cta" className="bg-white rounded-lg shadow-xl p-8 md:p-12 border-2 border-amber-400">
@@ -309,3 +222,5 @@ export default function AndrgoldPage() {
     </div>
   );
 }
+
+    

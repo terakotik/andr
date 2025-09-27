@@ -256,14 +256,20 @@
             "carrier": "Carrier"
         },
         "pricing": {
-            "title": "Pricing and Payment",
-            "subtitle": "The price is based on LBMA Gold Price quotes with an agreed discount. Payment — 100% prepayment.",
-            "checkPrice": "Check current price"
+            "title": "See the Profitability of Investing in Gold",
+            "subtitle": "The price is based on LBMA Gold Price quotes with an agreed discount. Use our calculator to estimate your potential profit.",
+            "checkPrice": "Check LBMA Price"
         },
         "chart": {
             "title": "Gold Price Dynamics: 10-Year Outlook",
             "description": "An impressive <strong>300% growth</strong> is projected <span class='font-bold text-amber-600'>in 10 years</span>. Gold demonstrates stable long-term growth, confirming its status as a reliable investment asset.",
-            "priceLabel": "Price ($)"
+            "priceLabel": "Price ($)",
+            "investmentAmountLabel": "Investment Amount ($)",
+            "investmentYearLabel": "Investment Year",
+            "calculateButton": "Calculate Profit",
+            "finalValueLabel": "Final Value in 2025",
+            "profitLabel": "Net Profit",
+            "yourInvestment": "Your Investment"
         },
         "cta": {
             "title": "Start cooperating with us",
@@ -293,3 +299,5 @@
         "ctaButton": "Request a Quote"
     }
 }
+
+    
