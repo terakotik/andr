@@ -184,22 +184,24 @@ export function GoldInvestmentCalculator() {
                                     content={({ active, payload, label }) => {
                                         if (active && payload && payload.length) {
                                             const dataPoint = payload[0];
-                                            const dataIndex = chartData.findIndex(d => d.year === label);
-                                            let annualGrowth = null;
+                                            const currentYear = parseInt(label, 10);
+                                            const currentPrice = dataPoint.payload.price;
+                                            
+                                            let totalGrowth = null;
+                                            const startPriceData = rawPriceData.find(d => d.year === startYear);
 
-                                            if (dataIndex > 0) {
-                                                const prevPrice = chartData[dataIndex - 1].price;
-                                                const currentPrice = dataPoint.payload.price;
-                                                annualGrowth = ((currentPrice - prevPrice) / prevPrice * 100).toFixed(2);
+                                            if (calculationResult && startPriceData && currentYear > parseInt(startYear)) {
+                                                const startPrice = startPriceData.price;
+                                                totalGrowth = ((currentPrice - startPrice) / startPrice * 100).toFixed(2);
                                             }
 
                                             return (
                                                 <div className="bg-background/90 backdrop-blur-sm p-4 rounded-lg shadow-lg border">
                                                     <p className="font-bold text-lg mb-2">{label}</p>
                                                     <p className="text-primary">{`${goldTranslations.chart?.priceLabel || 'Gold Price'}: ${formatCurrency(dataPoint.value as number)}`}</p>
-                                                    {annualGrowth !== null && (
-                                                        <p className={`font-semibold ${Number(annualGrowth) >= 0 ? 'text-green-500' : 'text-red-500'}`}>
-                                                            {goldTranslations.chart?.annualGrowth || 'Annual Growth'}: {annualGrowth}%
+                                                    {totalGrowth !== null && (
+                                                        <p className={`font-semibold ${Number(totalGrowth) >= 0 ? 'text-green-500' : 'text-red-500'}`}>
+                                                            {goldTranslations.chart?.totalGrowth || 'Total Growth'}: {totalGrowth}%
                                                         </p>
                                                     )}
                                                     {payload[1] && payload[1].value && (
