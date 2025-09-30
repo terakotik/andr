@@ -4,7 +4,7 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Gem, ShieldCheck, Scale, Globe, ArrowRight, ArrowLeft, Check, X, Award, ExternalLink } from 'lucide-react';
+import { Gem, ShieldCheck, Scale, Globe, ArrowRight, ArrowLeft, Check, X, Award, ExternalLink, ChevronRight } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import Link from 'next/link';
 import { GoldInvestmentCalculator } from '@/components/gold-investment-calculator';
@@ -32,14 +32,21 @@ export default function AndrgoldPage() {
                 Your browser does not support the video tag.
             </video>
           <div className="absolute inset-0 bg-primary/20"></div>
-          <div className="relative z-10 space-y-4 px-4">
-            <p className="font-headline text-lg text-primary-foreground/80 tracking-widest">ANDRGOLD</p>
-            <h1 className="text-4xl md:text-5xl font-headline font-bold text-white">
+          <div className="relative z-10 space-y-6 px-4">
+            <h1 className="text-4xl md:text-5xl font-headline font-bold text-white max-w-4xl mx-auto">
               {goldTranslations.heroTitle}
             </h1>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-200 max-w-3xl mx-auto">
               {goldTranslations.heroSubtitle}
             </p>
+             <div className="flex justify-center pt-4">
+                <Button size="lg" asChild className="rounded-full border-white text-white hover:bg-primary hover:text-primary-foreground hover:border-primary">
+                    <Link href="#cta">
+                        <ChevronRight className="mr-2 h-4 w-4" />
+                        {goldTranslations.heroButton}
+                    </Link>
+                </Button>
+            </div>
           </div>
         </section>
       
