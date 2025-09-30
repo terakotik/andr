@@ -54,17 +54,17 @@ export default function AndrgoldPage() {
             </p>
           </div>
           <div id="key-advantages" className="grid md:grid-cols-3 gap-8 text-center">
-            <div className="bg-card p-8 rounded-lg shadow-md border">
+            <div className="bg-card p-8 rounded-lg border">
                 <ShieldCheck className="h-12 w-12 text-primary mx-auto mb-4" />
                 <h3 className="text-xl font-bold mb-2 text-foreground">{goldTranslations.advantages?.quality?.title}</h3>
                 <p className="text-muted-foreground">{goldTranslations.advantages?.quality?.description}</p>
             </div>
-            <div className="bg-card p-8 rounded-lg shadow-md border">
+            <div className="bg-card p-8 rounded-lg border">
                 <Globe className="h-12 w-12 text-primary mx-auto mb-4" />
                 <h3 className="text-xl font-bold mb-2 text-foreground">{goldTranslations.advantages?.reliability?.title}</h3>
                 <p className="text-muted-foreground">{goldTranslations.advantages?.reliability?.description}</p>
             </div>
-            <div className="bg-card p-8 rounded-lg shadow-md border">
+            <div className="bg-card p-8 rounded-lg border">
                 <Gem className="h-12 w-12 text-primary mx-auto mb-4" />
                 <h3 className="text-xl font-bold mb-2 text-foreground">{goldTranslations.advantages?.approach?.title}</h3>
                 <p className="text-muted-foreground">{goldTranslations.advantages?.approach?.description}</p>
@@ -80,7 +80,7 @@ export default function AndrgoldPage() {
                 </p>
             </div>
             <div className="grid md:grid-cols-2 gap-8 items-stretch">
-                <Card className="flex flex-col">
+                <Card className="flex flex-col border">
                     <CardHeader>
                         <CardTitle className="flex items-center gap-3 text-foreground">
                             <Gem className="w-7 h-7 text-primary"/>
@@ -94,7 +94,7 @@ export default function AndrgoldPage() {
                         <p>{goldTranslations.products?.raw?.idealFor}</p>
                     </CardContent>
                 </Card>
-                <Card className="flex flex-col">
+                <Card className="flex flex-col border">
                     <CardHeader>
                         <CardTitle className="flex items-center gap-3 text-foreground">
                             <Award className="w-7 h-7 text-primary"/>
@@ -115,7 +115,7 @@ export default function AndrgoldPage() {
         </section>
 
         <section>
-          <Card className="grid md:grid-cols-2 overflow-hidden shadow-lg">
+          <Card className="grid md:grid-cols-2 overflow-hidden border">
               <div className="relative min-h-[300px] md:min-h-full bg-background">
                   <Image
                       src="https://s1.hostingkartinok.com/uploads/images/2025/09/af6b257df6c8cb1866f9df662df9502b.png"
@@ -184,18 +184,18 @@ export default function AndrgoldPage() {
                     </CardContent>
                 </Card>
             </div>
-            <div className="overflow-x-auto py-4">
+            <div className="overflow-x-auto py-8">
                 <div className="flex items-center justify-center my-4 min-w-[500px]">
-                    <div className="px-2 py-4 bg-secondary rounded-lg whitespace-nowrap shadow-md border">
-                        <p className="font-bold text-primary">{goldTranslations.delivery?.seller?.title}</p>
+                    <div className="px-6 py-3 bg-primary rounded-lg whitespace-nowrap text-primary-foreground">
+                        <p className="font-bold text-center">{goldTranslations.delivery?.seller?.title}</p>
                     </div>
-                    <ArrowRight className="w-8 h-8 mx-2 text-muted-foreground shrink-0"/>
-                     <div className="px-2 py-4 bg-muted rounded-lg whitespace-nowrap shadow-md border">
+                    <ArrowRight className="w-8 h-8 mx-4 text-muted-foreground shrink-0"/>
+                     <div className="px-6 py-3 bg-background rounded-lg whitespace-nowrap border-2 border-dashed">
                         <p className="font-bold text-center text-foreground">{goldTranslations.delivery?.carrier}</p>
                     </div>
-                    <ArrowRight className="w-8 h-8 mx-2 text-muted-foreground shrink-0"/>
-                    <div className="px-2 py-4 bg-secondary rounded-lg whitespace-nowrap shadow-md border">
-                        <p className="font-bold text-primary">{goldTranslations.delivery?.buyer?.title}</p>
+                    <ArrowRight className="w-8 h-8 mx-4 text-muted-foreground shrink-0"/>
+                    <div className="px-6 py-3 bg-primary rounded-lg whitespace-nowrap text-primary-foreground">
+                        <p className="font-bold text-center">{goldTranslations.delivery?.buyer?.title}</p>
                     </div>
                 </div>
             </div>
@@ -205,14 +205,14 @@ export default function AndrgoldPage() {
           <GoldInvestmentCalculator />
         </section>
         
-        <section id="cta" className="bg-card rounded-lg shadow-xl p-8 md:p-12 border">
+        <section id="cta" className="bg-card rounded-lg p-8 md:p-12 border">
             <div className="text-center space-y-4 mb-12">
               <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">{goldTranslations.cta?.title}</h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                 {goldTranslations.cta?.subtitle}
               </p>
             </div>
-            <Card className="max-w-2xl mx-auto rounded-lg bg-secondary/50">
+            <Card className="max-w-2xl mx-auto rounded-lg bg-background border">
                 <CardHeader>
                   <CardTitle>{goldTranslations.cta?.formTitle}</CardTitle>
                 </CardHeader>
@@ -226,5 +226,3 @@ export default function AndrgoldPage() {
     </div>
   );
 }
-
-    
