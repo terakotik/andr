@@ -17,7 +17,7 @@ export default function AndrgoldPage() {
   const goldTranslations = translations.goldPage || {};
 
   return (
-    <div className="bg-stone-50 text-gray-800">
+    <div className="bg-background text-foreground">
       
         <section className="relative h-[50vh] flex items-center justify-center text-center overflow-hidden">
             <video
@@ -32,7 +32,7 @@ export default function AndrgoldPage() {
             </video>
           <div className="absolute inset-0 bg-primary/20"></div>
           <div className="relative z-10 space-y-4 px-4">
-            <p className="font-headline text-lg text-amber-300 tracking-widest">ANDRGOLD</p>
+            <p className="font-headline text-lg text-primary-foreground/80 tracking-widest">ANDRGOLD</p>
             <h1 className="text-4xl md:text-5xl font-headline font-bold text-white">
               {goldTranslations.heroTitle}
             </h1>
@@ -47,33 +47,33 @@ export default function AndrgoldPage() {
         
         <section>
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-headline font-semibold text-amber-900 mb-4">{goldTranslations.investmentTitle}</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl font-headline font-semibold text-primary mb-4">{goldTranslations.investmentTitle}</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               {goldTranslations.investmentSubtitle}
             </p>
           </div>
           <div id="key-advantages" className="grid md:grid-cols-3 gap-8 text-center">
-            <div className="bg-white p-8 rounded-lg shadow-md border border-amber-100">
-                <ShieldCheck className="h-12 w-12 text-amber-600 mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2 text-amber-900">{goldTranslations.advantages?.quality?.title}</h3>
-                <p className="text-gray-600">{goldTranslations.advantages?.quality?.description}</p>
+            <div className="bg-card p-8 rounded-lg shadow-md border">
+                <ShieldCheck className="h-12 w-12 text-primary mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-2 text-foreground">{goldTranslations.advantages?.quality?.title}</h3>
+                <p className="text-muted-foreground">{goldTranslations.advantages?.quality?.description}</p>
             </div>
-            <div className="bg-white p-8 rounded-lg shadow-md border border-amber-100">
-                <Globe className="h-12 w-12 text-amber-600 mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2 text-amber-900">{goldTranslations.advantages?.reliability?.title}</h3>
-                <p className="text-gray-600">{goldTranslations.advantages?.reliability?.description}</p>
+            <div className="bg-card p-8 rounded-lg shadow-md border">
+                <Globe className="h-12 w-12 text-primary mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-2 text-foreground">{goldTranslations.advantages?.reliability?.title}</h3>
+                <p className="text-muted-foreground">{goldTranslations.advantages?.reliability?.description}</p>
             </div>
-            <div className="bg-white p-8 rounded-lg shadow-md border border-amber-100">
-                <Gem className="h-12 w-12 text-amber-600 mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2 text-amber-900">{goldTranslations.advantages?.approach?.title}</h3>
-                <p className="text-gray-600">{goldTranslations.advantages?.approach?.description}</p>
+            <div className="bg-card p-8 rounded-lg shadow-md border">
+                <Gem className="h-12 w-12 text-primary mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-2 text-foreground">{goldTranslations.advantages?.approach?.title}</h3>
+                <p className="text-muted-foreground">{goldTranslations.advantages?.approach?.description}</p>
             </div>
           </div>
         </section>
 
         <section id="product">
             <div className="text-center space-y-4 mb-12">
-                <h2 className="text-3xl md:text-4xl font-headline font-bold text-amber-900">{goldTranslations.products?.title}</h2>
+                <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">{goldTranslations.products?.title}</h2>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                     {goldTranslations.products?.subtitle}
                 </p>
@@ -81,32 +81,32 @@ export default function AndrgoldPage() {
             <div className="grid md:grid-cols-2 gap-8 items-stretch">
                 <Card className="flex flex-col">
                     <CardHeader>
-                        <CardTitle className="flex items-center gap-3 text-amber-900">
-                            <Gem className="w-7 h-7 text-amber-700"/>
+                        <CardTitle className="flex items-center gap-3 text-foreground">
+                            <Gem className="w-7 h-7 text-primary"/>
                             {goldTranslations.products?.raw?.title}
                         </CardTitle>
                         <CardDescription>{goldTranslations.products?.raw?.origin}</CardDescription>
                     </CardHeader>
-                    <CardContent className="flex-grow space-y-4">
-                        <p><span className="font-semibold">{goldTranslations.products?.purityLabel}:</span> {goldTranslations.products?.raw?.purity}</p>
-                        <p><span className="font-semibold">{goldTranslations.products?.formLabel}:</span> {goldTranslations.products?.raw?.form}</p>
+                    <CardContent className="flex-grow space-y-4 text-muted-foreground">
+                        <p><span className="font-semibold text-foreground">{goldTranslations.products?.purityLabel}:</span> {goldTranslations.products?.raw?.purity}</p>
+                        <p><span className="font-semibold text-foreground">{goldTranslations.products?.formLabel}:</span> {goldTranslations.products?.raw?.form}</p>
                         <p>{goldTranslations.products?.raw?.idealFor}</p>
                     </CardContent>
                 </Card>
                 <Card className="flex flex-col">
                     <CardHeader>
-                        <CardTitle className="flex items-center gap-3 text-amber-900">
-                            <Award className="w-7 h-7 text-amber-700"/>
+                        <CardTitle className="flex items-center gap-3 text-foreground">
+                            <Award className="w-7 h-7 text-primary"/>
                             {goldTranslations.products?.refined?.title}
                         </CardTitle>
                         <CardDescription>{goldTranslations.products?.refined?.afterRefining}</CardDescription>
                     </CardHeader>
-                    <CardContent className="flex-grow space-y-4">
-                        <p><span className="font-semibold">{goldTranslations.products?.purityLabel}:</span> {goldTranslations.products?.refined?.purity}</p>
-                        <p><span className="font-semibold">{goldTranslations.products?.formLabel}:</span> {goldTranslations.products?.refined?.form}</p>
+                    <CardContent className="flex-grow space-y-4 text-muted-foreground">
+                        <p><span className="font-semibold text-foreground">{goldTranslations.products?.purityLabel}:</span> {goldTranslations.products?.refined?.purity}</p>
+                        <p><span className="font-semibold text-foreground">{goldTranslations.products?.formLabel}:</span> {goldTranslations.products?.refined?.form}</p>
                         <div className="flex items-start gap-2 pt-2">
-                           <ShieldCheck className="w-5 h-5 text-amber-600 mt-1 shrink-0"/>
-                           <p><span className="font-semibold">{goldTranslations.products?.certificationLabel}:</span> {goldTranslations.products?.refined?.certification}</p>
+                           <ShieldCheck className="w-5 h-5 text-primary mt-1 shrink-0"/>
+                           <p><span className="font-semibold text-foreground">{goldTranslations.products?.certificationLabel}:</span> {goldTranslations.products?.refined?.certification}</p>
                         </div>
                     </CardContent>
                 </Card>
@@ -114,8 +114,8 @@ export default function AndrgoldPage() {
         </section>
 
         <section>
-          <Card className="grid md:grid-cols-2 overflow-hidden shadow-lg border-amber-200">
-              <div className="relative min-h-[300px] md:min-h-full">
+          <Card className="grid md:grid-cols-2 overflow-hidden shadow-lg">
+              <div className="relative min-h-[300px] md:min-h-full bg-secondary">
                   <Image
                       src="https://s1.hostingkartinok.com/uploads/images/2025/09/af6b257df6c8cb1866f9df662df9502b.png"
                       alt={goldTranslations.refinedCard?.alt || "Refined Gold 999.9"}
@@ -124,32 +124,32 @@ export default function AndrgoldPage() {
                   />
               </div>
               <div className="p-8">
-                  <h3 className="font-headline text-2xl font-bold text-amber-900 mb-4">{goldTranslations.refinedCard?.title}</h3>
+                  <h3 className="font-headline text-2xl font-bold text-primary mb-4">{goldTranslations.refinedCard?.title}</h3>
                   
                   <div className="space-y-6">
                       <div>
-                          <h4 className="font-bold text-lg text-amber-800 mb-2">{goldTranslations.refinedCard?.characteristics?.title}</h4>
-                          <ul className="list-disc list-inside space-y-1 text-gray-700">
-                              <li><span className="font-semibold">{goldTranslations.refinedCard?.characteristics?.category?.label}:</span> {goldTranslations.refinedCard?.characteristics?.category?.value}</li>
-                              <li><span className="font-semibold">{goldTranslations.refinedCard?.characteristics?.purity?.label}:</span> {goldTranslations.refinedCard?.characteristics?.purity?.value}</li>
-                              <li><span className="font-semibold">{goldTranslations.refinedCard?.characteristics?.manufacturer?.label}:</span> {goldTranslations.refinedCard?.characteristics?.manufacturer?.value}</li>
-                              <li><span className="font-semibold">{goldTranslations.refinedCard?.characteristics?.guarantees?.label}:</span> {goldTranslations.refinedCard?.characteristics?.guarantees?.value}</li>
+                          <h4 className="font-bold text-lg text-foreground mb-2">{goldTranslations.refinedCard?.characteristics?.title}</h4>
+                          <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                              <li><span className="font-semibold text-foreground">{goldTranslations.refinedCard?.characteristics?.category?.label}:</span> {goldTranslations.refinedCard?.characteristics?.category?.value}</li>
+                              <li><span className="font-semibold text-foreground">{goldTranslations.refinedCard?.characteristics?.purity?.label}:</span> {goldTranslations.refinedCard?.characteristics?.purity?.value}</li>
+                              <li><span className="font-semibold text-foreground">{goldTranslations.refinedCard?.characteristics?.manufacturer?.label}:</span> {goldTranslations.refinedCard?.characteristics?.manufacturer?.value}</li>
+                              <li><span className="font-semibold text-foreground">{goldTranslations.refinedCard?.characteristics?.guarantees?.label}:</span> {goldTranslations.refinedCard?.characteristics?.guarantees?.value}</li>
                           </ul>
                       </div>
 
                       <div>
-                          <h4 className="font-bold text-lg text-amber-800 mb-2">{goldTranslations.refinedCard?.investmentCase?.title}</h4>
-                          <p className="text-gray-700">
+                          <h4 className="font-bold text-lg text-foreground mb-2">{goldTranslations.refinedCard?.investmentCase?.title}</h4>
+                          <p className="text-muted-foreground">
                               {goldTranslations.refinedCard?.investmentCase?.description}
                           </p>
                       </div>
 
                       <div>
-                          <h4 className="font-bold text-lg text-amber-800 mb-2">{goldTranslations.refinedCard?.idealFor?.title}</h4>
-                           <ul className="list-disc list-inside space-y-1 text-gray-700">
-                              <li><span className="font-semibold">{goldTranslations.refinedCard?.idealFor?.investors?.label}:</span> {goldTranslations.refinedCard?.idealFor?.investors?.value}</li>
-                              <li><span className="font-semibold">{goldTranslations.refinedCard?.idealFor?.banks?.label}:</span> {goldTranslations.refinedCard?.idealFor?.banks?.value}</li>
-                              <li><span className="font-semibold">{goldTranslations.refinedCard?.idealFor?.buyers?.label}:</span> {goldTranslations.refinedCard?.idealFor?.buyers?.value}</li>
+                          <h4 className="font-bold text-lg text-foreground mb-2">{goldTranslations.refinedCard?.idealFor?.title}</h4>
+                           <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                              <li><span className="font-semibold text-foreground">{goldTranslations.refinedCard?.idealFor?.investors?.label}:</span> {goldTranslations.refinedCard?.idealFor?.investors?.value}</li>
+                              <li><span className="font-semibold text-foreground">{goldTranslations.refinedCard?.idealFor?.banks?.label}:</span> {goldTranslations.refinedCard?.idealFor?.banks?.value}</li>
+                              <li><span className="font-semibold text-foreground">{goldTranslations.refinedCard?.idealFor?.buyers?.label}:</span> {goldTranslations.refinedCard?.idealFor?.buyers?.value}</li>
                           </ul>
                       </div>
                   </div>
@@ -159,42 +159,42 @@ export default function AndrgoldPage() {
 
         <section id="delivery-terms">
             <div className="text-center space-y-4 mb-12">
-                <h2 className="text-3xl md:text-4xl font-headline font-bold text-amber-900">{goldTranslations.delivery?.title}</h2>
+                <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">{goldTranslations.delivery?.title}</h2>
             </div>
             <div className="grid md:grid-cols-2 gap-8 items-stretch max-w-6xl mx-auto">
-                <Card className="border-amber-600 border-2 flex flex-col">
+                <Card className="border-primary border-2 flex flex-col">
                     <CardHeader>
-                        <CardTitle className="text-amber-800">{goldTranslations.delivery?.seller?.title}</CardTitle>
+                        <CardTitle className="text-primary">{goldTranslations.delivery?.seller?.title}</CardTitle>
                     </CardHeader>
-                    <CardContent className="space-y-3 flex-grow">
+                    <CardContent className="space-y-3 flex-grow text-muted-foreground">
                        {goldTranslations.delivery?.seller?.duties.map((duty: string) => (
-                           <p key={duty} className="flex items-start"><Check className="w-5 h-5 mr-2 mt-1 text-amber-600 flex-shrink-0"/>{duty}</p>
+                           <p key={duty} className="flex items-start"><Check className="w-5 h-5 mr-2 mt-1 text-primary flex-shrink-0"/>{duty}</p>
                        ))}
                     </CardContent>
                 </Card>
-                <Card className="border-stone-500 border-2 flex flex-col">
+                <Card className="border-border border-2 flex flex-col">
                     <CardHeader>
-                        <CardTitle className="text-stone-800">{goldTranslations.delivery?.buyer?.title}</CardTitle>
+                        <CardTitle className="text-foreground">{goldTranslations.delivery?.buyer?.title}</CardTitle>
                     </CardHeader>
-                    <CardContent className="space-y-3 flex-grow">
+                    <CardContent className="space-y-3 flex-grow text-muted-foreground">
                        {goldTranslations.delivery?.buyer?.duties.map((duty: string) => (
-                           <p key={duty} className="flex items-start"><Check className="w-5 h-5 mr-2 mt-1 text-stone-600 flex-shrink-0"/>{duty}</p>
+                           <p key={duty} className="flex items-start"><Check className="w-5 h-5 mr-2 mt-1 text-muted-foreground flex-shrink-0"/>{duty}</p>
                        ))}
                     </CardContent>
                 </Card>
             </div>
             <div className="overflow-x-auto py-4">
                 <div className="flex items-center justify-center my-4 min-w-[500px]">
-                    <div className="px-2 py-4 bg-amber-100 rounded-lg whitespace-nowrap shadow-md border border-amber-200">
-                        <p className="font-bold text-amber-800">{goldTranslations.delivery?.seller?.title}</p>
+                    <div className="px-2 py-4 bg-secondary rounded-lg whitespace-nowrap shadow-md border">
+                        <p className="font-bold text-primary">{goldTranslations.delivery?.seller?.title}</p>
                     </div>
-                    <ArrowRight className="w-8 h-8 mx-2 text-gray-400 shrink-0"/>
-                     <div className="px-2 py-4 bg-gray-200 rounded-lg whitespace-nowrap shadow-md border-gray-300">
-                        <p className="font-bold text-center text-gray-700">{goldTranslations.delivery?.carrier}</p>
+                    <ArrowRight className="w-8 h-8 mx-2 text-muted-foreground shrink-0"/>
+                     <div className="px-2 py-4 bg-muted rounded-lg whitespace-nowrap shadow-md border">
+                        <p className="font-bold text-center text-foreground">{goldTranslations.delivery?.carrier}</p>
                     </div>
-                    <ArrowRight className="w-8 h-8 mx-2 text-gray-400 shrink-0"/>
-                    <div className="px-2 py-4 bg-amber-100 rounded-lg whitespace-nowrap shadow-md border border-amber-200">
-                        <p className="font-bold text-amber-800">{goldTranslations.delivery?.buyer?.title}</p>
+                    <ArrowRight className="w-8 h-8 mx-2 text-muted-foreground shrink-0"/>
+                    <div className="px-2 py-4 bg-secondary rounded-lg whitespace-nowrap shadow-md border">
+                        <p className="font-bold text-primary">{goldTranslations.delivery?.buyer?.title}</p>
                     </div>
                 </div>
             </div>
@@ -204,14 +204,14 @@ export default function AndrgoldPage() {
           <GoldInvestmentCalculator />
         </section>
         
-        <section id="cta" className="bg-white rounded-lg shadow-xl p-8 md:p-12 border-2 border-amber-400">
+        <section id="cta" className="bg-card rounded-lg shadow-xl p-8 md:p-12 border-2 border-primary">
             <div className="text-center space-y-6">
-                <h2 className="text-3xl md:text-4xl font-headline font-bold text-amber-900">{goldTranslations.cta?.title}</h2>
+                <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">{goldTranslations.cta?.title}</h2>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                     {goldTranslations.cta?.subtitle}
                 </p>
                 <div className="pt-4">
-                    <Button size="lg" asChild variant="outline" className="px-10 py-6 text-lg rounded-full">
+                    <Button size="lg" className="px-10 py-6 text-lg rounded-full">
                         <Link href="/#contact">{goldTranslations.cta?.button}</Link>
                     </Button>
                 </div>

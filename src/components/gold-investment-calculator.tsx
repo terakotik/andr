@@ -91,7 +91,7 @@ export function GoldInvestmentCalculator() {
     return (
         <div className="space-y-8">
             <div className="text-center space-y-4">
-                <h2 className="text-3xl md:text-4xl font-headline font-bold text-amber-900">{goldTranslations.pricing?.title}</h2>
+                <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">{goldTranslations.pricing?.title}</h2>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                     {goldTranslations.pricing?.subtitle}
                 </p>
@@ -105,9 +105,9 @@ export function GoldInvestmentCalculator() {
                 </div>
             </div>
 
-            <Card className="shadow-lg border-amber-200">
+            <Card className="shadow-lg">
                 <CardHeader>
-                    <CardTitle className="text-amber-900">{goldTranslations.chart?.title}</CardTitle>
+                    <CardTitle className="text-primary">{goldTranslations.chart?.title}</CardTitle>
                      <CardDescription
                         dangerouslySetInnerHTML={{
                             __html: goldTranslations.chart?.description || "",
@@ -115,7 +115,7 @@ export function GoldInvestmentCalculator() {
                     />
                 </CardHeader>
                 <CardContent className="space-y-6">
-                    <div className="grid md:grid-cols-3 gap-4 items-end bg-stone-100 p-4 rounded-lg border border-stone-200">
+                    <div className="grid md:grid-cols-3 gap-4 items-end bg-secondary/50 p-4 rounded-lg border">
                         <div className="space-y-2">
                             <Label htmlFor="investment-amount">{goldTranslations.chart?.investmentAmountLabel}</Label>
                             <Input 
@@ -139,21 +139,21 @@ export function GoldInvestmentCalculator() {
                                 </SelectContent>
                              </Select>
                         </div>
-                         <Button onClick={handleCalculate} className="w-full bg-amber-600 hover:bg-amber-700">
+                         <Button onClick={handleCalculate} className="w-full">
                             <TrendingUp className="mr-2 h-4 w-4" />
                             {goldTranslations.chart?.calculateButton}
                          </Button>
                     </div>
 
                     {calculationResult && (
-                        <div className="grid md:grid-cols-2 gap-4 text-center p-4 rounded-lg bg-green-50 border border-green-200">
+                        <div className="grid md:grid-cols-2 gap-4 text-center p-4 rounded-lg bg-green-500/10 border border-green-500/20">
                              <div>
-                                <p className="text-sm text-green-700 font-medium">{goldTranslations.chart?.finalValueLabel}</p>
-                                <p className="text-2xl font-bold text-green-800">{formatCurrency(calculationResult.finalValue)}</p>
+                                <p className="text-sm text-green-700 dark:text-green-400 font-medium">{goldTranslations.chart?.finalValueLabel}</p>
+                                <p className="text-2xl font-bold text-green-600 dark:text-green-300">{formatCurrency(calculationResult.finalValue)}</p>
                             </div>
                             <div>
-                                <p className="text-sm text-green-700 font-medium">{goldTranslations.chart?.profitLabel}</p>
-                                <p className="text-2xl font-bold text-green-800">{formatCurrency(calculationResult.profit)}</p>
+                                <p className="text-sm text-green-700 dark:text-green-400 font-medium">{goldTranslations.chart?.profitLabel}</p>
+                                <p className="text-2xl font-bold text-green-600 dark:text-green-300">{formatCurrency(calculationResult.profit)}</p>
                             </div>
                         </div>
                     )}
@@ -167,8 +167,8 @@ export function GoldInvestmentCalculator() {
                                         <stop offset="95%" stopColor="hsl(var(--primary))" stopOpacity={0.1}/>
                                     </linearGradient>
                                      <linearGradient id="colorInvestment" x1="0" y1="0" x2="0" y2="1">
-                                        <stop offset="5%" stopColor="#4ade80" stopOpacity={0.8}/>
-                                        <stop offset="95%" stopColor="#4ade80" stopOpacity={0.1}/>
+                                        <stop offset="5%" stopColor="hsl(var(--primary) / 0.8)" stopOpacity={0.8}/>
+                                        <stop offset="95%" stopColor="hsl(var(--primary) / 0.1)" stopOpacity={0.1}/>
                                     </linearGradient>
                                 </defs>
                                 <CartesianGrid strokeDasharray="3 3" vertical={false} />
@@ -228,11 +228,11 @@ export function GoldInvestmentCalculator() {
                                     <Area 
                                         type="monotone" 
                                         dataKey="investment" 
-                                        stroke="#22c55e"
+                                        stroke="hsl(var(--primary-foreground))"
                                         fill="url(#colorInvestment)" 
                                         strokeWidth={2}
                                         name={goldTranslations.chart?.yourInvestment || 'Your Investment'}
-                                        dot={{ r: 4, fill: "#22c55e" }}
+                                        dot={{ r: 4, fill: "hsl(var(--primary-foreground))" }}
                                         activeDot={{ r: 6 }}
                                     />
                                 )}
