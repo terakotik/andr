@@ -9,6 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import Link from 'next/link';
 import { GoldInvestmentCalculator } from '@/components/gold-investment-calculator';
 import { useLanguage } from '@/context/language-context';
+import { ContactForm } from '@/components/contact-form';
 
 export default function AndrgoldPage() {
   const { translations } = useLanguage();
@@ -19,7 +20,7 @@ export default function AndrgoldPage() {
   return (
     <div className="bg-background text-foreground">
       
-        <section className="relative h-[50vh] flex items-center justify-center text-center overflow-hidden">
+        <section className="relative h-screen flex items-center justify-center text-center overflow-hidden">
             <video
                 autoPlay
                 loop
@@ -204,18 +205,21 @@ export default function AndrgoldPage() {
           <GoldInvestmentCalculator />
         </section>
         
-        <section id="cta" className="bg-card rounded-lg shadow-xl p-8 md:p-12 border-2 border-primary">
-            <div className="text-center space-y-6">
-                <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">{goldTranslations.cta?.title}</h2>
-                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                    {goldTranslations.cta?.subtitle}
-                </p>
-                <div className="pt-4">
-                    <Button size="lg" className="px-10 py-6 text-lg rounded-full">
-                        <Link href="/#contact">{goldTranslations.cta?.button}</Link>
-                    </Button>
-                </div>
+        <section id="cta" className="bg-card rounded-lg shadow-xl p-8 md:p-12 border">
+            <div className="text-center space-y-4 mb-12">
+              <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">{goldTranslations.cta?.title}</h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                {goldTranslations.cta?.subtitle}
+              </p>
             </div>
+            <Card className="max-w-2xl mx-auto rounded-lg bg-secondary/50">
+                <CardHeader>
+                  <CardTitle>{goldTranslations.cta?.formTitle}</CardTitle>
+                </CardHeader>
+                <CardContent className="p-6 md:p-8">
+                    <ContactForm />
+                </CardContent>
+            </Card>
         </section>
 
       </main>

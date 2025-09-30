@@ -1,3 +1,4 @@
+
 {
     "header": {
         "about": "About Us",
@@ -261,7 +262,7 @@
         },
         "chart": {
             "title": "Gold Price Dynamics: 10-Year Outlook",
-            "description": "An impressive <strong>300% growth</strong> is projected <span class='font-bold text-amber-600'>in 10 years</span>. Gold demonstrates stable long-term growth, confirming its status as a reliable investment asset.",
+            "description": "An impressive <strong>300% growth</strong> is projected <span class='font-bold text-primary'>in 10 years</span>. Gold demonstrates stable long-term growth, confirming its status as a reliable investment asset.",
             "priceLabel": "Gold Price",
             "investmentAmountLabel": "Investment Amount ($)",
             "investmentYearLabel": "Investment Year",
@@ -274,7 +275,7 @@
         "cta": {
             "title": "Start cooperating with us",
             "subtitle": "Contact us to discuss the details and receive a personalized offer. Our team is ready to answer all your questions.",
-            "button": "Contact us"
+            "formTitle": "Send us a message"
         }
     },
     "shopPage": {
@@ -299,3 +300,5 @@
         "ctaButton": "Request a Quote"
     }
 }
+
+    
