@@ -116,7 +116,7 @@ export default function AndrgoldPage() {
 
         <section>
           <Card className="grid md:grid-cols-2 overflow-hidden shadow-lg">
-              <div className="relative min-h-[300px] md:min-h-full bg-secondary">
+              <div className="relative min-h-[300px] md:min-h-full bg-background">
                   <Image
                       src="https://s1.hostingkartinok.com/uploads/images/2025/09/af6b257df6c8cb1866f9df662df9502b.png"
                       alt={goldTranslations.refinedCard?.alt || "Refined Gold 999.9"}
@@ -167,7 +167,7 @@ export default function AndrgoldPage() {
                     <CardHeader>
                         <CardTitle className="text-primary">{goldTranslations.delivery?.seller?.title}</CardTitle>
                     </CardHeader>
-                    <CardContent className="space-y-3 flex-grow text-muted-foreground">
+                    <CardContent className="space-y-3 flex-grow text-card-foreground">
                        {goldTranslations.delivery?.seller?.duties.map((duty: string) => (
                            <p key={duty} className="flex items-start"><Check className="w-5 h-5 mr-2 mt-1 text-primary flex-shrink-0"/>{duty}</p>
                        ))}
@@ -177,7 +177,7 @@ export default function AndrgoldPage() {
                     <CardHeader>
                         <CardTitle className="text-foreground">{goldTranslations.delivery?.buyer?.title}</CardTitle>
                     </CardHeader>
-                    <CardContent className="space-y-3 flex-grow text-muted-foreground">
+                    <CardContent className="space-y-3 flex-grow text-card-foreground">
                        {goldTranslations.delivery?.buyer?.duties.map((duty: string) => (
                            <p key={duty} className="flex items-start"><Check className="w-5 h-5 mr-2 mt-1 text-muted-foreground flex-shrink-0"/>{duty}</p>
                        ))}
