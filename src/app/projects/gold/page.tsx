@@ -163,7 +163,7 @@ export default function AndrgoldPage() {
                 <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">{goldTranslations.delivery?.title}</h2>
             </div>
             <div className="grid md:grid-cols-2 gap-8 items-stretch max-w-6xl mx-auto">
-                <Card className="border-primary border-2 flex flex-col">
+                <Card className="border-border hover:border-primary border-2 flex flex-col transition-all duration-300">
                     <CardHeader>
                         <CardTitle className="text-primary">{goldTranslations.delivery?.seller?.title}</CardTitle>
                     </CardHeader>
@@ -173,7 +173,7 @@ export default function AndrgoldPage() {
                        ))}
                     </CardContent>
                 </Card>
-                <Card className="border-border border-2 flex flex-col">
+                <Card className="border-border hover:border-primary border-2 flex flex-col transition-all duration-300">
                     <CardHeader>
                         <CardTitle className="text-foreground">{goldTranslations.delivery?.buyer?.title}</CardTitle>
                     </CardHeader>
