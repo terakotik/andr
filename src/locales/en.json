@@ -176,6 +176,7 @@
         }
     },
     "goldPage": {
+        "preHeroTitle": "Gold Sale",
         "heroTitle": "Reliable Gold Investments for Your Future",
         "heroSubtitle": "Your strategic partner in the world of precious metals. We provide reliable supplies of high-quality investment gold to world markets.",
         "heroButton": "Send Request",
@@ -304,3 +305,5 @@
         "ctaButton": "Request a Quote"
     }
 }
+
+    

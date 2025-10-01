@@ -35,7 +35,7 @@ export default function AndrgoldPage() {
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center min-h-[60vh]">
             <div className="space-y-6">
-              <p className="text-2xl md:text-3xl font-headline font-bold text-white tracking-widest uppercase">Продажа золота</p>
+              <p className="text-4xl md:text-6xl font-headline font-bold text-white tracking-widest uppercase">{goldTranslations.preHeroTitle}</p>
               <h1 className="text-4xl md:text-5xl font-headline font-bold text-white">
                 {goldTranslations.heroTitle}
               </h1>
@@ -239,3 +239,5 @@ export default function AndrgoldPage() {
     </div>
   );
 }
+
+    
