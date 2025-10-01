@@ -1,3 +1,4 @@
+
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -39,26 +40,36 @@ export default function ConsultingPage() {
 
   return (
     <div>
-      <section className="bg-background py-16 md:py-24">
-        <div className="container mx-auto px-4 md:px-6">
+      <section className="relative bg-background py-16 md:py-24 overflow-hidden text-white">
+        <div className="absolute top-0 left-0 w-full h-full bg-black">
+          <iframe 
+            src="https://player.vimeo.com/video/407547341?background=1&autoplay=1&loop=1&byline=0&title=0"
+            className="absolute top-1/2 left-1/2 w-[177.77vh] min-w-[100vw] h-[56.25vw] min-h-[100vh] -translate-x-1/2 -translate-y-1/2 z-0 opacity-30 object-cover"
+            frameBorder="0" 
+            allow="autoplay; fullscreen" 
+            allowFullScreen
+          ></iframe>
+          <div className="pixel-overlay" style={{backgroundSize: '3px 3px'}}></div>
+        </div>
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl font-headline font-bold">
                 {translations.consulting.hero.title}
               </h1>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-gray-200">
                 {translations.consulting.hero.subtitle}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button size="lg" asChild variant="outline">
+                <Button size="lg" asChild variant="outline" className="border-white text-white hover:bg-primary hover:text-primary-foreground hover:border-primary">
                   <Link href="#services">{translations.consulting.hero.servicesButton}</Link>
                 </Button>
-                <Button size="lg" variant="outline" asChild>
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-primary hover:text-primary-foreground hover:border-primary" asChild>
                   <Link href="#contact-consulting">{translations.consulting.hero.contactButton}</Link>
                 </Button>
               </div>
             </div>
-            <Card className="shadow-lg rounded-lg">
+            <Card className="shadow-lg rounded-lg bg-card/80 backdrop-blur-sm text-card-foreground">
               <CardHeader>
                 <CardTitle>{translations.consulting.hero.formTitle}</CardTitle>
               </CardHeader>
