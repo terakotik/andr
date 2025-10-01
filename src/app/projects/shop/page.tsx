@@ -31,11 +31,10 @@ export default function AndrShopPage() {
        <section className="relative bg-background py-16 md:py-24 overflow-hidden text-white">
         <div className="absolute top-0 left-0 w-full h-full bg-black">
           <iframe 
-            src="https://player.vimeo.com/video/281393776?background=1&autoplay=1&loop=1&byline=0&title=0"
+            src="https://www.youtube.com/embed/pQbflNRSi_Y?autoplay=1&mute=1&loop=1&playlist=pQbflNRSi_Y&controls=0&showinfo=0&modestbranding=1"
             className="absolute top-1/2 left-1/2 w-[177.77vh] min-w-[100vw] h-[56.25vw] min-h-[100vh] -translate-x-1/2 -translate-y-1/2 z-0 opacity-30 object-cover"
             frameBorder="0" 
-            allow="autoplay; fullscreen" 
-            allowFullScreen
+            allow="autoplay; encrypted-media"
           ></iframe>
           <div className="pixel-overlay" style={{backgroundSize: '3px 3px'}}></div>
         </div>
