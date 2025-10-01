@@ -20,7 +20,7 @@ export default function AndrgoldPage() {
   return (
     <div className="bg-background text-foreground">
       
-      <section className="relative h-screen flex items-center overflow-hidden">
+      <section className="relative overflow-hidden py-16 md:py-24">
         <video
             autoPlay
             loop
@@ -33,7 +33,7 @@ export default function AndrgoldPage() {
         </video>
         <div className="absolute inset-0 bg-primary/20"></div>
         <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-center min-h-[60vh]">
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl font-headline font-bold text-white">
                 {goldTranslations.heroTitle}
