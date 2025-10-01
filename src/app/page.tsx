@@ -63,7 +63,7 @@ export default function Home() {
               playsInline
               className="absolute top-1/2 left-1/2 w-auto min-w-full min-h-full max-w-none -translate-x-1/2 -translate-y-1/2 opacity-30 z-0 object-cover"
           >
-              <source src="https://ruah.uz/images/RGR.mp4" type="video/mp4" />
+              <source src="https://player.vimeo.com/video/281393776?background=1&autoplay=1&loop=1&byline=0&title=0" type="video/mp4" />
               Your browser does not support the video tag.
           </video>
           <div className="pixel-overlay" style={{backgroundSize: '3px 3px'}}></div>
