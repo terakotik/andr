@@ -63,9 +63,7 @@ export function Header() {
   
   const navLinks = [
     { href: "/", label: translations.header.home },
-    { href: "/projects/gold", label: translations.header.investors },
-    { href: "/consulting", label: translations.header.consulting },
-    { href: "/projects/shop", label: translations.header.procurement },
+    { href: "/#footer-projects", label: translations.header.about },
     { href: "#", label: translations.header.contact, onClick: handleContactClick },
   ];
   
