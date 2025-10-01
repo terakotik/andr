@@ -61,8 +61,15 @@ export function Header() {
     }
   };
   
+  const getHomeLink = () => {
+    if (pathname.startsWith('/projects') || pathname.startsWith('/consulting')) {
+        return pathname;
+    }
+    return '/';
+  }
+
   const navLinks = [
-    { href: "/", label: translations.header.home },
+    { href: getHomeLink(), label: translations.header.home },
     { href: "/#footer-projects", label: translations.header.about },
     { href: "#", label: translations.header.contact, onClick: handleContactClick },
   ];
