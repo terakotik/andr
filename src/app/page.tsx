@@ -56,13 +56,16 @@ export default function Home() {
 
       <section className="relative bg-background py-16 md:py-24 overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full bg-black">
-          <iframe
-              src="https://player.vimeo.com/video/281393776?background=1&autoplay=1&loop=1&byline=0&title=0"
-              frameBorder="0"
-              allow="autoplay; fullscreen"
-              allowFullScreen
-              className="absolute top-1/2 left-1/2 w-auto min-w-full min-h-full max-w-none -translate-x-1/2 -translate-y-1/2 opacity-30 z-0 object-cover"
-            ></iframe>
+            <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute top-1/2 left-1/2 w-auto min-w-full min-h-full max-w-none -translate-x-1/2 -translate-y-1/2 opacity-30 z-0 object-cover"
+            >
+                <source src="https://ruah.uz/images/RGR.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
           <div className="pixel-overlay" style={{backgroundSize: '3px 3px'}}></div>
         </div>
         <div className="container mx-auto px-4 md:px-6 relative z-10">
