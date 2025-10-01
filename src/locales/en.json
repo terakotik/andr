@@ -48,7 +48,10 @@
             "title": "Our Businesses",
             "gold": "Sale and supply of investment-grade gold to world markets.",
             "shop": "Wholesale supply of high-quality food products.",
-            "consulting": "Professional consulting for business strategy and growth."
+            "consulting": "Professional consulting for business strategy and growth.",
+            "goldTitle": "Gold Sale",
+            "shopTitle": "Product Sales",
+            "consultingTitle": "Consulting"
         },
         "whyChooseUs": {
             "title": "Our Competitive Advantages",
@@ -305,5 +308,3 @@
         "ctaButton": "Request a Quote"
     }
 }
-
-    
