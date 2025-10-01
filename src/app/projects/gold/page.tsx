@@ -20,35 +20,40 @@ export default function AndrgoldPage() {
   return (
     <div className="bg-background text-foreground">
       
-        <section className="relative h-screen flex items-center justify-center text-center overflow-hidden">
-            <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="absolute top-1/2 left-1/2 w-auto min-w-full min-h-full max-w-none -translate-x-1/2 -translate-y-1/2 brightness-50 z-0 object-cover"
-            >
-                <source src="https://ruah.uz/images/RGR.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
-          <div className="absolute inset-0 bg-primary/20"></div>
-          <div className="relative z-10 space-y-6 px-4">
-            <h1 className="text-4xl md:text-5xl font-headline font-bold text-white max-w-4xl mx-auto">
-              {goldTranslations.heroTitle}
-            </h1>
-            <p className="text-lg text-gray-200 max-w-3xl mx-auto">
-              {goldTranslations.heroSubtitle}
-            </p>
-             <div className="flex justify-center pt-4">
-                <Button size="lg" asChild className="rounded-full border-white text-white hover:bg-primary hover:text-primary-foreground hover:border-primary">
-                    <Link href="#cta">
-                        <ChevronRight className="mr-2 h-4 w-4" />
-                        {goldTranslations.heroButton}
-                    </Link>
-                </Button>
+      <section className="relative h-screen flex items-center overflow-hidden">
+        <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute top-1/2 left-1/2 w-auto min-w-full min-h-full max-w-none -translate-x-1/2 -translate-y-1/2 brightness-50 z-0 object-cover"
+        >
+            <source src="https://ruah.uz/images/RGR.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+        <div className="absolute inset-0 bg-primary/20"></div>
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <h1 className="text-4xl md:text-5xl font-headline font-bold text-white">
+                {goldTranslations.heroTitle}
+              </h1>
+              <p className="text-lg text-gray-200">
+                {goldTranslations.heroSubtitle}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                  <Button size="lg" asChild className="rounded-full border-white text-white hover:bg-primary hover:text-primary-foreground hover:border-primary">
+                      <Link href="#cta">
+                          <ChevronRight className="mr-2 h-4 w-4" />
+                          {goldTranslations.heroButton}
+                      </Link>
+                  </Button>
+              </div>
             </div>
+            <div />
           </div>
-        </section>
+        </div>
+      </section>
       
 
       <main className="container mx-auto px-4 md:px-6 py-16 md:py-24 space-y-20">
