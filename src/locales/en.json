@@ -287,24 +287,23 @@
         }
     },
     "shopPage": {
+        "preHeroTitle": "PRODUCT SALES",
         "heroTitle": "Wholesale Food Supplies",
         "heroSubtitle": "We supply fresh, high-quality food products directly from producers to your business.",
-        "sectionTitle": "Reliable and Fresh Supplies",
-        "sectionSubtitle": "We are your trusted partner for sourcing and delivering wholesale premium food products, including beans, grains, and other crops.",
-        "features": {
-            "sourcing": {
-                "title": "Quality Sourcing",
-                "description": "We partner with the best producers to ensure the highest quality and freshness."
+        "heroButton": "View Products",
+        "sectionTitle": "Our Assortment",
+        "sectionSubtitle": "We are your trusted partner for sourcing and delivering wholesale premium food products.",
+        "products": {
+            "beans": {
+                "name": "Beans",
+                "description": "High-quality beans grown on fertile lands. Ideal for a wide range of culinary applications."
             },
-            "orders": {
-                "title": "Wholesale Orders",
-                "description": "Efficient handling of large orders to meet your business needs."
-            },
-            "logistics": {
-                "title": "Global Logistics",
-                "description": "Reliable and timely delivery to your location, wherever you are."
+            "legumes": {
+                "name": "Legumes",
+                "description": "A variety of legumes, rich in protein and nutrients. Guaranteed freshness and quality."
             }
         },
-        "ctaButton": "Request a Quote"
+        "ctaTitle": "Ready to start a partnership?",
+        "ctaButton": "Contact Us"
     }
 }
