@@ -2,7 +2,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { ContactForm } from "@/components/contact-form";
-import { Briefcase, Landmark, Scale, FileText } from "lucide-react";
+import { Briefcase, Landmark, Scale, FileText, CheckCircle } from "lucide-react";
 import Image from "next/image";
 import {PlaceHolderImages} from "@/lib/placeholder-images";
 import { Button } from "@/components/ui/button";
@@ -16,22 +16,22 @@ export default function ConsultingPage() {
 
     const consultingServices = [
       {
-        icon: <Briefcase className="h-10 w-10 text-primary" />,
+        icon: <Briefcase className="h-8 w-8 text-primary" />,
         title: translations.consulting.services.management.title,
         description: translations.consulting.services.management.description,
       },
       {
-        icon: <Landmark className="h-10 w-10 text-primary" />,
+        icon: <Landmark className="h-8 w-8 text-primary" />,
         title: translations.consulting.services.financial.title,
         description: translations.consulting.services.financial.description,
       },
       {
-        icon: <Scale className="h-10 w-10 text-primary" />,
+        icon: <Scale className="h-8 w-8 text-primary" />,
         title: translations.consulting.services.planning.title,
         description: translations.consulting.services.planning.description,
       },
        {
-        icon: <FileText className="h-10 w-10 text-primary" />,
+        icon: <FileText className="h-8 w-8 text-primary" />,
         title: translations.consulting.services.accreditive.title,
         description: translations.consulting.services.accreditive.description,
       },
@@ -79,17 +79,17 @@ export default function ConsultingPage() {
                         {translations.consulting.consultingServicesSection.subtitle}
                     </p>
                 </div>
-                <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
+                <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
                     {consultingServices.map((service) => (
-                    <Card key={service.title} className="flex flex-col md:flex-row items-center md:items-start overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-primary/50 transform hover:-translate-y-1 text-center md:text-left rounded-lg">
-                        <div className="p-6 flex-shrink-0">
-                          <div className="p-4 bg-secondary/50 rounded-full w-fit">
+                    <Card key={service.title} className="bg-card border rounded-lg p-6">
+                        <div className="flex items-start gap-4">
+                          <div className="p-2 bg-secondary rounded-full w-fit">
                             {service.icon}
                           </div>
-                        </div>
-                        <div className="p-6 pt-0 md:pt-6 md:border-l border-border/70 w-full">
-                          <CardTitle className="font-headline text-xl mb-2">{service.title}</CardTitle>
-                          <CardDescription>{service.description}</CardDescription>
+                          <div className="flex-1">
+                            <CardTitle className="font-headline text-xl mb-2">{service.title}</CardTitle>
+                            <CardDescription>{service.description}</CardDescription>
+                          </div>
                         </div>
                     </Card>
                     ))}

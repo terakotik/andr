@@ -27,6 +27,29 @@ export default function Home() {
     { name: 'Consulting', icon: <Briefcase className="h-10 w-10 text-primary"/>, description: translations.home.ourProjects.consulting, href: '/consulting' },
   ];
 
+  const consultingServices = [
+    {
+      icon: <Briefcase className="h-10 w-10 text-primary" />,
+      title: translations.consulting.services.management.title,
+      description: translations.consulting.services.management.description,
+    },
+    {
+      icon: <Landmark className="h-10 w-10 text-primary" />,
+      title: translations.consulting.services.financial.title,
+      description: translations.consulting.services.financial.description,
+    },
+    {
+      icon: <Scale className="h-10 w-10 text-primary" />,
+      title: translations.consulting.services.planning.title,
+      description: translations.consulting.services.planning.description,
+    },
+     {
+      icon: <FileText className="h-10 w-10 text-primary" />,
+      title: translations.consulting.services.accreditive.title,
+      description: translations.consulting.services.accreditive.description,
+    },
+  ];
+
   return (
     <div className="flex flex-col">
 
@@ -161,6 +184,33 @@ export default function Home() {
                   ))}
               </div>
           </div>
+      </section>
+
+      {/* Consulting Services Section */}
+      <section className="py-16 md:py-24" id="services">
+        <div className="container mx-auto px-4 md:px-6">
+            <div className="text-center space-y-4 mb-12">
+                <h2 className="text-3xl md:text-4xl font-headline font-bold">{translations.consulting.consultingServicesSection.title}</h2>
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                    {translations.consulting.consultingServicesSection.subtitle}
+                </p>
+            </div>
+            <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
+                {consultingServices.map((service) => (
+                <Card key={service.title} className="flex flex-col md:flex-row items-center md:items-start overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-primary/50 transform hover:-translate-y-1 text-center md:text-left rounded-lg">
+                    <div className="p-6 flex-shrink-0">
+                      <div className="p-4 bg-secondary/50 rounded-full w-fit">
+                        {service.icon}
+                      </div>
+                    </div>
+                    <div className="p-6 pt-0 md:pt-6 md:border-l border-border/70 w-full">
+                      <CardTitle className="font-headline text-xl mb-2">{service.title}</CardTitle>
+                      <CardDescription>{service.description}</CardDescription>
+                    </div>
+                </Card>
+                ))}
+            </div>
+        </div>
       </section>
 
       {/* Contact Section */}
