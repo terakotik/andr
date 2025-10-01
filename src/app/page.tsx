@@ -57,7 +57,7 @@ export default function Home() {
       <section className="relative bg-background py-16 md:py-24 overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full bg-black">
         <iframe 
-            src="https://player.vimeo.com/video/407547341?background=1&autoplay=1&loop=1&byline=0&title=0"
+            src="https://vimeo.com/407547341?turnstile=0.v1xE6PW0nuRTkIqi9Dve64stLZP-bgZfOoD5FaJYpWk9-fSymB2v6WPBRhzuudHuMNH5x0t_Qtgg7_8uEI44EQwoOjKw6dhP-4uEf_VgIA7XefVb11TSKGYEiFDQ8CbYaDIEY2rIrbj07s55jtOncG7i4bnKkTpcaw7ybwX3A1uylHyf4bgrZHa5-I78TBVCYpvs17luayPufJzb0jpsYATAQMbaFVUPdoCx_dBb5vcP_xHLCI5u2BH1ajewFfXldfoP33xJiQPAW3tf1k3zqyHR_4y8PX0n3D-zLMFWMAlU-7x0WOHajh4c5PECX1xRCGnCuY2Xn8kw5Z8cy3mqzaUhl2qAzdX-To3grw1Qh4Bu0MLuh-pWD_x9gMMLfKfHAfUCHW2o2poJtOXk8iCgHMJ0XWCphXIXG7bqKl-k72n35nyxlQibE1pULtpfA0cCr_nfxA0DzR7sDu36tvqeMme0msNHoSXqpimH4ZVkGY89p0DukpMbepmmRBjx5Rgu6PsPtyMZCgjqtmDIWcGwgjq7_Nc48EV1CvOYeW9Hk0WXKWVKhWLLohDhKcKSIK0t1RrCJPS41ezN535nI8eUB4MAh-GYCb07awT9SNBQSpVXmVk2NNJt3e5dSt2SzwbX75nnWdtRpHEMvIH_8kMJvYuSljRqgC_kNuN9KYNwP2_HaMDo2VNlbkSPZPdGLKApxtJmQjJa6VefH8R-ONA5_xUHzKeGMBVunnZ1vIwdlpbz-noUDhJMXcPiJUSQqcYM6BCASxrqdtheYkHTUNLRjxfxosC-Ipr_Q8rzu8dILTwch2Zd3x4CkcdNGYFYkly5FusrBjEa_kMEi91lqqHbyk0QWQmpirHzsscctTx0s83vFnc4Wk_rb4FjlItNNAMLzwHhM1wIQRjdllr7TVb7hA.ibpJbdNoUYA7Zl-7TyfeMw.b0467b9e2707f4c9349dd04ba117c37fb3256e098290a9f49c078e002aad03c3&background=1&autoplay=1&loop=1&byline=0&title=0"
             className="absolute top-1/2 left-1/2 w-[177.77vh] min-w-[100vw] h-[56.25vw] min-h-[100vh] -translate-x-1/2 -translate-y-1/2 opacity-30 z-0"
             frameBorder="0" 
             allow="autoplay; fullscreen" 
@@ -236,3 +236,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
