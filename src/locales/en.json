@@ -1,9 +1,12 @@
 
 {
     "header": {
-        "about": "About Us",
+        "home": "Home",
+        "investors": "For Investors & Banks",
         "consulting": "Consulting",
-        "contact": "Contact",
+        "procurement": "Procurement",
+        "contact": "Contacts",
+        "about": "About Us",
         "projects": "Our Projects",
         "contactUs": "Contact Us"
     },

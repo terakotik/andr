@@ -61,16 +61,13 @@ export function Header() {
   };
   
   const navLinks = [
-    { href: "/#about", label: translations.header.about },
+    { href: "/", label: translations.header.home },
+    { href: "/projects/gold", label: translations.header.investors },
+    { href: "/consulting", label: translations.header.consulting },
+    { href: "/projects/shop", label: translations.header.procurement },
+    { href: "#", label: translations.header.contact, onClick: handleContactClick },
   ];
   
-  const contactLink = { href: "#", label: translations.header.contact, onClick: handleContactClick };
-
-  const projectLinks = [
-    { href: "/projects/gold", label: "ANDRGOLD" },
-    { href: "/projects/shop", label: "ANDRSHOP" },
-    { href: "/consulting", label: translations.header.consulting },
-  ];
 
   return (
     <>
@@ -86,6 +83,7 @@ export function Header() {
               <Link
                 key={link.label}
                 href={link.href}
+                onClick={link.onClick}
                 className={cn(
                   "text-gray-300 transition-colors hover:text-white"
                 )}
@@ -93,26 +91,6 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center gap-1 text-gray-300 transition-colors hover:text-white focus:outline-none">
-                {translations.header.projects}
-                <ChevronDown className="h-4 w-4" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent>
-                {projectLinks.map((link) => (
-                  <DropdownMenuItem key={link.label} asChild>
-                    <Link href={link.href}>{link.label}</Link>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
-             <Link
-                href={contactLink.href}
-                onClick={contactLink.onClick}
-                className="text-gray-300 transition-colors hover:text-white"
-              >
-                {contactLink.label}
-              </Link>
           </nav>
 
           <div className="flex items-center gap-2">
@@ -156,38 +134,17 @@ export function Header() {
                   key={link.label}
                   href={link.href}
                   className="text-gray-300 hover:text-white text-lg"
-                  onClick={closeMenu}
+                  onClick={(e) => {
+                    if (link.onClick) {
+                      handleContactClick(e);
+                    } else {
+                      closeMenu();
+                    }
+                  }}
                 >
                   {link.label}
                 </Link>
               ))}
-               <details>
-                  <summary className="text-gray-300 hover:text-white text-lg cursor-pointer flex justify-between items-center list-none">
-                    {translations.header.projects}
-                    <ChevronDown className="h-4 w-4 transition-transform duration-200" />
-                  </summary>
-                  <div className="flex flex-col pl-4 pt-2 gap-2">
-                    {projectLinks.map((link) => (
-                       <Link
-                        key={link.label}
-                        href={link.href}
-                        className="text-gray-300 hover:text-white text-lg"
-                        onClick={closeMenu}
-                      >
-                        {link.label}
-                      </Link>
-                    ))}
-                  </div>
-              </details>
-               <Link
-                  href={contactLink.href}
-                  className="text-gray-300 hover:text-white text-lg"
-                  onClick={(e) => {
-                    handleContactClick(e);
-                  }}
-                >
-                  {contactLink.label}
-                </Link>
               <Button asChild className="w-full mt-2 rounded-full" size="lg" onClick={(e) => {
                   handleContactClick(e as React.MouseEvent<HTMLButtonElement | HTMLAnchorElement, MouseEvent>);
               }}>

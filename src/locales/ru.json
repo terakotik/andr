@@ -1,9 +1,12 @@
 
 {
     "header": {
-        "about": "О нас",
+        "home": "Главная",
+        "investors": "Инвесторам и банкам",
         "consulting": "Консалтинг",
+        "procurement": "Закупки",
         "contact": "Контакты",
+        "about": "О нас",
         "projects": "Наши проекты",
         "contactUs": "Связаться с нами"
     },
