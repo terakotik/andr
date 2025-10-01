@@ -3,7 +3,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { ContactForm } from "@/components/contact-form";
-import { Briefcase, Landmark, Scale, FileText, CheckCircle } from "lucide-react";
+import { Briefcase, Landmark, Scale, FileText } from "lucide-react";
 import Image from "next/image";
 import {PlaceHolderImages} from "@/lib/placeholder-images";
 import { Button } from "@/components/ui/button";
@@ -52,7 +52,7 @@ export default function ConsultingPage() {
           <div className="pixel-overlay" style={{backgroundSize: '3px 3px'}}></div>
         </div>
         <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center min-h-[60vh]">
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl font-headline font-bold">
                 {translations.consulting.hero.title}
@@ -69,7 +69,7 @@ export default function ConsultingPage() {
                 </Button>
               </div>
             </div>
-            <Card className="shadow-lg rounded-lg bg-card/80 backdrop-blur-sm text-card-foreground">
+            <Card className="shadow-lg rounded-lg bg-card/80 backdrop-blur-sm text-card-foreground hidden md:block">
               <CardHeader>
                 <CardTitle>{translations.consulting.hero.formTitle}</CardTitle>
               </CardHeader>
@@ -90,7 +90,7 @@ export default function ConsultingPage() {
                         {translations.consulting.consultingServicesSection.subtitle}
                     </p>
                 </div>
-                <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {consultingServices.map((service) => (
                     <Card key={service.title} className="bg-card border rounded-lg p-6">
                         <div className="flex items-start gap-4">
