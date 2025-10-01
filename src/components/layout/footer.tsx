@@ -18,8 +18,8 @@ export function Footer() {
   const { translations } = useLanguage();
 
   const projectLinks = [
-    { name: 'ANDRGOLD', href: '/projects/gold' },
-    { name: 'ANDRSHOP', href: '/projects/shop' },
+    { name: translations.footer.quickLinks.gold, href: '/projects/gold' },
+    { name: translations.footer.quickLinks.shop, href: '/projects/shop' },
     { name: translations.footer.quickLinks.consulting, href: '/consulting' },
   ];
   

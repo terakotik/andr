@@ -125,6 +125,8 @@
         "companyDescription": "Professional business consulting to enhance your strategy and operations.",
         "quickLinks": {
             "title": "Quick Links",
+            "gold": "Gold Sale",
+            "shop": "Product Sales",
             "consulting": "Consulting",
             "about": "About Us",
             "contact": "Contact"
