@@ -57,8 +57,8 @@ export default function Home() {
       <section className="relative bg-background py-16 md:py-24 overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full bg-black">
           <iframe 
-            src="https://player.vimeo.com/video/407547341?background=1&autoplay=1&loop=1&byline=0&title=0"
-            className="absolute top-1/2 left-1/2 w-auto min-w-full min-h-full max-w-none -translate-x-1/2 -translate-y-1/2 opacity-30 z-0 object-cover"
+            src="https://player.vimeo.com/video/281393776?background=1&autoplay=1&loop=1&byline=0&title=0"
+            className="absolute top-0 left-0 w-full h-full object-cover z-0 opacity-30"
             frameBorder="0" 
             allow="autoplay; fullscreen" 
             allowFullScreen
