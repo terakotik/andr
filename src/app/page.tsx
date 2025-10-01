@@ -58,7 +58,7 @@ export default function Home() {
         <div className="absolute top-0 left-0 w-full h-full bg-black">
           <iframe 
             src="https://player.vimeo.com/video/407547341?background=1&autoplay=1&loop=1&byline=0&title=0"
-            className="absolute top-1/2 left-1/2 min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 z-0 opacity-30"
+            className="absolute top-1/2 left-1/2 w-auto min-w-full min-h-full max-w-none -translate-x-1/2 -translate-y-1/2 z-0 opacity-30 object-cover"
             frameBorder="0" 
             allow="autoplay; fullscreen" 
             allowFullScreen
@@ -236,5 +236,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
