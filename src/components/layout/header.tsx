@@ -3,7 +3,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronDown, Menu, X, Globe } from "lucide-react";
+import { ChevronDown, Menu, X, Globe, Phone } from "lucide-react";
 import React, { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { usePathname } from 'next/navigation';
@@ -27,6 +27,8 @@ export function Header() {
   const [isClient, setIsClient] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
+  const phoneLink = "tel:+6289530825574";
+  const phoneNumber = "+62 895 308 25574";
 
   useEffect(() => {
     setIsClient(true);
@@ -99,7 +101,11 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-4">
+              <Link href={phoneLink} className="hidden md:flex items-center gap-2 text-sm font-medium text-gray-300 hover:text-white transition-colors">
+                  <Phone className="h-4 w-4" />
+                  <span>{phoneNumber}</span>
+              </Link>
               <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                       <Button variant="ghost" size="icon" className="text-white hover:bg-gray-800 hover:text-white">
@@ -151,6 +157,10 @@ export function Header() {
                   {link.label}
                 </Link>
               ))}
+              <Link href={phoneLink} className="flex items-center gap-2 text-gray-300 hover:text-white text-lg" onClick={closeMenu}>
+                  <Phone className="h-5 w-5" />
+                  <span>{phoneNumber}</span>
+              </Link>
               <Button asChild className="w-full mt-2 rounded-full" size="lg" onClick={(e) => {
                   handleContactClick(e as React.MouseEvent<HTMLButtonElement | HTMLAnchorElement, MouseEvent>);
               }}>
