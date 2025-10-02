@@ -40,8 +40,8 @@ export default function ConsultingPage() {
 
   return (
     <div>
-      <section className="relative bg-background py-16 md:py-24 overflow-hidden text-white">
-        <div className="absolute top-0 left-0 w-full h-full bg-black">
+      <section className="relative bg-background py-16 md:py-24 text-white">
+        <div className="absolute top-0 left-0 w-full h-full bg-black overflow-hidden">
           <iframe 
             src="https://player.vimeo.com/video/407547341?background=1&autoplay=1&loop=1&byline=0&title=0"
             className="absolute top-1/2 left-1/2 w-[177.77vh] min-w-[100vw] h-[56.25vw] min-h-[100vh] -translate-x-1/2 -translate-y-1/2 z-0 opacity-30 object-cover"
