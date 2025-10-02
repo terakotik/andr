@@ -195,9 +195,18 @@ export default function AndrShopPage() {
                         <span className="flex-shrink mx-4 text-muted-foreground text-sm">OR</span>
                         <div className="flex-grow border-t border-muted-foreground"></div>
                     </div>
-                    <Button onClick={handlePayment} variant="outline" className="w-full">
-                        {shopTranslations.payButton}
-                    </Button>
+                    <div className="flex flex-col items-center gap-4">
+                        <Button onClick={handlePayment} variant="outline" className="w-full">
+                            {shopTranslations.payButton}
+                        </Button>
+                        <Image 
+                            src="https://guide.insta-pay.ch/~gitbook/image?url=https%3A%2F%2F4098734040-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Forganizations%252FDkbKS1c9cgUjHhFMOrxs%252Fsites%252Fsite_KBu8A%252Flogo%252Fq1BpL7xXpmcRHer7CTwd%252FLogo%2520Colour%2520With%2520Black%2520Wordmark.png%3Falt%3Dmedia%26token%3D3e5a6178-41ca-433c-b175-75c7c4be7049&width=160&dpr=3&quality=100&sign=c82a8db&sv=2" 
+                            alt={shopTranslations.instapayLogoAlt || "Instapay Logo"}
+                            width={120} 
+                            height={30}
+                            className="object-contain" 
+                        />
+                    </div>
                 </CardContent>
             </Card>
         </section>

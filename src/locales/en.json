@@ -373,7 +373,8 @@
         "paymentToast": {
             "title": "Payment in Progress",
             "description": "Payment functionality is being set up. Please contact us to complete your order."
-        }
+        },
+        "instapayLogoAlt": "Instapay Logo"
     },
     "aboutPage": {
         "title": "About Us",
