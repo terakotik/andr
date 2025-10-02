@@ -113,7 +113,7 @@ export default function AndrShopPage() {
             <div className="text-center space-y-4">
                 <h3 className="text-2xl font-headline font-semibold text-primary">{shopTranslations.geography?.title}</h3>
                 <p className="text-muted-foreground max-w-2xl mx-auto">{shopTranslations.geography?.subtitle}</p>
-                <div className="flex justify-center items-center gap-8 pt-4">
+                <div className="flex justify-center items-center gap-8 pt-4 flex-wrap">
                     {countries.map((country) => (
                         <div key={country.name} className="flex flex-col items-center gap-2">
                             {country.icon}
