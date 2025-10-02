@@ -107,6 +107,30 @@
             "description": "Thank you for your message. We will get back to you shortly."
         }
     },
+    "orderForm": {
+        "nameLabel": "Full Name",
+        "namePlaceholder": "John Doe",
+        "emailLabel": "Email",
+        "emailPlaceholder": "you@example.com",
+        "phoneLabel": "Phone Number",
+        "phonePlaceholder": "+1 (555) 555-5555",
+        "productLabel": "Product Category",
+        "productPlaceholder": "Select a category",
+        "messageLabel": "Your Inquiry",
+        "messagePlaceholder": "Describe the details of your order...",
+        "submitButton": "Send Inquiry",
+        "validation": {
+            "name": "Name is required.",
+            "email": "Please enter a valid email.",
+            "phone": "Please enter a valid phone number.",
+            "product": "Please select a product category.",
+            "message": "Message must be at least 10 characters."
+        },
+        "toast": {
+            "title": "Inquiry Sent!",
+            "description": "Thank you! We will contact you soon to discuss the details."
+        }
+    },
     "contactModal": {
         "title": "We are available in messengers",
         "scanQR": "More convenient from your phone? <br/> Scan the QR code",
@@ -297,9 +321,10 @@
             "title": "Geography of supplies",
             "subtitle": "We already have established logistics and stable supplies of products to:",
             "countries": {
-                "kazakhstan": "Kazakhstan",
+                "afghanistan": "Afghanistan",
                 "pakistan": "Pakistan",
-                "india": "India"
+                "india": "India",
+                "china": "China"
             }
         },
         "advantages": {
@@ -314,7 +339,7 @@
             },
             "logistics": {
                 "title": "Proven logistics",
-                "description": "We already supply to Kazakhstan, Pakistan, and India. A reliable turnkey supply chain."
+                "description": "We already supply to Afghanistan, Pakistan, India and China. A reliable turnkey supply chain."
             },
             "price": {
                 "title": "Competitive prices",
@@ -342,7 +367,7 @@
         },
         "ctaTitle": "Ready to discuss your tasks?",
         "ctaSubtitle": "We will provide you with high-quality raw materials and reliable turnkey logistics.",
-        "ctaButton": "Contact Us"
+        "ctaButton": "Send an inquiry for calculation"
     },
     "aboutPage": {
         "title": "About Us",
@@ -351,3 +376,5 @@
         "p3": "Our team consists of highly qualified experts with many years of experience in international trade, finance, and consulting. We are constantly improving our skills and knowledge to offer you the most current and effective strategies."
     }
 }
+
+    

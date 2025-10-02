@@ -8,6 +8,7 @@ import { Leaf, ShoppingCart, Truck, ChevronRight, Sprout, Wheat, Check, Award, S
 import { useLanguage } from '@/context/language-context';
 import Link from 'next/link';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
+import { OrderForm } from '@/components/order-form';
 
 export default function AndrShopPage() {
   const { translations } = useLanguage();
@@ -60,9 +61,10 @@ export default function AndrShopPage() {
   ];
 
   const countries = [
-    { name: shopTranslations.geography?.countries.kazakhstan, icon: <Image src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Flag_of_Kazakhstan.svg" alt="Kazakhstan Flag" width={40} height={40} className="rounded-full object-cover h-10 w-10" /> },
+    { name: shopTranslations.geography?.countries.afghanistan, icon: <Image src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg" alt="Afghanistan Flag" width={40} height={40} className="rounded-full object-cover h-10 w-10" /> },
     { name: shopTranslations.geography?.countries.pakistan, icon: <Image src="https://upload.wikimedia.org/wikipedia/commons/3/32/Flag_of_Pakistan.svg" alt="Pakistan Flag" width={40} height={40} className="rounded-full object-cover h-10 w-10" /> },
     { name: shopTranslations.geography?.countries.india, icon: <Image src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" alt="India Flag" width={40} height={40} className="rounded-full object-cover h-10 w-10" /> },
+    { name: shopTranslations.geography?.countries.china, icon: <Image src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg" alt="China Flag" width={40} height={40} className="rounded-full object-cover h-10 w-10" /> },
   ];
 
   return (
@@ -165,14 +167,25 @@ export default function AndrShopPage() {
           </div>
         </section>
 
-        <section id="contact" className="text-center pt-8 bg-secondary/50 rounded-lg py-12">
-            <h2 className="text-3xl font-headline font-semibold text-primary mb-4 max-w-2xl mx-auto">{shopTranslations.ctaTitle}</h2>
-            <p className="text-muted-foreground mb-8">{shopTranslations.ctaSubtitle}</p>
-            <Button size="lg" variant="default" className="px-12 py-6 text-lg" asChild>
-                <Link href="/#footer-projects">{shopTranslations.ctaButton}</Link>
-            </Button>
+        <section id="order-form" className="bg-secondary/50 rounded-lg p-8 md:p-12 border">
+            <div className="text-center space-y-4 mb-12">
+              <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">{shopTranslations.ctaTitle}</h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                {shopTranslations.ctaSubtitle}
+              </p>
+            </div>
+            <Card className="max-w-2xl mx-auto rounded-lg bg-background border">
+                <CardHeader>
+                  <CardTitle>{shopTranslations.ctaButton}</CardTitle>
+                </CardHeader>
+                <CardContent className="p-6 md:p-8">
+                    <OrderForm productCategories={products.map(p => p.name)} />
+                </CardContent>
+            </Card>
         </section>
       </main>
     </div>
   );
 }
+
+    
