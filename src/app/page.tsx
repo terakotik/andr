@@ -66,20 +66,22 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {projectLinks.map((project) => (
-              <Card key={project.name} className="bg-card border rounded-lg p-8 flex flex-col transition-all duration-300 hover:border-primary">
-                <CardHeader className="flex-row items-center gap-4 p-0 mb-4">
-                    <div className="p-3 bg-primary/10 rounded-full w-fit flex-shrink-0">
-                      {project.icon}
-                    </div>
-                    <CardTitle className="font-headline text-3xl text-primary">{project.name}</CardTitle>
-                </CardHeader>
-                <CardContent className="flex-grow flex flex-col p-0">
-                  <p className="text-muted-foreground mb-6 flex-grow">{project.description}</p>
-                  <Button asChild variant="outline">
-                    <Link href={project.href}>{translations.home.learnMore}</Link>
-                  </Button>
-                </CardContent>
-              </Card>
+              <Link key={project.name} href={project.href} className="group block">
+                <Card className="bg-card border rounded-lg p-8 h-full flex flex-col transition-all duration-300 group-hover:border-primary group-hover:shadow-lg">
+                  <CardHeader className="flex-row items-center gap-4 p-0 mb-4">
+                      <div className="p-3 bg-primary/10 rounded-full w-fit flex-shrink-0">
+                        {project.icon}
+                      </div>
+                      <CardTitle className="font-headline text-3xl text-primary">{project.name}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-grow flex flex-col p-0">
+                    <p className="text-muted-foreground mb-6 flex-grow">{project.description}</p>
+                    <Button variant="outline" className="mt-auto">
+                      {translations.home.learnMore}
+                    </Button>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
