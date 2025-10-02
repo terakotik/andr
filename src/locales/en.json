@@ -166,7 +166,8 @@
             "placeholder": "Your email",
             "button": "Subscribe"
         },
-        "copyright": "AndrGlobal Consulting. All rights reserved."
+        "copyright": "AndrGlobal Consulting. All rights reserved.",
+        "developerCredit": "Development and automation"
     },
     "consulting": {
         "hero": {

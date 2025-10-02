@@ -166,7 +166,8 @@
             "placeholder": "Ваш email",
             "button": "Подписаться"
         },
-        "copyright": "AndrGlobal Consulting. Все права защищены."
+        "copyright": "AndrGlobal Consulting. Все права защищены.",
+        "developerCredit": "Разработка и автоматизация"
     },
     "consulting": {
         "hero": {

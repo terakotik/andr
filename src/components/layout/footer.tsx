@@ -88,8 +88,11 @@ export function Footer() {
         
         <Separator className="my-8" />
         
-        <div className="text-left text-sm text-muted-foreground">
-          © {new Date().getFullYear()} {translations.footer.copyright}
+        <div className="text-left text-sm text-muted-foreground space-y-2">
+          <p>© {new Date().getFullYear()} {translations.footer.copyright}</p>
+          <a href="https://www.1target.ru/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+            {translations.footer.developerCredit}
+          </a>
         </div>
       </div>
     </footer>
