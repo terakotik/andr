@@ -319,7 +319,8 @@
         "about": "We supply key agricultural crops for manufacturing and wholesale companies. Our expertise is the impeccable quality of products and reliable supplies to the countries of Central Asia and the Middle East.",
         "geography": {
             "title": "Geography of supplies",
-            "subtitle": "We already have established logistics and stable supplies of products to:",
+            "subtitle": "We already supply to Afghanistan, Pakistan, India and China.",
+            "heroSubtitle": "We already have established logistics and stable product supplies to:",
             "countries": {
                 "afghanistan": "Afghanistan",
                 "pakistan": "Pakistan",
@@ -376,5 +377,3 @@
         "p3": "Our team consists of highly qualified experts with many years of experience in international trade, finance, and consulting. We are constantly improving our skills and knowledge to offer you the most current and effective strategies."
     }
 }
-
-    

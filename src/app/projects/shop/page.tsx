@@ -61,10 +61,10 @@ export default function AndrShopPage() {
   ];
 
   const countries = [
-    { name: shopTranslations.geography?.countries.afghanistan, icon: <Image src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg" alt="Afghanistan Flag" width={40} height={40} className="rounded-full object-cover h-10 w-10" /> },
-    { name: shopTranslations.geography?.countries.pakistan, icon: <Image src="https://upload.wikimedia.org/wikipedia/commons/3/32/Flag_of_Pakistan.svg" alt="Pakistan Flag" width={40} height={40} className="rounded-full object-cover h-10 w-10" /> },
-    { name: shopTranslations.geography?.countries.india, icon: <Image src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" alt="India Flag" width={40} height={40} className="rounded-full object-cover h-10 w-10" /> },
-    { name: shopTranslations.geography?.countries.china, icon: <Image src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg" alt="China Flag" width={40} height={40} className="rounded-full object-cover h-10 w-10" /> },
+    { name: shopTranslations.geography?.countries.afghanistan, icon: <Image src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg" alt="Afghanistan Flag" width={24} height={24} className="rounded-full object-cover h-6 w-6" /> },
+    { name: shopTranslations.geography?.countries.pakistan, icon: <Image src="https://upload.wikimedia.org/wikipedia/commons/3/32/Flag_of_Pakistan.svg" alt="Pakistan Flag" width={24} height={24} className="rounded-full object-cover h-6 w-6" /> },
+    { name: shopTranslations.geography?.countries.india, icon: <Image src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" alt="India Flag" width={24} height={24} className="rounded-full object-cover h-6 w-6" /> },
+    { name: shopTranslations.geography?.countries.china, icon: <Image src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg" alt="China Flag" width={24} height={24} className="rounded-full object-cover h-6 w-6" /> },
   ];
 
   return (
@@ -88,6 +88,19 @@ export default function AndrShopPage() {
               <p className="text-lg text-gray-200">
                 {shopTranslations.heroSubtitle}
               </p>
+
+              <div className="pt-4 space-y-4">
+                 <p className="text-gray-300">{shopTranslations.geography?.heroSubtitle}</p>
+                 <div className="flex items-center gap-4 flex-wrap">
+                    {countries.map((country) => (
+                        <div key={country.name} className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full">
+                            {country.icon}
+                            <span className="font-medium text-sm text-white">{country.name}</span>
+                        </div>
+                    ))}
+                </div>
+              </div>
+
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                   <Button size="lg" asChild className="rounded-full border-white text-white hover:bg-primary hover:text-primary-foreground hover:border-primary">
                       <Link href="#products-list">
@@ -109,18 +122,6 @@ export default function AndrShopPage() {
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                     {shopTranslations.about}
                 </p>
-            </div>
-            <div className="text-center space-y-4">
-                <h3 className="text-2xl font-headline font-semibold text-primary">{shopTranslations.geography?.title}</h3>
-                <p className="text-muted-foreground max-w-2xl mx-auto">{shopTranslations.geography?.subtitle}</p>
-                <div className="flex justify-center items-center gap-8 pt-4 flex-wrap">
-                    {countries.map((country) => (
-                        <div key={country.name} className="flex flex-col items-center gap-2">
-                            {country.icon}
-                            <span className="font-semibold">{country.name}</span>
-                        </div>
-                    ))}
-                </div>
             </div>
         </section>
 
@@ -187,5 +188,3 @@ export default function AndrShopPage() {
     </div>
   );
 }
-
-    
