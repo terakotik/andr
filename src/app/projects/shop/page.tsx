@@ -25,22 +25,22 @@ export default function AndrShopPage() {
 
   const products = [
     {
-      icon: <Sprout className="h-10 w-10 text-primary" />,
+      icon: <Sprout className="h-8 w-8 md:h-10 md:w-10 text-primary" />,
       name: shopTranslations.products?.peanuts.name,
       description: shopTranslations.products?.peanuts.description,
     },
     {
-      icon: <Wheat className="h-10 w-10 text-primary" />,
+      icon: <Wheat className="h-8 w-8 md:h-10 md:w-10 text-primary" />,
       name: shopTranslations.products?.grains.name,
       description: shopTranslations.products?.grains.description,
     },
     {
-      icon: <Leaf className="h-10 w-10 text-primary" />,
+      icon: <Leaf className="h-8 w-8 md:h-10 md:w-10 text-primary" />,
       name: shopTranslations.products?.legumes.name,
       description: shopTranslations.products?.legumes.description,
     },
      {
-      icon: <Sprout className="h-10 w-10 text-primary" />,
+      icon: <Sprout className="h-8 w-8 md:h-10 md:w-10 text-primary" />,
       name: shopTranslations.products?.oilseeds.name,
       description: shopTranslations.products?.oilseeds.description,
     },
@@ -160,18 +160,16 @@ export default function AndrShopPage() {
             <h2 className="text-3xl font-headline font-semibold text-primary mb-4">{shopTranslations.sectionTitle}</h2>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 max-w-6xl mx-auto">
             {products.map((product, index) => (
-                <Card key={index} className="bg-card border p-6 rounded-lg text-center flex flex-col items-center">
-                    <CardHeader className="p-0 mb-4">
-                      <div className="p-4 bg-primary/10 rounded-full w-fit mx-auto">
-                        {product.icon}
-                      </div>
-                    </CardHeader>
-                    <CardContent className="p-0 flex-grow">
-                      <CardTitle className="font-headline text-xl mb-2">{product.name}</CardTitle>
-                      <p className="text-muted-foreground text-sm">{product.description}</p>
-                    </CardContent>
+                <Card key={index} className="bg-card border p-4 rounded-lg flex flex-row items-center gap-4 md:flex-col md:p-6 md:text-center">
+                    <div className="p-3 bg-primary/10 rounded-full w-fit flex-shrink-0 md:p-4 md:mx-auto">
+                      {product.icon}
+                    </div>
+                    <div className="flex-grow">
+                      <CardTitle className="font-headline text-lg md:text-xl md:mb-2">{product.name}</CardTitle>
+                      <p className="text-muted-foreground text-sm hidden md:block">{product.description}</p>
+                    </div>
                 </Card>
             ))}
           </div>
