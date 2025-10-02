@@ -9,10 +9,19 @@ import { useLanguage } from '@/context/language-context';
 import Link from 'next/link';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
 import { OrderForm } from '@/components/order-form';
+import { useToast } from "@/hooks/use-toast";
 
 export default function AndrShopPage() {
   const { translations } = useLanguage();
+  const { toast } = useToast();
   const shopTranslations = translations.shopPage || {};
+
+  const handlePayment = () => {
+    toast({
+      title: shopTranslations.paymentToast?.title,
+      description: shopTranslations.paymentToast?.description,
+    });
+  };
 
   const products = [
     {
@@ -181,6 +190,14 @@ export default function AndrShopPage() {
                 </CardHeader>
                 <CardContent className="p-6 md:p-8">
                     <OrderForm productCategories={products.map(p => p.name)} />
+                    <div className="relative flex py-5 items-center">
+                        <div className="flex-grow border-t border-muted-foreground"></div>
+                        <span className="flex-shrink mx-4 text-muted-foreground text-sm">OR</span>
+                        <div className="flex-grow border-t border-muted-foreground"></div>
+                    </div>
+                    <Button onClick={handlePayment} variant="outline" className="w-full">
+                        {shopTranslations.payButton}
+                    </Button>
                 </CardContent>
             </Card>
         </section>
