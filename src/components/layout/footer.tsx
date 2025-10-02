@@ -88,9 +88,9 @@ export function Footer() {
         
         <Separator className="my-8" />
         
-        <div className="text-left text-sm text-muted-foreground space-y-2">
+        <div className="flex justify-between items-center text-sm text-muted-foreground">
           <p>© {new Date().getFullYear()} {translations.footer.copyright}</p>
-          <a href="https://www.1target.ru/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+          <a href="https://www.1target.ru/" target="_blank" rel="noopener noreferrer" className="transition-colors developer-link">
             {translations.footer.developerCredit}
           </a>
         </div>
