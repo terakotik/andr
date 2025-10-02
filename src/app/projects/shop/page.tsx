@@ -175,18 +175,18 @@ export default function AndrShopPage() {
           </div>
         </section>
 
-        <section id="order-form" className="bg-secondary/50 rounded-lg p-8 md:p-12 border">
+        <section id="order-form">
             <div className="text-center space-y-4 mb-12">
               <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">{shopTranslations.ctaTitle}</h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                 {shopTranslations.ctaSubtitle}
               </p>
             </div>
-            <Card className="max-w-2xl mx-auto rounded-lg bg-background border">
-                <CardHeader>
+            <Card className="w-full mx-auto rounded-lg bg-background border-0 shadow-none">
+                <CardHeader className="px-0">
                   <CardTitle>{shopTranslations.ctaButton}</CardTitle>
                 </CardHeader>
-                <CardContent className="p-6 md:p-8">
+                <CardContent className="p-0">
                     <OrderForm productCategories={products.map(p => p.name)} />
                     <div className="relative flex py-5 items-center">
                         <div className="flex-grow border-t border-muted-foreground"></div>
