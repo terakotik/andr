@@ -88,9 +88,9 @@ export function Footer() {
         
         <Separator className="my-8" />
         
-        <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left text-sm text-muted-foreground">
+        <div className="flex flex-col md:flex-row justify-between text-left md:items-center text-xs text-muted-foreground">
           <p>© {new Date().getFullYear()} {translations.footer.copyright}</p>
-          <a href="https://www.1target.ru/" target="_blank" rel="noopener noreferrer" className="transition-colors developer-link mt-4 md:mt-0">
+          <a href="https://www.1target.ru/" target="_blank" rel="noopener noreferrer" className="transition-colors developer-link mt-2 md:mt-0">
             {translations.footer.developerCredit}
           </a>
         </div>
