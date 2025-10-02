@@ -289,23 +289,65 @@
         }
     },
     "shopPage": {
-        "preHeroTitle": "PRODUCT SALES",
-        "heroTitle": "Wholesale Food Supplies",
-        "heroSubtitle": "We supply fresh, high-quality food products directly from producers to your business.",
+        "heroTitle": "Food supplies for your business",
+        "heroSubtitle": "High-quality raw materials. Established logistics. Direct contracts.",
         "heroButton": "View Products",
-        "sectionTitle": "Our Assortment",
-        "sectionSubtitle": "We are your trusted partner for sourcing and delivering wholesale premium food products.",
-        "products": {
-            "beans": {
-                "name": "Beans",
-                "description": "High-quality beans grown on fertile lands. Ideal for a wide range of culinary applications."
-            },
-            "legumes": {
-                "name": "Grain",
-                "description": "A variety of grain, rich in protein and nutrients. Guaranteed freshness and quality."
+        "about": "We supply key agricultural crops for manufacturing and wholesale companies. Our expertise is the impeccable quality of products and reliable supplies to the countries of Central Asia and the Middle East.",
+        "geography": {
+            "title": "Geography of supplies",
+            "subtitle": "We already have established logistics and stable supplies of products to:",
+            "countries": {
+                "kazakhstan": "Kazakhstan",
+                "pakistan": "Pakistan",
+                "india": "India"
             }
         },
-        "ctaTitle": "Ready to start a partnership?",
+        "advantages": {
+            "title": "Our key advantages",
+            "stability": {
+                "title": "Stability of supplies",
+                "description": "We work directly with manufacturers, guaranteeing volume and adherence to deadlines even for large contracts."
+            },
+            "quality": {
+                "title": "Quality control",
+                "description": "All products comply with strict standards and requirements of the international market."
+            },
+            "logistics": {
+                "title": "Proven logistics",
+                "description": "We already supply to Kazakhstan, Pakistan, and India. A reliable turnkey supply chain."
+            },
+            "price": {
+                "title": "Competitive prices",
+                "description": "We eliminate unnecessary intermediaries, offering favorable conditions for your business."
+            }
+        },
+        "sectionTitle": "Main products",
+        "products": {
+            "peanuts": {
+                "name": "Peanuts",
+                "description": ""
+            },
+            "grains": {
+                "name": "Grains",
+                "description": ""
+            },
+            "legumes": {
+                "name": "Legumes",
+                "description": ""
+            },
+            "oilseeds": {
+                "name": "Oilseeds",
+                "description": ""
+            }
+        },
+        "ctaTitle": "Ready to discuss your tasks?",
+        "ctaSubtitle": "We will provide you with high-quality raw materials and reliable turnkey logistics.",
         "ctaButton": "Contact Us"
+    },
+    "aboutPage": {
+        "title": "About Us",
+        "p1": "ANDR GLOBAL FINANCIAL is your strategic partner in global business. We are a leading international company specializing in three key areas: trading in precious metals, professional consulting, and supplying high-quality food to world markets.",
+        "p2": "Our mission is to provide clients with reliable and efficient solutions that contribute to their growth and prosperity. We strive for long-term partnerships based on trust, transparency, and a mutual desire for success.",
+        "p3": "Our team consists of highly qualified experts with many years of experience in international trade, finance, and consulting. We are constantly improving our skills and knowledge to offer you the most current and effective strategies."
     }
 }

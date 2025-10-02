@@ -30,3 +30,37 @@ export function WhatsAppIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+
+export function KazakhstanFlag(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" {...props}>
+      <path fill="#00b0df" d="M0 85.337h512v341.326H0z"/>
+      <path fill="#fdd116" d="M256 256c-47.14 0-85.333-38.193-85.333-85.333s38.193-85.333 85.333-85.333 85.333 38.193 85.333 85.333S303.14 256 256 256zm-17.067-85.333c0 9.423 7.644 17.067 17.067 17.067s17.067-7.644 17.067-17.067-7.644-17.067-17.067-17.067-17.067 7.644-17.067 17.067z"/>
+      <path fill="#fdd116" d="m42.667 85.337-12.8 21.333h25.601zm-21.334 42.666 12.8 21.334 12.8-21.334h-25.6zM0 170.669h21.333v21.333H0zm42.667 42.666-12.8 21.334h25.601zm-21.334 42.667 12.8 21.333 12.8-21.333h-25.6zm21.334 42.667-12.8 21.333h25.601zM0 384.003h21.333v21.333H0z"/>
+    </svg>
+  );
+}
+
+export function PakistanFlag(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" {...props}>
+      <path fill="#006600" d="M128 0h384v512H128z"/>
+      <path fill="#fff" d="M0 0h128v512H0z"/>
+      <path fill="#fff" d="m352 176 36.6 80.4 88.4-2.4-70.2 52 24.6 87-79.4-40.2-76.6 45.4 20.2-87.8-66.8-55.8 88.2 2.6z"/>
+    </svg>
+  );
+}
+
+export function IndiaFlag(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" {...props}>
+      <path fill="#f93" d="M0 0h512v170.667H0z"/>
+      <path fill="#fff" d="M0 170.667h512v170.666H0z"/>
+      <path fill="#128807" d="M0 341.333h512V512H0z"/>
+      <circle cx="256" cy="256" r="64" fill="#000080" stroke="#000080" strokeWidth="1"/>
+      <circle cx="256" cy="256" r="56" fill="#fff"/>
+      <circle cx="256" cy="256" r="10" fill="#000080"/>
+      <path fill="#000080" d="M256 198.8v114.4m-57.2-57.2h114.4m-40.44-40.44 80.88 80.88m-80.88 0 80.88-80.88"/>
+    </svg>
+  );
+}

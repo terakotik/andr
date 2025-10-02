@@ -4,10 +4,11 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Leaf, ShoppingCart, Truck, ChevronRight, Sprout, Wheat } from 'lucide-react';
+import { Leaf, ShoppingCart, Truck, ChevronRight, Sprout, Wheat, Check, Award, ShieldCheck, ThumbsUp } from 'lucide-react';
 import { useLanguage } from '@/context/language-context';
 import Link from 'next/link';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
+import { KazakhstanFlag, PakistanFlag, IndiaFlag } from '@/components/icons';
 
 export default function AndrShopPage() {
   const { translations } = useLanguage();
@@ -16,14 +17,53 @@ export default function AndrShopPage() {
   const products = [
     {
       icon: <Sprout className="h-10 w-10 text-primary" />,
-      name: shopTranslations.products?.beans.name,
-      description: shopTranslations.products?.beans.description,
+      name: shopTranslations.products?.peanuts.name,
+      description: shopTranslations.products?.peanuts.description,
     },
     {
       icon: <Wheat className="h-10 w-10 text-primary" />,
+      name: shopTranslations.products?.grains.name,
+      description: shopTranslations.products?.grains.description,
+    },
+    {
+      icon: <Leaf className="h-10 w-10 text-primary" />,
       name: shopTranslations.products?.legumes.name,
       description: shopTranslations.products?.legumes.description,
     },
+     {
+      icon: <Sprout className="h-10 w-10 text-primary" />,
+      name: shopTranslations.products?.oilseeds.name,
+      description: shopTranslations.products?.oilseeds.description,
+    },
+  ];
+
+  const advantages = [
+      {
+          icon: <Truck className="h-8 w-8 text-primary" />,
+          title: shopTranslations.advantages?.stability.title,
+          description: shopTranslations.advantages?.stability.description,
+      },
+      {
+          icon: <Award className="h-8 w-8 text-primary" />,
+          title: shopTranslations.advantages?.quality.title,
+          description: shopTranslations.advantages?.quality.description,
+      },
+      {
+          icon: <ShieldCheck className="h-8 w-8 text-primary" />,
+          title: shopTranslations.advantages?.logistics.title,
+          description: shopTranslations.advantages?.logistics.description,
+      },
+      {
+          icon: <ThumbsUp className="h-8 w-8 text-primary" />,
+          title: shopTranslations.advantages?.price.title,
+          description: shopTranslations.advantages?.price.description,
+      },
+  ];
+
+  const countries = [
+    { name: shopTranslations.geography?.countries.kazakhstan, icon: <KazakhstanFlag className="h-10 w-10 rounded-full" /> },
+    { name: shopTranslations.geography?.countries.pakistan, icon: <PakistanFlag className="h-10 w-10 rounded-full" /> },
+    { name: shopTranslations.geography?.countries.india, icon: <IndiaFlag className="h-10 w-10 rounded-full" /> },
   ];
 
   return (
@@ -41,7 +81,6 @@ export default function AndrShopPage() {
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center min-h-[60vh]">
             <div className="space-y-6">
-              <p className="text-4xl md:text-6xl font-headline font-bold text-white tracking-widest uppercase">{shopTranslations.preHeroTitle}</p>
               <h1 className="text-4xl md:text-5xl font-headline font-bold text-white">
                 {shopTranslations.heroTitle}
               </h1>
@@ -63,33 +102,73 @@ export default function AndrShopPage() {
       </section>
 
       <main className="container mx-auto px-4 md:px-6 py-16 md:py-24 space-y-20">
+        
+        <section id="about-us">
+            <div className="text-center space-y-4 mb-12">
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                    {shopTranslations.about}
+                </p>
+            </div>
+            <div className="text-center space-y-4">
+                <h3 className="text-2xl font-headline font-semibold text-primary">{shopTranslations.geography?.title}</h3>
+                <p className="text-muted-foreground max-w-2xl mx-auto">{shopTranslations.geography?.subtitle}</p>
+                <div className="flex justify-center items-center gap-8 pt-4">
+                    {countries.map((country) => (
+                        <div key={country.name} className="flex flex-col items-center gap-2">
+                            {country.icon}
+                            <span className="font-semibold">{country.name}</span>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        <section id="advantages">
+            <div className="text-center space-y-4 mb-12">
+                <h2 className="text-3xl font-headline font-semibold text-primary mb-4">{shopTranslations.advantages?.title}</h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {advantages.map((advantage) => (
+                <Card key={advantage.title} className="bg-card border rounded-lg p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="p-2 bg-secondary rounded-full w-fit">
+                        {advantage.icon}
+                      </div>
+                      <div className="flex-1">
+                        <CardTitle className="font-headline text-xl mb-2">{advantage.title}</CardTitle>
+                        <CardDescription>{advantage.description}</CardDescription>
+                      </div>
+                    </div>
+                </Card>
+                ))}
+            </div>
+        </section>
+        
         <section id="products-list">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-headline font-semibold text-primary mb-4">{shopTranslations.sectionTitle}</h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              {shopTranslations.sectionSubtitle}
-            </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {products.map((product, index) => (
-                <Card key={index} className="bg-card border p-6 rounded-lg">
-                    <CardHeader className="flex flex-row items-center gap-4 p-0 mb-4">
-                      <div className="p-3 bg-primary/10 rounded-full w-fit flex-shrink-0">
+                <Card key={index} className="bg-card border p-6 rounded-lg text-center flex flex-col items-center">
+                    <CardHeader className="p-0 mb-4">
+                      <div className="p-4 bg-primary/10 rounded-full w-fit mx-auto">
                         {product.icon}
                       </div>
-                      <CardTitle className="font-headline text-2xl">{product.name}</CardTitle>
                     </CardHeader>
-                    <CardContent className="p-0">
-                      <p className="text-muted-foreground">{product.description}</p>
+                    <CardContent className="p-0 flex-grow">
+                      <CardTitle className="font-headline text-xl mb-2">{product.name}</CardTitle>
+                      <p className="text-muted-foreground text-sm">{product.description}</p>
                     </CardContent>
                 </Card>
             ))}
           </div>
         </section>
 
-        <section id="contact" className="text-center pt-8">
-            <h2 className="text-3xl font-headline font-semibold text-primary mb-4">{shopTranslations.ctaTitle}</h2>
+        <section id="contact" className="text-center pt-8 bg-secondary/50 rounded-lg py-12">
+            <h2 className="text-3xl font-headline font-semibold text-primary mb-4 max-w-2xl mx-auto">{shopTranslations.ctaTitle}</h2>
+            <p className="text-muted-foreground mb-8">{shopTranslations.ctaSubtitle}</p>
             <Button size="lg" variant="default" className="px-12 py-6 text-lg" asChild>
                 <Link href="/#footer-projects">{shopTranslations.ctaButton}</Link>
             </Button>
