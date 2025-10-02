@@ -122,7 +122,7 @@ export default function ConsultingPage() {
         </div>
       </section>
 
-      <section className="bg-secondary/50 py-16 md:py-24" id="contact-consulting">
+      <section className="py-16 md:py-24" id="contact-consulting">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl md:text-4xl font-headline font-bold">{translations.consulting.startTransformation.title}</h2>
@@ -130,11 +130,11 @@ export default function ConsultingPage() {
               {translations.consulting.startTransformation.subtitle}
             </p>
           </div>
-          <Card className="max-w-2xl mx-auto rounded-lg">
-            <CardHeader>
+          <Card className="w-full mx-auto rounded-lg bg-background border-0 shadow-none">
+            <CardHeader className="px-0">
               <CardTitle>{translations.consulting.startTransformation.formTitle}</CardTitle>
             </CardHeader>
-            <CardContent className="p-6 md:p-8">
+            <CardContent className="p-0">
               <ContactForm />
             </CardContent>
           </Card>
