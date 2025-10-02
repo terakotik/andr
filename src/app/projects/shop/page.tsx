@@ -8,7 +8,6 @@ import { Leaf, ShoppingCart, Truck, ChevronRight, Sprout, Wheat, Check, Award, S
 import { useLanguage } from '@/context/language-context';
 import Link from 'next/link';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
-import { KazakhstanFlag, PakistanFlag, IndiaFlag } from '@/components/icons';
 
 export default function AndrShopPage() {
   const { translations } = useLanguage();
@@ -61,9 +60,9 @@ export default function AndrShopPage() {
   ];
 
   const countries = [
-    { name: shopTranslations.geography?.countries.kazakhstan, icon: <KazakhstanFlag className="h-10 w-10 rounded-full" /> },
-    { name: shopTranslations.geography?.countries.pakistan, icon: <PakistanFlag className="h-10 w-10 rounded-full" /> },
-    { name: shopTranslations.geography?.countries.india, icon: <IndiaFlag className="h-10 w-10 rounded-full" /> },
+    { name: shopTranslations.geography?.countries.kazakhstan, icon: <Image src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Flag_of_Kazakhstan.svg" alt="Kazakhstan Flag" width={40} height={40} className="rounded-full object-cover h-10 w-10" /> },
+    { name: shopTranslations.geography?.countries.pakistan, icon: <Image src="https://upload.wikimedia.org/wikipedia/commons/3/32/Flag_of_Pakistan.svg" alt="Pakistan Flag" width={40} height={40} className="rounded-full object-cover h-10 w-10" /> },
+    { name: shopTranslations.geography?.countries.india, icon: <Image src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" alt="India Flag" width={40} height={40} className="rounded-full object-cover h-10 w-10" /> },
   ];
 
   return (
