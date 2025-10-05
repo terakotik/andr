@@ -371,6 +371,7 @@
         "ctaSubtitle": "We will provide you with high-quality raw materials and reliable turnkey logistics.",
         "ctaButton": "Send an inquiry for calculation",
         "payButton": "Pay with Instapay",
+        "paypalButton": "Pay with PayPal",
         "paymentToast": {
             "title": "Payment in Progress",
             "description": "Payment functionality is being set up. Please contact us to complete your order."

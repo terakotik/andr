@@ -10,6 +10,7 @@ import Link from 'next/link';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
 import { OrderForm } from '@/components/order-form';
 import { useToast } from "@/hooks/use-toast";
+import { PayPalButton } from '@/components/paypal-button';
 
 export default function AndrShopPage() {
   const { translations } = useLanguage();
@@ -25,22 +26,22 @@ export default function AndrShopPage() {
 
   const products = [
     {
-      icon: <Sprout className="h-8 w-8 md:h-10 md:w-10 text-primary" />,
+      icon: <Sprout className="h-8 w-8 text-primary" />,
       name: shopTranslations.products?.peanuts.name,
       description: shopTranslations.products?.peanuts.description,
     },
     {
-      icon: <Wheat className="h-8 w-8 md:h-10 md:w-10 text-primary" />,
+      icon: <Wheat className="h-8 w-8 text-primary" />,
       name: shopTranslations.products?.grains.name,
       description: shopTranslations.products?.grains.description,
     },
     {
-      icon: <Leaf className="h-8 w-8 md:h-10 md:w-10 text-primary" />,
+      icon: <Leaf className="h-8 w-8 text-primary" />,
       name: shopTranslations.products?.legumes.name,
       description: shopTranslations.products?.legumes.description,
     },
      {
-      icon: <Sprout className="h-8 w-8 md:h-10 md:w-10 text-primary" />,
+      icon: <Sprout className="h-8 w-8 text-primary" />,
       name: shopTranslations.products?.oilseeds.name,
       description: shopTranslations.products?.oilseeds.description,
     },
@@ -204,6 +205,7 @@ export default function AndrShopPage() {
                             height={30}
                             className="object-contain" 
                         />
+                         <PayPalButton />
                     </div>
                 </CardContent>
             </Card>
