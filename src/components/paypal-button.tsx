@@ -11,7 +11,7 @@ const PayPalButton = () => {
     const shopTranslations = translations.shopPage || {};
 
     const initialOptions = {
-        "clientId": "test", // Replace with your test client ID from PayPal Developer Dashboard
+        "clientId": "ARNBB8BmvCXf-d57tAIHOPiqu-g2_-9R-gKlWCwTzhk2n9_D5_qvWQ-l_ANS-ApKvFNam48GHpQ2KLpQ",
         "currency": "USD",
         "intent": "capture",
     };
