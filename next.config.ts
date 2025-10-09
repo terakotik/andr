@@ -100,6 +100,12 @@ const nextConfig: NextConfig = {
         hostname: 'ir.ozone.ru',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: '50.img.avito.st',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
@@ -110,3 +116,4 @@ export default nextConfig;
     
 
     
+

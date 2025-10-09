@@ -26,22 +26,18 @@ export default function AndrShopPage() {
 
   const products = [
     {
-      icon: <Sprout className="h-8 w-8 text-primary" />,
       name: shopTranslations.products?.peanuts.name,
       description: shopTranslations.products?.peanuts.description,
     },
     {
-      icon: <Wheat className="h-8 w-8 text-primary" />,
       name: shopTranslations.products?.grains.name,
       description: shopTranslations.products?.grains.description,
     },
     {
-      icon: <Leaf className="h-8 w-8 text-primary" />,
       name: shopTranslations.products?.legumes.name,
       description: shopTranslations.products?.legumes.description,
     },
      {
-      icon: <Sprout className="h-8 w-8 text-primary" />,
       name: shopTranslations.products?.oilseeds.name,
       description: shopTranslations.products?.oilseeds.description,
     },
@@ -51,7 +47,7 @@ export default function AndrShopPage() {
     {
       name: shopTranslations.beans?.firstSort,
       price: "$4",
-      imageUrl: "https://ir.ozone.ru/s3/multimedia-q/wc1000/6272410478.jpg"
+      imageUrl: "https://50.img.avito.st/image/1/1.K6LcZra4h0vqz0VOhh4e5LzHhU1ixwVDqsKFSWzPj0Fq.Bk1OQxfN58FgVVEFASop3WwZI0H0hZfSPXSX0x9oHxM"
     },
     {
       name: shopTranslations.beans?.secondSort,
@@ -191,7 +187,7 @@ export default function AndrShopPage() {
             {products.map((product, index) => (
               <Card key={index} className="bg-card border p-4 rounded-lg flex flex-row items-center gap-4 md:flex-col md:p-6 md:text-center">
                   <div className="p-3 bg-primary/10 rounded-full w-fit flex-shrink-0 md:p-4 md:mx-auto">
-                    {product.icon}
+                    <Sprout className="h-8 w-8 text-primary" />
                   </div>
                   <div className="flex-grow text-left md:text-center">
                     <CardTitle className="font-headline text-lg md:text-xl md:mb-2">{product.name}</CardTitle>
@@ -270,5 +266,3 @@ export default function AndrShopPage() {
     </div>
   );
 }
-
-    
