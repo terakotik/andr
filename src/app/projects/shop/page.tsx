@@ -52,16 +52,19 @@ export default function AndrShopPage() {
       icon: <Star className="h-8 w-8 text-primary" />,
       name: shopTranslations.beans?.firstSort,
       price: "$4",
+      imageUrl: "https://images.unsplash.com/photo-1599579085809-d5d856024104?q=80&w=1974&auto=format&fit=crop"
     },
     {
       icon: <Circle className="h-8 w-8 text-primary" />,
       name: shopTranslations.beans?.secondSort,
       price: "$1.8",
+      imageUrl: "https://images.unsplash.com/photo-1627910245383-a950a2599d14?q=80&w=1964&auto=format&fit=crop"
     },
     {
       icon: <Diamond className="h-8 w-8 text-primary" />,
       name: shopTranslations.beans?.handCalibrated,
       price: "$8",
+      imageUrl: "https://images.unsplash.com/photo-1572527838520-2c30fad1fb0d?q=80&w=1974&auto=format&fit=crop"
     },
   ];
 
@@ -184,15 +187,15 @@ export default function AndrShopPage() {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 max-w-6xl mx-auto">
             {products.map((product, index) => (
-                <Card key={index} className="bg-card border p-4 rounded-lg flex flex-row items-center gap-4 md:flex-col md:p-6 md:text-center">
-                    <div className="p-3 bg-primary/10 rounded-full w-fit flex-shrink-0 md:p-4 md:mx-auto">
-                      {product.icon}
-                    </div>
-                    <div className="flex-grow">
-                      <CardTitle className="font-headline text-lg md:text-xl md:mb-2">{product.name}</CardTitle>
-                      <p className="text-muted-foreground text-sm hidden md:block">{product.description}</p>
-                    </div>
-                </Card>
+              <Card key={index} className="bg-card border p-4 rounded-lg flex flex-row items-center gap-4 md:flex-col md:p-6 md:text-center">
+                  <div className="p-3 bg-primary/10 rounded-full w-fit flex-shrink-0 md:p-4 md:mx-auto">
+                    {product.icon}
+                  </div>
+                  <div className="flex-grow text-left md:text-center">
+                    <CardTitle className="font-headline text-lg md:text-xl md:mb-2">{product.name}</CardTitle>
+                    <p className="text-muted-foreground text-sm hidden md:block">{product.description}</p>
+                  </div>
+              </Card>
             ))}
           </div>
         </section>
@@ -202,14 +205,26 @@ export default function AndrShopPage() {
             <h2 className="text-3xl font-headline font-semibold text-primary mb-4">{shopTranslations.beans?.title}</h2>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {beanProducts.map((product, index) => (
-              <Card key={index} className="bg-card border rounded-lg p-6 text-center transition-all duration-300 hover:shadow-lg hover:border-primary">
-                  <div className="p-4 bg-primary/10 rounded-full w-fit mx-auto mb-4">
-                    {product.icon}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {beanProducts.map((product) => (
+              <Card key={product.name} className="group relative overflow-hidden rounded-lg border text-white transition-all duration-300 hover:shadow-lg hover:border-primary h-64 flex flex-col justify-end">
+                  <Image 
+                      src={product.imageUrl}
+                      alt={product.name}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      data-ai-hint="beans legumes"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                  <div className="relative p-6 z-10">
+                      <div className="flex items-center justify-between">
+                          <CardTitle className="font-headline text-2xl">{product.name}</CardTitle>
+                          <div className="p-3 bg-primary/20 backdrop-blur-sm rounded-full w-fit">
+                            {product.icon}
+                          </div>
+                      </div>
+                      <p className="text-3xl font-bold text-primary mt-2">{product.price}</p>
                   </div>
-                  <CardTitle className="font-headline text-xl mb-2">{product.name}</CardTitle>
-                  <p className="text-2xl font-bold text-primary">{product.price}</p>
               </Card>
             ))}
           </div>
