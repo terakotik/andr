@@ -367,6 +367,12 @@
                 "description": ""
             }
         },
+        "beans": {
+            "title": "Beans",
+            "firstSort": "First Sort",
+            "secondSort": "Second Sort",
+            "handCalibrated": "Hand-Calibrated Sort"
+        },
         "ctaTitle": "Send Inquiry",
         "ctaSubtitle": "We will provide you with high-quality raw materials and reliable turnkey logistics.",
         "ctaButton": "Send an inquiry for calculation",
@@ -385,3 +391,5 @@
         "p3": "Our team consists of highly qualified experts with many years of experience in international trade, finance, and consulting. We are constantly improving our skills and knowledge to offer you the most current and effective strategies."
     }
 }
+
+    

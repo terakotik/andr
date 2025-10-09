@@ -4,7 +4,7 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Leaf, ShoppingCart, Truck, ChevronRight, Sprout, Wheat, Check, Award, ShieldCheck, ThumbsUp } from 'lucide-react';
+import { Leaf, ShoppingCart, Truck, ChevronRight, Sprout, Wheat, Check, Award, ShieldCheck, ThumbsUp, Star, Circle, Diamond } from 'lucide-react';
 import { useLanguage } from '@/context/language-context';
 import Link from 'next/link';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
@@ -47,6 +47,24 @@ export default function AndrShopPage() {
     },
   ];
 
+  const beanProducts = [
+    {
+      icon: <Star className="h-8 w-8 text-primary" />,
+      name: shopTranslations.beans?.firstSort,
+      price: "$4",
+    },
+    {
+      icon: <Circle className="h-8 w-8 text-primary" />,
+      name: shopTranslations.beans?.secondSort,
+      price: "$1.8",
+    },
+    {
+      icon: <Diamond className="h-8 w-8 text-primary" />,
+      name: shopTranslations.beans?.handCalibrated,
+      price: "$8",
+    },
+  ];
+
   const advantages = [
       {
           icon: <Truck className="h-8 w-8 text-primary" />,
@@ -81,12 +99,15 @@ export default function AndrShopPage() {
     <div className="bg-background text-foreground">
        <section className="relative bg-background py-16 md:py-24 text-white">
         <div className="absolute top-0 left-0 w-full h-full bg-black overflow-hidden">
-          <iframe 
-            src="https://www.youtube.com/embed/pQbflNRSi_Y?autoplay=1&mute=1&loop=1&playlist=pQbflNRSi_Y&controls=0&showinfo=0&modestbranding=1"
-            className="absolute top-1/2 left-1/2 w-[177.77vh] min-w-[100vw] h-[56.25vw] min-h-[100vh] -translate-x-1/2 -translate-y-1/2 z-0 opacity-30 object-cover"
-            frameBorder="0" 
-            allow="autoplay; encrypted-media"
-          ></iframe>
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="absolute top-1/2 left-1/2 w-auto min-w-full min-h-full max-w-none -translate-x-1/2 -translate-y-1/2 z-0 opacity-30 object-cover"
+          >
+            <source src="https://s1.hostingkartinok.com/uploads/videos/2024/09/f4848cb631627993092288062a4d339e.mp4" type="video/mp4" />
+          </video>
           <div className="pixel-overlay" style={{backgroundSize: '3px 3px'}}></div>
         </div>
         <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -176,41 +197,61 @@ export default function AndrShopPage() {
           </div>
         </section>
 
+        <section id="bean-products">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-headline font-semibold text-primary mb-4">{shopTranslations.beans?.title}</h2>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            {beanProducts.map((product, index) => (
+              <Card key={index} className="bg-card border rounded-lg p-6 text-center transition-all duration-300 hover:shadow-lg hover:border-primary">
+                  <div className="p-4 bg-primary/10 rounded-full w-fit mx-auto mb-4">
+                    {product.icon}
+                  </div>
+                  <CardTitle className="font-headline text-xl mb-2">{product.name}</CardTitle>
+                  <p className="text-2xl font-bold text-primary">{product.price}</p>
+              </Card>
+            ))}
+          </div>
+        </section>
+
         <section id="order-form">
-            <div className="text-center space-y-4 mb-12">
-              <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">{shopTranslations.ctaTitle}</h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                {shopTranslations.ctaSubtitle}
-              </p>
-            </div>
-            <Card className="w-full mx-auto rounded-lg bg-background border-0 shadow-none">
-                <CardHeader className="px-0">
-                  <CardTitle>{shopTranslations.ctaButton}</CardTitle>
-                </CardHeader>
-                <CardContent className="p-0">
-                    <OrderForm productCategories={products.map(p => p.name)} />
-                    <div className="relative flex py-5 items-center">
-                        <div className="flex-grow border-t border-muted-foreground"></div>
-                        <span className="flex-shrink mx-4 text-muted-foreground text-sm">OR</span>
-                        <div className="flex-grow border-t border-muted-foreground"></div>
-                    </div>
-                    <div className="flex flex-col items-center gap-4">
-                        <Button onClick={handlePayment} variant="outline" className="w-full">
-                            {shopTranslations.payButton}
-                        </Button>
-                        <Image 
-                            src="https://guide.insta-pay.ch/~gitbook/image?url=https%3A%2F%2F4098734040-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Forganizations%252FDkbKS1c9cgUjHhFMOrxs%252Fsites%252Fsite_KBu8A%252Flogo%252Fq1BpL7xXpmcRHer7CTwd%252FLogo%2520Colour%2520With%2520Black%2520Wordmark.png%3Falt%3Dmedia%26token%3D3e5a6178-41ca-433c-b175-75c7c4be7049&width=160&dpr=3&quality=100&sign=c82a8db&sv=2" 
-                            alt={shopTranslations.instapayLogoAlt || "Instapay Logo"}
-                            width={120} 
-                            height={30}
-                            className="object-contain" 
-                        />
-                         <PayPalButton />
-                    </div>
-                </CardContent>
-            </Card>
+          <div className="text-center space-y-4 mb-12">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">{shopTranslations.ctaTitle}</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              {shopTranslations.ctaSubtitle}
+            </p>
+          </div>
+          <Card className="w-full mx-auto rounded-lg bg-background border-0 shadow-none">
+              <CardHeader className="px-0">
+                <CardTitle>{shopTranslations.ctaButton}</CardTitle>
+              </CardHeader>
+              <CardContent className="p-0">
+                  <OrderForm productCategories={[...products.map(p => p.name), ...beanProducts.map(p => p.name)]} />
+                  <div className="relative flex py-5 items-center">
+                      <div className="flex-grow border-t border-muted-foreground"></div>
+                      <span className="flex-shrink mx-4 text-muted-foreground text-sm">OR</span>
+                      <div className="flex-grow border-t border-muted-foreground"></div>
+                  </div>
+                  <div className="flex flex-col items-center gap-4">
+                      <Button onClick={handlePayment} variant="outline" className="w-full">
+                          {shopTranslations.payButton}
+                      </Button>
+                      <Image 
+                          src="https://guide.insta-pay.ch/~gitbook/image?url=https%3A%2F%2F4098734040-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Forganizations%252FDkbKS1c9cgUjHhFMOrxs%252Fsites%252Fsite_KBu8A%252Flogo%252Fq1BpL7xXpmcRHer7CTwd%252FLogo%2520Colour%2520With%2520Black%2520Wordmark.png%3Falt%3Dmedia%26token%3D3e5a6178-41ca-433c-b175-75c7c4be7049&width=160&dpr=3&quality=100&sign=c82a8db&sv=2" 
+                          alt={shopTranslations.instapayLogoAlt || "Instapay Logo"}
+                          width={120} 
+                          height={30}
+                          className="object-contain" 
+                      />
+                       <PayPalButton />
+                  </div>
+              </CardContent>
+          </Card>
         </section>
       </main>
     </div>
   );
 }
+
+    
