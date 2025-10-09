@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from 'next/link';
@@ -26,6 +25,99 @@ export function Footer() {
   const andrGoldImageUrl = "https://dalogo.ru/wp-content/uploads/2019/10/Sajjt-11132-SHokoladnyjj-mini-Slitok-zolota-New-3.jpg";
   const officeAddress = "Alamanda Office, Jl. Bypass Ngurah Rai Br. Kerthayasa No.67 5th Floor";
   const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(officeAddress)}`;
+
+  const developerLogoHtml = `
+    <!DOCTYPE html>
+    <html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"><\/script>
+        <style>
+            body { margin: 0; overflow: hidden; background-color: transparent; }
+        </style>
+    </head>
+    <body>
+        <script>
+            let scene, camera, renderer, uGroup;
+            const ROTATION_SPEED = 0.015;
+            const GLOW_COLOR = 0x00ffff;
+
+            function init() {
+                try {
+                    scene = new THREE.Scene();
+                    const aspectRatio = 1;
+                    camera = new THREE.PerspectiveCamera(75, aspectRatio, 0.1, 1000);
+                    camera.position.z = 3.5;
+
+                    renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+                    renderer.setSize(50, 50);
+                    renderer.setPixelRatio(window.devicePixelRatio);
+                    document.body.appendChild(renderer.domElement);
+
+                    uGroup = new THREE.Group();
+                    scene.add(uGroup);
+
+                    const thickness = 0.5;
+                    const height = 3;
+                    const width = 2.5;
+
+                    const verticalBarGeometry = new THREE.BoxGeometry(thickness, height, thickness);
+                    const horizontalBarGeometry = new THREE.BoxGeometry(width + thickness, thickness, thickness);
+
+                    const coreMaterial = new THREE.MeshPhongMaterial({
+                        color: GLOW_COLOR,
+                        shininess: 100,
+                        emissive: GLOW_COLOR,
+                        emissiveIntensity: 0.5
+                    });
+
+                    const leftBar = new THREE.Mesh(verticalBarGeometry, coreMaterial);
+                    leftBar.position.x = -width / 2;
+                    leftBar.position.y = 0.5;
+                    uGroup.add(leftBar);
+
+                    const rightBar = new THREE.Mesh(verticalBarGeometry, coreMaterial);
+                    rightBar.position.x = width / 2;
+                    rightBar.position.y = 0.5;
+                    uGroup.add(rightBar);
+
+                    const bottomBar = new THREE.Mesh(horizontalBarGeometry, coreMaterial);
+                    bottomBar.position.y = -height / 2 + thickness / 2;
+                    bottomBar.scale.x = 0.7;
+                    uGroup.add(bottomBar);
+                    
+                    const edgeMaterial = new THREE.LineBasicMaterial({ color: 0xffffff, linewidth: 1 });
+                    uGroup.children.forEach(mesh => {
+                        const edges = new THREE.EdgesGeometry(mesh.geometry);
+                        const line = new THREE.LineSegments(edges, edgeMaterial);
+                        mesh.add(line);
+                    });
+
+                    const ambientLight = new THREE.AmbientLight(0x404040, 2);
+                    scene.add(ambientLight);
+
+                    const pointLight = new THREE.PointLight(GLOW_COLOR, 3, 50);
+                    scene.add(pointLight);
+                    
+                } catch (error) {
+                    console.error("3D logo error:", error);
+                }
+            }
+
+            function animate() {
+                if (!uGroup) return;
+                requestAnimationFrame(animate);
+                uGroup.rotation.y += ROTATION_SPEED * 1.5;
+                renderer.render(scene, camera);
+            }
+
+            init();
+            animate();
+        <\/script>
+    </body>
+    </html>
+  `;
 
 
   return (
@@ -90,9 +182,18 @@ export function Footer() {
         
         <div className="flex flex-col md:flex-row justify-between text-left md:items-center text-xs text-muted-foreground">
           <p>© {new Date().getFullYear()} {translations.footer.copyright}</p>
-          <a href="https://www.1target.ru/" target="_blank" rel="noopener noreferrer" className="transition-colors developer-link mt-2 md:mt-0">
-            {translations.footer.developerCredit}
-          </a>
+          <div className="flex items-center gap-2">
+            <iframe 
+                srcDoc={developerLogoHtml}
+                width="50" 
+                height="50" 
+                style={{ border: 'none', background: 'transparent' }}
+                title="Developer 3D Logo"
+            />
+            <a href="https://www.1target.ru/" target="_blank" rel="noopener noreferrer" className="transition-colors developer-link mt-2 md:mt-0">
+                {translations.footer.developerCredit}
+            </a>
+          </div>
         </div>
       </div>
     </footer>
