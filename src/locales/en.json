@@ -247,6 +247,13 @@
                 "certification": "Supplied with a certificate from the Uzbek State Assay Office."
             }
         },
+        "specialOffer": {
+            "title": "Special Offer",
+            "description": "Exclusive gold bars available at a special price.",
+            "condition": "2% discount on 100% prepayment for orders of 5kg or more.",
+            "buttonText": "Get Offer",
+            "alt": "Special offer gold"
+        },
         "refinedCard": {
             "alt": "Refined Gold 999.9",
             "title": "Refined Gold — Your Reliable Asset",
@@ -393,5 +400,7 @@
         "p3": "Our team consists of highly qualified experts with many years of experience in international trade, finance, and consulting. We are constantly improving our skills and knowledge to offer you the most current and effective strategies."
     }
 }
+
+    
 
     

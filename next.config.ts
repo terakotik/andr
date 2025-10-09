@@ -27,7 +27,7 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'picsum.photos',
         port: '',
-        pathname: '/**',
+pathname: '/**',
       },
       {
         protocol: 'https',
@@ -103,12 +103,6 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: '50.img.avito.st',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
         hostname: 'semenjalnica.si',
         port: '',
         pathname: '/**',
@@ -118,12 +112,20 @@ const nextConfig: NextConfig = {
         hostname: 'img02.flagma-ge.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.ibb.co',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
 };
 
 export default nextConfig;
+
+    
 
     
 

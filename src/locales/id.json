@@ -247,6 +247,13 @@
                 "certification": "Disertai dengan sertifikat dari Kantor Uji Negara Uzbekistan."
             }
         },
+        "specialOffer": {
+            "title": "Penawaran Spesial",
+            "description": "Batangan emas eksklusif tersedia dengan harga spesial.",
+            "condition": "Diskon 2% untuk pembayaran di muka 100% untuk pesanan 5kg atau lebih.",
+            "buttonText": "Dapatkan Penawaran",
+            "alt": "Emas penawaran spesial"
+        },
         "refinedCard": {
             "alt": "Emas Murni 999.9",
             "title": "Emas Murni — Aset Andal Anda",
@@ -393,3 +400,5 @@
         "p3": "Tim kami terdiri dari para ahli berkualifikasi tinggi dengan pengalaman bertahun-tahun dalam perdagangan internasional, keuangan, dan konsultasi. Kami terus meningkatkan keterampilan dan pengetahuan kami untuk menawarkan strategi yang paling terkini dan efektif."
     }
 }
+
+    

@@ -4,7 +4,7 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Gem, ShieldCheck, Scale, Globe, ArrowRight, ArrowLeft, Check, X, Award, ExternalLink, ChevronRight } from 'lucide-react';
+import { Gem, ShieldCheck, Scale, Globe, ArrowRight, ArrowLeft, Check, X, Award, ExternalLink, ChevronRight, Star } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import Link from 'next/link';
 import { GoldInvestmentCalculator } from '@/components/gold-investment-calculator';
@@ -137,6 +137,37 @@ export default function AndrgoldPage() {
             </div>
         </section>
 
+        <section id="special-offer">
+            <Card className="grid md:grid-cols-2 overflow-hidden border-2 border-primary shadow-lg shadow-primary/20">
+                <div className="p-8 order-2 md:order-1">
+                    <h3 className="font-headline text-2xl font-bold text-primary mb-4 flex items-center gap-2">
+                        <Star className="w-6 h-6"/>
+                        {goldTranslations.specialOffer?.title}
+                    </h3>
+                    
+                    <div className="space-y-4">
+                        <p className="text-lg text-foreground">
+                            {goldTranslations.specialOffer?.description}
+                        </p>
+                        <div className="bg-primary/10 border-l-4 border-primary p-4 rounded-r-lg">
+                           <p className="font-bold text-primary">{goldTranslations.specialOffer?.condition}</p>
+                        </div>
+                         <Button asChild size="lg" className="mt-4">
+                            <Link href="#cta">{goldTranslations.specialOffer?.buttonText}</Link>
+                        </Button>
+                    </div>
+                </div>
+                 <div className="relative min-h-[300px] md:min-h-full bg-background order-1 md:order-2">
+                    <Image
+                        src="https://i.ibb.co/TBdxk3ZT/photo-2025-05-07-13-10-07.jpg"
+                        alt={goldTranslations.specialOffer?.alt || "Special offer gold"}
+                        fill
+                        className="object-cover"
+                    />
+                </div>
+            </Card>
+        </section>
+
         <section>
           <Card className="grid md:grid-cols-2 overflow-hidden border">
               <div className="relative min-h-[300px] md:min-h-full bg-background">
@@ -266,5 +297,7 @@ export default function AndrgoldPage() {
     </div>
   );
 }
+
+    
 
     
