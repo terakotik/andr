@@ -184,13 +184,13 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between text-left md:items-center text-xs text-muted-foreground">
           <p>© {new Date().getFullYear()} {translations.footer.copyright}</p>
           <div className="flex items-center gap-2">
-            <iframe 
+            {/* <iframe 
                 srcDoc={developerLogoHtml}
                 width="25" 
                 height="25" 
                 style={{ border: 'none', background: 'transparent' }}
                 title="Developer 3D Logo"
-            />
+            /> */}
             <a href="https://www.1target.ru/" target="_blank" rel="noopener noreferrer" className="transition-colors developer-link mt-2 md:mt-0">
                 {translations.footer.developerCredit}
             </a>
