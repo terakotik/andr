@@ -47,7 +47,7 @@ export default function AndrShopPage() {
     {
       name: shopTranslations.beans?.firstSort,
       price: "$4",
-      imageUrl: "https://50.img.avito.st/image/1/1.K6LcZra4h0vqz0VOhh4e5LzHhU1ixwVDqsKFSWzPj0Fq.Bk1OQxfN58FgVVEFASop3WwZI0H0hZfSPXSX0x9oHxM"
+      imageUrl: "https://semenjalnica.si/wp-content/uploads/2021/12/Zorin.jpg"
     },
     {
       name: shopTranslations.beans?.secondSort,
@@ -266,3 +266,5 @@ export default function AndrShopPage() {
     </div>
   );
 }
+
+    

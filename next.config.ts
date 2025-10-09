@@ -106,6 +106,12 @@ const nextConfig: NextConfig = {
         hostname: '50.img.avito.st',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'semenjalnica.si',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
@@ -117,3 +123,4 @@ export default nextConfig;
 
     
 
+    
