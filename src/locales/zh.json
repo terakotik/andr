@@ -1,0 +1,395 @@
+
+{
+    "header": {
+        "home": "首页",
+        "investors": "致投资者和银行",
+        "consulting": "咨询",
+        "procurement": "采购",
+        "contact": "联系方式",
+        "about": "关于我们",
+        "projects": "我们的项目",
+        "contactUs": "联系我们"
+    },
+    "home": {
+        "hero": {
+            "title": "欢迎来到可靠投资和国际贸易的世界",
+            "subtitle": "您在全球业务中的战略合作伙伴。我们是一家领先的国际公司，专注于三个关键领域：贵金属交易、专业咨询以及向全球市场供应高品质食品。",
+            "servicesButton": "我们的业务"
+        },
+        "consultingDirections": {
+            "title": "主要业务领域",
+            "subtitle": "我们为各行各业的战略业务发展提供全面的解决方案。"
+        },
+        "featuredServices": {
+            "management": {
+                "title": "管理咨询",
+                "description": "优化管理体系和组织结构以提高生产力。",
+                "details": "我们对您的业务流程进行深入分析，并实施先进的管理技术以实现最高效率。"
+            },
+            "financial": {
+                "title": "财务咨询",
+                "description": "分析投资机会，制定战略，管理资产组合并最小化风险。",
+                "details": "我们的专家将帮助您有效管理财务，优化成本并寻找新的资金来源。"
+            },
+            "planning": {
+                "title": "财务规划",
+                "description": "为公司和个人制定全面的财务计划和预算。",
+                "details": "我们将帮助您创建一个可持续的财务模型，确保您的业务和个人财富稳定增长。"
+            },
+            "accreditive": {
+                "title": "银行信用证支持",
+                "description": "确保国际贸易操作的可靠性和安全性。",
+                "details": "我们为获取和执行银行信用证提供全面支持。我们与马来西亚“Asia invest”的合作关系确保了客户的可靠性和优惠条件。"
+            }
+        },
+        "learnMore": "了解更多",
+        "orderButton": "订购",
+        "ourProjects": {
+            "title": "我们的业务",
+            "gold": "向全球市场销售和供应投资级黄金。",
+            "shop": "批发供应高品质食品。",
+            "consulting": "为业务战略和增长提供专业咨询。",
+            "goldTitle": "黄金销售",
+            "shopTitle": "产品销售",
+            "consultingTitle": "咨询"
+        },
+        "whyChooseUs": {
+            "title": "我们的竞争优势",
+            "subtitle": "我们公司的成功基于全球专业知识与对不同市场本地特点的深刻理解的独特结合。",
+            "points": [
+                "全球专业知识和本地市场知识",
+                "交易的可靠性和完全透明",
+                "为每位客户提供个性化方法",
+                "积极利用技术创新"
+            ],
+            "aboutUsButton": "联系我们",
+            "imageAlt": "我们的竞争优势"
+        },
+        "testimonials": {
+            "title": "客户评价",
+            "reviews": [
+                {
+                    "name": "阿列克谢·彼得罗夫",
+                    "title": "'TechnoStroy'首席执行官",
+                    "avatar": "https://picsum.photos/seed/avatar1/100/100",
+                    "text": "感谢AndrGlobal，我们的战略规划达到了一个新的水平。他们的团队对我们的业务有深刻的理解，并提供了真正创新的解决方案。"
+                },
+                {
+                    "name": "埃琳娜·伊万诺娃",
+                    "title": "'InvestGroup'首席财务官",
+                    "avatar": "https://picsum.photos/seed/avatar2/100/100",
+                    "text": "专业精神和个性化方法是AndrGlobal的与众不同之处。他们帮助我们优化了资金流，并显著降低了成本。"
+                }
+            ]
+        },
+        "startCollaboration": {
+            "title": "今天就开始与我们合作",
+            "subtitle": "我们的专家团队随时准备回答您的所有问题，并提供有关我们服务的详细信息。",
+            "formTitle": "给我们发消息"
+        }
+    },
+    "contactForm": {
+        "title": "联系我们",
+        "nameLabel": "全名",
+        "namePlaceholder": "张三",
+        "emailLabel": "电子邮件地址",
+        "emailPlaceholder": "zhang.san@example.com",
+        "messageLabel": "您的消息",
+        "messagePlaceholder": "告诉我们我们能如何帮助您...",
+        "submitButton": "发送消息",
+        "validation": {
+            "name": "姓名必须至少包含2个字符。",
+            "email": "请输入有效的电子邮件地址。",
+            "message": "消息必须至少包含10个字符。"
+        },
+        "toast": {
+            "title": "消息已发送！",
+            "description": "感谢您的留言。我们会尽快与您联系。"
+        }
+    },
+    "orderForm": {
+        "nameLabel": "全名",
+        "namePlaceholder": "张三",
+        "emailLabel": "电子邮件",
+        "emailPlaceholder": "you@example.com",
+        "phoneLabel": "电话号码",
+        "phonePlaceholder": "+86 138 1234 5678",
+        "productLabel": "产品类别",
+        "productPlaceholder": "选择一个类别",
+        "messageLabel": "您的咨询",
+        "messagePlaceholder": "描述您订单的详细信息...",
+        "submitButton": "发送咨询",
+        "validation": {
+            "name": "姓名是必填项。",
+            "email": "请输入有效的电子邮件。",
+            "phone": "请输入有效的电话号码。",
+            "product": "请选择一个产品类别。",
+            "message": "消息必须至少包含10个字符。"
+        },
+        "toast": {
+            "title": "咨询已发送！",
+            "description": "谢谢！我们会尽快与您联系以讨论详细信息。"
+        }
+    },
+    "contactModal": {
+        "title": "我们在即时通讯应用上在线",
+        "scanQR": "用手机更方便？<br/>扫描二维码",
+        "whatsappButton": "WhatsApp"
+    },
+    "footer": {
+        "ourProjects": {
+            "title": "我们的合作伙伴项目",
+            "subtitle": "将我们的专业知识扩展到多元化市场。"
+        },
+        "learnMore": "了解更多",
+        "projects": {
+            "gold": "向全球市场销售和供应黄金。",
+            "shop": "批发食品供应。"
+        },
+        "companyDescription": "专业的商业咨询，以提升您的战略和运营。",
+        "quickLinks": {
+            "title": "快速链接",
+            "gold": "黄金销售",
+            "shop": "产品销售",
+            "consulting": "咨询",
+            "about": "关于我们",
+            "contact": "联系方式"
+        },
+        "followUs": {
+            "title": "关注我们"
+        },
+        "ourOffice": {
+            "title": "我们的办公室"
+        },
+        "subscribe": {
+            "title": "订阅我们的新闻通讯",
+            "placeholder": "您的电子邮件",
+            "button": "订阅"
+        },
+        "copyright": "AndrGlobal Consulting. 版权所有。",
+        "developerCredit": "开发与自动化"
+    },
+    "consulting": {
+        "hero": {
+            "title": "为您的业务提供全面的解决方案",
+            "subtitle": "借助我们的专家支持，为您的公司开启新的视野。我们将帮助您制定并实施通往成功的战略。",
+            "servicesButton": "我们的服务",
+            "contactButton": "联系我们",
+            "formTitle": "获取咨询"
+        },
+        "consultingServicesSection": {
+            "title": "主要咨询服务",
+            "subtitle": "我们专注于保证您业务增长和稳定的战略方向。"
+        },
+        "services": {
+            "management": {
+                "title": "管理咨询",
+                "description": "协助制定和实施有效的管理体系，优化组织结构，提高生产力。我们分析当前的业务流程，找出瓶颈，并提供能带来显著生产力增长的解决方案。"
+            },
+            "financial": {
+                "title": "财务咨询",
+                "description": "分析投资机会，制定战略，管理资产组合并最小化风险。我们帮助确定关键发展方向，制定公司使命和愿景，并创建实现战略目标的路线图。"
+            },
+            "planning": {
+                "title": "财务规划",
+                "description": "为公司和个人制定全面的财务计划和预算，并监控其执行。我们帮助您将技术用作业务增长的工具。"
+            },
+            "accreditive": {
+                "title": "银行信用证支持",
+                "description": "我们为国际贸易操作提供获取和执行银行信用证的全面支持。我们与马来西亚“Asia invest”的合作关系确保了客户的可靠性和优惠条件。"
+            }
+        },
+        "startTransformation": {
+            "title": "开始您的转型",
+            "subtitle": "准备好迈出下一步了吗？联系我们进行个性化咨询。",
+            "formTitle": "给我们发消息"
+        }
+    },
+    "goldPage": {
+        "preHeroTitle": "黄金销售",
+        "heroTitle": "为您的未来提供可靠的黄金投资",
+        "heroSubtitle": "您在贵金属世界中的战略合作伙伴。我们向全球市场提供高质量投资黄金的可靠供应。",
+        "heroButton": "发送请求",
+        "investmentTitle": "可靠且有利可图的黄金投资",
+        "investmentSubtitle": "我们是您获取和供应符合国际标准的高质量金条的值得信赖的合作伙伴。",
+        "advantages": {
+            "quality": {
+                "title": "质量保证",
+                "description": "黄金的纯度和来源由证书确认。"
+            },
+            "reliability": {
+                "title": "供应可靠性",
+                "description": "严格遵守FCA塔什干合同的条款和条件。"
+            },
+            "approach": {
+                "title": "个性化方法",
+                "description": "我们准备根据您的需求调整合作条款。"
+            }
+        },
+        "products": {
+            "title": "我们的产品",
+            "subtitle": "我们提供来自阿富汗的原金和最高纯度的精炼金。",
+            "purityLabel": "纯度",
+            "formLabel": "形式",
+            "certificationLabel": "认证",
+            "raw": {
+                "title": "原金",
+                "origin": "产地：阿富汗",
+                "purity": "93-97%（22-23克拉）",
+                "form": "标准金条（1、2、3公斤）。",
+                "idealFor": "非常适合后续加工和精炼。"
+            },
+            "refined": {
+                "title": "精炼金",
+                "afterRefining": "完全提纯后",
+                "purity": "999.9（四个九）",
+                "form": "标准金条（1、2、3公斤）。",
+                "certification": "随附乌兹别克国家检测局的证书。"
+            }
+        },
+        "refinedCard": {
+            "alt": "精炼金 999.9",
+            "title": "精炼金 — 您的可靠资产",
+            "characteristics": {
+                "title": "主要特点：",
+                "category": { "label": "类别", "value": "投资黄金（FINE GOLD）" },
+                "purity": { "label": "纯度", "value": "999.9（'四个九'）— 最高纯度标准。" },
+                "manufacturer": { "label": "制造商", "value": "RUAH Gold Refinery（乌兹别克斯坦）" },
+                "guarantees": { "label": "保证", "value": "已认证，负责任采购。" }
+            },
+            "investmentCase": {
+                "title": "为什么这是一项有利可图的投资？",
+                "description": "999.9纯度的黄金是银行和投资者的全球标准。“IN GOLD WE INVEST”标志和证书的存在证实了其流动性和价值。这不仅仅是一种金属，而是在任何经济形势下保值资本的稳定资产。"
+            },
+            "idealFor": {
+                "title": "非常适合：",
+                "investors": { "label": "私人投资者", "value": "用于保护和增值储蓄。" },
+                "banks": { "label": "银行", "value": "作为可靠的储备资产。" },
+                "buyers": { "label": "大宗买家", "value": "作为不稳定时期的战略资产。" }
+            }
+        },
+        "delivery": {
+            "title": "交货条款：FCA塔什干（国际贸易术语解释通则2020）",
+            "seller": {
+                "title": "卖方责任（我方）",
+                "duties": [
+                    "在塔什干准备出口货物。",
+                    "办理出口报关手续。",
+                    "承担货物移交给承运人之前的风险。",
+                    "提供所有必要文件。"
+                ]
+            },
+            "buyer": {
+                "title": "买方责任",
+                "duties": [
+                    "指定承运人并签订运输合同。",
+                    "从我方收到货物起承担风险。",
+                    "办理进口报关手续。",
+                    "组织后续运输。"
+                ]
+            },
+            "carrier": "承运人"
+        },
+        "pricing": {
+            "title": "查看黄金投资的盈利能力",
+            "subtitle": "价格基于LBMA黄金价格报价并有协议折扣。使用我们的计算器估算您的潜在利润。",
+            "checkPrice": "查看LBMA价格"
+        },
+        "chart": {
+            "title": "黄金价格动态：10年展望",
+            "description": "预计<span class='font-bold text-primary'>10年内</span>将实现<strong>300%</strong>的惊人增长。黄金表现出稳定的长期增长，证实了其作为可靠投资资产的地位。",
+            "priceLabel": "黄金价格",
+            "investmentAmountLabel": "投资金额（$）",
+            "investmentYearLabel": "投资年份",
+            "calculateButton": "计算利润",
+            "finalValueLabel": "2025年的最终价值",
+            "profitLabel": "净利润",
+            "yourInvestment": "您的投资",
+            "totalGrowth": "总增长"
+        },
+        "cta": {
+            "title": "开始与我们合作",
+            "subtitle": "联系我们讨论细节并接收个性化报价。我们的团队随时准备回答您的所有问题。",
+            "formTitle": "给我们发消息"
+        }
+    },
+    "shopPage": {
+        "heroTitle": "为您的业务提供食品供应",
+        "heroSubtitle": "高品质原材料。成熟的物流。直接合同。",
+        "heroButton": "查看产品",
+        "about": "我们为制造和批发公司供应主要农作物。我们的专长是无可挑剔的产品质量和对中亚及中东国家的可靠供应。",
+        "geography": {
+            "title": "供应地理",
+            "subtitle": "我们已经向阿富汗、巴基斯坦、印度和中国供货。",
+            "heroSubtitle": "我们已经拥有成熟的物流和稳定的产品供应到：",
+            "countries": {
+                "afghanistan": "阿富汗",
+                "pakistan": "巴基斯坦",
+                "india": "印度",
+                "china": "中国"
+            }
+        },
+        "advantages": {
+            "title": "我们的主要优势",
+            "stability": {
+                "title": "供应稳定",
+                "description": "我们直接与制造商合作，即使是大合同也能保证数量和遵守期限。"
+            },
+            "quality": {
+                "title": "质量控制",
+                "description": "所有产品均符合国际市场的严格标准和要求。"
+            },
+            "logistics": {
+                "title": "成熟的物流",
+                "description": "我们已经向阿富汗、巴基斯坦、印度和中国供货。可靠的交钥匙供应链。"
+            },
+            "price": {
+                "title": "有竞争力的价格",
+                "description": "我们 eliminat 不必要的中间商，为您的业务提供优惠条件。"
+            }
+        },
+        "sectionTitle": "主要产品",
+        "products": {
+            "peanuts": {
+                "name": "花生",
+                "description": ""
+            },
+            "grains": {
+                "name": "谷物",
+                "description": ""
+            },
+            "legumes": {
+                "name": "豆类",
+                "description": ""
+            },
+            "oilseeds": {
+                "name": "油籽",
+                "description": ""
+            }
+        },
+        "beans": {
+            "title": "豆子",
+            "firstSort": "一等品",
+            "secondSort": "二等品",
+            "handCalibrated": "手选品",
+            "lentils": "小扁豆"
+        },
+        "ctaTitle": "发送咨询",
+        "ctaSubtitle": "我们将为您提供高品质的原材料和可靠的交钥匙物流。",
+        "ctaButton": "发送咨询以获取计算",
+        "payButton": "使用Instapay支付",
+        "paypalButton": "使用PayPal支付",
+        "paymentToast": {
+            "title": "付款处理中",
+            "description": "付款功能正在设置中。请联系我们以完成您的订单。"
+        },
+        "buyButton": "购买",
+        "instapayLogoAlt": "Instapay标志"
+    },
+    "aboutPage": {
+        "title": "关于我们",
+        "p1": "ANDR GLOBAL FINANCIAL 是您在全球业务中的战略合作伙伴。我们是一家领先的国际公司，专注于三个关键领域：贵金属交易、专业咨询以及向全球市场供应高品质食品。",
+        "p2": "我们的使命是为客户提供可靠高效的解决方案，促进他们的成长和繁荣。我们致力于建立基于信任、透明和共同成功愿望的长期合作伙伴关系。",
+        "p3": "我们的团队由在国际贸易、金融和咨询领域拥有多年经验的高素质专家组成。我们不断提升我们的技能和知识，以便为您提供最新、最有效的策略。"
+    }
+}

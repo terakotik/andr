@@ -4,8 +4,9 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 import ru from '@/locales/ru.json';
 import en from '@/locales/en.json';
 import id from '@/locales/id.json';
+import zh from '@/locales/zh.json';
 
-export type LanguageCode = 'ru' | 'en' | 'id';
+export type LanguageCode = 'ru' | 'en' | 'id' | 'zh';
 
 export interface Language {
     code: LanguageCode;
@@ -16,9 +17,10 @@ export const languages: { [key in LanguageCode]?: Language } = {
     ru: { code: 'ru', name: 'Русский' },
     en: { code: 'en', name: 'English' },
     id: { code: 'id', name: 'Bahasa Indonesia' },
+    zh: { code: 'zh', name: '中文' },
 };
 
-const translations = { ru, en, id };
+const translations = { ru, en, id, zh };
 
 interface LanguageContextType {
     language: LanguageCode;
