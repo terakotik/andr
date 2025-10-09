@@ -13,10 +13,10 @@ export interface Language {
     name: string;
 }
 
-export const languages: { [key in LanguageCode]?: Language } = {
+export const languages: { [key in LanguageCode]: Language } = {
+    id: { code: 'id', name: 'Bahasa Indonesia' },
     ru: { code: 'ru', name: 'Русский' },
     en: { code: 'en', name: 'English' },
-    id: { code: 'id', name: 'Bahasa Indonesia' },
     zh: { code: 'zh', name: '中文' },
 };
 
