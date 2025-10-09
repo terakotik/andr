@@ -205,13 +205,13 @@ export default function AndrShopPage() {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {beanProducts.map((product) => (
-              <Card key={product.name} className="flex flex-col overflow-hidden transition-all duration-300 p-0 border-0">
+              <Card key={product.name} className="flex flex-col overflow-hidden transition-all duration-300 p-0 border">
                   <div className="group relative overflow-hidden h-64 flex flex-col justify-end text-white rounded-t-lg">
                       <Image 
                           src={product.imageUrl}
                           alt={product.name}
                           fill
-                          className="object-cover transition-transform duration-500 group-hover:scale-110"
+                          className={`object-cover transition-transform duration-500 ${product.name === shopTranslations.beans?.firstSort ? 'scale-125 object-top' : 'group-hover:scale-110'}`}
                           data-ai-hint="beans legumes"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
@@ -222,7 +222,7 @@ export default function AndrShopPage() {
                           <p className="text-3xl font-bold text-white mt-2">{product.price}</p>
                       </div>
                   </div>
-                  <Button className="w-full rounded-t-none">{shopTranslations.buyButton}</Button>
+                  <Button className="w-full rounded-none">{shopTranslations.buyButton}</Button>
               </Card>
             ))}
           </div>
