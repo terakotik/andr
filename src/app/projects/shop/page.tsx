@@ -66,6 +66,12 @@ export default function AndrShopPage() {
       price: "$8",
       imageUrl: "https://images.unsplash.com/photo-1572527838520-2c30fad1fb0d?q=80&w=1974&auto=format&fit=crop"
     },
+    {
+      icon: <Leaf className="h-8 w-8 text-primary" />,
+      name: shopTranslations.beans?.lentils,
+      price: "$2",
+      imageUrl: "https://st5.depositphotos.com/4603773/67243/i/450/depositphotos_672436680-stock-photo-lentils-spread-bamboo-colander.jpg"
+    }
   ];
 
   const advantages = [
@@ -268,5 +274,7 @@ export default function AndrShopPage() {
     </div>
   );
 }
+
+    
 
     

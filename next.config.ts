@@ -88,11 +88,19 @@ const nextConfig: NextConfig = {
         hostname: 'guide.insta-pay.ch',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'st5.depositphotos.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
 };
 
 export default nextConfig;
+
+    
 
     
