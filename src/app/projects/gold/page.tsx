@@ -138,26 +138,26 @@ export default function AndrgoldPage() {
         </section>
 
         <section id="special-offer">
-            <Card className="grid md:grid-cols-2 overflow-hidden border-2 border-primary shadow-lg shadow-primary/20">
+            <Card className="grid md:grid-cols-2 overflow-hidden border-2 bg-black border-gray-700 shadow-lg shadow-primary/20">
                 <div className="p-8 order-2 md:order-1">
-                    <h3 className="font-headline text-2xl font-bold text-primary mb-4 flex items-center gap-2">
-                        <Star className="w-6 h-6"/>
+                    <h3 className="font-headline text-2xl font-bold text-white mb-4 flex items-center gap-2">
+                        <Star className="w-6 h-6 text-white"/>
                         {goldTranslations.specialOffer?.title}
                     </h3>
                     
                     <div className="space-y-4">
-                        <p className="text-lg text-foreground">
+                        <p className="text-lg text-gray-300">
                             {goldTranslations.specialOffer?.description}
                         </p>
-                        <div className="bg-primary/10 border-l-4 border-primary p-4 rounded-r-lg">
-                           <p className="font-bold text-primary">{goldTranslations.specialOffer?.condition}</p>
+                        <div className="bg-gray-800 p-4 rounded-lg">
+                           <p className="font-bold text-white">{goldTranslations.specialOffer?.condition}</p>
                         </div>
-                         <Button asChild size="lg" className="mt-4">
+                         <Button asChild size="lg" className="mt-4 bg-white text-black hover:bg-gray-200">
                             <Link href="#cta">{goldTranslations.specialOffer?.buttonText}</Link>
                         </Button>
                     </div>
                 </div>
-                 <div className="relative min-h-[300px] md:min-h-full bg-background order-1 md:order-2">
+                 <div className="relative min-h-[300px] md:min-h-full order-1 md:order-2">
                     <Image
                         src="https://i.ibb.co/TBdxk3ZT/photo-2025-05-07-13-10-07.jpg"
                         alt={goldTranslations.specialOffer?.alt || "Special offer gold"}
@@ -297,6 +297,8 @@ export default function AndrgoldPage() {
     </div>
   );
 }
+
+    
 
     
 
