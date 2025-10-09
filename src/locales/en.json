@@ -383,6 +383,7 @@
             "title": "Payment in Progress",
             "description": "Payment functionality is being set up. Please contact us to complete your order."
         },
+        "buyButton": "Buy",
         "instapayLogoAlt": "Instapay Logo"
     },
     "aboutPage": {
@@ -392,7 +393,5 @@
         "p3": "Our team consists of highly qualified experts with many years of experience in international trade, finance, and consulting. We are constantly improving our skills and knowledge to offer you the most current and effective strategies."
     }
 }
-
-    
 
     
