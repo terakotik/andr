@@ -112,12 +112,20 @@ const nextConfig: NextConfig = {
         hostname: 'semenjalnica.si',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'img02.flagma-ge.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
 };
 
 export default nextConfig;
+
+    
 
     
 
