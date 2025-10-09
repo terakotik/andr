@@ -52,12 +52,12 @@ export default function AndrShopPage() {
     {
       name: shopTranslations.beans?.secondSort,
       price: "$1.8",
-      imageUrl: "https://img02.flagma-ge.com/photo/fasol-optom-iz-uzbekistana-1785184_big.jpg"
+      imageUrl: "https://ir.ozone.ru/s3/multimedia-q/wc1000/6272410478.jpg"
     },
     {
       name: shopTranslations.beans?.handCalibrated,
       price: "$8",
-      imageUrl: "https://ir.ozone.ru/s3/multimedia-q/wc1000/6272410478.jpg"
+      imageUrl: "https://img02.flagma-ge.com/photo/fasol-optom-iz-uzbekistana-1785184_big.jpg"
     },
     {
       name: shopTranslations.beans?.lentils,
@@ -272,3 +272,4 @@ export default function AndrShopPage() {
     
 
     
+
