@@ -49,25 +49,21 @@ export default function AndrShopPage() {
 
   const beanProducts = [
     {
-      icon: <Star className="h-8 w-8 text-primary" />,
       name: shopTranslations.beans?.firstSort,
       price: "$4",
       imageUrl: "https://images.unsplash.com/photo-1599579085809-d5d856024104?q=80&w=1974&auto=format&fit=crop"
     },
     {
-      icon: <Circle className="h-8 w-8 text-primary" />,
       name: shopTranslations.beans?.secondSort,
       price: "$1.8",
       imageUrl: "https://images.unsplash.com/photo-1627910245383-a950a2599d14?q=80&w=1964&auto=format&fit=crop"
     },
     {
-      icon: <Diamond className="h-8 w-8 text-primary" />,
       name: shopTranslations.beans?.handCalibrated,
       price: "$8",
       imageUrl: "https://images.unsplash.com/photo-1572527838520-2c30fad1fb0d?q=80&w=1974&auto=format&fit=crop"
     },
     {
-      icon: <Leaf className="h-8 w-8 text-primary" />,
       name: shopTranslations.beans?.lentils,
       price: "$2",
       imageUrl: "https://st5.depositphotos.com/4603773/67243/i/450/depositphotos_672436680-stock-photo-lentils-spread-bamboo-colander.jpg"
@@ -225,11 +221,8 @@ export default function AndrShopPage() {
                   <div className="relative p-6 z-10">
                       <div className="flex items-center justify-between">
                           <CardTitle className="font-headline text-2xl">{product.name}</CardTitle>
-                          <div className="p-3 bg-primary/20 backdrop-blur-sm rounded-full w-fit">
-                            {product.icon}
-                          </div>
                       </div>
-                      <p className="text-3xl font-bold text-primary mt-2">{product.price}</p>
+                      <p className="text-3xl font-bold text-white mt-2">{product.price}</p>
                   </div>
               </Card>
             ))}
@@ -274,7 +267,3 @@ export default function AndrShopPage() {
     </div>
   );
 }
-
-    
-
-    
