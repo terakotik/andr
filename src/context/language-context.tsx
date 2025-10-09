@@ -3,21 +3,22 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import ru from '@/locales/ru.json';
 import en from '@/locales/en.json';
+import id from '@/locales/id.json';
 
-export type LanguageCode = 'ru' | 'en' | 'cn';
+export type LanguageCode = 'ru' | 'en' | 'id';
 
 export interface Language {
     code: LanguageCode;
     name: string;
 }
 
-export const languages: { [key in LanguageCode]: Language } = {
+export const languages: { [key in LanguageCode]?: Language } = {
     ru: { code: 'ru', name: 'Русский' },
     en: { code: 'en', name: 'English' },
-    cn: { code: 'cn', name: '中文' },
+    id: { code: 'id', name: 'Bahasa Indonesia' },
 };
 
-const translations = { ru, en };
+const translations = { ru, en, id };
 
 interface LanguageContextType {
     language: LanguageCode;

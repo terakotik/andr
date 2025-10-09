@@ -1,0 +1,395 @@
+
+{
+    "header": {
+        "home": "Beranda",
+        "investors": "Untuk Investor & Bank",
+        "consulting": "Konsultasi",
+        "procurement": "Pengadaan",
+        "contact": "Kontak",
+        "about": "Tentang Kami",
+        "projects": "Proyek Kami",
+        "contactUs": "Hubungi Kami"
+    },
+    "home": {
+        "hero": {
+            "title": "Selamat datang di dunia investasi yang andal dan perdagangan internasional",
+            "subtitle": "Mitra strategis Anda dalam bisnis global. Kami adalah perusahaan internasional terkemuka yang berspesialisasi dalam tiga bidang utama: perdagangan logam mulia, konsultasi profesional, dan pasokan makanan berkualitas tinggi ke pasar dunia.",
+            "servicesButton": "Bisnis Kami"
+        },
+        "consultingDirections": {
+            "title": "Area Bisnis Utama",
+            "subtitle": "Kami menawarkan solusi komprehensif untuk pengembangan bisnis strategis di berbagai sektor."
+        },
+        "featuredServices": {
+            "management": {
+                "title": "Konsultasi Manajemen",
+                "description": "Optimalisasi sistem manajemen dan struktur organisasi untuk meningkatkan produktivitas.",
+                "details": "Kami menawarkan analisis mendalam tentang proses bisnis Anda dan implementasi teknik manajemen tingkat lanjut untuk mencapai efisiensi maksimum."
+            },
+            "financial": {
+                "title": "Konsultasi Keuangan",
+                "description": "Analisis peluang investasi, pengembangan strategi, manajemen portofolio aset, dan minimalisasi risiko.",
+                "details": "Spesialis kami akan membantu Anda mengelola keuangan secara efektif, mengoptimalkan biaya, dan menemukan sumber pendanaan baru."
+            },
+            "planning": {
+                "title": "Perencanaan Keuangan",
+                "description": "Pengembangan rencana keuangan dan anggaran yang komprehensif untuk perusahaan dan individu.",
+                "details": "Kami akan membantu Anda menciptakan model keuangan yang berkelanjutan yang akan memastikan pertumbuhan stabil bisnis dan kesejahteraan pribadi Anda."
+            },
+            "accreditive": {
+                "title": "Dukungan Letter of Credit Bank",
+                "description": "Memastikan keandalan dan keamanan operasi perdagangan internasional.",
+                "details": "Kami menyediakan dukungan penuh untuk mendapatkan dan melaksanakan letter of credit bank. Kemitraan kami dengan 'Asia invest' (Malaysia) memastikan keandalan dan persyaratan yang menguntungkan bagi klien kami."
+            }
+        },
+        "learnMore": "Pelajari Lebih Lanjut",
+        "orderButton": "Pesan",
+        "ourProjects": {
+            "title": "Bisnis Kami",
+            "gold": "Penjualan dan pasokan emas tingkat investasi ke pasar dunia.",
+            "shop": "Pasokan grosir produk makanan berkualitas tinggi.",
+            "consulting": "Konsultasi profesional untuk strategi dan pertumbuhan bisnis.",
+            "goldTitle": "Penjualan Emas",
+            "shopTitle": "Penjualan Produk",
+            "consultingTitle": "Konsultasi"
+        },
+        "whyChooseUs": {
+            "title": "Keunggulan Kompetitif Kami",
+            "subtitle": "Keberhasilan perusahaan kami didasarkan pada kombinasi unik dari keahlian global dan pemahaman mendalam tentang spesifikasi lokal dari berbagai pasar.",
+            "points": [
+                "Keahlian global dan pengetahuan tentang pasar lokal",
+                "Keandalan dan transparansi penuh transaksi",
+                "Pendekatan individual untuk setiap klien",
+                "Penggunaan aktif inovasi teknologi"
+            ],
+            "aboutUsButton": "Hubungi Kami",
+            "imageAlt": "Keunggulan kompetitif kami"
+        },
+        "testimonials": {
+            "title": "Apa Kata Klien Kami",
+            "reviews": [
+                {
+                    "name": "Alexey Petrov",
+                    "title": "CEO, 'TechnoStroy'",
+                    "avatar": "https://picsum.photos/seed/avatar1/100/100",
+                    "text": "Berkat AndrGlobal, kami telah mencapai tingkat perencanaan strategis yang baru. Tim mereka menunjukkan pemahaman mendalam tentang bisnis kami dan menawarkan solusi yang benar-benar inovatif."
+                },
+                {
+                    "name": "Elena Ivanova",
+                    "title": "CFO, 'InvestGroup'",
+                    "avatar": "https://picsum.photos/seed/avatar2/100/100",
+                    "text": "Profesionalisme dan pendekatan individual adalah yang membedakan AndrGlobal. Mereka membantu kami mengoptimalkan arus keuangan dan mengurangi biaya secara signifikan."
+                }
+            ]
+        },
+        "startCollaboration": {
+            "title": "Mulai berkolaborasi dengan kami hari ini",
+            "subtitle": "Tim ahli kami siap menjawab semua pertanyaan Anda dan memberikan informasi terperinci tentang layanan kami.",
+            "formTitle": "Kirimkan pesan kepada kami"
+        }
+    },
+    "contactForm": {
+        "title": "Hubungi Kami",
+        "nameLabel": "Nama Lengkap",
+        "namePlaceholder": "John Doe",
+        "emailLabel": "Alamat Email",
+        "emailPlaceholder": "john.doe@example.com",
+        "messageLabel": "Pesan Anda",
+        "messagePlaceholder": "Beri tahu kami bagaimana kami dapat membantu...",
+        "submitButton": "Kirim Pesan",
+        "validation": {
+            "name": "Nama harus terdiri dari minimal 2 karakter.",
+            "email": "Harap masukkan alamat email yang valid.",
+            "message": "Pesan harus terdiri dari minimal 10 karakter."
+        },
+        "toast": {
+            "title": "Pesan Terkirim!",
+            "description": "Terima kasih atas pesan Anda. Kami akan segera menghubungi Anda."
+        }
+    },
+    "orderForm": {
+        "nameLabel": "Nama Lengkap",
+        "namePlaceholder": "John Doe",
+        "emailLabel": "Email",
+        "emailPlaceholder": "anda@example.com",
+        "phoneLabel": "Nomor Telepon",
+        "phonePlaceholder": "+62 812 3456 7890",
+        "productLabel": "Kategori Produk",
+        "productPlaceholder": "Pilih kategori",
+        "messageLabel": "Pertanyaan Anda",
+        "messagePlaceholder": "Jelaskan detail pesanan Anda...",
+        "submitButton": "Kirim Pertanyaan",
+        "validation": {
+            "name": "Nama wajib diisi.",
+            "email": "Harap masukkan email yang valid.",
+            "phone": "Harap masukkan nomor telepon yang valid.",
+            "product": "Harap pilih kategori produk.",
+            "message": "Pesan harus terdiri dari minimal 10 karakter."
+        },
+        "toast": {
+            "title": "Pertanyaan Terkirim!",
+            "description": "Terima kasih! Kami akan segera menghubungi Anda untuk membahas detailnya."
+        }
+    },
+    "contactModal": {
+        "title": "Kami tersedia di aplikasi pesan",
+        "scanQR": "Lebih nyaman dari ponsel Anda? <br/> Pindai kode QR",
+        "whatsappButton": "WhatsApp"
+    },
+    "footer": {
+        "ourProjects": {
+            "title": "Proyek Mitra Kami",
+            "subtitle": "Memperluas keahlian kami ke pasar yang beragam."
+        },
+        "learnMore": "Pelajari Lebih Lanjut",
+        "projects": {
+            "gold": "Penjualan dan pasokan emas ke pasar dunia.",
+            "shop": "Pasokan makanan grosir."
+        },
+        "companyDescription": "Konsultasi bisnis profesional untuk meningkatkan strategi dan operasi Anda.",
+        "quickLinks": {
+            "title": "Tautan Cepat",
+            "gold": "Penjualan Emas",
+            "shop": "Penjualan Produk",
+            "consulting": "Konsultasi",
+            "about": "Tentang Kami",
+            "contact": "Kontak"
+        },
+        "followUs": {
+            "title": "Ikuti Kami"
+        },
+        "ourOffice": {
+            "title": "Kantor Kami"
+        },
+        "subscribe": {
+            "title": "Berlangganan buletin kami",
+            "placeholder": "Email Anda",
+            "button": "Berlangganan"
+        },
+        "copyright": "AndrGlobal Consulting. Hak cipta dilindungi undang-undang.",
+        "developerCredit": "Pengembangan dan otomatisasi"
+    },
+    "consulting": {
+        "hero": {
+            "title": "Solusi komprehensif untuk bisnis Anda",
+            "subtitle": "Temukan cakrawala baru untuk perusahaan Anda dengan dukungan ahli kami. Kami akan membantu Anda mengembangkan dan menerapkan strategi yang mengarah pada kesuksesan.",
+            "servicesButton": "Layanan Kami",
+            "contactButton": "Hubungi Kami",
+            "formTitle": "Dapatkan konsultasi"
+        },
+        "consultingServicesSection": {
+            "title": "Layanan Konsultasi Utama",
+            "subtitle": "Kami fokus pada arah strategis yang menjamin pertumbuhan dan stabilitas bisnis Anda."
+        },
+        "services": {
+            "management": {
+                "title": "Konsultasi Manajemen",
+                "description": "Bantuan dalam mengembangkan dan menerapkan sistem manajemen yang efektif, mengoptimalkan struktur organisasi, dan meningkatkan produktivitas. Kami menganalisis proses bisnis saat ini, mengidentifikasi hambatan, dan menawarkan solusi yang mengarah pada pertumbuhan produktivitas yang signifikan."
+            },
+            "financial": {
+                "title": "Konsultasi Keuangan",
+                "description": "Analisis peluang investasi, pengembangan strategi, manajemen portofolio aset, dan minimalisasi risiko. Kami membantu menentukan arah pengembangan utama, merumuskan misi dan visi perusahaan, dan membuat peta jalan untuk mencapai tujuan strategis."
+            },
+            "planning": {
+                "title": "Perencanaan Keuangan",
+                "description": "Pengembangan rencana keuangan dan anggaran yang komprehensif untuk perusahaan dan individu, dan pemantauan pelaksanaannya. Kami membantu Anda menggunakan teknologi sebagai alat untuk pertumbuhan bisnis."
+            },
+            "accreditive": {
+                "title": "Dukungan Letter of Credit Bank",
+                "description": "Kami menyediakan dukungan penuh untuk mendapatkan dan melaksanakan letter of credit bank untuk operasi perdagangan internasional. Kemitraan kami dengan 'Asia invest' (Malaysia) memastikan keandalan dan persyaratan yang menguntungkan bagi klien kami."
+            }
+        },
+        "startTransformation": {
+            "title": "Mulai Transformasi Anda",
+            "subtitle": "Siap mengambil langkah berikutnya? Hubungi kami untuk konsultasi pribadi.",
+            "formTitle": "Kirimkan pesan kepada kami"
+        }
+    },
+    "goldPage": {
+        "preHeroTitle": "Penjualan Emas",
+        "heroTitle": "Investasi Emas yang Andal untuk Masa Depan Anda",
+        "heroSubtitle": "Mitra strategis Anda di dunia logam mulia. Kami menyediakan pasokan andal emas investasi berkualitas tinggi ke pasar dunia.",
+        "heroButton": "Kirim Permintaan",
+        "investmentTitle": "Investasi Emas yang Andal dan Menguntungkan",
+        "investmentSubtitle": "Kami adalah mitra tepercaya Anda untuk akuisisi dan pasokan batangan emas berkualitas tinggi yang memenuhi standar internasional.",
+        "advantages": {
+            "quality": {
+                "title": "Jaminan Kualitas",
+                "description": "Kemurnian dan asal emas dikonfirmasi oleh sertifikat."
+            },
+            "reliability": {
+                "title": "Keandalan Pasokan",
+                "description": "Kepatuhan ketat terhadap syarat dan ketentuan kontrak FCA Tashkent."
+            },
+            "approach": {
+                "title": "Pendekatan Individual",
+                "description": "Kami siap menyesuaikan ketentuan kerja sama dengan kebutuhan Anda."
+            }
+        },
+        "products": {
+            "title": "Produk Kami",
+            "subtitle": "Kami menawarkan emas mentah dari Afghanistan dan emas murni dengan kemurnian tertinggi.",
+            "purityLabel": "Kemurnian",
+            "formLabel": "Bentuk",
+            "certificationLabel": "Sertifikasi",
+            "raw": {
+                "title": "Emas Mentah",
+                "origin": "Asal: Afghanistan",
+                "purity": "93-97% (22-23 karat)",
+                "form": "Batangan standar (1, 2, 3 kg).",
+                "idealFor": "Ideal untuk pemrosesan dan pemurnian lebih lanjut."
+            },
+            "refined": {
+                "title": "Emas Murni",
+                "afterRefining": "Setelah pemurnian penuh",
+                "purity": "999.9 (empat sembilan)",
+                "form": "Batangan standar (1, 2, 3 kg).",
+                "certification": "Disertai dengan sertifikat dari Kantor Uji Negara Uzbekistan."
+            }
+        },
+        "refinedCard": {
+            "alt": "Emas Murni 999.9",
+            "title": "Emas Murni — Aset Andal Anda",
+            "characteristics": {
+                "title": "Karakteristik Utama:",
+                "category": { "label": "Kategori", "value": "Emas Investasi (FINE GOLD)" },
+                "purity": { "label": "Kemurnian", "value": "999.9 ('empat sembilan') — standar kemurnian tertinggi." },
+                "manufacturer": { "label": "Produsen", "value": "RUAH Gold Refinery (Uzbekistan)" },
+                "guarantees": { "label": "Jaminan", "value": "Bersertifikat, Bersumber secara Bertanggung Jawab." }
+            },
+            "investmentCase": {
+                "title": "Mengapa ini investasi yang menguntungkan?",
+                "description": "Emas kemurnian 999.9 adalah standar global untuk bank dan investor. Tanda 'IN GOLD WE INVEST' dan adanya sertifikat mengkonfirmasi likuiditas dan nilainya. Ini bukan hanya logam, tetapi aset stabil untuk pelestarian modal dalam situasi ekonomi apa pun."
+            },
+            "idealFor": {
+                "title": "Ideal untuk:",
+                "investors": { "label": "Investor Swasta", "value": "Untuk melindungi dan menumbuhkan tabungan." },
+                "banks": { "label": "Bank", "value": "Sebagai aset cadangan yang andal." },
+                "buyers": { "label": "Pembeli Besar", "value": "Sebagai aset strategis di masa-masa tidak stabil." }
+            }
+        },
+        "delivery": {
+            "title": "Syarat Pengiriman: FCA Tashkent (Incoterms 2020)",
+            "seller": {
+                "title": "Tugas Penjual (kami)",
+                "duties": [
+                    "Menyiapkan barang untuk ekspor di Tashkent.",
+                    "Melakukan bea cukai ekspor.",
+                    "Menanggung risiko hingga barang diserahkan kepada pengangkut.",
+                    "Menyediakan semua dokumen yang diperlukan."
+                ]
+            },
+            "buyer": {
+                "title": "Tugas Pembeli",
+                "duties": [
+                    "Menunjuk pengangkut dan membuat kontrak pengangkutan.",
+                    "Menanggung risiko sejak menerima barang dari kami.",
+                    "Melakukan bea cukai impor.",
+                    "Mengatur transportasi lebih lanjut."
+                ]
+            },
+            "carrier": "Pengangkut"
+        },
+        "pricing": {
+            "title": "Lihat Profitabilitas Investasi Emas",
+            "subtitle": "Harga didasarkan pada kutipan Harga Emas LBMA dengan diskon yang disepakati. Gunakan kalkulator kami untuk memperkirakan potensi keuntungan Anda.",
+            "checkPrice": "Periksa Harga LBMA"
+        },
+        "chart": {
+            "title": "Dinamika Harga Emas: Prospek 10 Tahun",
+            "description": "Pertumbuhan yang mengesankan sebesar <strong>300%</strong> diproyeksikan <span class='font-bold text-primary'>dalam 10 tahun</span>. Emas menunjukkan pertumbuhan jangka panjang yang stabil, mengkonfirmasi statusnya sebagai aset investasi yang andal.",
+            "priceLabel": "Harga Emas",
+            "investmentAmountLabel": "Jumlah Investasi ($)",
+            "investmentYearLabel": "Tahun Investasi",
+            "calculateButton": "Hitung Keuntungan",
+            "finalValueLabel": "Nilai Akhir pada 2025",
+            "profitLabel": "Keuntungan Bersih",
+            "yourInvestment": "Investasi Anda",
+            "totalGrowth": "Pertumbuhan Total"
+        },
+        "cta": {
+            "title": "Mulai bekerja sama dengan kami",
+            "subtitle": "Hubungi kami untuk membahas detailnya dan menerima penawaran yang dipersonalisasi. Tim kami siap menjawab semua pertanyaan Anda.",
+            "formTitle": "Kirimkan pesan kepada kami"
+        }
+    },
+    "shopPage": {
+        "heroTitle": "Pasokan makanan untuk bisnis Anda",
+        "heroSubtitle": "Bahan baku berkualitas tinggi. Logistik yang mapan. Kontrak langsung.",
+        "heroButton": "Lihat Produk",
+        "about": "Kami memasok tanaman pertanian utama untuk perusahaan manufaktur dan grosir. Keahlian kami adalah kualitas produk yang sempurna dan pasokan yang andal ke negara-negara Asia Tengah dan Timur Tengah.",
+        "geography": {
+            "title": "Geografi pasokan",
+            "subtitle": "Kami sudah memasok ke Afghanistan, Pakistan, India, dan Cina.",
+            "heroSubtitle": "Kami sudah memiliki logistik yang mapan dan pasokan produk yang stabil ke:",
+            "countries": {
+                "afghanistan": "Afghanistan",
+                "pakistan": "Pakistan",
+                "india": "India",
+                "china": "Cina"
+            }
+        },
+        "advantages": {
+            "title": "Keunggulan utama kami",
+            "stability": {
+                "title": "Stabilitas pasokan",
+                "description": "Kami bekerja langsung dengan produsen, menjamin volume dan kepatuhan terhadap tenggat waktu bahkan untuk kontrak besar."
+            },
+            "quality": {
+                "title": "Kontrol kualitas",
+                "description": "Semua produk memenuhi standar dan persyaratan ketat pasar internasional."
+            },
+            "logistics": {
+                "title": "Logistik yang terbukti",
+                "description": "Kami sudah memasok ke Afghanistan, Pakistan, India, dan Cina. Rantai pasokan turnkey yang andal."
+            },
+            "price": {
+                "title": "Harga kompetitif",
+                "description": "Kami menghilangkan perantara yang tidak perlu, menawarkan kondisi yang menguntungkan untuk bisnis Anda."
+            }
+        },
+        "sectionTitle": "Produk utama",
+        "products": {
+            "peanuts": {
+                "name": "Kacang Tanah",
+                "description": ""
+            },
+            "grains": {
+                "name": "Biji-bijian",
+                "description": ""
+            },
+            "legumes": {
+                "name": "Kacang-kacangan",
+                "description": ""
+            },
+            "oilseeds": {
+                "name": "Biji Minyak",
+                "description": ""
+            }
+        },
+        "beans": {
+            "title": "Kacang",
+            "firstSort": "Sortiran Pertama",
+            "secondSort": "Sortiran Kedua",
+            "handCalibrated": "Sortiran Kalibrasi Tangan",
+            "lentils": "Lentil"
+        },
+        "ctaTitle": "Kirim Pertanyaan",
+        "ctaSubtitle": "Kami akan memberi Anda bahan baku berkualitas tinggi dan logistik turnkey yang andal.",
+        "ctaButton": "Kirim pertanyaan untuk perhitungan",
+        "payButton": "Bayar dengan Instapay",
+        "paypalButton": "Bayar dengan PayPal",
+        "paymentToast": {
+            "title": "Pembayaran Sedang Diproses",
+            "description": "Fungsionalitas pembayaran sedang disiapkan. Silakan hubungi kami untuk menyelesaikan pesanan Anda."
+        },
+        "buyButton": "Beli",
+        "instapayLogoAlt": "Logo Instapay"
+    },
+    "aboutPage": {
+        "title": "Tentang Kami",
+        "p1": "ANDR GLOBAL FINANCIAL adalah mitra strategis Anda dalam bisnis global. Kami adalah perusahaan internasional terkemuka yang berspesialisasi dalam tiga bidang utama: perdagangan logam mulia, konsultasi profesional, dan pasokan makanan berkualitas tinggi ke pasar dunia.",
+        "p2": "Misi kami adalah memberikan solusi yang andal dan efisien kepada klien yang berkontribusi pada pertumbuhan dan kemakmuran mereka. Kami berusaha untuk kemitraan jangka panjang berdasarkan kepercayaan, transparansi, и saling keinginan untuk sukses.",
+        "p3": "Tim kami terdiri dari para ahli berkualifikasi tinggi dengan pengalaman bertahun-tahun dalam perdagangan internasional, keuangan, dan konsultasi. Kami terus meningkatkan keterampilan dan pengetahuan kami untuk menawarkan strategi yang paling terkini dan efektif."
+    }
+}
