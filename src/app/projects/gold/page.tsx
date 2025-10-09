@@ -138,21 +138,20 @@ export default function AndrgoldPage() {
         </section>
 
         <section id="special-offer">
-            <Card className="grid md:grid-cols-2 overflow-hidden border-0 bg-black">
+            <Card className="grid md:grid-cols-2 overflow-hidden bg-black rounded-lg">
                 <div className="p-8 order-2 md:order-1 flex flex-col justify-center">
-                    <h3 className="font-headline text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                        <Star className="w-6 h-6 text-white"/>
-                        {goldTranslations.specialOffer?.title}
-                    </h3>
-                    
-                    <div className="space-y-4">
+                    <div className="space-y-6">
+                        <h3 className="font-headline text-2xl font-bold text-white flex items-center gap-2">
+                            <Star className="w-6 h-6 text-white"/>
+                            {goldTranslations.specialOffer?.title}
+                        </h3>
                         <p className="text-lg text-gray-300">
                             {goldTranslations.specialOffer?.description}
                         </p>
                         <div className="bg-gray-800 p-4 rounded-lg">
                            <p className="font-bold text-white">{goldTranslations.specialOffer?.condition}</p>
                         </div>
-                         <Button asChild size="lg" className="mt-4 bg-white text-black hover:bg-gray-200">
+                         <Button asChild size="lg" className="bg-white text-black hover:bg-gray-200">
                             <Link href="#cta">{goldTranslations.specialOffer?.buttonText}</Link>
                         </Button>
                     </div>
@@ -169,13 +168,13 @@ export default function AndrgoldPage() {
         </section>
 
         <section>
-          <Card className="grid md:grid-cols-2 overflow-hidden border">
+          <Card className="grid md:grid-cols-2 overflow-hidden border rounded-lg">
               <div className="relative min-h-[300px] md:min-h-full bg-background">
                   <Image
                       src="https://s1.hostingkartinok.com/uploads/images/2025/09/af6b257df6c8cb1866f9df662df9502b.png"
                       alt={goldTranslations.refinedCard?.alt || "Refined Gold 999.9"}
                       fill
-                      className="object-contain p-4"
+                      className="object-contain p-8"
                   />
               </div>
               <div className="p-8">
@@ -184,7 +183,7 @@ export default function AndrgoldPage() {
                   <div className="space-y-6">
                       <div>
                           <h4 className="font-bold text-lg text-foreground mb-2">{goldTranslations.refinedCard?.characteristics?.title}</h4>
-                          <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                          <ul className="list-disc list-inside space-y-2 text-muted-foreground">
                               <li><span className="font-semibold text-foreground">{goldTranslations.refinedCard?.characteristics?.category?.label}:</span> {goldTranslations.refinedCard?.characteristics?.category?.value}</li>
                               <li><span className="font-semibold text-foreground">{goldTranslations.refinedCard?.characteristics?.purity?.label}:</span> {goldTranslations.refinedCard?.characteristics?.purity?.value}</li>
                               <li><span className="font-semibold text-foreground">{goldTranslations.refinedCard?.characteristics?.manufacturer?.label}:</span> {goldTranslations.refinedCard?.characteristics?.manufacturer?.value}</li>
@@ -201,7 +200,7 @@ export default function AndrgoldPage() {
 
                       <div>
                           <h4 className="font-bold text-lg text-foreground mb-2">{goldTranslations.refinedCard?.idealFor?.title}</h4>
-                           <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                           <ul className="list-disc list-inside space-y-2 text-muted-foreground">
                               <li><span className="font-semibold text-foreground">{goldTranslations.refinedCard?.idealFor?.investors?.label}:</span> {goldTranslations.refinedCard?.idealFor?.investors?.value}</li>
                               <li><span className="font-semibold text-foreground">{goldTranslations.refinedCard?.idealFor?.banks?.label}:</span> {goldTranslations.refinedCard?.idealFor?.banks?.value}</li>
                               <li><span className="font-semibold text-foreground">{goldTranslations.refinedCard?.idealFor?.buyers?.label}:</span> {goldTranslations.refinedCard?.idealFor?.buyers?.value}</li>
@@ -217,21 +216,21 @@ export default function AndrgoldPage() {
                 <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">{goldTranslations.delivery?.title}</h2>
             </div>
             <div className="grid md:grid-cols-2 gap-8 items-stretch max-w-6xl mx-auto">
-                <Card className="border-border hover:border-primary border-2 flex flex-col transition-all duration-300">
-                    <CardHeader>
+                <Card className="border-border hover:border-primary border-2 flex flex-col transition-all duration-300 p-6">
+                    <CardHeader className="p-0 mb-4">
                         <CardTitle className="text-primary">{goldTranslations.delivery?.seller?.title}</CardTitle>
                     </CardHeader>
-                    <CardContent className="space-y-3 flex-grow text-card-foreground">
+                    <CardContent className="space-y-3 flex-grow text-card-foreground p-0">
                        {goldTranslations.delivery?.seller?.duties.map((duty: string) => (
                            <p key={duty} className="flex items-start"><Check className="w-5 h-5 mr-2 mt-1 text-primary flex-shrink-0"/>{duty}</p>
                        ))}
                     </CardContent>
                 </Card>
-                <Card className="border-border hover:border-primary border-2 flex flex-col transition-all duration-300">
-                    <CardHeader>
+                <Card className="border-border hover:border-primary border-2 flex flex-col transition-all duration-300 p-6">
+                    <CardHeader className="p-0 mb-4">
                         <CardTitle className="text-foreground">{goldTranslations.delivery?.buyer?.title}</CardTitle>
                     </CardHeader>
-                    <CardContent className="space-y-3 flex-grow text-card-foreground">
+                    <CardContent className="space-y-3 flex-grow text-card-foreground p-0">
                        {goldTranslations.delivery?.buyer?.duties.map((duty: string) => (
                            <p key={duty} className="flex items-start"><Check className="w-5 h-5 mr-2 mt-1 text-muted-foreground flex-shrink-0"/>{duty}</p>
                        ))}
@@ -239,7 +238,7 @@ export default function AndrgoldPage() {
                 </Card>
             </div>
             <div className="overflow-x-auto py-8">
-                <div className="flex flex-col md:flex-row items-center justify-center my-4 gap-2 md:gap-4">
+                <div className="flex flex-col md:flex-row items-center justify-center my-4 gap-4">
                     <div className="px-4 py-2 bg-primary rounded-lg whitespace-nowrap text-primary-foreground">
                         <p className="font-bold text-center text-sm">{goldTranslations.delivery?.seller?.title}</p>
                     </div>
@@ -266,7 +265,7 @@ export default function AndrgoldPage() {
                 {goldTranslations.cta?.subtitle}
               </p>
             </div>
-            <Card className="w-full mx-auto rounded-lg bg-background border-0 shadow-none">
+            <Card className="w-full mx-auto rounded-lg bg-background border-0 shadow-none max-w-3xl">
                 <CardHeader className="px-0">
                   <CardTitle>{goldTranslations.cta?.formTitle}</CardTitle>
                 </CardHeader>
