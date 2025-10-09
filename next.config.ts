@@ -94,6 +94,12 @@ const nextConfig: NextConfig = {
         hostname: 'st5.depositphotos.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'ir.ozone.ru',
+        port: '',
+        pathname: '/**',
       }
     ],
   },

@@ -51,17 +51,17 @@ export default function AndrShopPage() {
     {
       name: shopTranslations.beans?.firstSort,
       price: "$4",
-      imageUrl: "https://images.unsplash.com/photo-1599579085809-d5d856024104?q=80&w=1974&auto=format&fit=crop"
+      imageUrl: "https://ir.ozone.ru/s3/multimedia-q/wc1000/6272410478.jpg"
     },
     {
       name: shopTranslations.beans?.secondSort,
       price: "$1.8",
-      imageUrl: "https://images.unsplash.com/photo-1627910245383-a950a2599d14?q=80&w=1964&auto=format&fit=crop"
+      imageUrl: "https://ir.ozone.ru/s3/multimedia-q/wc1000/6272410478.jpg"
     },
     {
       name: shopTranslations.beans?.handCalibrated,
       price: "$8",
-      imageUrl: "https://images.unsplash.com/photo-1572527838520-2c30fad1fb0d?q=80&w=1974&auto=format&fit=crop"
+      imageUrl: "https://ir.ozone.ru/s3/multimedia-q/wc1000/6272410478.jpg"
     },
     {
       name: shopTranslations.beans?.lentils,
