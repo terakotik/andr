@@ -138,8 +138,8 @@ export default function AndrgoldPage() {
         </section>
 
         <section id="special-offer">
-            <Card className="grid md:grid-cols-2 overflow-hidden border-2 bg-black border-gray-700 shadow-lg shadow-primary/20">
-                <div className="p-8 order-2 md:order-1">
+            <Card className="grid md:grid-cols-2 overflow-hidden border-0 bg-black">
+                <div className="p-8 order-2 md:order-1 flex flex-col justify-center">
                     <h3 className="font-headline text-2xl font-bold text-white mb-4 flex items-center gap-2">
                         <Star className="w-6 h-6 text-white"/>
                         {goldTranslations.specialOffer?.title}
@@ -239,17 +239,17 @@ export default function AndrgoldPage() {
                 </Card>
             </div>
             <div className="overflow-x-auto py-8">
-                <div className="flex items-center justify-center my-4 min-w-[500px]">
-                    <div className="px-6 py-3 bg-primary rounded-lg whitespace-nowrap text-primary-foreground">
-                        <p className="font-bold text-center">{goldTranslations.delivery?.seller?.title}</p>
+                <div className="flex flex-col md:flex-row items-center justify-center my-4 gap-2 md:gap-4">
+                    <div className="px-4 py-2 bg-primary rounded-lg whitespace-nowrap text-primary-foreground">
+                        <p className="font-bold text-center text-sm">{goldTranslations.delivery?.seller?.title}</p>
                     </div>
-                    <ArrowRight className="w-8 h-8 mx-4 text-muted-foreground shrink-0"/>
-                     <div className="px-6 py-3 bg-background rounded-lg whitespace-nowrap border-2 border-dashed">
-                        <p className="font-bold text-center text-foreground">{goldTranslations.delivery?.carrier}</p>
+                    <ArrowRight className="w-6 h-6 text-muted-foreground shrink-0 rotate-90 md:rotate-0"/>
+                     <div className="px-4 py-2 bg-background rounded-lg whitespace-nowrap border-2 border-dashed">
+                        <p className="font-bold text-center text-sm text-foreground">{goldTranslations.delivery?.carrier}</p>
                     </div>
-                    <ArrowRight className="w-8 h-8 mx-4 text-muted-foreground shrink-0"/>
-                    <div className="px-6 py-3 bg-primary rounded-lg whitespace-nowrap text-primary-foreground">
-                        <p className="font-bold text-center">{goldTranslations.delivery?.buyer?.title}</p>
+                    <ArrowRight className="w-6 h-6 text-muted-foreground shrink-0 rotate-90 md:rotate-0"/>
+                    <div className="px-4 py-2 bg-primary rounded-lg whitespace-nowrap text-primary-foreground">
+                        <p className="font-bold text-center text-sm">{goldTranslations.delivery?.buyer?.title}</p>
                     </div>
                 </div>
             </div>
@@ -297,9 +297,3 @@ export default function AndrgoldPage() {
     </div>
   );
 }
-
-    
-
-    
-
-    
