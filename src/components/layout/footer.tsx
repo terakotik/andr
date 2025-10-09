@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from 'next/link';
@@ -51,7 +52,7 @@ export function Footer() {
                     camera.position.z = 3.5;
 
                     renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-                    renderer.setSize(50, 50);
+                    renderer.setSize(25, 25);
                     renderer.setPixelRatio(window.devicePixelRatio);
                     document.body.appendChild(renderer.domElement);
 
@@ -185,8 +186,8 @@ export function Footer() {
           <div className="flex items-center gap-2">
             <iframe 
                 srcDoc={developerLogoHtml}
-                width="50" 
-                height="50" 
+                width="25" 
+                height="25" 
                 style={{ border: 'none', background: 'transparent' }}
                 title="Developer 3D Logo"
             />
