@@ -52,12 +52,12 @@ export default function AndrShopPage() {
     {
       name: shopTranslations.beans?.secondSort,
       price: "$1.8",
-      imageUrl: "https://ir.ozone.ru/s3/multimedia-q/wc1000/6272410478.jpg"
+      imageUrl: "https://img02.flagma-ge.com/photo/fasol-optom-iz-uzbekistana-1785184_big.jpg"
     },
     {
       name: shopTranslations.beans?.handCalibrated,
       price: "$8",
-      imageUrl: "https://img02.flagma-ge.com/photo/fasol-optom-iz-uzbekistana-1785184_big.jpg"
+      imageUrl: "https://ir.ozone.ru/s3/multimedia-q/wc1000/6272410478.jpg"
     },
     {
       name: shopTranslations.beans?.lentils,
@@ -205,25 +205,25 @@ export default function AndrShopPage() {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {beanProducts.map((product) => (
-              <div key={product.name}>
-                <Card className="group relative overflow-hidden rounded-lg border text-white transition-all duration-300 hover:shadow-lg hover:border-primary h-64 flex flex-col justify-end">
-                    <Image 
-                        src={product.imageUrl}
-                        alt={product.name}
-                        fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-110"
-                        data-ai-hint="beans legumes"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-                    <div className="relative p-6 z-10">
-                        <div className="flex items-center justify-between">
-                            <CardTitle className="font-headline text-2xl">{product.name}</CardTitle>
-                        </div>
-                        <p className="text-3xl font-bold text-white mt-2">{product.price}</p>
-                    </div>
-                </Card>
-                <Button className="w-full mt-4">{shopTranslations.buyButton}</Button>
-              </div>
+              <Card key={product.name} className="flex flex-col overflow-hidden transition-all duration-300 p-0">
+                  <div className="group relative overflow-hidden h-64 flex flex-col justify-end text-white rounded-t-lg">
+                      <Image 
+                          src={product.imageUrl}
+                          alt={product.name}
+                          fill
+                          className="object-cover transition-transform duration-500 group-hover:scale-110"
+                          data-ai-hint="beans legumes"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                      <div className="relative p-6 z-10">
+                          <div className="flex items-center justify-between">
+                              <CardTitle className="font-headline text-2xl">{product.name}</CardTitle>
+                          </div>
+                          <p className="text-3xl font-bold text-white mt-2">{product.price}</p>
+                      </div>
+                  </div>
+                  <Button className="w-full rounded-t-none">{shopTranslations.buyButton}</Button>
+              </Card>
             ))}
           </div>
         </section>
@@ -268,8 +268,3 @@ export default function AndrShopPage() {
     </div>
   );
 }
-
-    
-
-    
-
