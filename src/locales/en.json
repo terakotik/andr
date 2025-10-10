@@ -405,7 +405,7 @@
         "productDetails": "Product Details",
         "productName": "Product Name",
         "productId": "Product ID",
-        "pricePerTon": "Price per ton",
+        "pricePerKg": "Price per kg",
         "quantityLabel": "Quantity (in tons)",
         "minQuantity": "Minimum purchase is 1 ton.",
         "total": "Total",

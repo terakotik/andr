@@ -405,7 +405,7 @@
         "productDetails": "Detail Produk",
         "productName": "Nama Produk",
         "productId": "ID Produk",
-        "pricePerTon": "Harga per ton",
+        "pricePerKg": "Harga per kg",
         "quantityLabel": "Kuantitas (dalam ton)",
         "minQuantity": "Pembelian minimum adalah 1 ton.",
         "total": "Total",

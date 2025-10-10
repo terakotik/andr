@@ -23,7 +23,7 @@ function InvoiceContent() {
 
     const productId = searchParams.get('productId');
     const productName = searchParams.get('productName');
-    const pricePerTon = parseFloat(searchParams.get('price') || '0');
+    const pricePerKg = parseFloat(searchParams.get('price') || '0');
 
     const invoiceId = useMemo(() => {
         if (!productId) return '';
@@ -33,6 +33,7 @@ function InvoiceContent() {
     const invoiceTranslations = translations.invoicePage || {};
 
     useEffect(() => {
+        const pricePerTon = pricePerKg * 1000;
         const newTotal = quantity * pricePerTon;
         setTotalPrice(newTotal);
 
@@ -41,7 +42,7 @@ function InvoiceContent() {
             setPaymentLink(newLink);
         }
 
-    }, [quantity, pricePerTon, invoiceId]);
+    }, [quantity, pricePerKg, invoiceId]);
 
     const handleQuantityChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = parseInt(e.target.value, 10);
@@ -58,7 +59,7 @@ function InvoiceContent() {
         setTimeout(() => setHasCopied(false), 2000);
     };
 
-    if (!productId || !productName || pricePerTon === 0) {
+    if (!productId || !productName || pricePerKg === 0) {
         return (
             <div className="container mx-auto px-4 md:px-6 py-16 md:py-24 text-center">
                 <Alert variant="destructive" className="max-w-lg mx-auto">
@@ -91,8 +92,8 @@ function InvoiceContent() {
                             <span className="font-mono text-sm">{productId}</span>
                         </div>
                         <div className="flex justify-between items-center">
-                            <span className="text-muted-foreground">{invoiceTranslations.pricePerTon}:</span>
-                            <span className="font-bold">${pricePerTon.toFixed(2)}</span>
+                            <span className="text-muted-foreground">{invoiceTranslations.pricePerKg}:</span>
+                            <span className="font-bold">${pricePerKg.toFixed(2)}</span>
                         </div>
                     </div>
 

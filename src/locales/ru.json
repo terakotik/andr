@@ -405,7 +405,7 @@
         "productDetails": "Детали продукта",
         "productName": "Название товара",
         "productId": "ID товара",
-        "pricePerTon": "Цена за тонну",
+        "pricePerKg": "Цена за кг",
         "quantityLabel": "Количество (в тоннах)",
         "minQuantity": "Минимальная покупка - 1 тонна.",
         "total": "Итого",

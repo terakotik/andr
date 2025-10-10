@@ -405,7 +405,7 @@
         "productDetails": "产品详情",
         "productName": "产品名称",
         "productId": "产品ID",
-        "pricePerTon": "每吨价格",
+        "pricePerKg": "每公斤价格",
         "quantityLabel": "数量（吨）",
         "minQuantity": "最少购买量为1吨。",
         "total": "总计",
