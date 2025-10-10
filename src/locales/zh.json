@@ -352,7 +352,7 @@
             },
             "price": {
                 "title": "有竞争力的价格",
-                "description": "我们 eliminat 不必要的中间商，为您的业务提供优惠条件。"
+                "description": "我们消除不必要的中间商，为您的业务提供优惠条件。"
             }
         },
         "sectionTitle": "主要产品",
@@ -398,6 +398,22 @@
         "p1": "ANDR GLOBAL FINANCIAL 是您在全球业务中的战略合作伙伴。我们是一家领先的国际公司，专注于三个关键领域：贵金属交易、专业咨询以及向全球市场供应高品质食品。",
         "p2": "我们的使命是为客户提供可靠高效的解决方案，促进他们的成长和繁荣。我们致力于建立基于信任、透明和共同成功愿望的长期合作伙伴关系。",
         "p3": "我们的团队由在国际贸易、金融和咨询领域拥有多年经验的高素质专家组成。我们不断提升我们的技能和知识，以便为您提供最新、最有效的策略。"
+    },
+    "invoicePage": {
+        "title": "发票生成",
+        "subtitle": "请在下面确认您的订单详情。",
+        "productDetails": "产品详情",
+        "productName": "产品名称",
+        "productId": "产品ID",
+        "pricePerTon": "每吨价格",
+        "quantityLabel": "数量（吨）",
+        "minQuantity": "最少购买量为1吨。",
+        "total": "总计",
+        "totalAmount": "总金额",
+        "paymentLinkTitle": "您的专属付款链接",
+        "paymentLinkDescription": "使用以下链接继续付款，或与负责付款的人员分享。",
+        "productError": "无法加载产品详情。请重试。",
+        "backToShop": "返回商店"
     }
 }
 

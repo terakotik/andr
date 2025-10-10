@@ -45,23 +45,27 @@ export default function AndrShopPage() {
 
   const beanProducts = [
     {
+      id: "first-sort",
       name: shopTranslations.beans?.firstSort,
-      price: "$4",
+      price: 4,
       imageUrl: "https://semenjalnica.si/wp-content/uploads/2021/12/Zorin.jpg"
     },
     {
+      id: "second-sort",
       name: shopTranslations.beans?.secondSort,
-      price: "$1.8",
+      price: 1.8,
       imageUrl: "https://img02.flagma-ge.com/photo/fasol-optom-iz-uzbekistana-1785184_big.jpg"
     },
     {
+      id: "hand-calibrated",
       name: shopTranslations.beans?.handCalibrated,
-      price: "$8",
+      price: 8,
       imageUrl: "https://ir.ozone.ru/s3/multimedia-q/wc1000/6272410478.jpg"
     },
     {
+      id: "lentils",
       name: shopTranslations.beans?.lentils,
-      price: "$2",
+      price: 2,
       imageUrl: "https://st5.depositphotos.com/4603773/67243/i/450/depositphotos_672436680-stock-photo-lentils-spread-bamboo-colander.jpg"
     }
   ];
@@ -217,10 +221,14 @@ export default function AndrShopPage() {
                           <div className="flex items-center justify-between">
                               <CardTitle className="font-headline text-2xl">{product.name}</CardTitle>
                           </div>
-                          <p className="text-3xl font-bold text-white mt-2">{product.price}</p>
+                          <p className="text-3xl font-bold text-white mt-2">${product.price}</p>
                       </div>
                   </div>
-                  <Button className="w-full rounded-none">{shopTranslations.buyButton}</Button>
+                  <Button asChild className="w-full rounded-none">
+                    <Link href={`/invoice?productId=${product.id}&productName=${encodeURIComponent(product.name)}&price=${product.price}`}>
+                        {shopTranslations.buyButton}
+                    </Link>
+                  </Button>
               </Card>
             ))}
           </div>
@@ -266,3 +274,5 @@ export default function AndrShopPage() {
     </div>
   );
 }
+
+    

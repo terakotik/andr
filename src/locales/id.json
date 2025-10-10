@@ -340,7 +340,7 @@
             "title": "Keunggulan utama kami",
             "stability": {
                 "title": "Stabilitas pasokan",
-                "description": "Kami bekerja langsung dengan produsen, menjamin volume dan kepatuhan terhadap tenggat waktu bahkan untuk kontrak besar."
+                "description": "Kami bekerja langsung dengan produsen, menjamin volume dan kepatuhan terhadap tenggat waktu even untuk kontrak besar."
             },
             "quality": {
                 "title": "Kontrol kualitas",
@@ -396,8 +396,24 @@
     "aboutPage": {
         "title": "Tentang Kami",
         "p1": "ANDR GLOBAL FINANCIAL adalah mitra strategis Anda dalam bisnis global. Kami adalah perusahaan internasional terkemuka yang berspesialisasi dalam tiga bidang utama: perdagangan logam mulia, konsultasi profesional, dan pasokan makanan berkualitas tinggi ke pasar dunia.",
-        "p2": "Misi kami adalah memberikan solusi yang andal dan efisien kepada klien yang berkontribusi pada pertumbuhan dan kemakmuran mereka. Kami berusaha untuk kemitraan jangka panjang berdasarkan kepercayaan, transparansi, и saling keinginan untuk sukses.",
+        "p2": "Misi kami adalah memberikan solusi yang andal dan efisien kepada klien yang berkontribusi pada pertumbuhan dan kemakmuran mereka. Kami berusaha untuk kemitraan jangka panjang berdasarkan kepercayaan, transparansi, dan saling keinginan untuk sukses.",
         "p3": "Tim kami terdiri dari para ahli berkualifikasi tinggi dengan pengalaman bertahun-tahun dalam perdagangan internasional, keuangan, dan konsultasi. Kami terus meningkatkan keterampilan dan pengetahuan kami untuk menawarkan strategi yang paling terkini dan efektif."
+    },
+    "invoicePage": {
+        "title": "Pembuatan Faktur",
+        "subtitle": "Harap konfirmasi detail pesanan Anda di bawah ini.",
+        "productDetails": "Detail Produk",
+        "productName": "Nama Produk",
+        "productId": "ID Produk",
+        "pricePerTon": "Harga per ton",
+        "quantityLabel": "Kuantitas (dalam ton)",
+        "minQuantity": "Pembelian minimum adalah 1 ton.",
+        "total": "Total",
+        "totalAmount": "Jumlah Total",
+        "paymentLinkTitle": "Tautan Pembayaran Unik Anda",
+        "paymentLinkDescription": "Gunakan tautan di bawah ini untuk melanjutkan pembayaran atau bagikan dengan orang yang bertanggung jawab atas pembayaran.",
+        "productError": "Tidak dapat memuat detail produk. Silakan coba lagi.",
+        "backToShop": "Kembali ke Toko"
     }
 }
 
