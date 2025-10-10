@@ -1,14 +1,14 @@
 
 "use client";
 
-import React, { useState, useEffect, Suspense } from 'react';
+import React, { useState, useEffect, Suspense, useMemo } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { useLanguage } from '@/context/language-context';
-import { AlertCircle, Copy, Check } from 'lucide-react';
+import { AlertCircle, Copy, Check, ExternalLink } from 'lucide-react';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import Link from 'next/link';
 
@@ -25,18 +25,23 @@ function InvoiceContent() {
     const productName = searchParams.get('productName');
     const pricePerTon = parseFloat(searchParams.get('price') || '0');
 
+    const invoiceId = useMemo(() => {
+        if (!productId) return '';
+        return `${productId.toUpperCase()}-${Date.now()}`;
+    }, [productId]);
+
     const invoiceTranslations = translations.invoicePage || {};
 
     useEffect(() => {
         const newTotal = quantity * pricePerTon;
         setTotalPrice(newTotal);
 
-        if (productId && newTotal > 0) {
-            const newLink = `${window.location.origin}/pay?invoiceId=${productId}-${Date.now()}&amount=${newTotal}`;
+        if (invoiceId && newTotal > 0) {
+            const newLink = `${window.location.origin}/pay?invoiceId=${invoiceId}&amount=${newTotal}`;
             setPaymentLink(newLink);
         }
 
-    }, [quantity, pricePerTon, productId]);
+    }, [quantity, pricePerTon, invoiceId]);
 
     const handleQuantityChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = parseInt(e.target.value, 10);
@@ -71,7 +76,7 @@ function InvoiceContent() {
         <div className="container mx-auto px-4 md:px-6 py-16 md:py-24">
             <Card className="max-w-2xl mx-auto shadow-lg">
                 <CardHeader>
-                    <CardTitle className="text-3xl font-headline">{invoiceTranslations.title}</CardTitle>
+                    <CardTitle className="text-3xl font-headline">{invoiceTranslations.title} #{invoiceId}</CardTitle>
                     <CardDescription>{invoiceTranslations.subtitle}</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-8">
@@ -126,6 +131,12 @@ function InvoiceContent() {
                                 {hasCopied ? <Check className="h-4 w-4 text-green-500" /> : <Copy className="h-4 w-4" />}
                             </Button>
                         </div>
+                        <Button asChild className="w-full">
+                            <Link href={paymentLink} target="_blank">
+                                {invoiceTranslations.payButton}
+                                <ExternalLink className="ml-2 h-4 w-4" />
+                            </Link>
+                        </Button>
                     </div>
                 </CardContent>
             </Card>
@@ -141,5 +152,3 @@ export default function InvoicePage() {
         </Suspense>
     )
 }
-
-    

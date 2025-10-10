@@ -400,7 +400,7 @@
         "p3": "我们的团队由在国际贸易、金融和咨询领域拥有多年经验的高素质专家组成。我们不断提升我们的技能和知识，以便为您提供最新、最有效的策略。"
     },
     "invoicePage": {
-        "title": "发票生成",
+        "title": "发票",
         "subtitle": "请在下面确认您的订单详情。",
         "productDetails": "产品详情",
         "productName": "产品名称",
@@ -412,9 +412,8 @@
         "totalAmount": "总金额",
         "paymentLinkTitle": "您的专属付款链接",
         "paymentLinkDescription": "使用以下链接继续付款，或与负责付款的人员分享。",
+        "payButton": "使用Instapay支付",
         "productError": "无法加载产品详情。请重试。",
         "backToShop": "返回商店"
     }
 }
-
-    

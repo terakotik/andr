@@ -400,7 +400,7 @@
         "p3": "Tim kami terdiri dari para ahli berkualifikasi tinggi dengan pengalaman bertahun-tahun dalam perdagangan internasional, keuangan, dan konsultasi. Kami terus meningkatkan keterampilan dan pengetahuan kami untuk menawarkan strategi yang paling terkini dan efektif."
     },
     "invoicePage": {
-        "title": "Pembuatan Faktur",
+        "title": "Faktur",
         "subtitle": "Harap konfirmasi detail pesanan Anda di bawah ini.",
         "productDetails": "Detail Produk",
         "productName": "Nama Produk",
@@ -412,9 +412,8 @@
         "totalAmount": "Jumlah Total",
         "paymentLinkTitle": "Tautan Pembayaran Unik Anda",
         "paymentLinkDescription": "Gunakan tautan di bawah ini untuk melanjutkan pembayaran atau bagikan dengan orang yang bertanggung jawab atas pembayaran.",
+        "payButton": "Bayar dengan Instapay",
         "productError": "Tidak dapat memuat detail produk. Silakan coba lagi.",
         "backToShop": "Kembali ke Toko"
     }
 }
-
-    

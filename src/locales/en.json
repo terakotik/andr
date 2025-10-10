@@ -400,7 +400,7 @@
         "p3": "Our team consists of highly qualified experts with many years of experience in international trade, finance, and consulting. We are constantly improving our skills and knowledge to offer you the most current and effective strategies."
     },
     "invoicePage": {
-        "title": "Invoice Generation",
+        "title": "Invoice",
         "subtitle": "Please confirm the details of your order below.",
         "productDetails": "Product Details",
         "productName": "Product Name",
@@ -412,9 +412,8 @@
         "totalAmount": "Total Amount",
         "paymentLinkTitle": "Your Unique Payment Link",
         "paymentLinkDescription": "Use the link below to proceed with the payment or share it with the person responsible for payments.",
+        "payButton": "Pay with Instapay",
         "productError": "Could not load product details. Please try again.",
         "backToShop": "Back to Shop"
     }
 }
-
-    
