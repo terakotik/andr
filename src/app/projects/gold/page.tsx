@@ -11,6 +11,7 @@ import { GoldInvestmentCalculator } from '@/components/gold-investment-calculato
 import { useLanguage } from '@/context/language-context';
 import { ContactForm } from '@/components/contact-form';
 import { useToast } from "@/hooks/use-toast";
+import { PayPalButton } from '@/components/paypal-button';
 
 export default function AndrgoldPage() {
   const { translations } = useLanguage();
@@ -287,6 +288,9 @@ export default function AndrgoldPage() {
                             height={30}
                             className="object-contain" 
                         />
+                         <div className="w-full flex justify-center">
+                            <PayPalButton />
+                         </div>
                     </div>
                 </CardContent>
             </Card>
