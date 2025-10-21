@@ -13,9 +13,10 @@ import { useToast } from "@/hooks/use-toast";
 import { PayPalButton } from '@/components/paypal-button';
 
 export default function AndrShopPage() {
-  const { translations } = useLanguage();
+  const { language, translations } = useLanguage();
   const { toast } = useToast();
   const shopTranslations = translations.shopPage || {};
+  const conversionRate = 16000; // 1 USD = 16000 IDR
 
   const handlePayment = () => {
     toast({
@@ -99,6 +100,15 @@ export default function AndrShopPage() {
     { name: shopTranslations.geography?.countries.india, icon: <Image src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" alt="India Flag" width={24} height={24} className="rounded-full object-cover h-6 w-6" /> },
     { name: shopTranslations.geography?.countries.china, icon: <Image src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg" alt="China Flag" width={24} height={24} className="rounded-full object-cover h-6 w-6" /> },
   ];
+
+  const formatCurrency = (price: number) => {
+    if (language === 'id') {
+      const priceInIdr = price * conversionRate;
+      return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(priceInIdr);
+    }
+    return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(price);
+  };
+
 
   return (
     <div className="bg-background text-foreground">
@@ -221,7 +231,7 @@ export default function AndrShopPage() {
                           <div className="flex items-center justify-between">
                               <CardTitle className="font-headline text-2xl">{product.name}</CardTitle>
                           </div>
-                          <p className="text-3xl font-bold text-white mt-2">${product.price}</p>
+                          <p className="text-3xl font-bold text-white mt-2">{formatCurrency(product.price)}</p>
                       </div>
                   </div>
                   <Button asChild className="w-full rounded-none">

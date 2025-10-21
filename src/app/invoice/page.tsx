@@ -13,7 +13,7 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import Link from 'next/link';
 
 function InvoiceContent() {
-    const { translations } = useLanguage();
+    const { language, translations } = useLanguage();
     const searchParams = useSearchParams();
 
     const [quantity, setQuantity] = useState(1);
@@ -24,6 +24,8 @@ function InvoiceContent() {
     const productId = searchParams.get('productId');
     const productName = searchParams.get('productName');
     const pricePerKg = parseFloat(searchParams.get('price') || '0');
+
+    const conversionRate = 16000;
 
     const invoiceId = useMemo(() => {
         if (!productId) return '';
@@ -57,6 +59,13 @@ function InvoiceContent() {
         navigator.clipboard.writeText(paymentLink);
         setHasCopied(true);
         setTimeout(() => setHasCopied(false), 2000);
+    };
+
+    const formatCurrency = (amount: number) => {
+        if (language === 'id') {
+            return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(amount * conversionRate);
+        }
+        return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(amount);
     };
 
     if (!productId || !productName || pricePerKg === 0) {
@@ -93,7 +102,7 @@ function InvoiceContent() {
                         </div>
                         <div className="flex justify-between items-center">
                             <span className="text-muted-foreground">{invoiceTranslations.pricePerKg}:</span>
-                            <span className="font-bold">${pricePerKg.toFixed(2)}</span>
+                            <span className="font-bold">{formatCurrency(pricePerKg)}</span>
                         </div>
                     </div>
 
@@ -114,7 +123,7 @@ function InvoiceContent() {
                          <h3 className="font-semibold text-lg">{invoiceTranslations.total}</h3>
                         <div className="flex justify-between items-center text-2xl font-bold text-primary">
                             <span>{invoiceTranslations.totalAmount}:</span>
-                            <span>${totalPrice.toFixed(2)}</span>
+                            <span>{formatCurrency(totalPrice)}</span>
                         </div>
                     </div>
                     
