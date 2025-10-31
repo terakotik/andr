@@ -12,7 +12,6 @@ export default function Home() {
   const { translations } = useLanguage();
 
   const projectLinks = [
-    { name: translations.home.ourProjects.goldTitle, icon: <Gem className="h-12 w-12 text-primary"/>, description: translations.home.ourProjects.gold, href: '/projects/gold' },
     { name: translations.home.ourProjects.shopTitle, icon: <ShoppingCart className="h-12 w-12 text-primary"/>, description: translations.home.ourProjects.shop, href: '/projects/shop' },
     { name: translations.home.ourProjects.consultingTitle, icon: <Briefcase className="h-12 w-12 text-primary"/>, description: translations.home.ourProjects.consulting, href: '/consulting' },
   ];
@@ -64,7 +63,7 @@ export default function Home() {
               {translations.home.consultingDirections.subtitle}
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {projectLinks.map((project) => (
               <Link key={project.name} href={project.href} className="group block">
                 <Card className="bg-card border rounded-lg p-8 h-full flex flex-col transition-all duration-300 group-hover:border-primary group-hover:shadow-lg">
