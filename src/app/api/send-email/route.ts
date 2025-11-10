@@ -11,11 +11,16 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ message: 'Отсутствуют обязательные поля: имя, email или сообщение.' }, { status: 400 });
     }
 
-    // ВРЕМЕННОЕ РЕШЕНИЕ ДЛЯ ОТЛАДКИ: Учетные данные прописаны напрямую
-    const user = "kursorik1@gmail.com";
-    const pass = "fxhdjovxuzvyvklb";
+    // ВАЖНО: Эти переменные должны быть настроены в вашем окружении (например, в файле .env.local или в секретах хостинга)
+    const user = process.env.EMAIL_USER;
+    const pass = process.env.EMAIL_PASS;
     const bitrixEmail = "fwdmnuj5hgbzmogk48ggg8socgc@b24-4jaudn.bitrix24.ru";
 
+    if (!user || !pass) {
+        console.error('Ошибка: EMAIL_USER или EMAIL_PASS не установлены в переменных окружения.');
+        return NextResponse.json({ message: 'Ошибка конфигурации сервера: учетные данные для отправки почты не найдены.' }, { status: 500 });
+    }
+    
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
