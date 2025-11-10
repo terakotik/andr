@@ -74,8 +74,9 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ message: 'Сообщение успешно отправлено.' }, { status: 200 });
 
   } catch (error) {
-    console.error('Ошибка при отправке почты:', error);
+    // Улучшенное логирование для детальной диагностики
+    console.error('ПОЛНАЯ ОШИБКА ОТПРАВКИ ПОЧТЫ:', error);
     const errorMessage = error instanceof Error ? error.message : 'Неизвестная ошибка';
-    return NextResponse.json({ message: 'Не удалось отправить письмо.', error: errorMessage }, { status: 500 });
+    return NextResponse.json({ message: 'Не удалось отправить письмо.', error: errorMessage, details: error }, { status: 500 });
   }
 }
