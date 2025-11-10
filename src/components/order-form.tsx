@@ -78,18 +78,19 @@ export function OrderForm({ productCategories }: OrderFormProps) {
                 body: JSON.stringify(values),
             });
 
+            const result = await response.json();
+
             if (response.ok) {
                 toast({
-                    title: orderFormTranslations.toast?.title,
-                    description: orderFormTranslations.toast?.description,
+                    title: orderFormTranslations.toast.title,
+                    description: orderFormTranslations.toast.description,
                 });
                 form.reset();
             } else {
-                const errorData = await response.json();
                 toast({
                     variant: "destructive",
                     title: "Ошибка отправки",
-                    description: errorData.message || "Не удалось отправить запрос.",
+                    description: result.message || "Не удалось отправить запрос.",
                 });
             }
         } catch (error) {

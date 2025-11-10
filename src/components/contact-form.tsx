@@ -57,6 +57,8 @@ export function ContactForm() {
                 body: JSON.stringify(values),
             });
 
+            const result = await response.json();
+
             if (response.ok) {
                 toast({
                     title: translations.contactForm.toast.title,
@@ -64,11 +66,10 @@ export function ContactForm() {
                 });
                 form.reset();
             } else {
-                const errorData = await response.json();
                 toast({
                     variant: "destructive",
                     title: "Ошибка отправки",
-                    description: errorData.message || "Не удалось отправить сообщение.",
+                    description: result.message || "Не удалось отправить сообщение.",
                 });
             }
         } catch (error) {

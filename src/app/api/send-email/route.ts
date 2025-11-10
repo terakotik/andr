@@ -1,7 +1,6 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import * as nodemailer from 'nodemailer';
-import 'dotenv/config';
 
 export async function POST(req: NextRequest) {
   try {
@@ -12,27 +11,23 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ message: 'Отсутствуют обязательные поля: имя, email или сообщение.' }, { status: 400 });
     }
 
+    // ВРЕМЕННОЕ РЕШЕНИЕ ДЛЯ ОТЛАДКИ: Учетные данные прописаны напрямую
+    const user = "kursorik1@gmail.com";
+    const pass = "fxhdjovxuzvyvklb";
+    const bitrixEmail = "fwdmnuj5hgbzmogk48ggg8socgc@b24-4jaudn.bitrix24.ru";
+
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
+        user: user,
+        pass: pass,
       },
     });
 
-    // 1. Проверка соединения с SMTP сервером
-    try {
-      await transporter.verify();
-      console.log("Server is ready to take our messages");
-    } catch (verifyError) {
-      console.error('ПОЛНАЯ ОШИБКА ВЕРИФИКАЦИИ SMTP:', verifyError);
-      return NextResponse.json({ message: 'Ошибка соединения с почтовым сервером.', error: (verifyError as Error).message }, { status: 500 });
-    }
+    // 1. Проверка соединения
+    await transporter.verify();
 
     const isOrderForm = phone && productCategory;
-    
-    // Используем переменную окружения для Bitrix email
-    const bitrixEmail = process.env.BITRIX_EMAIL_ADDRESS;
     const recipients = bitrixEmail ? `${bitrixEmail}, sale@andrgf.id, bm@andrgf.id` : 'sale@andrgf.id, bm@andrgf.id';
     
     const subjectToManagers = isOrderForm 
@@ -54,13 +49,12 @@ export async function POST(req: NextRequest) {
 
     // 2. Отправка письма менеджерам
     const mailOptionsToManagers = {
-      from: `"${name}" <${process.env.EMAIL_USER}>`,
+      from: `"${name}" <${user}>`,
       to: recipients,
       replyTo: email,
       subject: subjectToManagers,
       html: htmlToManagers,
     };
-
     await transporter.sendMail(mailOptionsToManagers);
     
     // 3. Отправка подтверждающего письма клиенту
@@ -75,21 +69,19 @@ export async function POST(req: NextRequest) {
           <p style="font-size: 14px; font-weight: bold; margin-top: 20px;">С уважением,<br>Команда Andr Global Financial</p>
       </div>
     `;
-
     const mailOptionsToClient = {
-      from: `"Andr Global Financial" <${process.env.EMAIL_USER}>`,
+      from: `"Andr Global Financial" <${user}>`,
       to: email,
       subject: subjectToClient,
       html: htmlToClient,
     };
-
     await transporter.sendMail(mailOptionsToClient);
 
     return NextResponse.json({ message: 'Сообщение успешно отправлено.' }, { status: 200 });
 
   } catch (error) {
-    console.error('ПОЛНАЯ ОШИБКА ОТПРАВКИ ПОЧТЫ:', error);
     const errorMessage = error instanceof Error ? error.message : 'Неизвестная ошибка';
-    return NextResponse.json({ message: 'Не удалось отправить письмо.', error: errorMessage, details: error }, { status: 500 });
+    console.error('ПОЛНАЯ ОШИБКА ОТПРАВКИ ПОЧТЫ:', error);
+    return NextResponse.json({ message: 'Не удалось отправить письмо.', error: errorMessage }, { status: 500 });
   }
 }
