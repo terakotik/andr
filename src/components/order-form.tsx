@@ -4,6 +4,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
+import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -34,6 +35,7 @@ export function OrderForm({ productCategories }: OrderFormProps) {
     const { translations } = useLanguage();
     const { toast } = useToast();
     const orderFormTranslations = translations.orderForm || {};
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const phoneRegex = new RegExp(
       /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/
@@ -65,13 +67,40 @@ export function OrderForm({ productCategories }: OrderFormProps) {
         },
     });
 
-    function onSubmit(values: z.infer<typeof formSchema>) {
-        console.log(values);
-        toast({
-            title: orderFormTranslations.toast?.title,
-            description: orderFormTranslations.toast?.description,
-        });
-        form.reset();
+    async function onSubmit(values: z.infer<typeof formSchema>) {
+        setIsSubmitting(true);
+        try {
+            const response = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(values),
+            });
+
+            if (response.ok) {
+                toast({
+                    title: orderFormTranslations.toast?.title,
+                    description: orderFormTranslations.toast?.description,
+                });
+                form.reset();
+            } else {
+                const errorData = await response.json();
+                toast({
+                    variant: "destructive",
+                    title: "Ошибка отправки",
+                    description: errorData.message || "Не удалось отправить запрос.",
+                });
+            }
+        } catch (error) {
+            toast({
+                variant: "destructive",
+                title: "Сетевая ошибка",
+                description: "Произошла ошибка при отправке формы. Пожалуйста, попробуйте снова.",
+            });
+        } finally {
+            setIsSubmitting(false);
+        }
     }
 
     return (
@@ -159,10 +188,10 @@ export function OrderForm({ productCategories }: OrderFormProps) {
                         </FormItem>
                     )}
                 />
-                <Button type="submit" className="w-full">{orderFormTranslations.submitButton}</Button>
+                <Button type="submit" className="w-full" disabled={isSubmitting}>
+                  {isSubmitting ? "Отправка..." : orderFormTranslations.submitButton}
+                </Button>
             </form>
         </Form>
     );
 }
-
-    

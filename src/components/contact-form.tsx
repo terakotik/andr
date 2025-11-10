@@ -1,8 +1,10 @@
+
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
+import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -21,6 +23,7 @@ import { useLanguage } from "@/context/language-context";
 export function ContactForm() {
     const { translations } = useLanguage();
     const { toast } = useToast();
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const formSchema = z.object({
         name: z.string().min(2, {
@@ -43,13 +46,40 @@ export function ContactForm() {
         },
     });
 
-    function onSubmit(values: z.infer<typeof formSchema>) {
-        console.log(values);
-        toast({
-            title: translations.contactForm.toast.title,
-            description: translations.contactForm.toast.description,
-        });
-        form.reset();
+    async function onSubmit(values: z.infer<typeof formSchema>) {
+        setIsSubmitting(true);
+        try {
+            const response = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(values),
+            });
+
+            if (response.ok) {
+                toast({
+                    title: translations.contactForm.toast.title,
+                    description: translations.contactForm.toast.description,
+                });
+                form.reset();
+            } else {
+                const errorData = await response.json();
+                toast({
+                    variant: "destructive",
+                    title: "Ошибка отправки",
+                    description: errorData.message || "Не удалось отправить сообщение.",
+                });
+            }
+        } catch (error) {
+            toast({
+                variant: "destructive",
+                title: "Сетевая ошибка",
+                description: "Произошла ошибка при отправке формы. Пожалуйста, попробуйте снова.",
+            });
+        } finally {
+            setIsSubmitting(false);
+        }
     }
 
     return (
@@ -98,7 +128,10 @@ export function ContactForm() {
                         </FormItem>
                     )}
                 />
-                <Button type="submit" className="w-full">{translations.contactForm.submitButton}</Button>
-            </form>        </Form>
+                <Button type="submit" className="w-full" disabled={isSubmitting}>
+                    {isSubmitting ? "Отправка..." : translations.contactForm.submitButton}
+                </Button>
+            </form>
+        </Form>
     );
 }
