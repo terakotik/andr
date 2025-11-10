@@ -2,7 +2,6 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import * as nodemailer from 'nodemailer';
 
-// Используем service: 'gmail' для оптимальной конфигурации с Gmail
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
@@ -13,6 +12,15 @@ const transporter = nodemailer.createTransport({
 
 export async function POST(req: NextRequest) {
   try {
+    // 1. Проверка соединения с SMTP сервером
+    try {
+      await transporter.verify();
+      console.log("Server is ready to take our messages");
+    } catch (verifyError) {
+      console.error('SMTP Cоединение не удалось:', verifyError);
+      return NextResponse.json({ message: 'Ошибка соединения с почтовым сервером.', error: (verifyError as Error).message }, { status: 500 });
+    }
+
     const body = await req.json();
     const { name, email, message, phone, productCategory } = body;
 
@@ -21,8 +29,6 @@ export async function POST(req: NextRequest) {
     }
 
     const isOrderForm = phone && productCategory;
-    
-    // --- ИЗМЕНЕНИЕ: Отправляем на несколько адресов ---
     const recipients = 'sale@andrgf.id, bm@andrgf.id';
     
     const subjectToManagers = isOrderForm 
@@ -42,18 +48,18 @@ export async function POST(req: NextRequest) {
       </div>
     `;
 
-    // 1. Отправка письма менеджерам
+    // 2. Отправка письма менеджерам
     const mailOptionsToManagers = {
       from: `"${name}" <${process.env.EMAIL_USER}>`,
       to: recipients,
-      replyTo: email, // Поле для удобного ответа клиенту
+      replyTo: email,
       subject: subjectToManagers,
       html: htmlToManagers,
     };
 
     await transporter.sendMail(mailOptionsToManagers);
     
-    // 2. Отправка подтверждающего письма клиенту
+    // 3. Отправка подтверждающего письма клиенту
     const subjectToClient = `Ваша заявка принята | Andr Global Financial`;
     const htmlToClient = `
       <div style="font-family: sans-serif; padding: 20px; max-width: 600px; margin: auto; border: 1px solid #eee; border-radius: 8px;">
@@ -78,7 +84,6 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ message: 'Сообщение успешно отправлено.' }, { status: 200 });
 
   } catch (error) {
-    // Улучшенное логирование для детальной диагностики
     console.error('ПОЛНАЯ ОШИБКА ОТПРАВКИ ПОЧТЫ:', error);
     const errorMessage = error instanceof Error ? error.message : 'Неизвестная ошибка';
     return NextResponse.json({ message: 'Не удалось отправить письмо.', error: errorMessage, details: error }, { status: 500 });
