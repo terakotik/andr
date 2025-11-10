@@ -54,7 +54,7 @@ export async function POST(req: NextRequest) {
 
     const mailOptions = {
       from: `"${name}" <${process.env.EMAIL_USER}>`, // Адрес, с которого отправляется письмо
-      to: 'fwdmnuj5hgbzmogk48ggg8socgc@b24-4jaudn.bitrix24.ru', 
+      to: process.env.BITRIX_EMAIL_ADDRESS, 
       replyTo: email,
       subject: subject,
       text: text,
