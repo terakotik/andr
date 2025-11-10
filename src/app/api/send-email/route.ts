@@ -21,6 +21,10 @@ export async function POST(req: NextRequest) {
     }
 
     const isOrderForm = phone && productCategory;
+    
+    // --- ИЗМЕНЕНИЕ: Отправляем на несколько адресов ---
+    const recipients = 'sale@andrgf.id, bm@andrgf.id';
+    
     const subjectToManagers = isOrderForm 
         ? `Новый заказ с сайта от: ${name}`
         : `Новая заявка с сайта от: ${name}`;
@@ -41,8 +45,8 @@ export async function POST(req: NextRequest) {
     // 1. Отправка письма менеджерам
     const mailOptionsToManagers = {
       from: `"${name}" <${process.env.EMAIL_USER}>`,
-      to: 'sale@andrgf.id, bm@andrgf.id',
-      replyTo: email,
+      to: recipients,
+      replyTo: email, // Поле для удобного ответа клиенту
       subject: subjectToManagers,
       html: htmlToManagers,
     };
