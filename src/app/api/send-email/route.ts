@@ -2,15 +2,13 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import * as nodemailer from 'nodemailer';
 
-// Настройка Nodemailer (ВАЖНО: Используйте переменные окружения!)
-// Эти переменные нужно будет добавить в ваш файл .env.local
 const transporter = nodemailer.createTransport({
-  host: process.env.EMAIL_HOST,        // Например, 'smtp.yandex.ru' или 'smtp.google.com'
-  port: parseInt(process.env.EMAIL_PORT || '587', 10), // Обычно 587 (TLS) или 465 (SSL)
-  secure: process.env.EMAIL_PORT === '465', // true для порта 465, false для других
+  host: process.env.EMAIL_HOST,
+  port: parseInt(process.env.EMAIL_PORT || '587', 10),
+  secure: process.env.EMAIL_PORT === '465',
   auth: {
-    user: process.env.EMAIL_USER,      // Ваш корпоративный email для отправки (например, no-reply@andrgf.id)
-    pass: process.env.EMAIL_PASS,      // Пароль/токен приложения для этого email
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
   },
 });
 
@@ -23,13 +21,12 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ message: 'Отсутствуют обязательные поля: имя, email или сообщение.' }, { status: 400 });
     }
 
-    // Определяем тему и тело письма в зависимости от наличия данных из формы заказа
     const isOrderForm = phone && productCategory;
-    const subject = isOrderForm 
+    const subjectToManagers = isOrderForm 
         ? `Новый заказ с сайта от: ${name}`
         : `Новая заявка с сайта от: ${name}`;
 
-    const text = `
+    const textToManagers = `
         Имя: ${name}
         Email: ${email}
         ${isOrderForm ? `Телефон: ${phone}` : ''}
@@ -39,7 +36,7 @@ export async function POST(req: NextRequest) {
         ${message}
     `;
 
-    const html = `
+    const htmlToManagers = `
       <div style="font-family: sans-serif; padding: 20px; border: 1px solid #eee; border-radius: 8px;">
         <h2 style="color: #333;">${isOrderForm ? 'Новый заказ с сайта' : 'Новая заявка с сайта'}</h2>
         <p><strong>Имя:</strong> ${name}</p>
@@ -52,16 +49,39 @@ export async function POST(req: NextRequest) {
       </div>
     `;
 
-    const mailOptions = {
-      from: `"${name}" <${process.env.EMAIL_USER}>`, // Адрес, с которого отправляется письмо
-      to: process.env.BITRIX_EMAIL_ADDRESS, 
+    // 1. Отправка письма менеджерам
+    const mailOptionsToManagers = {
+      from: `"${name}" <${process.env.EMAIL_USER}>`,
+      to: 'sale@andrgf.id, bm@andrgf.id',
       replyTo: email,
-      subject: subject,
-      text: text,
-      html: html,
+      subject: subjectToManagers,
+      text: textToManagers,
+      html: htmlToManagers,
     };
 
-    await transporter.sendMail(mailOptions);
+    await transporter.sendMail(mailOptionsToManagers);
+    
+    // 2. Отправка подтверждающего письма клиенту
+    const subjectToClient = `Ваша заявка принята | Andr Global Financial`;
+    const htmlToClient = `
+      <div style="font-family: sans-serif; padding: 20px; max-width: 600px; margin: auto; border: 1px solid #eee; border-radius: 8px;">
+          <h2 style="color: #333;">Здравствуйте, ${name}!</h2>
+          <p>Благодарим за ваше обращение в Andr Global Financial. Ваша заявка успешно принята.</p>
+          <p>Наш менеджер свяжется с вами в ближайшее рабочее время.</p>
+          <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+          <p style="font-size: 12px; color: #777;">Это автоматическое уведомление, на него не нужно отвечать.</p>
+          <p style="font-size: 14px; font-weight: bold; margin-top: 20px;">С уважением,<br>Команда Andr Global Financial</p>
+      </div>
+    `;
+
+    const mailOptionsToClient = {
+      from: `"Andr Global Financial" <${process.env.EMAIL_USER}>`,
+      to: email,
+      subject: subjectToClient,
+      html: htmlToClient,
+    };
+
+    await transporter.sendMail(mailOptionsToClient);
 
     return NextResponse.json({ message: 'Сообщение успешно отправлено.' }, { status: 200 });
 
