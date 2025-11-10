@@ -1,6 +1,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import * as nodemailer from 'nodemailer';
+import 'dotenv/config';
 
 export async function POST(req: NextRequest) {
   try {
@@ -29,7 +30,10 @@ export async function POST(req: NextRequest) {
     }
 
     const isOrderForm = phone && productCategory;
-    const recipients = 'fwdmnuj5hgbzmogk48ggg8socgc@b24-4jaudn.bitrix24.ru, sale@andrgf.id, bm@andrgf.id';
+    
+    // Используем переменную окружения для Bitrix email
+    const bitrixEmail = process.env.BITRIX_EMAIL_ADDRESS;
+    const recipients = bitrixEmail ? `${bitrixEmail}, sale@andrgf.id, bm@andrgf.id` : 'sale@andrgf.id, bm@andrgf.id';
     
     const subjectToManagers = isOrderForm 
         ? `Новый заказ с сайта от: ${name}`
