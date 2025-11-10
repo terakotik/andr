@@ -2,25 +2,8 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import * as nodemailer from 'nodemailer';
 
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
-  },
-});
-
 export async function POST(req: NextRequest) {
   try {
-    // 1. Проверка соединения с SMTP сервером
-    try {
-      await transporter.verify();
-      console.log("Server is ready to take our messages");
-    } catch (verifyError) {
-      console.error('SMTP Cоединение не удалось:', verifyError);
-      return NextResponse.json({ message: 'Ошибка соединения с почтовым сервером.', error: (verifyError as Error).message }, { status: 500 });
-    }
-
     const body = await req.json();
     const { name, email, message, phone, productCategory } = body;
 
@@ -28,8 +11,25 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ message: 'Отсутствуют обязательные поля: имя, email или сообщение.' }, { status: 400 });
     }
 
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
+
+    // 1. Проверка соединения с SMTP сервером
+    try {
+      await transporter.verify();
+      console.log("Server is ready to take our messages");
+    } catch (verifyError) {
+      console.error('ПОЛНАЯ ОШИБКА ВЕРИФИКАЦИИ SMTP:', verifyError);
+      return NextResponse.json({ message: 'Ошибка соединения с почтовым сервером.', error: (verifyError as Error).message }, { status: 500 });
+    }
+
     const isOrderForm = phone && productCategory;
-    const recipients = 'sale@andrgf.id, bm@andrgf.id';
+    const recipients = 'fwdmnuj5hgbzmogk48ggg8socgc@b24-4jaudn.bitrix24.ru, sale@andrgf.id, bm@andrgf.id';
     
     const subjectToManagers = isOrderForm 
         ? `Новый заказ с сайта от: ${name}`
