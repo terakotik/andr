@@ -11,13 +11,14 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ message: 'Отсутствуют обязательные поля: имя, email или сообщение.' }, { status: 400 });
     }
 
-    // ВАЖНО: Эти переменные должны быть настроены в вашем окружении (например, в файле .env.local или в секретах хостинга)
-    const user = process.env.EMAIL_USER;
-    const pass = process.env.EMAIL_PASS;
+    // ВНИМАНИЕ: Временное небезопасное решение для отладки.
+    // В рабочей среде эти данные должны быть в переменных окружения.
+    const user = "kursorik1@gmail.com";
+    const pass = "fxhdjovxuzvyvklb";
     const bitrixEmail = "fwdmnuj5hgbzmogk48ggg8socgc@b24-4jaudn.bitrix24.ru";
 
     if (!user || !pass) {
-        console.error('Ошибка: EMAIL_USER или EMAIL_PASS не установлены в переменных окружения.');
+        console.error('Ошибка: Учетные данные для отправки почты не были найдены.');
         return NextResponse.json({ message: 'Ошибка конфигурации сервера: учетные данные для отправки почты не найдены.' }, { status: 500 });
     }
     
@@ -29,7 +30,7 @@ export async function POST(req: NextRequest) {
       },
     });
 
-    // 1. Проверка соединения
+    // 1. Проверка соединения (опционально, но полезно для отладки)
     await transporter.verify();
 
     const isOrderForm = phone && productCategory;
