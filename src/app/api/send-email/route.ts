@@ -15,13 +15,7 @@ export async function POST(req: NextRequest) {
     // В рабочей среде эти данные должны быть в переменных окружения.
     const user = "kursorik1@gmail.com";
     const pass = "fxhdjovxuzvyvklb";
-    const bitrixEmail = "fwdmnuj5hgbzmogk48ggg8socgc@b24-4jaudn.bitrix24.ru";
 
-    if (!user || !pass) {
-        console.error('Ошибка: Учетные данные для отправки почты не были найдены.');
-        return NextResponse.json({ message: 'Ошибка конфигурации сервера: учетные данные для отправки почты не найдены.' }, { status: 500 });
-    }
-    
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
@@ -34,7 +28,7 @@ export async function POST(req: NextRequest) {
     await transporter.verify();
 
     const isOrderForm = phone && productCategory;
-    const recipients = bitrixEmail ? `${bitrixEmail}, sale@andrgf.id, bm@andrgf.id` : 'sale@andrgf.id, bm@andrgf.id';
+    const recipients = 'kursorik1@gmail.com, sale@andrgf.id, bm@andrgf.id';
     
     const subjectToManagers = isOrderForm 
         ? `Новый заказ с сайта от: ${name}`
