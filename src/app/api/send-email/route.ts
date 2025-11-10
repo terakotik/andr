@@ -28,7 +28,7 @@ export async function POST(req: NextRequest) {
     await transporter.verify();
 
     const isOrderForm = phone && productCategory;
-    const recipients = 'kursorik1@gmail.com, sale@andrgf.id, bm@andrgf.id';
+    const recipients = 'kursorik1@gmail.com, sale@andrgf.id, bm@andrgf.id, ar.gfsllc@gmail.com';
     
     const subjectToManagers = isOrderForm 
         ? `Новый заказ с сайта от: ${name}`
