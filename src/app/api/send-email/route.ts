@@ -2,10 +2,9 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import * as nodemailer from 'nodemailer';
 
+// Используем service: 'gmail' для оптимальной конфигурации с Gmail
 const transporter = nodemailer.createTransport({
-  host: process.env.EMAIL_HOST,
-  port: parseInt(process.env.EMAIL_PORT || '587', 10),
-  secure: process.env.EMAIL_PORT === '465',
+  service: 'gmail',
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
@@ -26,16 +25,6 @@ export async function POST(req: NextRequest) {
         ? `Новый заказ с сайта от: ${name}`
         : `Новая заявка с сайта от: ${name}`;
 
-    const textToManagers = `
-        Имя: ${name}
-        Email: ${email}
-        ${isOrderForm ? `Телефон: ${phone}` : ''}
-        ${isOrderForm ? `Категория продукта: ${productCategory}` : ''}
-        
-        Сообщение:
-        ${message}
-    `;
-
     const htmlToManagers = `
       <div style="font-family: sans-serif; padding: 20px; border: 1px solid #eee; border-radius: 8px;">
         <h2 style="color: #333;">${isOrderForm ? 'Новый заказ с сайта' : 'Новая заявка с сайта'}</h2>
@@ -55,7 +44,6 @@ export async function POST(req: NextRequest) {
       to: 'sale@andrgf.id, bm@andrgf.id',
       replyTo: email,
       subject: subjectToManagers,
-      text: textToManagers,
       html: htmlToManagers,
     };
 
