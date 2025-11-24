@@ -181,7 +181,12 @@ export function Footer() {
         <Separator className="my-8" />
         
         <div className="flex flex-col md:flex-row justify-between text-left md:items-center text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} {translations.footer.copyright}</p>
+            <div className="flex flex-col md:flex-row md:items-center gap-x-4 gap-y-2">
+                 <p>© {new Date().getFullYear()} {translations.footer.copyright}</p>
+                 <Link href="/policy" className="hover:text-primary transition-colors">
+                    {translations.footer.privacyPolicy}
+                 </Link>
+            </div>
           <div className="flex items-center gap-2">
             {/* <iframe 
                 srcDoc={developerLogoHtml}
@@ -199,3 +204,5 @@ export function Footer() {
     </footer>
   );
 }
+
+    
