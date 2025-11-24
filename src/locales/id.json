@@ -396,7 +396,7 @@
     },
     "aboutPage": {
         "title": "Tentang Kami",
-        "p1": "ANDR GLOBAL FINANCIAL adalah mitra strategis Anda dalam bisnis global. Kami adalah perusahaan internasional terkemuka yang berspesialisasi dalam tiga bidang utama: perdagangan logam mulia, konsultasi profesional, dan pasokan makanan berkualitas tinggi ke pasar dunia.",
+        "p1": "ANDR GLOBAL FINANCIAL adalah mitra strategis Anda dalam bisnis global. Kami adalah perusahaan internasional terkemuka yang berspesialisasi dalam tiga bidang utama: perdagangan logam mulia, konsultasi profesional, и pasokan makanan berkualitas tinggi ke pasar dunia.",
         "p2": "Misi kami adalah memberikan solusi yang andal dan efisien kepada klien yang berkontribusi pada pertumbuhan dan kemakmuran mereka. Kami berusaha untuk kemitraan jangka panjang berdasarkan kepercayaan, transparansi, dan saling keinginan untuk sukses.",
         "p3": "Tim kami terdiri dari para ahli berkualifikasi tinggi dengan pengalaman bertahun-tahun dalam perdagangan internasional, keuangan, dan konsultasi. Kami terus meningkatkan keterampilan dan pengetahuan kami untuk menawarkan strategi yang paling terkini dan efektif."
     },
@@ -420,114 +420,124 @@
     "policyPage": {
         "terms": {
             "title": "Syarat dan Ketentuan Penggunaan Situs Web PT. ANDR GLOBAL FINANCIAL",
-            "date": "Tanggal Efektif: [Masukkan Tanggal]",
+            "date": "Tanggal Efektif: {date}",
             "sections": [
                 {
                     "title": "1. Ketentuan Umum",
                     "content": [
-                        "Syarat dan Ketentuan ini ('Ketentuan') mengatur penggunaan situs web https://andrgf.id, yang dimiliki dan dioperasikan oleh PT. ANDR GLOBAL FINANCIAL sesuai dengan hukum Republik Indonesia.",
-                        "Dengan menggunakan Situs, Pengguna menyetujui Ketentuan ini secara keseluruhan. Ketidaksetujuan mengharuskan penghentian segera penggunaan Situs.",
-                        "Perusahaan berhak mengubah Ketentuan tanpa pemberitahuan sebelumnya. Penggunaan Situs secara berkelanjutan merupakan penerimaan atas perubahan tersebut.",
-                        "Situs ini menyediakan informasi tentang produk dan layanan Perusahaan, termasuk perdagangan makanan internasional dan layanan konsultasi. Informasi yang diberikan bukan merupakan penawaran umum."
+                        "• Syarat dan Ketentuan ini ('Ketentuan') mengatur penggunaan situs web https://andrgf.id, yang dimiliki dan dioperasikan oleh PT. ANDR GLOBAL FINANCIAL sesuai dengan hukum Republik Indonesia.",
+                        "• Dengan menggunakan Situs, Pengguna menyetujui Ketentuan ini secara keseluruhan. Ketidaksetujuan mengharuskan penghentian segera penggunaan Situs.",
+                        "• Perusahaan berhak mengubah Ketentuan tanpa pemberitahuan sebelumnya. Penggunaan Situs secara berkelanjutan merupakan penerimaan atas perubahan tersebut.",
+                        "• Situs ini menyediakan informasi tentang produk dan layanan Perusahaan, termasuk perdagangan makanan internasional dan layanan konsultasi. Informasi yang diberikan bukan merupakan penawaran umum."
                     ]
                 },
                 {
                     "title": "2. Lingkup Layanan",
                     "content": [
-                        "Layanan konsultasi: diberikan berdasarkan perjanjian tertulis terpisah.",
-                        "Perdagangan makanan internasional: diatur oleh kontrak penjualan terpisah yang menentukan kualitas, kuantitas, harga, syarat pengiriman (Incoterms), dan pembayaran."
+                        "• Layanan konsultasi: diberikan berdasarkan perjanjian tertulis terpisah.",
+                        "• Perdagangan makanan internasional: diatur oleh kontrak penjualan terpisah yang menentukan kualitas, kuantitas, harga, syarat pengiriman (Incoterms), dan pembayaran."
                     ]
                 },
                 {
                     "title": "3. Kekayaan Intelektual",
                     "content": [
-                        "Semua konten di Situs (teks, grafik, logo, gambar, perangkat lunak) adalah milik Perusahaan atau pemasoknya.",
-                        "Penggunaan Konten apa pun tanpa izin tertulis dilarang."
+                        "• Semua konten di Situs (teks, grafik, logo, gambar, perangkat lunak) adalah milik Perusahaan atau pemasoknya.",
+                        "• Penggunaan Konten apa pun tanpa izin tertulis dilarang."
                     ]
                 },
                 {
                     "title": "4. Penafian dan Batasan Tanggung Jawab",
                     "content": [
-                        "Situs dan Konten disediakan 'sebagaimana adanya'. Perusahaan tidak menjamin keakuratan dan kelengkapan informasi.",
-                        "Informasi ini hanya untuk tujuan informasional dan bukan merupakan nasihat keuangan, investasi, hukum, atau pajak.",
-                        "Perusahaan tidak bertanggung jawab atas kerugian yang terkait dengan penggunaan atau ketidakmampuan menggunakan Situs.",
-                        "Tanggung jawab atas transaksi komersial terbatas pada ketentuan kontrak masing-masing."
+                        "• Situs dan Konten disediakan 'sebagaimana adanya'. Perusahaan tidak menjamin keakuratan dan kelengkapan informasi.",
+                        "• Informasi ini hanya untuk tujuan informasional dan bukan merupakan nasihat keuangan, investasi, hukum, atau pajak.",
+                        "• Perusahaan tidak bertanggung jawab atas kerugian yang terkait dengan penggunaan atau ketidakmampuan menggunakan Situs.",
+                        "• Tanggung jawab atas transaksi komersial terbatas pada ketentuan kontrak masing-masing."
                     ]
                 },
                 {
                     "title": "5. Hukum yang Berlaku dan Penyelesaian Sengketa",
                     "content": [
-                        "Ketentuan ini diatur oleh hukum Republik Indonesia.",
-                        "Sengketa akan diselesaikan melalui negosiasi, dan jika tidak memungkinkan, akan diselesaikan di yurisdiksi eksklusif Pengadilan Negeri Jakarta Selatan."
+                        "• Ketentuan ini diatur oleh hukum Republik Indonesia.",
+                        "• Sengketa akan diselesaikan melalui negosiasi, dan jika tidak memungkinkan, akan diselesaikan di yurisdiksi eksklusif Pengadilan Negeri Jakarta Selatan."
                     ]
                 }
             ]
         },
         "privacy": {
             "title": "Kebijakan Privasi PT. ANDR GLOBAL FINANCIAL",
-            "date": "Tanggal Efektif: [Masukkan Tanggal]",
+            "date": "Tanggal Efektif: {date}",
             "sections": [
                 {
                     "title": "1. Ketentuan Umum",
                     "content": [
-                        "Kebijakan ini menjelaskan bagaimana Perusahaan mengumpulkan, menggunakan, menyimpan, dan melindungi data pribadi pengguna situs web https://andrgf.id.",
-                        "Perusahaan mematuhi hukum Indonesia, termasuk Undang-Undang No. 27 Tahun 2022 tentang Perlindungan Data Pribadi ('UU PDP') dan Peraturan No. 71 Tahun 2019.",
-                        "Dengan menggunakan Situs, pengguna menyetujui pengumpulan dan pemrosesan data sesuai dengan Kebijakan ini."
+                        "• Kebijakan ini menjelaskan bagaimana Perusahaan mengumpulkan, menggunakan, menyimpan, dan melindungi data pribadi pengguna situs web https://andrgf.id.",
+                        "• Perusahaan mematuhi hukum Indonesia, termasuk Undang-Undang No. 27 Tahun 2022 tentang Perlindungan Data Pribadi ('UU PDP') dan Peraturan No. 71 Tahun 2019.",
+                        "• Dengan menggunakan Situs, pengguna menyetujui pengumpulan dan pemrosesan data sesuai dengan Kebijakan ini."
                     ]
                 },
                 {
                     "title": "2. Pengumpulan dan Penggunaan Data",
                     "content": [
-                        "Disediakan oleh pengguna: nama, email, telepon, perusahaan, jabatan, dan informasi lainnya.",
-                        "Dikumpulkan secara otomatis: alamat IP, browser, OS, waktu akses, halaman yang dilihat, cookie.",
-                        "Tujuan pemrosesan:",
-                        "• untuk menanggapi pertanyaan dan memberikan informasi;",
-                        "• untuk membuat dan melaksanakan kontrak;",
-                        "• untuk memastikan operasi dan peningkatan Situs;",
-                        "• untuk mematuhi kewajiban hukum."
+                        "• Disediakan oleh pengguna: nama, email, telepon, perusahaan, jabatan, dan informasi lainnya.",
+                        "• Dikumpulkan secara otomatis: alamat IP, browser, OS, waktu akses, halaman yang dilihat, cookie.",
+                        "• Tujuan pemrosesan:",
+                        {"subpoints": [
+                            "untuk menanggapi pertanyaan dan memberikan informasi;",
+                            "untuk membuat dan melaksanakan kontrak;",
+                            "untuk memastikan operasi dan peningkatan Situs;",
+                            "untuk mematuhi kewajiban hukum."
+                        ]}
                     ]
                 },
                 {
                     "title": "3. Keamanan Data",
                     "content": [
-                        "Perusahaan menerapkan langkah-langkah keamanan teknis, fisik, dan organisasi.",
-                        "Akses ke data hanya terbatas pada karyawan yang berwenang."
+                        "• Perusahaan menerapkan langkah-langkah keamanan teknis, fisik, dan organisasi.",
+                        "• Akses ke data hanya terbatas pada karyawan yang berwenang."
                     ]
                 },
                 {
                     "title": "4. Penyimpanan Data",
                     "content": [
-                        "Data disimpan selama diperlukan untuk tujuan pengumpulannya atau sebagaimana diwajibkan oleh hukum."
+                        "• Data disimpan selama diperlukan untuk tujuan pengumpulannya atau sebagaimana diwajibkan oleh hukum."
                     ]
                 },
                 {
                     "title": "5. Transfer Data Lintas Batas",
                     "content": [
-                        "Perusahaan dapat mentransfer data ke luar Indonesia (misalnya, ke mitra logistik).",
-                        "Transfer dilakukan dengan syarat ada tingkat perlindungan yang memadai atau jaminan kontraktual."
+                        "• Perusahaan dapat mentransfer data ke luar Indonesia (misalnya, ke mitra logistik).",
+                        "• Transfer dilakukan dengan syarat ada tingkat perlindungan yang memadai atau jaminan kontraktual."
                     ]
                 },
                 {
                     "title": "6. Hak Pengguna",
                     "content": [
                         "Pengguna berhak untuk:",
-                        "• mengakses datanya;",
-                        "• meminta koreksi atau pembaruan;",
-                        "• meminta penghapusan atau pemusnahan dalam kondisi tertentu;",
-                        "• menarik persetujuan untuk pemrosesan data.",
+                        {
+                          "subpoints": [
+                            "mengakses datanya;",
+                            "meminta koreksi atau pembaruan;",
+                            "meminta penghapusan atau pemusnahan dalam kondisi tertentu;",
+                            "menarik persetujuan untuk pemrosesan data."
+                          ]
+                        },
                         "Untuk menggunakan hak-hak ini, silakan hubungi Petugas Perlindungan Data."
                     ]
                 }
-            ]
+            ],
+            "contact": {
+                "title": "Informasi Kontak",
+                "dpo": "Petugas Perlindungan Data",
+                "name": "PT. ANDR GLOBAL FINANCIAL",
+                "address": "Alamat: Alamanda Office, Lantai 5, Jl. Bypass Ngurah Rai No. 67, Kedonganan, Kuta, Badung, Bali 80361, INDONESIA",
+                "email": "sale@andrgf.id"
+            }
         },
         "contact": {
-            "title": "Informasi Kontak",
-            "dpo": "Petugas Perlindungan Data",
+            "title": "6. Informasi Kontak",
             "name": "PT. ANDR GLOBAL FINANCIAL",
             "address": "Alamat: Alamanda Office, Lantai 5, Jl. Bypass Ngurah Rai No. 67, Kedonganan, Kuta, Badung, Bali 80361, INDONESIA",
-            "email": "Email: sale@andrgf.id"
+            "email": "sale@andrgf.id"
         }
     }
 }
-
-    

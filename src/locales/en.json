@@ -420,114 +420,124 @@
     "policyPage": {
         "terms": {
             "title": "Terms and Conditions of Use for the PT. ANDR GLOBAL FINANCIAL Website",
-            "date": "Effective Date: [Insert Date]",
+            "date": "Effective Date: {date}",
             "sections": [
                 {
                     "title": "1. General Provisions",
                     "content": [
-                        "These Terms and Conditions ('Terms') govern the use of the website https://andrgf.id, owned and operated by PT. ANDR GLOBAL FINANCIAL in accordance with the laws of the Republic of Indonesia.",
-                        "By using the Site, the User agrees to these Terms in their entirety. Disagreement requires immediate cessation of Site use.",
-                        "The Company reserves the right to change the Terms without prior notice. Continued use of the Site constitutes acceptance of the changes.",
-                        "The Site provides information about the Company's products and services, including international food trade and consulting services. The information provided does not constitute a public offer."
+                        "• These Terms and Conditions ('Terms') govern the use of the website https://andrgf.id, owned and operated by PT. ANDR GLOBAL FINANCIAL in accordance with the laws of the Republic of Indonesia.",
+                        "• By using the Site, the User agrees to these Terms in their entirety. Disagreement requires immediate cessation of Site use.",
+                        "• The Company reserves the right to change the Terms without prior notice. Continued use of the Site constitutes acceptance of the changes.",
+                        "• The Site provides information about the Company's products and services, including international food trade and consulting services. The information provided does not constitute a public offer."
                     ]
                 },
                 {
                     "title": "2. Scope of Services",
                     "content": [
-                        "Consulting services: are provided under a separate written agreement.",
-                        "International food trade: is regulated by a separate sales contract specifying quality, quantity, price, delivery terms (Incoterms), and payment."
+                        "• Consulting services: are provided under a separate written agreement.",
+                        "• International food trade: is regulated by a separate sales contract specifying quality, quantity, price, delivery terms (Incoterms), and payment."
                     ]
                 },
                 {
                     "title": "3. Intellectual Property",
                     "content": [
-                        "All content on the Site (texts, graphics, logos, images, software) is the property of the Company or its suppliers.",
-                        "Any use of the Content without written permission is prohibited."
+                        "• All content on the Site (texts, graphics, logos, images, software) is the property of the Company or its suppliers.",
+                        "• Any use of the Content without written permission is prohibited."
                     ]
                 },
                 {
                     "title": "4. Disclaimer and Limitation of Liability",
                     "content": [
-                        "The Site and Content are provided 'as is'. The Company does not guarantee the accuracy and completeness of the information.",
-                        "The information is for informational purposes only and does not constitute financial, investment, legal, or tax advice.",
-                        "The Company is not liable for losses related to the use or inability to use the Site.",
-                        "Liability for commercial transactions is limited to the terms of the respective contracts."
+                        "• The Site and Content are provided 'as is'. The Company does not guarantee the accuracy and completeness of the information.",
+                        "• The information is for informational purposes only and does not constitute financial, investment, legal, or tax advice.",
+                        "• The Company is not liable for losses related to the use or inability to use the Site.",
+                        "• Liability for commercial transactions is limited to the terms of the respective contracts."
                     ]
                 },
                 {
                     "title": "5. Applicable Law and Dispute Resolution",
                     "content": [
-                        "The Terms are governed by the laws of the Republic of Indonesia.",
-                        "Disputes shall be settled through negotiations, and if impossible, in the exclusive jurisdiction of the South Jakarta District Court (Pengadilan Negeri Jakarta Selatan)."
+                        "• The Terms are governed by the laws of the Republic of Indonesia.",
+                        "• Disputes shall be settled through negotiations, and if impossible, in the exclusive jurisdiction of the South Jakarta District Court (Pengadilan Negeri Jakarta Selatan)."
                     ]
                 }
             ]
         },
         "privacy": {
             "title": "Privacy Policy of PT. ANDR GLOBAL FINANCIAL",
-            "date": "Effective Date: [Insert Date]",
+            "date": "Effective Date: {date}",
             "sections": [
                 {
                     "title": "1. General Provisions",
                     "content": [
-                        "This Policy describes how the Company collects, uses, stores, and protects the personal data of users of the website https://andrgf.id.",
-                        "The Company complies with the laws of Indonesia, including Law No. 27 of 2022 on Personal Data Protection ('PDP Law') and Regulation No. 71 of 2019.",
-                        "By using the Site, the user consents to the collection and processing of data according to this Policy."
+                        "• This Policy describes how the Company collects, uses, stores, and protects the personal data of users of the website https://andrgf.id.",
+                        "• The Company complies with the laws of Indonesia, including Law No. 27 of 2022 on Personal Data Protection ('PDP Law') and Regulation No. 71 of 2019.",
+                        "• By using the Site, the user consents to the collection and processing of data according to this Policy."
                     ]
                 },
                 {
                     "title": "2. Data Collection and Use",
                     "content": [
-                        "Provided by the user: name, email, phone, company, position, and other information.",
-                        "Automatically collected: IP address, browser, OS, access time, pages viewed, cookies.",
-                        "Purposes of processing:",
-                        "• to respond to inquiries and provide information;",
-                        "• to conclude and execute contracts;",
-                        "• to ensure the operation and improvement of the Site;",
-                        "• to comply with legal obligations."
+                        "• Provided by the user: name, email, phone, company, position, and other information.",
+                        "• Automatically collected: IP address, browser, OS, access time, pages viewed, cookies.",
+                        "• Purposes of processing:",
+                        {"subpoints": [
+                            "to respond to inquiries and provide information;",
+                            "to conclude and execute contracts;",
+                            "to ensure the operation and improvement of the Site;",
+                            "to comply with legal obligations."
+                        ]}
                     ]
                 },
                 {
                     "title": "3. Data Security",
                     "content": [
-                        "The Company applies technical, physical, and organizational security measures.",
-                        "Access to data is restricted to authorized employees only."
+                        "• The Company applies technical, physical, and organizational security measures.",
+                        "• Access to data is restricted to authorized employees only."
                     ]
                 },
                 {
                     "title": "4. Data Storage",
                     "content": [
-                        "Data is stored for as long as necessary for the purposes of its collection or as required by law."
+                        "• Data is stored for as long as necessary for the purposes of its collection or as required by law."
                     ]
                 },
                 {
                     "title": "5. Cross-Border Data Transfer",
                     "content": [
-                        "The Company may transfer data outside of Indonesia (e.g., to logistics partners).",
-                        "Transfer is carried out provided there is an adequate level of protection or contractual guarantees."
+                        "• The Company may transfer data outside of Indonesia (e.g., to logistics partners).",
+                        "• Transfer is carried out provided there is an adequate level of protection or contractual guarantees."
                     ]
                 },
                 {
                     "title": "6. User Rights",
                     "content": [
                         "The user has the right to:",
-                        "• access their data;",
-                        "• request correction or updating;",
-                        "• request deletion or destruction under certain conditions;",
-                        "• withdraw consent to data processing.",
+                        {
+                          "subpoints": [
+                            "access their data;",
+                            "request correction or updating;",
+                            "request deletion or destruction under certain conditions;",
+                            "withdraw consent to data processing."
+                          ]
+                        },
                         "To exercise these rights, please contact the Data Protection Officer."
                     ]
                 }
-            ]
+            ],
+            "contact": {
+                "title": "Contact Information",
+                "dpo": "Data Protection Officer",
+                "name": "PT. ANDR GLOBAL FINANCIAL",
+                "address": "Address: Alamanda Office, 5th Floor, Jl. Bypass Ngurah Rai No. 67, Kedonganan, Kuta, Badung, Bali 80361, INDONESIA",
+                "email": "sale@andrgf.id"
+            }
         },
         "contact": {
-            "title": "Contact Information",
-            "dpo": "Data Protection Officer",
+            "title": "6. Contact Information",
             "name": "PT. ANDR GLOBAL FINANCIAL",
             "address": "Address: Alamanda Office, 5th Floor, Jl. Bypass Ngurah Rai No. 67, Kedonganan, Kuta, Badung, Bali 80361, INDONESIA",
-            "email": "Email: sale@andrgf.id"
+            "email": "sale@andrgf.id"
         }
     }
 }
-
-    
