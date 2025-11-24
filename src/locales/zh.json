@@ -526,11 +526,8 @@
                 }
             ],
             "contact": {
-                "title": "联系信息",
-                "dpo": "数据保护官",
-                "name": "PT. ANDR GLOBAL FINANCIAL",
-                "address": "地址: Alamanda Office, 5th Floor, Jl. Bypass Ngurah Rai No. 67, Kedonganan, Kuta, Badung, Bali 80361, INDONESIA",
-                "email": "sale@andrgf.id"
+                "title": "7. 联系信息",
+                "dpo": "数据保护官"
             }
         },
         "contact": {
@@ -541,3 +538,5 @@
         }
     }
 }
+
+    

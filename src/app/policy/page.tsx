@@ -16,11 +16,11 @@ export default function PolicyPage() {
                 {Array.isArray(section.content) && section.content.map((item: any, i: number) => {
                      if (typeof item === 'string') {
                         if (item.startsWith('•')) {
-                            const subItems = section.content.slice(i).join(' ').split('•').filter(s => s.trim()).map(s => s.trim());
-                            const listItems = subItems.map((subItem, j) => (
-                                <li key={j} className="ml-4">{subItem.endsWith(';') ? subItem.slice(0,-1) : subItem}</li>
+                             const listItems = section.content.filter((subItem:any) => typeof subItem === 'string' && subItem.startsWith('•')).map((subItem: string, j: number) => (
+                                <li key={j} className="ml-4">{subItem.substring(1).trim()}</li>
                             ));
-                            section.content.splice(i, section.content.length);
+                            // prevent rendering duplicates
+                            if (i > 0 && typeof section.content[i-1] === 'string' && section.content[i-1].startsWith('•')) return null;
                             return <ul key={i} className="list-disc list-inside space-y-1">{listItems}</ul>
                         }
                         return <p key={i}>{item}</p>
@@ -81,7 +81,7 @@ export default function PolicyPage() {
                         {renderSections(policy.privacy.sections?.slice(0, 5))}
                         {renderRights(policy.privacy.sections?.[5])}
                         <div className="space-y-2">
-                             <h3 className="text-xl font-semibold text-primary">{policy.contact.title}</h3>
+                             <h3 className="text-xl font-semibold text-primary">{policy.privacy.contact.title}</h3>
                              <p>{policy.privacy.contact.dpo}</p>
                              <p>{policy.contact.name}</p>
                              <p>{policy.contact.address}</p>
@@ -94,3 +94,5 @@ export default function PolicyPage() {
         </div>
     );
 }
+
+    
