@@ -168,7 +168,8 @@
         },
         "copyright": "AndrGlobal Consulting. Hak cipta dilindungi undang-undang.",
         "developerCredit": "Pengembangan dan otomatisasi",
-        "privacyPolicy": "Kebijakan Privasi"
+        "privacyPolicy": "Kebijakan Privasi",
+        "termsAndConditions": "Syarat dan Ketentuan"
     },
     "consulting": {
         "hero": {
@@ -538,5 +539,3 @@
         }
     }
 }
-
-    

@@ -168,7 +168,8 @@
         },
         "copyright": "AndrGlobal Consulting. 版权所有。",
         "developerCredit": "开发与自动化",
-        "privacyPolicy": "隐私政策"
+        "privacyPolicy": "隐私政策",
+        "termsAndConditions": "条款和条件"
     },
     "consulting": {
         "hero": {
@@ -538,5 +539,3 @@
         }
     }
 }
-
-    

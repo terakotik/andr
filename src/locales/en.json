@@ -168,7 +168,8 @@
         },
         "copyright": "AndrGlobal Consulting. All rights reserved.",
         "developerCredit": "Development and automation",
-        "privacyPolicy": "Privacy Policy"
+        "privacyPolicy": "Privacy Policy",
+        "termsAndConditions": "Terms and Conditions"
     },
     "consulting": {
         "hero": {
@@ -538,5 +539,3 @@
         }
     }
 }
-
-    

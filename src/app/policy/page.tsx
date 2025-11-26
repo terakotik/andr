@@ -53,10 +53,10 @@ export default function PolicyPage() {
     }
 
     return (
-        <div className="container mx-auto px-4 md:px-6 py-12">
+        <div className="container mx-auto px-4 md:px-6 py-12 scroll-mt-20">
             <div className="max-w-4xl mx-auto space-y-12">
                 
-                <article className="space-y-6">
+                <article id="terms" className="space-y-6 pt-8 scroll-mt-20">
                     <header>
                         <h1 className="text-3xl font-bold font-headline text-center">{policy.terms.title}</h1>
                         <p className="text-center text-muted-foreground">{policy.terms.date?.replace('{date}', today)}</p>
@@ -72,7 +72,7 @@ export default function PolicyPage() {
                     </div>
                 </article>
 
-                <article className="space-y-6 pt-12">
+                <article id="privacy" className="space-y-6 pt-12 scroll-mt-20">
                     <header>
                         <h1 className="text-3xl font-bold font-headline text-center">{policy.privacy.title}</h1>
                         <p className="text-center text-muted-foreground">{policy.privacy.date?.replace('{date}', today)}</p>
@@ -94,5 +94,3 @@ export default function PolicyPage() {
         </div>
     );
 }
-
-    

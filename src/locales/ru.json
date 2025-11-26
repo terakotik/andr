@@ -168,7 +168,8 @@
         },
         "copyright": "AndrGlobal Consulting. Все права защищены.",
         "developerCredit": "Разработка и автоматизация",
-        "privacyPolicy": "Политика конфиденциальности"
+        "privacyPolicy": "Политика конфиденциальности",
+        "termsAndConditions": "Положения и условия"
     },
     "consulting": {
         "hero": {
@@ -538,5 +539,3 @@
         }
     }
 }
-
-    
