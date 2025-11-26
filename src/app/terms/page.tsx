@@ -3,9 +3,9 @@
 
 import { useLanguage } from "@/context/language-context";
 
-export default function PolicyPage() {
+export default function TermsPage() {
     const { language, translations } = useLanguage();
-    const policy = translations.policyPage || { privacy: {}, contact: {} };
+    const policy = translations.termsPage || { terms: {}, contact: {} };
     const today = new Date().toLocaleDateString(language, { year: 'numeric', month: 'long', day: 'numeric' });
 
     const renderSections = (sections: any[]) => {
@@ -36,35 +36,19 @@ export default function PolicyPage() {
             </div>
         ));
     };
-    
-    const renderRights = (section: any) => {
-        if (!section || !Array.isArray(section.content)) return null;
-        return (
-             <div className="space-y-2">
-                <h3 className="text-xl font-semibold text-primary">{section.title}</h3>
-                <p>{section.content[0]}</p>
-                 <ul className="list-disc list-inside space-y-1 ml-4">
-                    {section.content[1].subpoints.map((item: string, i:number) => <li key={i}>{item}</li>)}
-                </ul>
-                <p>{section.content[2]}</p>
-            </div>
-        )
-    }
 
     return (
         <div className="container mx-auto px-4 md:px-6 py-12">
             <div className="max-w-4xl mx-auto space-y-12">
-                <article id="privacy" className="space-y-6 pt-8">
+                <article id="terms" className="space-y-6 pt-8">
                     <header>
-                        <h1 className="text-3xl font-bold font-headline text-center">{policy.privacy.title}</h1>
-                        <p className="text-center text-muted-foreground">{policy.privacy.date?.replace('{date}', today)}</p>
+                        <h1 className="text-3xl font-bold font-headline text-center">{policy.terms.title}</h1>
+                        <p className="text-center text-muted-foreground">{policy.terms.date?.replace('{date}', today)}</p>
                     </header>
-                     <div className="prose prose-lg max-w-none space-y-6">
-                        {renderSections(policy.privacy.sections?.slice(0, 5))}
-                        {renderRights(policy.privacy.sections?.[5])}
+                    <div className="prose prose-lg max-w-none space-y-6">
+                        {renderSections(policy.terms.sections)}
                         <div className="space-y-2">
-                             <h3 className="text-xl font-semibold text-primary">{policy.privacy.contact.title}</h3>
-                             <p>{policy.privacy.contact.dpo}</p>
+                             <h3 className="text-xl font-semibold text-primary">{policy.contact.title}</h3>
                              <p>{policy.contact.name}</p>
                              <p>{policy.contact.address}</p>
                              <p>Email: <a href={`mailto:${policy.contact.email}`}>{policy.contact.email}</a></p>

@@ -418,7 +418,7 @@
         "productError": "无法加载产品详情。请重试。",
         "backToShop": "返回商店"
     },
-    "policyPage": {
+    "termsPage": {
         "terms": {
             "title": "PT. ANDR GLOBAL FINANCIAL 网站使用条款和条件",
             "date": "生效日期：{date}",
@@ -464,6 +464,14 @@
                 }
             ]
         },
+        "contact": {
+            "title": "6. 联系信息",
+            "name": "PT. ANDR GLOBAL FINANCIAL",
+            "address": "地址: Alamanda Office, 5th Floor, Jl. Bypass Ngurah Rai No. 67, Kedonganan, Kuta, Badung, Bali 80361, INDONESIA",
+            "email": "sale@andrgf.id"
+        }
+    },
+    "policyPage": {
         "privacy": {
             "title": "PT. ANDR GLOBAL FINANCIAL 隐私政策",
             "date": "生效日期：{date}",
@@ -528,14 +536,11 @@
             ],
             "contact": {
                 "title": "7. 联系信息",
-                "dpo": "数据保护官"
+                "dpo": "数据保护官",
+                "name": "PT. ANDR GLOBAL FINANCIAL",
+                "address": "地址: Alamanda Office, 5th Floor, Jl. Bypass Ngurah Rai No. 67, Kedonganan, Kuta, Badung, Bali 80361, INDONESIA",
+                "email": "sale@andrgf.id"
             }
-        },
-        "contact": {
-            "title": "6. 联系信息",
-            "name": "PT. ANDR GLOBAL FINANCIAL",
-            "address": "地址: Alamanda Office, 5th Floor, Jl. Bypass Ngurah Rai No. 67, Kedonganan, Kuta, Badung, Bali 80361, INDONESIA",
-            "email": "sale@andrgf.id"
         }
     }
 }

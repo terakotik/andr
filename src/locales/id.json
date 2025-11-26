@@ -418,7 +418,7 @@
         "productError": "Tidak dapat memuat detail produk. Silakan coba lagi.",
         "backToShop": "Kembali ke Toko"
     },
-    "policyPage": {
+    "termsPage": {
         "terms": {
             "title": "Syarat dan Ketentuan Penggunaan Situs Web PT. ANDR GLOBAL FINANCIAL",
             "date": "Tanggal Efektif: {date}",
@@ -464,6 +464,14 @@
                 }
             ]
         },
+        "contact": {
+            "title": "6. Informasi Kontak",
+            "name": "PT. ANDR GLOBAL FINANCIAL",
+            "address": "Alamat: Alamanda Office, Lantai 5, Jl. Bypass Ngurah Rai No. 67, Kedonganan, Kuta, Badung, Bali 80361, INDONESIA",
+            "email": "sale@andrgf.id"
+        }
+    },
+    "policyPage": {
         "privacy": {
             "title": "Kebijakan Privasi PT. ANDR GLOBAL FINANCIAL",
             "date": "Tanggal Efektif: {date}",
@@ -528,14 +536,11 @@
             ],
             "contact": {
                 "title": "7. Informasi Kontak",
-                "dpo": "Petugas Perlindungan Data"
+                "dpo": "Petugas Perlindungan Data",
+                "name": "PT. ANDR GLOBAL FINANCIAL",
+                "address": "Alamat: Alamanda Office, Lantai 5, Jl. Bypass Ngurah Rai No. 67, Kedonganan, Kuta, Badung, Bali 80361, INDONESIA",
+                "email": "sale@andrgf.id"
             }
-        },
-        "contact": {
-            "title": "6. Informasi Kontak",
-            "name": "PT. ANDR GLOBAL FINANCIAL",
-            "address": "Alamat: Alamanda Office, Lantai 5, Jl. Bypass Ngurah Rai No. 67, Kedonganan, Kuta, Badung, Bali 80361, INDONESIA",
-            "email": "sale@andrgf.id"
         }
     }
 }

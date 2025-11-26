@@ -183,10 +183,10 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between text-left md:items-center text-xs text-muted-foreground">
             <div className="flex flex-col md:flex-row md:items-center gap-x-4 gap-y-2">
                  <p>© {new Date().getFullYear()} {translations.footer.copyright}</p>
-                 <Link href="/policy#terms" className="hover:text-primary transition-colors">
+                 <Link href="/terms" className="hover:text-primary transition-colors">
                     {translations.footer.termsAndConditions}
                  </Link>
-                 <Link href="/policy#privacy" className="hover:text-primary transition-colors">
+                 <Link href="/policy" className="hover:text-primary transition-colors">
                     {translations.footer.privacyPolicy}
                  </Link>
             </div>
