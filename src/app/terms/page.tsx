@@ -42,16 +42,16 @@ export default function TermsPage() {
             <div className="max-w-4xl mx-auto space-y-12">
                 <article id="terms" className="space-y-6 pt-8">
                     <header>
-                        <h1 className="text-3xl font-bold font-headline text-center">{policy.terms.title}</h1>
-                        <p className="text-center text-muted-foreground">{policy.terms.date?.replace('{date}', today)}</p>
+                        <h1 className="text-3xl font-bold font-headline text-center">{policy.terms?.title}</h1>
+                        <p className="text-center text-muted-foreground">{policy.terms?.date?.replace('{date}', today)}</p>
                     </header>
                     <div className="prose prose-lg max-w-none space-y-6">
-                        {renderSections(policy.terms.sections)}
+                        {renderSections(policy.terms?.sections)}
                         <div className="space-y-2">
-                             <h3 className="text-xl font-semibold text-primary">{policy.contact.title}</h3>
-                             <p>{policy.contact.name}</p>
-                             <p>{policy.contact.address}</p>
-                             <p>Email: <a href={`mailto:${policy.contact.email}`}>{policy.contact.email}</a></p>
+                             <h3 className="text-xl font-semibold text-primary">{policy.contact?.title}</h3>
+                             <p>{policy.contact?.name}</p>
+                             <p>{policy.contact?.address}</p>
+                             <p>Email: <a href={`mailto:${policy.contact?.email}`}>{policy.contact?.email}</a></p>
                         </div>
                     </div>
                 </article>

@@ -56,18 +56,18 @@ export default function PolicyPage() {
             <div className="max-w-4xl mx-auto space-y-12">
                 <article id="privacy" className="space-y-6 pt-8">
                     <header>
-                        <h1 className="text-3xl font-bold font-headline text-center">{policy.privacy.title}</h1>
-                        <p className="text-center text-muted-foreground">{policy.privacy.date?.replace('{date}', today)}</p>
+                        <h1 className="text-3xl font-bold font-headline text-center">{policy.privacy?.title}</h1>
+                        <p className="text-center text-muted-foreground">{policy.privacy?.date?.replace('{date}', today)}</p>
                     </header>
                      <div className="prose prose-lg max-w-none space-y-6">
-                        {renderSections(policy.privacy.sections?.slice(0, 5))}
-                        {renderRights(policy.privacy.sections?.[5])}
+                        {renderSections(policy.privacy?.sections?.slice(0, 5))}
+                        {renderRights(policy.privacy?.sections?.[5])}
                         <div className="space-y-2">
-                             <h3 className="text-xl font-semibold text-primary">{policy.privacy.contact.title}</h3>
-                             <p>{policy.privacy.contact.dpo}</p>
-                             <p>{policy.contact.name}</p>
-                             <p>{policy.contact.address}</p>
-                             <p>Email: <a href={`mailto:${policy.contact.email}`}>{policy.contact.email}</a></p>
+                             <h3 className="text-xl font-semibold text-primary">{policy.privacy?.contact?.title}</h3>
+                             <p>{policy.privacy?.contact?.dpo}</p>
+                             <p>{policy.privacy?.contact?.name}</p>
+                             <p>{policy.privacy?.contact?.address}</p>
+                             <p>Email: <a href={`mailto:${policy.privacy?.contact?.email}`}>{policy.privacy?.contact?.email}</a></p>
                         </div>
                     </div>
                 </article>
